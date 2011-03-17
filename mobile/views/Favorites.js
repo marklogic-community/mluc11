@@ -17,14 +17,34 @@
 */
 
 (function() {
+
+    var loginLogoutUser = function() {
+        if(mluc.readCookie("MLUC-SESSION")) {
+            mluc.eraseCookie("MLUC-SESSION");
+            mluc.eraseCookie("MLUC-USERNAME");
+            updatePage();
+        }
+        else {
+            mluc.login();
+        }
+    };
     
     var toolBar = new Ext.Toolbar({
         dock: "top",
-        title: "Favorites"
+        title: "Favorites",
+        items: [
+            {xtype: 'spacer'},
+            {
+                id: 'loginbutton',
+                xtype: 'button',
+                handler: loginLogoutUser
+            }
+        ]
     });
 
     var viewDetails = function(scheduleList, index, elementItem, eventObject) {
-        toolBar.add({
+        toolBar.insert(0, {
+            id: "backbutton",
             xtype: "button",
             ui: "back",
             text: toolBar.title,
@@ -40,7 +60,6 @@
         toolBar.setTitle("Info");
         var mySession = scheduleList.store.getAt(index);
         var session = Ext.getStore("SessionStore").getById(mySession.get("sessionId"));
-        console.log(session);
 
         mluc.favoritesView.getComponent(1).viewSession(session);
     };
@@ -55,19 +74,8 @@
         toolBar.remove(0);
     };
 
-    var loginLogoutUser = function() {
-        if(mluc.readCookie("MLUC-SESSION")) {
-            mluc.eraseCookie("MLUC-SESSION");
-            mluc.eraseCookie("MLUC-USERNAME");
-            updatePage();
-        }
-        else {
-            mluc.login();
-        }
-    };
-
     var updatePage = function() {
-        var button = mluc.favoritesView.getComponent(0).getComponent(0);
+        var button = toolBar.getComponent("loginbutton");
         var username = mluc.readCookie("MLUC-USERNAME");
         if(mluc.readCookie("MLUC-SESSION") && username) {
             button.setText("Logout");
@@ -77,7 +85,7 @@
             mySessionStore.load(function() {});
         }
         else {
-            button.setText("Login via Facebook");
+            button.setText("Login");
         }
     };
 
@@ -88,32 +96,19 @@
         dockedItems: [toolBar],
         items:[
             {
-                xtype: "panel",
-                items:[
-                    {
-                        xtype: "button",
-                        listeners: {
-                            el: {
-                                click: loginLogoutUser
-                            }
-                        }
-                    },
-                    {
-                        xtype: "list",
-                        scroll: false,
-                        grouped: true,
-                        html: "Loading...",
-                        emptyText: "You haven't marked yourself as attending any sessions yet.",
-                        itemTpl: "<span class='session-track'>{track}</span><br><span class='session-title'>{title}</span><br><span class='session-room'>{location}</span>",
-                        cls: "session-list",
-                        multiSelect: false,
-                        singleSelect: true,
-                        store: "MySessionsStore",
-                        listeners: {
-                            itemtap: viewDetails
-                        }
-                    }
-                ]
+                scroll: "vertical",
+                xtype: "list",
+                grouped: true,
+                html: "Loading...",
+                emptyText: "You haven't marked yourself as attending any sessions yet.",
+                itemTpl: "<span class='session-track'>{track}</span><br><span class='session-title'>{title}</span><br><span class='session-room'>{location}</span>",
+                cls: "session-list",
+                multiSelect: false,
+                singleSelect: true,
+                store: "MySessionsStore",
+                listeners: {
+                    itemtap: viewDetails
+                }
             },
             {
                 xtype: "sessionviewer",

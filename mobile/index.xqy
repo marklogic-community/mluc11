@@ -21,7 +21,7 @@ xquery version "1.0-ml";
 import module namespace redirect="http://marklogic.com/commons/mobile-redirect" at "lib/mobile-redirect.xqy";
 
 let $set := xdmp:set-response-content-type("text/html")
-where not(redirect:testAndPerformRedirect(8200, 8201, "localhost:8200", "localhost:8201", "sticky"))
+where not(redirect:testAndPerformRedirect(8004, 8005, "mluc11.marklogic.com", "m.mluc11.marklogic.com", "sticky"))
 return
 "<!DOCTYPE html>",
 <html> 

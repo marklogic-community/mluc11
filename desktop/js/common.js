@@ -278,7 +278,6 @@ Ext.regStore("SponsorsStore", {
 });
 
 
-// XXX - need to do something about the localhost domain
 mluc.createCookie = function(name, value, days) {
     if(days) {
         var date = new Date();
@@ -288,7 +287,7 @@ mluc.createCookie = function(name, value, days) {
     else {
         var expires = "";
     }
-    document.cookie = name + "=" + value + expires + "; path=/; domain=.localhost";
+    document.cookie = name + "=" + value + expires + "; path=/;";
 };
 
 mluc.readCookie = function(name) {
