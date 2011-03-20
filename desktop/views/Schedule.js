@@ -66,6 +66,11 @@ Ext.define('mluc.widgets.Schedule', {
             handler: this.viewMySchedule
         });
 
+        this.searchInput = new Ext.form.Text({
+            width: 300,
+            emptyText: 'Search schedule',
+        });
+
         Ext.getStore("SessionStore").addListener("load", this.renderSchedule, this);
         var speakerStore = Ext.getStore("SpeakerStore");
         speakerStore.addListener("load", this.loadSchedule);
@@ -93,16 +98,13 @@ Ext.define('mluc.widgets.Schedule', {
                     "-",
                     this.myScheduleButton,
                     "->",
+                    this.searchInput,
+                    " ",
                     {
-                        xtype: 'textfield',
-                        width: 300,
-                        emptyText: 'Search schedule',
-                        enableKeyEvents: true,
+                        text: "Search",
+                        cls: "visiblebutton",
                         scope: this,
-                        listeners: {
-                            keyup: this.searchSchedule,
-                            scope: this
-                        }
+                        handler: this.searchSchedule
                     },
                     " "
                 ]
@@ -161,26 +163,22 @@ Ext.define('mluc.widgets.Schedule', {
         }
     },
 
-    searchSchedule: function(searchInput, eventObject) {
+    searchSchedule: function() {
+        this.setLoading(true);
         var store = Ext.getStore("SessionSearchStore");
         store.remove(store.getRange());
-        var userQuery = searchInput.getValue();
+        var userQuery = this.searchInput.getValue();
         var query = {key: "title"};
         if(userQuery.length !== 0) {
             var words = userQuery.split(" ");
             var keywords = [];
             for(var i = 0; i < words.length; i += 1) {
-                var wildcarded = false;
-                if(i === words.length - 1) {
-                    wildcarded = true;
-                    words[i] += "*";
-                }
                 keywords.push({
                     "or": [
-                        {"contains": {"key": "title", "string": words[i], "weight": 3, "caseSensitive": false, "wildcarded": wildcarded}},
-                        {"contains": {"key": "abstract", "string": words[i], "weight": 2, "caseSensitive": false, "wildcarded": wildcarded}},
-                        {"contains": {"key": "track", "string": words[i], "weight": 1, "caseSensitive": false, "wildcarded": wildcarded}},
-                        {"contains": {"key": "location", "string": words[i], "weight": 1, "caseSensitive": false, "wildcarded": wildcarded}}
+                        {"contains": {"key": "title", "string": words[i], "weight": 3, "caseSensitive": false}},
+                        {"contains": {"key": "abstract", "string": words[i], "weight": 2, "caseSensitive": false}},
+                        {"contains": {"key": "track", "string": words[i], "weight": 1, "caseSensitive": false}},
+                        {"contains": {"key": "location", "string": words[i], "weight": 1, "caseSensitive": false}}
                     ]
                 });
             }
@@ -194,6 +192,7 @@ Ext.define('mluc.widgets.Schedule', {
             store.load({
                 scope: this,
                 callback: function() {
+                    this.setLoading(false);
                     this.renderSchedule(Ext.getStore("SessionStore"), undefined, undefined, true);
                 }
             });
