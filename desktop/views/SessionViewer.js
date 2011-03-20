@@ -87,7 +87,7 @@ Ext.define("mluc.views.DetailsWindow", {
                                         extendedInfo += '<p>' + speaker.bio + '</p>';
                                     }
                                     extendedInfo += '</div>';
-                                    speakers += '<div class="' + className + '"><span class="presenter-name">' + speaker.name + '</span> - <span class="presenter-affiliation">' + speaker.affiliation + '</span>' + extendedInfo + '</div>';
+                                    speakers += '<div class="' + className + '"><span class="presenter-name">' + speaker.name + '</span> - <span class="presenter-affiliation">' + speaker.affiliation + '</span> <a class="detailslink">speaker details</a>' + extendedInfo + '</div>';
                                 }
 
                                 return speakers;
@@ -154,7 +154,7 @@ Ext.define("mluc.views.DetailsWindow", {
                 else if(element.hasCls("session-login")) {
                     mluc.login();
                 }
-                else if(element.hasCls("session-presenter") || element.findParent("div.session-presenter")) {
+                else if(element.hasCls("detailslink")) {
                     panel.showHideSpeakerDetails(element);
                 }
             });

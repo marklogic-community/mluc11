@@ -223,8 +223,17 @@ div.attendance-list div.person span.realname {
 
 div.session-presenter {
     margin-top: 5px;
-    border: 1px solid #ABA7A6;
     padding: 5px;
+}
+
+div.session-presenter span.presenter-name,
+div.session-presenter span.presenter-affiliation {
+    font-weight: bold;
+}
+
+div.session-presenter a.detailslink {
+    padding-left: 10px;
+    font-weight: normal;
     cursor: pointer;
 }
 
