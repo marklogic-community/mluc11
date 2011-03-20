@@ -27,15 +27,12 @@ Ext.onReady(function() {
     Ext.create('Ext.Viewport', {
         layout: {
             type: 'border',
-            padding: 5
         },
         defaults: {
-            split: true
         },
         items: [
             {
                 region: 'north',
-                split: true,
                 height: 100,
                 cls: "header",
                 html: '<div id="header"><div id="logo"><a href="?event=content.home">Mark Logic</a></div>' +
@@ -50,7 +47,7 @@ Ext.onReady(function() {
                 border: false,
                 layout: {
                     type: 'border',
-                    padding: 0
+                    padding: 5
                 },
                 items: [
                     mluc.views.Schedule,
