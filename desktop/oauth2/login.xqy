@@ -59,7 +59,15 @@ return
                     let $referer := xdmp:get-request-header("Referer")
                     let $set := xdmp:set-response-content-type("text/html")
                     return 
-                        <html><script type="text/javascript">window.opener.location.reload(); window.close();</script></html>
+                        <html><script type="text/javascript"><![CDATA[
+                            if(window.opener) {
+                                window.opener.location.reload();
+                                window.close();
+                            }
+                            else {
+                                window.location = "http://m.mluc11.marklogic.com";
+                            }
+                        ]]></script></html>
                         (: the referrer gets lost sometimes from the original site, namely when you need to login iwth your credential
                            at facebook. If you're already logged in then it works fine. So if the referer is from facebook just
                            redirected to the root :)

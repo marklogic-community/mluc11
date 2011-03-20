@@ -22,6 +22,7 @@
         if(mluc.readCookie("MLUC-SESSION")) {
             mluc.eraseCookie("MLUC-SESSION");
             mluc.eraseCookie("MLUC-USERNAME");
+            mluc.eraseCookie("MLUC-NAME");
             updatePage();
         }
         else {
@@ -75,17 +76,18 @@
     };
 
     var updatePage = function() {
+        var mySessionStore = Ext.getStore("MySessionsStore");
         var button = toolBar.getComponent("loginbutton");
         var username = mluc.readCookie("MLUC-USERNAME");
         if(mluc.readCookie("MLUC-SESSION") && username) {
             button.setText("Logout");
 
-            var mySessionStore = Ext.getStore("MySessionsStore");
             mySessionStore.proxy.extraParams = {q: Ext.util.JSON.encode({key: "username", value: username})};
             mySessionStore.load(function() {});
         }
         else {
             button.setText("Login");
+            mySessionStore.remove(mySessionStore.getRange());
         }
     };
 
@@ -100,7 +102,7 @@
                 xtype: "list",
                 grouped: true,
                 html: "Loading...",
-                emptyText: "You haven't marked yourself as attending any sessions yet.",
+                emptyText: "Either you haven't marked yourself as attending any sessions or you need to login first.",
                 itemTpl: "<span class='session-track'>{track}</span><br><span class='session-title'>{title}</span><br><span class='session-room'>{location}</span>",
                 cls: "session-list",
                 multiSelect: false,
@@ -116,8 +118,6 @@
         ],
         listeners: {
             beforeactivate: updatePage
-            // show: updatePage
         }
     });
 })();
-
