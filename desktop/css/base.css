@@ -139,8 +139,26 @@ div.session span.affiliation {
     font-style: italic;
 }
 
+div.sessiondetail div.numattendees {
+    float: right;
+    text-align: center;
+    padding: 3px;
+    width: 75px;
+    height: 47px;
+    border: 1px solid #d1d1d1;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+div.sessiondetail div.numattendees span.num {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 div.sessiondetail h2 {
     font-size: 16px;
+    width: 525px;
 }
 
 div.sessiondetail p {

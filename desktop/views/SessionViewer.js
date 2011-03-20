@@ -56,6 +56,7 @@ Ext.define("mluc.views.DetailsWindow", {
                     xtype: "container",
                     tpl: new Ext.XTemplate(
                         '<div class="sessiondetail">',
+                            '{id:this.renderNumAttendees}',
                             '<h2 class="title">{title}</h2>',
                             '<span class="time">{[ Ext.Date.format(values.startTime, "g:ia") + " - " + Ext.Date.format(values.endTime, "g:ia") ]}</span>',
                             '<span class="location">&nbsp;in {location}</span>',
@@ -66,6 +67,12 @@ Ext.define("mluc.views.DetailsWindow", {
                             '</div>',
                         '</div>',
                         {
+                            renderNumAttendees: function() {
+                                if(me.store.getCount()) {
+                                    return '<div class="numattendees"><span class="num">' + me.store.getCount() + '</span><br>Attending</div>';
+                                }
+                                return "";
+                            },
                             renderSpeakers: function(speakerIds) {
                                 var speakers = "";
                                 var speakerStore = Ext.getStore("SpeakerStore");
@@ -92,7 +99,7 @@ Ext.define("mluc.views.DetailsWindow", {
 
                                 return speakers;
                             },
-                            renderAttendies: function(sessionId) {
+                            renderAttendies: function() {
                                 var username = mluc.readCookie("MLUC-USERNAME");
                                 var attending = false;
 
@@ -110,7 +117,7 @@ Ext.define("mluc.views.DetailsWindow", {
                                     }
                                 }
                                 else {
-                                    addLogin = '<div class="session-login" onclick="mluc.login()">Click to login via Facebook so you can mark yourself as attending this session.</div>';
+                                    addLogin = '<div class="session-login">Click to login via Facebook so you can mark yourself as attending this session.</div>';
                                 }
 
                                 return '<div class="attend-login">' + addLogin + '</div><h3>Attendees</h3>';
@@ -156,6 +163,9 @@ Ext.define("mluc.views.DetailsWindow", {
                 }
                 else if(element.hasCls("detailslink")) {
                     panel.showHideSpeakerDetails(element);
+                }
+                else if(element.hasCls("numattendees") || element.parent("div.numattendees")) {
+                    panel.jumpToAttendance();
                 }
             });
         }
@@ -252,6 +262,12 @@ Ext.define("mluc.views.DetailsWindow", {
         var speakerDetails = container.child("div.speaker-details");
         speakerDetails.setVisibilityMode(Ext.core.Element.DISPLAY);
         speakerDetails.setVisible(!speakerDetails.isVisible(), true);
+    },
+
+    jumpToAttendance: function() {
+        var attendBox = Ext.get(Ext.DomQuery.selectNode("div.attendance-list"));
+        var container = attendBox.parent("div.x-window-body");
+        attendBox.scrollIntoView(container);
     }
 });
 
