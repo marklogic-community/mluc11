@@ -59,7 +59,7 @@ Ext.define('mluc.widgets.Schedule', {
         });
 
         this.myScheduleButton = new Ext.button.Button({
-            text: "My Schedule",
+            text: "Highlight My Schedule",
             cls: "visiblebutton",
             enableToggle: true,
             scope: this,

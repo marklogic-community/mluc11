@@ -31,7 +31,7 @@ return
         <link href="/sencha-touch/resources/css/sencha-touch.css" rel="stylesheet" type="text/css" />
         <link href="/css/app.css" rel="stylesheet" type="text/css" />
     </head> 
-    <body><!-- --></body> 
+    <body>Loading...</body> 
     <script src="/sencha-touch/sencha-touch-debug.js" type="text/javascript"><!-- --></script>
     <script src="/js/app.js" type="text/javascript"><!-- --></script>
     <script src="/views/SessionViewer.js" type="text/javascript"><!-- --></script>

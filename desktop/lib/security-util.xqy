@@ -62,7 +62,7 @@ declare function security-util:createNewUser(
     $role as xs:string,
     $providerName as xs:string, 
     $providerUserId as xs:string
-) as xs:unsignedLong
+) as xs:unsignedLong?
 {
     security-util:createNewUser($username, $password, $description, $role, $providerName, $providerUserId, "Security")   
 };

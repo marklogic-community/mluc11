@@ -19,22 +19,33 @@
 /*
     Override some default sencha styles
 */
+html,
+body {
+    font-family: Helvetica;
+}
+
 .x-toolbar-dark {
     background-color: #A9B533;
     background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#436026), color-stop(0.02, #A9B533), to(#436026));
     border-color: black;
 }
 
-.x-list-header {
+h3.x-list-header {
+    background-image: none;
     background-color: #EEF1D7;
     border-bottom: 1px solid #D1D1D1;
+    border-top: none;
     color: #A9B533;
     font-size: 0.8em;
     font-weight: bold;
     padding: 0.2em 1.02em;
+    text-shadow: none;
+    -webkit-box-shadow: none;
 }
 
 .x-list .x-list-item.x-item-selected {
+    background-image: none;
+    text-shadow: none;
     background-color: #C6D43C;
     border-bottom-color: #D1D1D1;
     border-top-color: #D1D1D1;
@@ -65,36 +76,6 @@
     color: #666;
 }
 
-div.grouped-container div.kv-layout td {
-    border-top: 1px solid #D1D1D1;
-    font-size: 10pt;
-    font-weight:bold;
-}
-
-div.grouped-container div.section {
-    background-color: white;
-    border: 1px solid #D1D1D1;
-    border-bottom-left-radius: 10px 10px;
-    border-bottom-right-radius: 10px 10px;
-    border-top-left-radius: 10px 10px;
-    border-top-right-radius: 10px 10px;
-    margin-bottom: 30px;
-}
-
-div.grouped-container div.kv-layout th {
-    border-top: 1px solid #D1D1D1;
-    color: #8A9B3C;
-    font-size: 10pt;
-    font-weight: bold;
-    padding-right: 11px;
-    text-align: right;
-    width: 75px;
-}
-
-div.session-details div.session-presenters div.session-presenter.bordered{
-    border-bottom: 1px solid #D1D1D1;
-}
-
 .x-toolbar-dark .x-button,
 .x-toolbar-dark .x-button.x-button-back::after,
 .x-toolbar-dark .x-button.x-button-forward::after,
@@ -109,14 +90,6 @@ div.session-details div.session-presenters div.session-presenter.bordered{
 .x-toolbar .x-toolbar-dark .x-field-select .x-input-text.x-button-forward::after {
     background-color: #436025;
     background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#A9B532), color-stop(0.02, #436025), to(#2B3D18));
-}
-
-div.session-details div.session-abstract,
-div.session-details div.session-presenters,
-div.session-details div.session-attendance {
-    font-size: 11pt;
-    line-height: 1.4em;
-    padding: 10px;
 }
 
 .x-fullscreen {
@@ -202,7 +175,7 @@ div.grouped-container {
 }
 
 div.grouped-container h2.group-name {
-    color: rgb(37, 73, 132);
+    color: #436026;
     margin-bottom: 10px;
     margin-top: 10px;
     margin-left: 10px;
@@ -212,8 +185,12 @@ div.grouped-container h2.group-name {
 
 div.grouped-container div.section {
     background-color: white;
-    border: 1px solid rgb(37, 73, 132);
-    -webkit-border-radius: 10px;
+    border: 1px solid #D1D1D1;
+    border-bottom-left-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+    border-top-left-radius: 10px 10px;
+    border-top-right-radius: 10px 10px;
+    margin-bottom: 30px;
 }
 
 div.grouped-container div.kv-layout table {
@@ -225,30 +202,35 @@ div.grouped-container div.kv-layout tr {
 }
 
 div.grouped-container div.kv-layout th {
-    width: 75px;
-    text-align: right;
+    border-top: 1px solid #D1D1D1;
+    color: #8A9B3C;
     font-size: 10pt;
     font-weight: bold;
     padding-right: 11px;
-    color: rgb(37, 73, 132);
-    border-top: 1px solid rgb(37, 73, 132);
+    text-align: right;
+    width: 75px;
 }
 
 div.grouped-container div.kv-layout td {
+    border-top: 1px solid #D1D1D1;
     font-size: 10pt;
-    border-top: 1px solid rgb(37, 73, 132);
+    font-weight:bold;
 }
 
 /*
     Session details
 */
-div.session-details div.session-abstract {
-    padding: 10px;
+
+div.session-details div.session-abstract,
+div.session-details div.session-attendance {
     font-size: 11pt;
+    line-height: 1.4em;
+    padding: 10px;
 }
 
 div.session-details div.session-presenters {
     padding: 0px;
+    line-height: 1.4em;
     font-size: 11pt;
 }
 
@@ -291,7 +273,7 @@ div.attendance-list div.person span.realname {
 }
 
 div.session-details div.session-presenters div.session-presenter.bordered {
-    border-bottom: 1px solid rgb(37, 73, 132);
+    border-bottom: 1px solid #D1D1D1;
 }
 
 div.session-details div.session-presenters span.presenter-name {
@@ -346,7 +328,7 @@ div.speaker-session-list {
     margin-left: 10px;
     margin-right: 10px;
     background-color: white;
-    border: 1px solid rgb(37, 73, 132);
+    border: 1px solid #d1d1d1;
     -webkit-border-radius: 10px;
 }
 
@@ -368,13 +350,12 @@ div.speaker-session-list div.x-list-item:last-child {
 News
 */
 div.tweet {
-    min-height: 60px;
-    border: 1px solid #ccc;
-    margin: 2px;
-    padding: 5px;
-    background-color: white;
     -webkit-box-orient: horizontal;
+    background-color: white;
+    border-bottom: 1px solid #CCC;
     display: -webkit-box;
+    min-height: 60px;
+    padding: 10px;
 }
 
 div.tweet img {
@@ -386,14 +367,15 @@ div.tweet span.username {
     font-weight: bold;
 }
 div.tweet span.date {
-    font-style: italic;
+    color: gray;
 }
 div.tweet div.text {
-    position: relative;
     -webkit-box-flex: 1;
-    font-size: 11px;
+    font-size: 13px;
+    line-height: 1.4em;
     min-height: 50px;
-    padding-left: 5px;
+    padding-left: 10px;
+    position: relative;
 }
 
 div.tweet a {

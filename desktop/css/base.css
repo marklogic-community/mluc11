@@ -20,6 +20,19 @@
     background-color: white;
 }
 
+.x-table-layout-cell  {
+    border: none;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.x-table-layout-cell div.session {
+    padding: 5px;
+}
+
+.x-table-layout-cell div.session:hover {
+    background-color: #eef1d7;
+}
+
 #content {
     width: 978px;
 }
@@ -55,12 +68,15 @@ News
 */
 div.tweet {
     min-height: 60px;
-    border: 1px solid #ccc;
-    margin: 2px;
-    padding: 5px;
+    border-bottom: 1px solid #d1d1d1;
+    padding: 10px;
     background-color: white;
     -webkit-box-orient: horizontal;
     display: -webkit-box;
+}
+
+div.tweet:last-child {
+    border-bottom: none;
 }
 
 div.tweet img {
@@ -70,18 +86,18 @@ div.tweet img {
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
-div.tweet span.username {
+div.tweet span.username a {
     font-weight: bold;
 }
 div.tweet span.date {
-    font-style: italic;
+    font-size: 10px;
 }
 div.tweet div.text {
     position: relative;
     -webkit-box-flex: 1;
-    font-size: 11px;
+    font-size: 12px;
     min-height: 50px;
-    padding-left: 5px;
+    padding-left: 10px;
 }
 div.tweet a {
     color: #436026;
@@ -96,7 +112,6 @@ Schedule
 */
 table.x-table-layout {
     border-collapse:separate;
-    border-spacing: 5px;
 }
 
 table.x-table-layout div.timeslot {
@@ -105,7 +120,6 @@ table.x-table-layout div.timeslot {
 
 table.x-table-layout td {
     width: 16.6%;
-    border: 1px solid #999;
     vertical-align: top;
 }
 
@@ -115,7 +129,6 @@ div.session {
 }
 
 div.session.plenary {
-    background-color: #efefef;
 }
 
 div.session span.title {
@@ -124,6 +137,15 @@ div.session span.title {
 
 div.session span.affiliation {
     font-style: italic;
+}
+
+div.sessiondetail h2 {
+    font-size: 16px;
+}
+
+div.sessiondetail p {
+    color: #333;
+    line-height: 1.4em;
 }
 
 td div.header {
@@ -147,7 +169,9 @@ div.attendance {
 }
 
 div.attendance h3 {
-    border-bottom: 1px solid #ABA7A6;
+    margin-top: 15px;
+    font-size: 16px;
+    border-bottom: 1px solid #d1d1d1;
     padding-bottom: 0px;
 }
 
@@ -185,6 +209,12 @@ div.attend-login div.session-dont-attend {
 
 div.attendance-list div.person {
     padding-top: 5px;
+}
+
+div.attendance-list div.person img {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
 div.attendance-list div.person span.realname {

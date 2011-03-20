@@ -192,21 +192,21 @@ declare function oauth2:loginAsMarkLogicUser(
     $username as xs:string
 ) as empty-sequence()
 {
-    let $userDoc := /user[@name = $username]
     let $sessionID := string(xdmp:random())
-    let $update :=
+    let $userDoc :=
         xdmp:eval(
             "xquery version '1.0-ml';
             declare variable $username as xs:string external;
             declare variable $sessionID as xs:string external;
 
             let $userDoc := /user[@name = $username]
-            let $log := xdmp:log($userDoc)
             where exists($userDoc)
-            return
-                if(exists($userDoc/sessionID))
-                then xdmp:node-replace($userDoc/sessionID, <sessionID>{ $sessionID }</sessionID>)
-                else xdmp:node-insert-child($userDoc, <sessionID>{ $sessionID }</sessionID>)
+            return (
+                    $userDoc,
+                    if(exists($userDoc/sessionID))
+                    then xdmp:node-replace($userDoc/sessionID, <sessionID>{ $sessionID }</sessionID>)
+                    else xdmp:node-insert-child($userDoc, <sessionID>{ $sessionID }</sessionID>)
+                )
             ",
             (xs:QName("username"), $username, xs:QName("sessionID"), $sessionID)
         )

@@ -46,7 +46,7 @@ Ext.define("mluc.views.DetailsWindow", {
             resizable: false,
             closeAction: "hide",
             width: 600,
-            height: 350,
+            height: 550,
             plain: true,
             autoScroll: true,
             bodyPadding: 10,
@@ -112,7 +112,7 @@ Ext.define("mluc.views.DetailsWindow", {
                                     addLogin = '<div class="session-login" onclick="mluc.login()">Click to login via Facebook so you can mark yourself as attending this session.</div>';
                                 }
 
-                                return '<div class="attend-login">' + addLogin + '</div><h3>Attendance</h3>';
+                                return '<div class="attend-login">' + addLogin + '</div><h3>Attendees</h3>';
                             }
                         }
                     )
@@ -122,10 +122,10 @@ Ext.define("mluc.views.DetailsWindow", {
                     cls: "attendance-list",
                     tpl: new Ext.XTemplate(
                         '<tpl for=".">',
-                            '<div class="person">',
+                            '<div class="person"><a href="http://www.facebook.com/profile.php?id={[ this.getIdFromUsername(values.get("username")) ]}" target="_blank">',
                                 '<img src="http://graph.facebook.com/{[ this.getIdFromUsername(values.get("username")) ]}/picture"/>',
                                 '<span class="realname">{[ values.get("realname") ]}</span>',
-                            '</div>',
+                            '</a></div>',
                         '</tpl>',
                         {
                             getIdFromUsername: function(username) {
@@ -167,13 +167,16 @@ Ext.define("mluc.views.DetailsWindow", {
         var realname = mluc.readCookie("MLUC-NAME").replace("+", " ");
         if(username) {
             this.setLoading(true);
-            var mySession = Ext.ModelMgr.create({id: id, sessionId: this.session.getId(), username: username, realname: realname, dateAdded: new Date()}, 'Attendee');
-            mySession.save({
-                success: function() {
-                    me.setLoading(false);
-                    me.viewSession();
-                }
-            });
+            var mySession;
+            window.setTimeout(function() {
+                mySession = Ext.ModelMgr.create({id: id, sessionId: me.session.getId(), username: username, realname: realname, dateAdded: new Date()}, 'Attendee');
+                mySession.save({
+                    success: function() {
+                        me.setLoading(false);
+                        me.viewSession();
+                    }
+                });
+            }, 0);
 
             this.store.insert(this.store.getCount(), [mySession]);
 
@@ -192,36 +195,43 @@ Ext.define("mluc.views.DetailsWindow", {
 
         if(username && index >= 0) {
             this.setLoading(true);
-            var record = this.store.getAt(index);
+            window.setTimeout(function() {
+                var record = me.store.getAt(index);
 
-            var mySessionStore = Ext.getStore("MySessionsStore");
-            var mySession = mySessionStore.find("sessionId", this.session.getId());
-            mySessionStore.removeAt(mySession);
+                var mySessionStore = Ext.getStore("MySessionsStore");
+                var mySession = mySessionStore.find("sessionId", me.session.getId());
+                mySessionStore.removeAt(mySession);
 
-            this.store.remove(record);
+                me.store.remove(record);
 
-            var operation = Ext.create('Ext.data.Operation', {records: [record], action: "destroy"});
+                var operation = Ext.create('Ext.data.Operation', {records: [record], action: "destroy"});
         
-            var callback = function(operation) {
-                if(operation.wasSuccessful()) {
-                    me.setLoading(false);
-                    me.viewSession();
-                }
-            };
-        
-            record.getProxy().destroy(operation, callback, record);
+                var callback = function(operation) {
+                    if(operation.wasSuccessful()) {
+                        me.setLoading(false);
+                        me.viewSession();
+                    }
+                };
+                record.getProxy().destroy(operation, callback, record);
 
-            mluc.views.Schedule.renderSchedule(Ext.getStore("SessionStore"));
+            	mluc.views.Schedule.renderSchedule(Ext.getStore("SessionStore"));
+            }, 0);
         }
     },
 
     viewSession: function(session) {
         var me = this;
-        this.show();
-
         if(session !== undefined) {
             this.session = session;
         }
+        var title = this.session.get("title");
+        if(title.length > 75) {
+            this.setTitle(title.substring(0, 75) + "...");
+        }
+        else {
+            this.setTitle(title);
+        }
+        this.show();
 
         this.setLoading(true);
         this.store.proxy.extraParams = {q: Ext.JSON.encode({key: "sessionId", value: this.session.getId()})};

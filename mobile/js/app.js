@@ -322,7 +322,7 @@ mluc.createCookie = function(name, value, days) {
     else {
         var expires = "";
     }
-    document.cookie = name + "=" + value + expires + "; path=/;";
+    document.cookie = name + "=" + value + expires + "; path=/; domain=mluc11.marklogic.com;";
 };
 
 mluc.readCookie = function(name) {

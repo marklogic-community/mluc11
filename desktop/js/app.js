@@ -39,12 +39,8 @@ Ext.onReady(function() {
                 height: 100,
                 cls: "header",
                 html: '<div id="header"><div id="logo"><a href="?event=content.home">Mark Logic</a></div>' +
-                    '<div class="header-right-nav"><ul>' + 
-                        '<li class="contact"><a href="www.marklogicevents.com/?event=content.contact">Contact Us</a></li>' +
-                        '<li><a href="http://www.facebook.com/pages/MarkLogic/156994971006396" target="_blank" ><img src="http://www.marklogicevents.com/img/facebook.gif" alt="" width="20" height="20" /></a></li>' +
-                        '<li><a href="http://www.twitter.com/marklogic" target="_blank"><img src="http://www.marklogicevents.com/img/twitter.gif" alt="" width="20" height="20" /></a></li>' +
-                        '<li><a href="http://www.linkedin.com/companies/marklogic"><img src="http://www.marklogicevents.com/img/in.gif" alt="" width="20" height="20" /></a></li>' +
-                    '</ul></div></div>',
+                    '<div class="header-right-nav">Login</div>' +
+                    '</div></div>',
                 border: false
             },
             {
@@ -64,7 +60,7 @@ Ext.onReady(function() {
             {
                 region: 'south',
                 border: false,
-                height: 30,
+                height: 37,
                 html: '<div id="footer"><ul>' +
                         '<li class="none"><a href="http://www.marklogicevents.com/?event=content.privacy">Privacy Policy</a></li>' +
                         '<li><a href="http://www.marklogicevents.com/?event=content.terms">Terms of Use </a></li>' +
