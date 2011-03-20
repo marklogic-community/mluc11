@@ -32,12 +32,14 @@
         });
         toolBar.doLayout();
 
+
         mluc.scheduleView.setActiveItem(1, {
             type: "slide",
             direction: "left"
         });
 
         var session = scheduleList.store.getAt(index);
+        // scheduleList.deselect([session]);
         toolBar.setTitle("Info");
 
         mluc.scheduleView.getComponent(1).viewSession(session);
@@ -51,6 +53,11 @@
         var button = toolBar.getComponent(0);
         toolBar.setTitle(button.text);
         toolBar.remove(0);
+
+        window.setTimeout(function() {
+            var scheduleList = mluc.scheduleView.getComponent(0).getComponent(1);
+            scheduleList.deselect(scheduleList.getSelectedRecords());
+        }, 500);
     };
 
     var searchSchedule =  function(searchInput, eventObject) {

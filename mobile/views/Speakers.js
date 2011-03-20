@@ -89,12 +89,19 @@
         var button = toolBar.getComponent(0);
         toolBar.setTitle(lastTitle);
 
+        var list;
         if(prevTitleStack.length == 0) {
             toolBar.remove(0);
+            list = mluc.speakersView.getComponent(0).getComponent(1);
         }
         else {
             button.setText(prevTitleStack[prevTitleStack.length - 1]);
+            list = mluc.speakersView.getComponent(1).getComponent(1);
         }
+
+        window.setTimeout(function() {
+            list.deselect(list.getSelectedRecords());
+        }, 500);
     };
 
     var speakerInfoTemplate = new Ext.XTemplate(

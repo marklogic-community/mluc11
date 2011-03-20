@@ -84,7 +84,6 @@
                 cls: "session-list",
                 multiSelect: false,
                 singleSelect: true,
-                // onItemDisclosure: true,
                 store: "SponsorsStore",
                 listeners: {
                     itemtap: viewDetails
