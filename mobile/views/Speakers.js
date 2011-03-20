@@ -129,17 +129,12 @@
             var words = userQuery.split(" ");
             var keywords = [];
             for(var i = 0; i < words.length; i += 1) {
-                var wildcarded = false;
-                if(i === words.length - 1) {
-                    wildcarded = true;
-                    words[i] += "*";
-                }
                 keywords.push({
                     "or": [
-                        {"contains": {"key": "name", "string": words[i], "weight": 3, "caseSensitive": false, "wildcarded": wildcarded}},
-                        {"contains": {"key": "bio", "string": words[i], "weight": 2, "caseSensitive": false, "wildcarded": wildcarded}},
-                        {"contains": {"key": "email", "string": words[i], "weight": 1, "caseSensitive": false, "wildcarded": wildcarded}},
-                        {"contains": {"key": "affiliation", "string": words[i], "weight": 1, "caseSensitive": false, "wildcarded": wildcarded}}
+                        {"contains": {"key": "name", "string": words[i], "weight": 3, "caseSensitive": false}},
+                        {"contains": {"key": "bio", "string": words[i], "weight": 2, "caseSensitive": false}},
+                        {"contains": {"key": "email", "string": words[i], "weight": 1, "caseSensitive": false}},
+                        {"contains": {"key": "affiliation", "string": words[i], "weight": 1, "caseSensitive": false}}
                     ]
                 });
             }
@@ -171,7 +166,7 @@
                         cls: "search-box",
                         placeHolder: "Search speakers",
                         listeners: {
-                            keyup: searchSpeakers
+                            action: searchSpeakers
                         }
                     },
                     {
