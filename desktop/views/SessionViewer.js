@@ -58,6 +58,7 @@ Ext.define("mluc.views.DetailsWindow", {
                         '<div class="sessiondetail">',
                             '<h2 class="title">{title}</h2>',
                             '<span class="time">{[ Ext.Date.format(values.startTime, "g:ia") + " - " + Ext.Date.format(values.endTime, "g:ia") ]}</span>',
+                            '<span class="location">&nbsp;in {location}</span>',
                             '<p class="abstract">{abstract}</h2>',
                             '<div class="speakers">{speakerIds:this.renderSpeakers}</div>',
                             '<div class="attendance">',
