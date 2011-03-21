@@ -167,14 +167,17 @@ Ext.define('mluc.widgets.Schedule', {
     },
 
     viewMySchedule: function() {
-        var username = mluc.readCookie("MLUC-USERNAME");
-        if(this.myScheduleButton.pressed && username && username.length > 0) {
+        if(!mluc.isLoggedIn()) {
+            mluc.login();
+        }
+        else if(this.myScheduleButton.pressed) {
             this.setLoading(true);
             var mySessionStore = Ext.getStore("MySessionsStore");
             mySessionStore.addListener("load", function() {
                 this.setLoading(false);
                 this.renderSchedule(Ext.getStore("SessionStore"));
             }, this);
+            var username = mluc.readCookie("MLUC-USERNAME");
             mySessionStore.proxy.extraParams = {q: Ext.JSON.encode({key: "username", value: username})};
             mySessionStore.load(function() {});
         }

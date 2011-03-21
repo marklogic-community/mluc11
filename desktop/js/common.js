@@ -312,3 +312,14 @@ mluc.eraseCookie = function(name) {
 mluc.login = function() {
     window.open("/oauth2/login.xqy", "login");
 };
+
+mluc.logout = function() {
+    mluc.eraseCookie("MLUC-SESSION");
+    mluc.eraseCookie("MLUC-USERNAME");
+    mluc.eraseCookie("MLUC-NAME");
+}
+
+mluc.isLoggedIn = function() {
+    var username = mluc.readCookie("MLUC-USERNAME");
+    return username && username.length > 0;
+};

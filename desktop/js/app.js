@@ -24,6 +24,26 @@ Ext.onReady(function() {
     mluc.views.Schedule = Ext.create('mluc.widgets.Schedule', {});
     mluc.views.Twitter = Ext.create('mluc.widgets.Twitter', {});
 
+    mluc.loginLogoutButton = new Ext.button.Button({
+        xtype: "button",
+        text: mluc.isLoggedIn() ? "Logout" : "Login",
+        handler: function(button) {
+            if(mluc.isLoggedIn()) {
+                mluc.logout();
+                button.setText("Login");
+            }
+            else {
+                mluc.login();
+                button.setText("Logout");
+            }
+        },
+        style: {
+            position: "absolute",
+            top: "10px",
+            right: "10px",
+        }
+    });
+
     Ext.create('Ext.Viewport', {
         layout: {
             type: 'border',
@@ -35,10 +55,10 @@ Ext.onReady(function() {
                 region: 'north',
                 height: 100,
                 cls: "header",
-                html: '<div id="header"><div id="logo"><a href="?event=content.home">Mark Logic</a></div>' +
-                    '<div class="header-right-nav">Login</div>' +
-                    '</div></div>',
-                border: false
+                html: '<div id="header"><div id="logo"><a href="?event=content.home">Mark Logic</a></div></div>',
+                border: false,
+                layout:'absolute',
+                items: [mluc.loginLogoutButton]
             },
             {
                 region: 'center',
