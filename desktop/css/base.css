@@ -29,8 +29,9 @@
     padding: 5px;
 }
 
-.x-table-layout-cell div.session:hover {
+td.breakoutsession:hover {
     background-color: #eef1d7;
+    cursor: pointer;
 }
 
 #content {

@@ -108,7 +108,27 @@ Ext.define('mluc.widgets.Schedule', {
                     },
                     " "
                 ]
-            }]
+            }],
+            listeners: {
+                /*
+                body: {
+                    mouseover: function(element) {
+                        element = Ext.get(element);
+                        console.log(element);
+                    }
+                }
+                */
+                afterlayout: function(panel) {
+                    var sessions = panel.body.query("div.breakoutsession");
+                    for(var i = 0; i < sessions.length; i += 1) {
+                        var cell = Ext.get(sessions[i]).parent("td");
+                        if(!cell.hasCls("breakoutsession")) {
+                            cell.addCls("breakoutsession");
+                        }
+                    }
+                }
+            }
+       
         });
         this.callParent(arguments);
     },
@@ -118,14 +138,14 @@ Ext.define('mluc.widgets.Schedule', {
             panel.body.on('click', function(e) {
                 var element = Ext.get(e.target);
                 var container = undefined;
-                if(element.hasCls("session-summary")) {
+                if(element.hasCls("breakoutsession") && element.hasCls("session")) {
                     container = element;
                 }
-                else if(element.child("div.session-summary")) {
-                    container = Ext.get(element.child("div.session-summary"));
+                else if(element.child("div.breakoutsession")) {
+                    container = Ext.get(element.child("div.breakoutsession"));
                 }
-                else if(element.parent("div.session-summary")) {
-                    container = Ext.get(element.parent("div.session-summary"));
+                else if(element.parent("div.breakoutsession")) {
+                    container = Ext.get(element.parent("div.breakoutsession"));
                 }
 
                 if(container) {
@@ -275,6 +295,7 @@ Ext.define('mluc.widgets.Schedule', {
                 addTimeslot = true;
             }
             else {
+                className += " breakoutsession";
                 if(numColumnOutput === 0) {
                     addTimeslot = true;
                 }
@@ -316,13 +337,13 @@ Ext.define('mluc.widgets.Schedule', {
                     xtype: "container",
                     html: Ext.Date.format(sessions[i].get("startTime"), "g:ia") + " - " + Ext.Date.format(sessions[i].get("endTime"), "g:ia"),
                     height: height,
-                    cls: className + " timeslot"
+                    cls: "session timeslot"
                 });
             }
 
             var content = "<span class='title x-unselectable'>" + sessions[i].get("title") + "</span><br>" + speakers;
             if(sessions[i].get("plenary") === false) {
-                content = '<div style="height: 100%; cursor: pointer;" class="x-unselectable session-summary" id="seshsum-' + sessions[i].get("id") + '">' + content + '</div>';
+                content = '<div class="x-unselectable">' + content + '</div>';
             }
 
             if(this.myScheduleButton.pressed === true && sessions[i].get("plenary") === false) {
@@ -337,6 +358,7 @@ Ext.define('mluc.widgets.Schedule', {
 
             panel.add({
                 xtype: "container",
+                id: "seshsum-" + sessions[i].get("id"),
                 html: content,
                 height: height,
                 colspan: colspan,

@@ -57,7 +57,7 @@ Ext.onReady(function() {
             {
                 region: 'south',
                 border: false,
-                height: 37,
+                height: 40,
                 html: '<div id="footer"><ul>' +
                         '<li class="none"><a href="http://www.marklogicevents.com/?event=content.privacy">Privacy Policy</a></li>' +
                         '<li><a href="http://www.marklogicevents.com/?event=content.terms">Terms of Use </a></li>' +
