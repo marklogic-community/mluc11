@@ -164,7 +164,7 @@
                     {
                         xtype: "searchfield",
                         cls: "search-box",
-                        placeHolder: "Search speakers",
+                        placeHolder: "Filter speakers",
                         listeners: {
                             action: searchSpeakers
                         }

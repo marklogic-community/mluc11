@@ -68,7 +68,7 @@ Ext.define('mluc.widgets.Schedule', {
 
         this.searchInput = new Ext.form.Text({
             width: 300,
-            emptyText: 'Search schedule',
+            emptyText: 'Filter schedule',
         });
 
         Ext.getStore("SessionStore").addListener("load", this.renderSchedule, this);
@@ -101,7 +101,7 @@ Ext.define('mluc.widgets.Schedule', {
                     this.searchInput,
                     " ",
                     {
-                        text: "Search",
+                        text: "Filter",
                         cls: "visiblebutton",
                         scope: this,
                         handler: this.searchSchedule

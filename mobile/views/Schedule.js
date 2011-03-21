@@ -103,7 +103,7 @@
                         scroll: false,
                         xtype: "searchfield",
                         cls: "search-box",
-                        placeHolder: "Search sessions",
+                        placeHolder: "Filter sessions",
                         listeners: {
                             action: searchSchedule
                         }
