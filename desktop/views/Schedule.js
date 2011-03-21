@@ -21,6 +21,7 @@ Ext.define('mluc.widgets.Schedule', {
     alias: 'widget.schedule',
 
     initComponent: function() {
+        var me = this;
         this.detailsWindow = Ext.create('widget.detailswindow', {});
 
         this.dateSelector = new Ext.button.Cycle({
@@ -59,7 +60,7 @@ Ext.define('mluc.widgets.Schedule', {
         });
 
         this.myScheduleButton = new Ext.button.Button({
-            text: "Highlight My Schedule",
+            text: "Highlight My Favorites",
             cls: "visiblebutton",
             enableToggle: true,
             scope: this,
@@ -69,6 +70,13 @@ Ext.define('mluc.widgets.Schedule', {
         this.searchInput = new Ext.form.Text({
             width: 300,
             emptyText: 'Filter schedule',
+            listeners: {
+                specialkey: function(field, e) {
+                    if(e.getKey() == e.ENTER) {
+                        me.searchSchedule();
+                    }
+                }
+            }
         });
 
         Ext.getStore("SessionStore").addListener("load", this.renderSchedule, this);
@@ -110,14 +118,6 @@ Ext.define('mluc.widgets.Schedule', {
                 ]
             }],
             listeners: {
-                /*
-                body: {
-                    mouseover: function(element) {
-                        element = Ext.get(element);
-                        console.log(element);
-                    }
-                }
-                */
                 afterlayout: function(panel) {
                     var sessions = panel.body.query("div.breakoutsession");
                     for(var i = 0; i < sessions.length; i += 1) {
@@ -128,7 +128,6 @@ Ext.define('mluc.widgets.Schedule', {
                     }
                 }
             }
-       
         });
         this.callParent(arguments);
     },
@@ -187,12 +186,12 @@ Ext.define('mluc.widgets.Schedule', {
     },
 
     searchSchedule: function() {
-        this.setLoading(true);
         var store = Ext.getStore("SessionSearchStore");
         store.remove(store.getRange());
         var userQuery = this.searchInput.getValue();
         var query = {key: "title"};
         if(userQuery.length !== 0) {
+            this.setLoading(true);
             var words = userQuery.split(" ");
             var keywords = [];
             for(var i = 0; i < words.length; i += 1) {

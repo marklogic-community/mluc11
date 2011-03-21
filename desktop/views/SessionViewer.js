@@ -110,10 +110,10 @@ Ext.define("mluc.views.DetailsWindow", {
                                 var addLogin;
                                 if(mluc.readCookie("MLUC-SESSION")) {
                                     if(attending) {
-                                        addLogin = '<div class="session-dont-attend">No longer interested</div>';
+                                        addLogin = '<div class="session-dont-attend">Unfavorite</div>';
                                     }
                                     else {
-                                        addLogin = '<div class="session-attend">Count me in!</div>';
+                                        addLogin = '<div class="session-attend">Favorite</div>';
                                     }
                                 }
                                 else {
@@ -187,15 +187,16 @@ Ext.define("mluc.views.DetailsWindow", {
                         me.viewSession();
                     }
                 });
+
+                me.store.insert(me.store.getCount(), [mySession]);
+
+                // Shove it into the my session store too in case the uesr is currently viewing their session in the background
+                var mySessionStore = Ext.getStore("MySessionsStore");
+                mySessionStore.insert(mySessionStore.getCount(), [mySession]);
+
+                mluc.views.Schedule.renderSchedule(Ext.getStore("SessionStore"));
             }, 0);
 
-            this.store.insert(this.store.getCount(), [mySession]);
-
-            // Shove it into the my session store too in case the uesr is currently viewing their session in the background
-            var mySessionStore = Ext.getStore("MySessionsStore");
-            mySessionStore.insert(mySessionStore.getCount(), [mySession]);
-
-            mluc.views.Schedule.renderSchedule(Ext.getStore("SessionStore"));
         }
     },
 

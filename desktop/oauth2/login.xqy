@@ -78,4 +78,4 @@ return
                         :)
             else
                 (: if there's a problem just pass along the error :)
-                xdmp:set-response-code(string($accessTokenResponse[1]/xdmphttp:code), string($accessTokenResponse[1]/xdmphttp:message))
+                xdmp:set-response-code(xs:integer($accessTokenResponse[1]/xdmphttp:code), string($accessTokenResponse[1]/xdmphttp:message))

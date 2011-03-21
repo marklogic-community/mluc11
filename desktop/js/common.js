@@ -287,7 +287,7 @@ mluc.createCookie = function(name, value, days) {
     else {
         var expires = "";
     }
-    document.cookie = name + "=" + value + expires + "; path=/;";
+    document.cookie = name + "=" + value + expires + "; path=/; domain=" + document.domain + ";";
 };
 
 mluc.readCookie = function(name) {
@@ -310,7 +310,7 @@ mluc.eraseCookie = function(name) {
 };
 
 mluc.login = function() {
-    window.open("/oauth2/login.xqy", "login");
+    window.location = "/oauth2/login.xqy";
 };
 
 mluc.logout = function() {
