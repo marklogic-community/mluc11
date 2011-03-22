@@ -188,20 +188,12 @@ Ext.regStore("SessionStore", {
     getGroups: function() {
         var headers = [];
         var sessions = this.getRange();
-
-        var lastDayHeader = "";
         var sessionsAtTime = [];
         for(var i = 0; i < sessions.length; i += 1) {
-            var dayHeader = sessions[i].get("startTime").format("l, F j");
-            if(dayHeader !== lastDayHeader) {
-                headers.push({name: dayHeader, children: []});
-            }
-            lastDayHeader = dayHeader;
-
-            var timeHeader = sessions[i].get("startTime").format("g:ia") + " - " + sessions[i].get("endTime").format("g:ia");
+            var timeHeader = sessions[i].get("startTime").format("l") + ", " +  sessions[i].get("startTime").format("g:ia") + " - " + sessions[i].get("endTime").format("g:ia");
             var nextTimeHeader = undefined;
             if(sessions[i + 1]) {
-                nextTimeHeader = sessions[i + 1].get("startTime").format("g:ia") + " - " + sessions[i + 1].get("endTime").format("g:ia");
+                nextTimeHeader = sessions[i].get("startTime").format("l") + ", " + sessions[i + 1].get("startTime").format("g:ia") + " - " + sessions[i + 1].get("endTime").format("g:ia");
             }
 
             sessionsAtTime.push(sessions[i]);
@@ -322,7 +314,7 @@ mluc.createCookie = function(name, value, days) {
     else {
         var expires = "";
     }
-    document.cookie = name + "=" + value + expires + "; path=/; domain=mluc11.marklogic.com;";
+    document.cookie = name + "=" + value + expires + "; path=/; domain=m.mluc11.marklogic.com;";
 };
 
 mluc.readCookie = function(name) {

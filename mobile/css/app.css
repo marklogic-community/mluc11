@@ -222,7 +222,7 @@ div.grouped-container div.kv-layout td {
 */
 
 div.session-details div.session-abstract,
-div.session-details div.session-attendance {
+div.session-attendance {
     font-size: 11pt;
     line-height: 1.4em;
     padding: 10px;
@@ -234,12 +234,20 @@ div.session-details div.session-presenters {
     font-size: 11pt;
 }
 
-div.session-details div.session-presenters div.session-presenter {
+div.session-details div.session-presenter {
     padding: 5px 10px;
 }
 
 div.attend-login {
     margin-top: 10px;
+}
+
+div.session-attendance {
+    margin-top: 20px;
+}
+
+div.session-attendance div.person img {
+    -webkit-border-radius: 5px;
 }
 
 div.session-attend,

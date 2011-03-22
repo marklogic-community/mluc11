@@ -17,6 +17,7 @@
 */
 
 (function() {
+    var sessionDetailsPanel = undefined;
 
     var loginLogoutUser = function() {
         if(mluc.readCookie("MLUC-SESSION")) {
@@ -53,7 +54,13 @@
         });
         toolBar.doLayout();
 
-        mluc.favoritesView.setActiveItem(1, {
+        sessionDetailsPanel = new Ext.create({
+            xtype: "sessionviewer",
+            scroll: "vertical"
+        });
+        mluc.favoritesView.add(sessionDetailsPanel);
+
+        mluc.favoritesView.setActiveItem(sessionDetailsPanel, {
             type: "slide",
             direction: "left"
         });
@@ -62,7 +69,7 @@
         var mySession = scheduleList.store.getAt(index);
         var session = Ext.getStore("SessionStore").getById(mySession.get("sessionId"));
 
-        mluc.favoritesView.getComponent(1).viewSession(session);
+        sessionDetailsPanel.viewSession(session);
     };
 
     var goBack = function() {
@@ -73,6 +80,9 @@
         var button = toolBar.getComponent(0);
         toolBar.setTitle(button.text);
         toolBar.remove(0);
+
+        mluc.speakersView.remove(sessionDetailsPanel);
+        sessionDetailsPanel = undefined;
     };
 
     var updatePage = function() {
@@ -112,9 +122,6 @@
                     itemtap: viewDetails
                 }
             },
-            {
-                xtype: "sessionviewer",
-            }
         ],
         listeners: {
             beforeactivate: updatePage

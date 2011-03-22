@@ -17,6 +17,7 @@
 */
 
 (function() {
+    var sessionDetailsPanel;
     
     var toolBar = new Ext.Toolbar({
         dock: "top",
@@ -32,17 +33,21 @@
         });
         toolBar.doLayout();
 
+        sessionDetailsPanel = new Ext.create({
+            xtype: "sessionviewer",
+            scroll: "vertical"
+        });
+        mluc.favoritesView.add(sessionDetailsPanel);
 
-        mluc.scheduleView.setActiveItem(1, {
+        mluc.scheduleView.setActiveItem(sessionDetailsPanel, {
             type: "slide",
             direction: "left"
         });
 
         var session = scheduleList.store.getAt(index);
-        // scheduleList.deselect([session]);
         toolBar.setTitle("Info");
 
-        mluc.scheduleView.getComponent(1).viewSession(session);
+        sessionDetailsPanel.viewSession(session);
     };
     
     var goBack = function() {
@@ -54,9 +59,14 @@
         toolBar.setTitle(button.text);
         toolBar.remove(0);
 
+
         window.setTimeout(function() {
             var scheduleList = mluc.scheduleView.getComponent(0).getComponent(1);
             scheduleList.deselect(scheduleList.getSelectedRecords());
+            if(sessionDetailsPanel !== undefined) {
+                mluc.scheduleView.remove(sessionDetailsPanel);
+                sessionDetailsPanel = undefined;
+            }
         }, 500);
     };
 
@@ -124,9 +134,6 @@
                         }
                     }
                 ]
-            },
-            {
-                xtype: "sessionviewer",
             }
         ],
     });

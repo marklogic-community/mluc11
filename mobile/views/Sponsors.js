@@ -38,7 +38,7 @@
         });
 
         var sponsorData = sponsorList.store.getAt(index);
-        toolBar.setTitle(sponsorData.get("company"));
+        toolBar.setTitle("Info");
 
         mluc.sponsorView.getComponent(1).update(sponsorData.data);
     };

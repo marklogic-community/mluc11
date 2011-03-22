@@ -18,6 +18,7 @@
 
 (function() {
 
+    var sessionDetailsPanel = undefined;
     var prevTitleStack = [];
 
     var toolBar = new Ext.Toolbar({
@@ -62,7 +63,13 @@
     };
 
     var viewSessionDetails = function(sessionList, index, elementItem, eventObject) {
-        mluc.speakersView.setActiveItem(2, {
+        sessionDetailsPanel = new Ext.create({
+            xtype: "sessionviewer",
+            scroll: "vertical"
+        });
+        mluc.speakersView.add(sessionDetailsPanel);
+
+        mluc.speakersView.setActiveItem(sessionDetailsPanel, {
             type: "slide",
             direction: "left"
         });
@@ -75,7 +82,7 @@
         button.setText(toolBar.title);
         toolBar.setTitle("Info");
 
-        mluc.speakersView.getComponent(2).viewSession(sessionData);
+        sessionDetailsPanel.viewSession(sessionData);
     };
     
     var goBack = function() {
@@ -101,6 +108,10 @@
 
         window.setTimeout(function() {
             list.deselect(list.getSelectedRecords());
+            if(sessionDetailsPanel !== undefined) {
+                mluc.speakersView.remove(sessionDetailsPanel);
+                sessionDetailsPanel = undefined;
+            }
         }, 500);
     };
 
@@ -212,6 +223,7 @@
             },
             {
                 xtype: "sessionviewer",
+                scroll: "vertical"
             }
         ]
     });
