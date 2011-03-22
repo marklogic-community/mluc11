@@ -49,7 +49,7 @@ var sessionViewer = Ext.extend(Ext.Panel, {
                         '<div class="session-title">{title}</div>',
                         '<table><tbody>',
                             '<tr><th>Day</th><td>{startTime:date("l")}</td></tr>',
-                            '<tr><th>Time</th><td>{startTime:date("g:ia")} - {endTime:date("g:ia")}</td></tr>',
+                            '<tr><th>Time</th><td>{startTime:date("g:ia")} &ndash; {endTime:date("g:ia")}</td></tr>',
                             '<tpl if="location.length &gt; 0"><tr><th>Room</th><td>{location}</td></tr></tpl>',
                             '<tpl if="track.length &gt; 0"><tr><th>Track</th><td>{track}</td></tr></tpl>',
                         '</tbody></table>',

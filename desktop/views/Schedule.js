@@ -323,7 +323,7 @@ Ext.define('mluc.widgets.Schedule', {
                         speakers += name;
 
                         if(affiliation !== nextSpeakerAffiliation && affiliation.length > 0) {
-                            var affiliation = " - <span class='affiliation'>" + affiliation + "</span>";
+                            var affiliation = " &ndash; <span class='affiliation'>" + affiliation + "</span>";
                             speakers += affiliation;
                         }
 
@@ -337,7 +337,7 @@ Ext.define('mluc.widgets.Schedule', {
             if(addTimeslot) {
                 panel.add({
                     xtype: "container",
-                    html: Ext.Date.format(sessions[i].get("startTime"), "g:ia") + " - " + Ext.Date.format(sessions[i].get("endTime"), "g:ia"),
+                    html: Ext.Date.format(sessions[i].get("startTime"), "g:ia") + " &ndash; " + Ext.Date.format(sessions[i].get("endTime"), "g:ia"),
                     height: height,
                     cls: "session timeslot"
                 });

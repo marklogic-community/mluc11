@@ -58,7 +58,7 @@ Ext.define("mluc.views.DetailsWindow", {
                         '<div class="sessiondetail">',
                             '{id:this.renderNumAttendees}',
                             '<h2 class="title">{title}</h2>',
-                            '<span class="time">{[ Ext.Date.format(values.startTime, "g:ia") + " - " + Ext.Date.format(values.endTime, "g:ia") ]}</span>',
+                            '<span class="time">{[ Ext.Date.format(values.startTime, "g:ia") + " &ndash; " + Ext.Date.format(values.endTime, "g:ia") ]}</span>',
                             '<span class="location">&nbsp;in {location}</span>',
                             '<p class="abstract">{abstract}</h2>',
                             '<div class="speakers">{speakerIds:this.renderSpeakers}</div>',
@@ -94,7 +94,7 @@ Ext.define("mluc.views.DetailsWindow", {
                                         extendedInfo += '<p>' + speaker.bio + '</p>';
                                     }
                                     extendedInfo += '</div>';
-                                    speakers += '<div class="' + className + '"><span class="presenter-name">' + speaker.name + '</span> - <span class="presenter-affiliation">' + speaker.affiliation + '</span> <a class="detailslink">speaker details</a>' + extendedInfo + '</div>';
+                                    speakers += '<div class="' + className + '"><span class="presenter-name">' + speaker.name + '</span> &ndash; <span class="presenter-affiliation">' + speaker.affiliation + '</span> <a class="detailslink">speaker details</a>' + extendedInfo + '</div>';
                                 }
 
                                 return speakers;

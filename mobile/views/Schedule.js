@@ -70,32 +70,43 @@
         }, 500);
     };
 
+    var searchTimmer = undefined;
     var searchSchedule =  function(searchInput, eventObject) {
-        var store = Ext.getStore("SessionStore");
-        var userQuery = searchInput.getValue();
-        var query = {key: "title"};
-        if(userQuery.length !== 0) {
-            var words = userQuery.split(" ");
-            var keywords = [];
-            for(var i = 0; i < words.length; i += 1) {
-                keywords.push({
-                    "or": [
-                        {"contains": {"key": "title", "string": words[i], "weight": 3, "caseSensitive": false}},
-                        {"contains": {"key": "abstract", "string": words[i], "weight": 2, "caseSensitive": false}},
-                        {"contains": {"key": "track", "string": words[i], "weight": 1, "caseSensitive": false}},
-                        {"contains": {"key": "location", "string": words[i], "weight": 1, "caseSensitive": false}}
-                    ]
-                });
-            }
+        if(searchTimmer !== undefined) {
+            clearTimeout(searchTimmer);
+        }
+        searchTimmer = setTimeout(function() {
+            var store = Ext.getStore("SessionStore");
+            var userQuery = searchInput.getValue();
+            var query = {key: "title"};
+            if(userQuery.length !== 0) {
+                var words = userQuery.split(" ");
+                var keywords = [];
+                for(var i = 0; i < words.length; i += 1) {
+                    var wildcarded = false;
+                    if(i === words.length - 1) {
+                        wildcarded = true;
+                        words[i] += "*";
+                    }
+                    keywords.push({
+                        "or": [
+                            {"contains": {"key": "title", "string": words[i], "weight": 3, "caseSensitive": false, "wildcarded": wildcarded}},
+                            {"contains": {"key": "abstract", "string": words[i], "weight": 2, "caseSensitive": false, "wildcarded": wildcarded}},
+                            {"contains": {"key": "track", "string": words[i], "weight": 1, "caseSensitive": false, "wildcarded": wildcarded}},
+                            {"contains": {"key": "location", "string": words[i], "weight": 1, "caseSensitive": false, "wildcarded": wildcarded}}
+                        ]
+                    });
+                }
 
-            query = {
-                "fulltext": {
-                    "and": keywords
+                query = {
+                    "fulltext": {
+                        "and": keywords
+                    }
                 }
             }
-        }
-        store.proxy.extraParams = {q: Ext.util.JSON.encode(query)};
-        store.load(function() {});
+            store.proxy.extraParams = {q: Ext.util.JSON.encode(query)};
+            store.load(function() {});
+        }, 1000);
     };
 
     mluc.views.Schedule = Ext.extend(Ext.Panel, {
@@ -115,7 +126,7 @@
                         cls: "search-box",
                         placeHolder: "Filter sessions",
                         listeners: {
-                            action: searchSchedule
+                            keyup: searchSchedule
                         }
                     },
                     {

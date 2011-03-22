@@ -170,7 +170,7 @@ Ext.regStore("SessionStore", {
         }
     ],
     getGroupString: function(record) {
-        return record.get("startTime").format("g:ia") + " - " + record.get("endTime").format("g:ia");
+        return record.get("startTime").format("g:ia") + " &ndash; " + record.get("endTime").format("g:ia");
     }
 });
 
@@ -225,7 +225,7 @@ Ext.regStore("MySessionsStore", {
         var sessionStore = Ext.getStore("SessionStore");
         var session = sessionStore.getById(record.get("sessionId"));
 
-        return session.get("startTime").format("g:ia") + " - " + session.get("endTime").format("g:ia");
+        return session.get("startTime").format("g:ia") + " &ndash; " + session.get("endTime").format("g:ia");
     }
 });
 
