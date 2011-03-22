@@ -354,7 +354,7 @@ Ext.define('mluc.widgets.Schedule', {
                 }
             }
 
-            if(viaSearch === true && sessions[i].get("plenary") === false && searchResultStore.find("id", sessions[i].getId()) === -1) {
+            if(viaSearch === true && searchResultStore.find("id", sessions[i].getId()) === -1) {
                 className += " notsearchresult";
             }
 
