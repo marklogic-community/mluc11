@@ -67,40 +67,40 @@ div.header div.x-panel-body {
 /*
 News
 */
-div.tweet {
+table.tweet {
     min-height: 60px;
     border-bottom: 1px solid #d1d1d1;
-    padding: 10px;
+    /* padding: 10px; */
     background-color: white;
-    -webkit-box-orient: horizontal;
-    display: -webkit-box;
 }
 
-div.tweet:last-child {
+table.tweet:last-child {
     border-bottom: none;
 }
 
-div.tweet img {
+table.tweet img {
     width: 50px;
     height: 50px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
-div.tweet span.username a {
+table.tweet span.username a {
     font-weight: bold;
 }
-div.tweet span.date {
+table.tweet span.date {
     font-size: 10px;
 }
-div.tweet div.text {
-    position: relative;
-    -webkit-box-flex: 1;
+table.tweet td.icon {
+    vertical-align: top;
+    padding: 5px;
+}
+table.tweet td.text {
     font-size: 12px;
     min-height: 50px;
-    padding-left: 10px;
+    padding: 5px;
 }
-div.tweet a {
+table.tweet a {
     color: #436026;
     text-decoration: none;
     font-weight: normal;
