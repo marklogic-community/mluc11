@@ -76,7 +76,7 @@ Ext.define('mluc.widgets.Twitter', {
                 {name: "profile_image_url", type: "string"},
                 {name: "created_at", type: "string"},
                 {name: "created_at_date", convert: function(value, record) { return Ext.Date.parseDate(record.get("created_at"), "D, d M Y G:i:s O"); }},
-                {name: "date_formatted", convert: function(value, record) { return Ext.Date.format(record.get("created_at_date"), "D M j, g:ia"); }},
+                {name: "date_formatted", convert: function(value, record) { return mluc.friendlyDateSince(record.get("created_at_date")); }},
             ],
         });
 
