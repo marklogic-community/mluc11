@@ -62,9 +62,6 @@ Ext.define("mluc.views.DetailsWindow", {
                             '<span class="location">&nbsp;in {location}</span>',
                             '<p class="abstract">{abstract}</h2>',
                             '<div class="speakers">{speakerIds:this.renderSpeakers}</div>',
-                            '<div class="attendance">',
-                                '{id:this.renderAttendies}',
-                            '</div>',
                         '</div>',
                         {
                             renderNumAttendees: function() {
@@ -98,7 +95,17 @@ Ext.define("mluc.views.DetailsWindow", {
                                 }
 
                                 return speakers;
-                            },
+                            }
+                        }
+                    )
+                },
+                {
+                    xtype: "container",
+                    tpl: new Ext.XTemplate(
+                        '<div class="attendance">',
+                            '{id:this.renderAttendies}',
+                        '</div>',
+                        {
                             renderAttendies: function() {
                                 var username = mluc.readCookie("MLUC-USERNAME");
                                 var attending = false;
@@ -110,14 +117,24 @@ Ext.define("mluc.views.DetailsWindow", {
                                 var addLogin;
                                 if(mluc.readCookie("MLUC-SESSION")) {
                                     if(attending) {
-                                        addLogin = '<div class="session-dont-attend">Unfavorite</div>';
+                                        addLogin = "<table><tbody><tr>";
+                                        addLogin += "<td class='icon'><img src='http://graph.facebook.com/" + username.substring(username.indexOf("_") + 1) + "/picture'/></td>";
+                                        addLogin += "<td><span class='header'>This session is in your favorites.</span><div class='inputs'><div class='session-dont-attend x-btn x-btn-default x-btn-default-small x-btn-small x-btn-default-small-noicon x-abs-layout-item x-btn-default-small-over'><em><button>Remove from favorites</button></em></div></div></div></td>";
+                                        addLogin += "</tr></tbody></table>";
                                     }
                                     else {
-                                        addLogin = '<div class="session-attend">Favorite</div>';
+                                        addLogin = "<table><tbody><tr>";
+                                        addLogin += "<td class='icon'><img src='http://graph.facebook.com/" + username.substring(username.indexOf("_") + 1) + "/picture'/></td>";
+                                        addLogin += "<td><span class='header'>Look like an interesting session?</span> Optionally tell everyone why:<div class='inputs'><input type='text' class='favorite-reason'/><div class='session-attend x-btn x-btn-default x-btn-default-small x-btn-small x-btn-default-small-noicon x-abs-layout-item x-btn-default-small-over'><em><button>Add to favorites</button></em></div></div></td>";
+                                        addLogin += "</tr></tbody></table>";
                                     }
                                 }
                                 else {
                                     addLogin = '<div class="session-login">Click to login via Facebook so you can mark yourself as attending this session.</div>';
+                                    addLogin = "<table><tbody><tr>";
+                                    addLogin += "<td class='icon'><img src='/images/unknown.gif'/></td>";
+                                    addLogin += "<td><span class='header'>Look like an interesting session?</span><div class='inputs'><div class='session-login x-btn x-btn-default x-btn-default-small x-btn-small x-btn-default-small-noicon x-abs-layout-item x-btn-default-small-over'><em><button>Login to add to favorites</button></em></div></div></td>";
+                                    addLogin += "</tr></tbody></table>";
                                 }
 
                                 return '<div class="attend-login">' + addLogin + '</div><h3>Attendees</h3>';
@@ -130,10 +147,13 @@ Ext.define("mluc.views.DetailsWindow", {
                     cls: "attendance-list",
                     tpl: new Ext.XTemplate(
                         '<tpl for=".">',
-                            '<div class="person"><a href="http://www.facebook.com/profile.php?id={[ this.getIdFromUsername(values.get("username")) ]}" target="_blank">',
-                                '<img src="http://graph.facebook.com/{[ this.getIdFromUsername(values.get("username")) ]}/picture"/>',
-                                '<span class="realname">{[ values.get("realname") ]}</span>',
-                            '</a></div>',
+                            '<table class="person"><tbody><tr>',
+                                '<td><a href="http://www.facebook.com/profile.php?id={[ this.getIdFromUsername(values.get("username")) ]}" target="_blank"><img src="http://graph.facebook.com/{[ this.getIdFromUsername(values.get("username")) ]}/picture"/></a></td>',
+                                '<td>',
+                                    '<a href="http://www.facebook.com/profile.php?id={[ this.getIdFromUsername(values.get("username")) ]}" target="_blank">{[ values.get("realname") ]}</a>',
+                                    '<p class="reason">{[ values.get("reason") ]}</p>',
+                                '</td>',
+                            '</tr></tbody></table>',
                         '</tpl>',
                         {
                             getIdFromUsername: function(username) {
@@ -152,13 +172,15 @@ Ext.define("mluc.views.DetailsWindow", {
         render: function(panel) {
             panel.body.on('click', function(e) {
                 var element = Ext.get(e.target);
-                if(element.hasCls("session-dont-attend")) {
+                if(element.hasCls("session-dont-attend") || element.parent("div.session-dont-attend")) {
                     panel.unattend();
                 }
-                else if(element.hasCls("session-attend")) {
-                    panel.attend();
+                else if(element.hasCls("session-attend") || element.parent("div.session-attend")) {
+                    var inputs = element.parent("div.inputs");
+                    var reason = inputs.child("input.favorite-reason");
+                    panel.attend(reason.dom.value);
                 }
-                else if(element.hasCls("session-login")) {
+                else if(element.hasCls("session-login") || element.parent("div.session-login")) {
                     mluc.login();
                 }
                 else if(element.hasCls("detailslink")) {
@@ -171,7 +193,7 @@ Ext.define("mluc.views.DetailsWindow", {
         }
     },
 
-    attend: function() {
+    attend: function(reason) {
         var me = this;
         var id = Math.ceil(Math.random() * 100000000000000000);
         var username = mluc.readCookie("MLUC-USERNAME");
@@ -180,7 +202,7 @@ Ext.define("mluc.views.DetailsWindow", {
             this.setLoading(true);
             var mySession;
             window.setTimeout(function() {
-                mySession = Ext.ModelMgr.create({id: id, sessionId: me.session.getId(), username: username, realname: realname, dateAdded: new Date()}, 'Attendee');
+                mySession = Ext.ModelMgr.create({id: id, sessionId: me.session.getId(), username: username, realname: realname, reason: reason, dateAdded: new Date()}, 'Attendee');
                 mySession.save({
                     success: function() {
                         me.setLoading(false);
@@ -250,7 +272,8 @@ Ext.define("mluc.views.DetailsWindow", {
         this.store.load(function(records) {
             me.setLoading(false);
             me.getComponent(0).update(me.session.data);
-            me.getComponent(1).update(me.store.getRange());
+            me.getComponent(1).update(me.session.data);
+            me.getComponent(2).update(me.store.getRange());
         });
     },
 

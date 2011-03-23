@@ -88,6 +88,7 @@ Ext.regModel("Attendee", {
         {name: "sessionId", type: "string"},
         {name: "username", type: "string"},
         {name: "realname", type: "string"},
+        {name: "reason", type: "string"},
         {name: "dateAdded", type: "date", dateFormat: "c"},
         // Pull in the session info
         {name: "title", convert: function(value, record) { var sesh = Ext.getStore("SessionStore").getById(record.get("sessionId")); return sesh ? sesh.get("title") : undefined; }},
@@ -314,7 +315,7 @@ mluc.createCookie = function(name, value, days) {
     else {
         var expires = "";
     }
-    document.cookie = name + "=" + value + expires + "; path=/; domain=m.mluc11.marklogic.com;";
+    document.cookie = name + "=" + value + expires + "; path=/; domain=mluc11.marklogic.com;";
 };
 
 mluc.readCookie = function(name) {

@@ -99,14 +99,23 @@ var sessionViewer = Ext.extend(Ext.Panel, {
                             var addLogin;
                             if(mluc.readCookie("MLUC-SESSION")) {
                                 if(attending) {
-                                    addLogin = '<div class="attend-login session-dont-attend">Unfavorite</div>';
+                                    addLogin = "<table><tbody><tr>";
+                                    addLogin += "<td class='icon'><img src='http://graph.facebook.com/" + username.substring(username.indexOf("_") + 1) + "/picture'/></td>";
+                                    addLogin += "<td><span class='header'>This session is in your favorites.</span><div class='inputs'><span class='session-dont-attend x-button x-button-normal'><span class='x-button-label'>Remove from favorites</span></span></div></div></td>";
+                                    addLogin += "</tr></tbody></table>";
                                 }
                                 else {
-                                    addLogin = '<div class="attend-login session-attend">Favorite</div>';
+                                    addLogin = "<table><tbody><tr>";
+                                    addLogin += "<td class='icon'><img src='http://graph.facebook.com/" + username.substring(username.indexOf("_") + 1) + "/picture'/></td>";
+                                    addLogin += "<td><span class='header'>Look like an interesting session?</span> Optionally tell everyone why:<div class='inputs'><input type='text' class='favorite-reason'/><span class='session-attend x-button x-button-normal'><span class='x-button-label'>Add to favorites</span></span></div></td>";
+                                    addLogin += "</tr></tbody></table>";
                                 }
                             }
                             else {
-                                addLogin = '<div class="attend-login session-login">Click to login via Facebook so you can mark yourself as attending this session.</div>';
+                                addLogin = "<table><tbody><tr>";
+                                addLogin += "<td class='icon'><img src='/images/unknown.gif'/></td>";
+                                addLogin += "<td><span class='header'>Look like an interesting session?</span><div class='inputs'><span class='session-login x-button x-button-normal'><em><span class='x-button-label'>Login to add to favorites</span></span></div></td>";
+                                addLogin += "</tr></tbody></table>";
                             }
 
                             var publicAttendance = '<h2 class="group-name">Attendance</h2>';
@@ -116,7 +125,13 @@ var sessionViewer = Ext.extend(Ext.Panel, {
                             for(var i = 0; i < attendees.length; i += 1) {
                                 var username = attendees[i].get("username");
                                 var fbId = username.substring(username.indexOf("_") + 1);
-                                publicAttendance += '<div class="person"><img src="http://graph.facebook.com/' + fbId + '/picture"/><span class="realname">' + attendees[i].get("realname") + '</span></div>';
+                                publicAttendance += '<table class="person"><tbody><tr>' + 
+                                    '<td><a href="http://www.facebook.com/profile.php?id=' + fbId + '" target="_blank"><img src="http://graph.facebook.com/' + fbId + '/picture"/></a></td>' + 
+                                    '<td>' + 
+                                        '<a href="http://www.facebook.com/profile.php?id=' + fbId + '" target="_blank">' + attendees[i].get("realname") + '</a>' + 
+                                        '<p class="reason">' + attendees[i].get("reason") + '</p>' + 
+                                    '</td>' + 
+                                '</tr></tbody></table>';
                             }
                             publicAttendance += '</div>';
 
@@ -124,7 +139,7 @@ var sessionViewer = Ext.extend(Ext.Panel, {
                                 publicAttendance = "";
                             }
 
-                            return addLogin + publicAttendance;
+                            return "<div class='attend-login'>" + addLogin + "</div>" + publicAttendance;
                         }
                     }
                 )
@@ -137,13 +152,15 @@ var sessionViewer = Ext.extend(Ext.Panel, {
         render: function(panel) {
             panel.body.on('click', function(e) {
                 var element = Ext.get(e.target);
-                if(element.hasCls("session-dont-attend")) {
+                if(element.hasCls("session-dont-attend") || element.parent(".session-dont-attend")) {
                     panel.unattend();
                 }
-                else if(element.hasCls("session-attend")) {
-                    panel.attend();
+                else if(element.hasCls("session-attend") || element.parent(".session-attend")) {
+                    var inputs = element.parent("div.inputs");
+                    var reason = inputs.child("input.favorite-reason");
+                    panel.attend(reason.dom.value);
                 }
-                else if(element.hasCls("session-login")) {
+                else if(element.hasCls("session-login") || element.parent(".session-login")) {
                     mluc.login();
                 }
             });
@@ -172,13 +189,13 @@ var sessionViewer = Ext.extend(Ext.Panel, {
         this.getComponent(1).update(this.session.data);
     },
 
-    attend: function() {
+    attend: function(reason) {
         var me = this;
         var id = Math.ceil(Math.random() * 100000000000000000);
         var username = mluc.readCookie("MLUC-USERNAME");
         var realname = mluc.readCookie("MLUC-NAME").replace("+", " ");
         if(username) {
-            var mySession = Ext.ModelMgr.create({id: id, sessionId: this.session.getId(), username: username, realname: realname, ddateAdded: new Date()}, 'Attendee');
+            var mySession = Ext.ModelMgr.create({id: id, sessionId: this.session.getId(), username: username, realname: realname, reason: reason, ddateAdded: new Date()}, 'Attendee');
             this.store.insert(this.store.getCount(), [mySession]);
             mySession.save({
                 success: function() {

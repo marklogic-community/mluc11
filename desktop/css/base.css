@@ -195,49 +195,52 @@ div.attendance h3 {
 }
 
 div.attend-login {
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
 }
 
-div.attend-login div.session-attend,
-div.attend-login div.session-dont-attend,
-div.attend-login div.session-login {
-    text-align: center;
-    background-color: #556D00;
-    color: white;
+div.attend-login span.header {
+    font-size: 13px;
     font-weight: bold;
-    padding: 3px;
-    border: 1px solid #ABA7A6;
-    margin-left: auto;
-    margin-right: auto;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-div.attend-login div.session-dont-attend {
-    background-color: rgb(217,34,49);
 }
 
-div.attend-login div.session-login {
+div.attend-login td {
+    vertical-align: top;
 }
-
-div.attend-login div.session-attend,
-div.attend-login div.session-dont-attend {
-    width: 150px;
+div.attend-login td.icon {
+    padding-right: 5px;
 }
-
-div.attendance-list div.person {
-    padding-top: 5px;
-}
-
-div.attendance-list div.person img {
+div.attend-login img {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
+div.attend-login div.inputs {
+    margin-top: 5px;
+}
+div.attend-login input {
+    width: 300px;
+    padding: 3px;
+    margin-right: 5px;
+    border: 1px solid #d1d1d1;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
 
-div.attendance-list div.person span.realname {
-    padding-left: 5px;
+div.attendance-list table.person {
+    padding-top: 5px;
+}
+
+div.attendance-list table.person td {
+    vertical-align: top;
+    padding: 5px 5px 5px 0px;
+}
+
+div.attendance-list table.person img {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
 div.session-presenter {
