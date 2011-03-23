@@ -120,6 +120,11 @@ h3.x-list-header {
     -webkit-mask-image:url(/images/icon-favorites.png)
 }
 
+.x-list-item {
+    background-image:url('/images/chevron.png');
+    background-repeat:no-repeat;
+    background-position:right center;
+}
 
 
 
