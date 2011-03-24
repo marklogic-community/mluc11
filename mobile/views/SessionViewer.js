@@ -84,75 +84,92 @@ var sessionViewer = Ext.extend(Ext.Panel, {
             },
             {
                 xtype: "panel",
-                cls: "session-attendance grouped-container",
+                cls: "attend-login grouped-container",
                 tpl: new Ext.XTemplate(
-                    '{[this.renderAttendies(values.id)]}',
+                    '<tpl if="this.isLoggedIn() == true">',
+                        '<tpl if="this.isAttending() == true"><table class="attending"></tpl>',
+                        '<tpl if="this.isAttending() == false"><table class="attending" style="display: none"></tpl>',
+                        '<tbody><tr>',
+                            '<td class="icon"><img src="http://graph.facebook.com/{[ this.getFBIdFromUsername() ]}/picture"/></td>',
+                            '<td>',
+                                '<span class="header">This session is in your favorites.</span>',
+                                '<div class="inputs"><span class="session-dont-attend x-button x-button-normal"><span class="x-button-label">Remove from favorites</span></span></div></div>',
+                            '</td>',
+                        '</tr></tbody></table>',
+
+                        '<tpl if="this.isAttending() == false"><table class="notattending"></tpl>',
+                        '<tpl if="this.isAttending() == true"><table class="notattending" style="display: none"></tpl>',
+                        '<tbody><tr>',
+                            '<td class="icon"><img src="http://graph.facebook.com/{[ this.getFBIdFromUsername() ]}/picture"/></td>',
+                            '<td>',
+                                '<span class="header">Look like an interesting session?</span> Optionally tell everyone why:',
+                                '<div class="inputs"><input type="text" class="favorite-reason"/><span class="session-attend x-button x-button-normal"><span class="x-button-label">Add to favorites</span></span></div>',
+                            '</td>',
+                        '</tr></tbody></table>',
+                    '</tpl>',
+                    '<tpl if="this.isLoggedIn() == false">',
+                        '<table><tbody><tr>',
+                        '<td class="icon"><img src="/images/unknown.gif"/></td>',
+                        '<td><span class="header">Look like an interesting session?</span><div class="inputs"><span class="session-login x-button x-button-normal"><em><span class="x-button-label">Login to add to favorites</span></span></div></td>',
+                        '</tr></tbody></table>',
+                    '</tpl>',
                     {
-                        renderAttendies: function(sessionId) {
+                        isLoggedIn: function() {
+                            if(mluc.readCookie("MLUC-USERNAME") && mluc.readCookie("MLUC-SESSION")) {
+                                return true;
+                            }
+                            return false;
+                        },
+                        isAttending: function() {
                             var username = mluc.readCookie("MLUC-USERNAME");
                             var attending = false;
-
                             if(me.store.find("username", username) >= 0) {
                                 attending = true;
                             }
-
-                            var addLogin;
-                            if(mluc.readCookie("MLUC-SESSION")) {
-                                if(attending) {
-                                    addLogin = "<table><tbody><tr>";
-                                    addLogin += "<td class='icon'><img src='http://graph.facebook.com/" + username.substring(username.indexOf("_") + 1) + "/picture'/></td>";
-                                    addLogin += "<td><span class='header'>This session is in your favorites.</span><div class='inputs'><span class='session-dont-attend x-button x-button-normal'><span class='x-button-label'>Remove from favorites</span></span></div></div></td>";
-                                    addLogin += "</tr></tbody></table>";
-                                }
-                                else {
-                                    addLogin = "<table><tbody><tr>";
-                                    addLogin += "<td class='icon'><img src='http://graph.facebook.com/" + username.substring(username.indexOf("_") + 1) + "/picture'/></td>";
-                                    addLogin += "<td><span class='header'>Look like an interesting session?</span> Optionally tell everyone why:<div class='inputs'><input type='text' class='favorite-reason'/><span class='session-attend x-button x-button-normal'><span class='x-button-label'>Add to favorites</span></span></div></td>";
-                                    addLogin += "</tr></tbody></table>";
-                                }
-                            }
-                            else {
-                                addLogin = "<table><tbody><tr>";
-                                addLogin += "<td class='icon'><img src='/images/unknown.gif'/></td>";
-                                addLogin += "<td><span class='header'>Look like an interesting session?</span><div class='inputs'><span class='session-login x-button x-button-normal'><em><span class='x-button-label'>Login to add to favorites</span></span></div></td>";
-                                addLogin += "</tr></tbody></table>";
-                            }
-
-                            var publicAttendance = '<h2 class="group-name">Attendance</h2>';
-                            publicAttendance += '<div class="attendance-list section">';
-
-                            var attendees = me.store.getRange();
-                            var shortListNum = 10;
-                            var hasHidden = false;
-                            for(var i = 0; i < attendees.length; i += 1) {
-                                var username = attendees[i].get("username");
-                                var fbId = username.substring(username.indexOf("_") + 1);
-                                publicAttendance += '<table class="person"><tbody><tr>' + 
-                                    '<td><a href="http://www.facebook.com/profile.php?id=' + fbId + '" target="_blank"><img src="http://graph.facebook.com/' + fbId + '/picture"/></a></td>' + 
-                                    '<td>' + 
-                                        '<a href="http://www.facebook.com/profile.php?id=' + fbId + '" target="_blank">' + attendees[i].get("realname") + '</a>' + 
-                                        '<p class="reason">' + attendees[i].get("reason") + '</p>' + 
-                                    '</td>' + 
-                                '</tr></tbody></table>';
-                                if(i === shortListNum - 1 && attendees.length > shortListNum) {
-                                    publicAttendance += "<div class='showall'><span class='showall-button x-button x-button-normal'><em><span class='x-button-label'>See all " + attendees.length + " attendees</em></span></div>";
-                                    publicAttendance += "<div class='fulllist'>";
-                                    hasHidden = true;
-                                }
-                            }
-                            if(hasHidden) {
-                                publicAttendance += '</div>';
-                            }
-                            publicAttendance += '</div>';
-
-                            if(attendees.length === 0) {
-                                publicAttendance = "";
-                            }
-
-                            return "<div class='attend-login'>" + addLogin + "</div>" + publicAttendance;
+                            return attending;
+                        },
+                        getFBIdFromUsername: function() {
+                            var username = mluc.readCookie("MLUC-USERNAME");
+                            return username.substring(username.indexOf("_") + 1);
                         }
                     }
                 )
+            },
+            {
+                xtype: "dataview",
+                store: this.store,
+                scroll: false,
+                tpl: new Ext.XTemplate(
+                    '<div class="grouped-container"><h2 class="group-name">Attendance</h2>',
+                    '<div class="attendance-list section"><tpl for=".">',
+                        '<table class="person"><tbody><tr>',
+                            '<td><a href="http://www.facebook.com/profile.php?id={[ this.getFBIdFromUsername(values.username) ]}" target="_blank">',
+                                '<img src="http://graph.facebook.com/{[ this.getFBIdFromUsername(values.username) ]}/picture"/>',
+                            '</a></td>',
+                            '<td>',
+                                '<a href="http://www.facebook.com/profile.php?id={[ this.getFBIdFromUsername(values.username) ]}" target="_blank">{realname}</a>',
+                                '<p class="reason">{reason}</p>',
+                            '</td>',
+                        '</tr></tbody></table>',
+                        '<tpl if="xindex == 1 && xcount &gt; 1">',
+                            '<div class="showall"><span class="showall-button x-button x-button-normal"><em><span class="x-button-label">See all {[xcount]} attendees</em></span></div>',
+                            '<div class="fulllist">',
+                        '</tpl>',
+                        '<tpl if="xindex == xcount && xcount &gt; 1">',
+                            '</div>',
+                        '</tpl>',
+                    '</tpl></div></div>',
+                    {
+                        getFBIdFromUsername: function(username) {
+                            return username.substring(username.indexOf("_") + 1);
+                        }
+                    }
+                ),
+                autoHeight:true,
+                multiSelect: false,
+                overItmClass:'x-view-over',
+                itemSelector:'table.person',
+                emptyText: ''
             }
         ];
 
@@ -201,10 +218,6 @@ var sessionViewer = Ext.extend(Ext.Panel, {
         }
     },
 
-    updateAttendance: function() {
-        this.getComponent(1).update(this.session.data);
-    },
-
     attend: function(reason) {
         var me = this;
         var id = Math.ceil(Math.random() * 100000000000000000);
@@ -212,10 +225,13 @@ var sessionViewer = Ext.extend(Ext.Panel, {
         var realname = mluc.readCookie("MLUC-NAME").replace("+", " ");
         if(username) {
             var mySession = Ext.ModelMgr.create({id: id, sessionId: this.session.getId(), username: username, realname: realname, reason: reason, dateAdded: new Date()}, 'Attendee');
-            this.store.insert(this.store.getCount(), [mySession]);
+            this.store.insert(0, [mySession]);
+            me.setLoading(true);
             mySession.save({
                 success: function() {
-                    me.updateAttendance();
+                    me.setLoading(false);
+                    Ext.DomQuery.selectNode("table.attending").style.display = "block";
+                    Ext.DomQuery.selectNode("table.notattending").style.display = "none";
                 }
             });
         }
@@ -239,10 +255,13 @@ var sessionViewer = Ext.extend(Ext.Panel, {
         
             var callback = function(operation) {
                 if(operation.wasSuccessful()) {
-                    me.updateAttendance();
+                    me.setLoading(false);
+                    Ext.DomQuery.selectNode("table.attending").style.display = "none";
+                    Ext.DomQuery.selectNode("table.notattending").style.display = "block";
                 }
             };
         
+            me.setLoading(true);
             record.getProxy().destroy(operation, callback, record);
         }
     }
