@@ -211,7 +211,7 @@ var sessionViewer = Ext.extend(Ext.Panel, {
         var username = mluc.readCookie("MLUC-USERNAME");
         var realname = mluc.readCookie("MLUC-NAME").replace("+", " ");
         if(username) {
-            var mySession = Ext.ModelMgr.create({id: id, sessionId: this.session.getId(), username: username, realname: realname, reason: reason, ddateAdded: new Date()}, 'Attendee');
+            var mySession = Ext.ModelMgr.create({id: id, sessionId: this.session.getId(), username: username, realname: realname, reason: reason, dateAdded: new Date()}, 'Attendee');
             this.store.insert(this.store.getCount(), [mySession]);
             mySession.save({
                 success: function() {
