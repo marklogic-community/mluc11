@@ -122,6 +122,8 @@ var sessionViewer = Ext.extend(Ext.Panel, {
                             publicAttendance += '<div class="attendance-list section">';
 
                             var attendees = me.store.getRange();
+                            var shortListNum = 10;
+                            var hasHidden = false;
                             for(var i = 0; i < attendees.length; i += 1) {
                                 var username = attendees[i].get("username");
                                 var fbId = username.substring(username.indexOf("_") + 1);
@@ -132,6 +134,14 @@ var sessionViewer = Ext.extend(Ext.Panel, {
                                         '<p class="reason">' + attendees[i].get("reason") + '</p>' + 
                                     '</td>' + 
                                 '</tr></tbody></table>';
+                                if(i === shortListNum - 1 && attendees.length > shortListNum) {
+                                    publicAttendance += "<div class='showall'><span class='showall-button x-button x-button-normal'><em><span class='x-button-label'>See all " + attendees.length + " attendees</em></span></div>";
+                                    publicAttendance += "<div class='fulllist'>";
+                                    hasHidden = true;
+                                }
+                            }
+                            if(hasHidden) {
+                                publicAttendance += '</div>';
                             }
                             publicAttendance += '</div>';
 
@@ -162,6 +172,12 @@ var sessionViewer = Ext.extend(Ext.Panel, {
                 }
                 else if(element.hasCls("session-login") || element.parent(".session-login")) {
                     mluc.login();
+                }
+                else if(element.hasCls("showall-button") || element.parent(".showall-button")) {
+                    var showallContainer = Ext.get(element.parent("div.showall"));
+                    showallContainer.setVisible(Element.DISPLAY);
+                    showallContainer.hide(true);
+                    showallContainer.next("div.fulllist").dom.style.display = "block";
                 }
             });
         }

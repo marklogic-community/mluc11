@@ -256,13 +256,19 @@ div.attend-login span.header {
     font-weight: bold;
 }
 
+div.showall span.showall-button,
 div.attend-login span.session-login,
 div.attend-login span.session-attend,
 div.attend-login span.session-dont-attend {
     display: inline
 }
+div.showall .x-button-label,
 div.attend-login .x-button-label {
     display: inline;
+}
+
+div.fulllist {
+    display: none;
 }
 
 div.attend-login td {
@@ -315,6 +321,11 @@ div.attendance-list table.person a {
 
 div.attendance-list table.person img {
     -webkit-border-radius: 5px;
+}
+
+div.attendance-list div.showall {
+    text-align: center;
+    line-height: 30px;
 }
 
 
