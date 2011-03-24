@@ -58,6 +58,7 @@ Ext.regModel("Session", {
         {name: "speakerIds", mapping: "speakers"},
         {name: "startTime", type: "date", dateFormat: "c"},
         {name: "endTime", type: "date", dateFormat: "c"},
+        {name: "sessionDate", convert: function(value, record) { return record.get("startTime");}},
         {name: "location", type: "string"},
         {name: "track", type: "string"},
         {name: "type", type: "string"},
