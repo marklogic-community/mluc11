@@ -276,11 +276,19 @@ div.attend-login img {
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
+div.attend-login table {
+    width: 100%;
+}
+div.attend-login td.icon {
+    width: 55px;
+}
 div.attend-login div.inputs {
     margin-top: 5px;
+    line-height: 30px;
 }
 div.attend-login input {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     padding: 3px;
     margin-right: 5px;
     border: 1px solid #d1d1d1;
