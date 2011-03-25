@@ -145,7 +145,6 @@
                             render: function(sessionList) {
                                 window.setTimeout(function() {
                                     var featured = sessionList.el.query("span.featured");
-                                    alert(featured.length);
                                     for(var i = 0; i < featured.length; i += 1) {
                                         var cell = Ext.get(featured[i]).parent("div.x-list-item");
                                         if(!cell.hasCls("featured")) {

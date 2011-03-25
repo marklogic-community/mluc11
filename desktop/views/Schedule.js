@@ -170,6 +170,7 @@ Ext.define('mluc.widgets.Schedule', {
     },
 
     changeScheduleDate: function(button, dateItem) {
+        this.searchInput.setValue("");
         this.renderSchedule(Ext.getStore("SessionStore"));
     },
 
@@ -234,7 +235,7 @@ Ext.define('mluc.widgets.Schedule', {
 
     renderSchedule: function(sessionStore, records, successful, viaSearch) {
         if(viaSearch === true) {
-            this.dateSelector.setActiveItem(0);
+            this.dateSelector.setActiveItem(0, true);
             if(this.myScheduleButton.pressed) {
                 this.myScheduleButton.toggle();
             }

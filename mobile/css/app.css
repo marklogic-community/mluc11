@@ -451,3 +451,10 @@ span.sponsor-tagline {
 div.sponsor-details div.sponsor-image {
     text-align: center;
 }
+
+div.sponsor-details th.about {
+    vertical-align: top;
+}
+div.sponsor-details td.about {
+    font-weight: normal !important;
+}
