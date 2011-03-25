@@ -55,6 +55,7 @@ Ext.regModel("Session", {
         {name: "id", type: "string"},
         {name: "title", type: "string"},
         {name: "plenary", type: "boolean"},
+        {name: "featured", type: "boolean", defaultValue: false},
         {name: "speakerIds", mapping: "speakers"},
         {name: "startTime", type: "date", dateFormat: "c"},
         {name: "endTime", type: "date", dateFormat: "c"},

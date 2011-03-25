@@ -253,6 +253,11 @@ div.attend-login span.header {
     font-weight: bold;
 }
 
+div.x-list-item.featured {
+    border-top: 1px solid rgb(95,116,37);
+    border-bottom: 1px solid rgb(95,116,37);
+}
+
 div.showall span.showall-button,
 div.attend-login span.session-login,
 div.attend-login span.session-attend,

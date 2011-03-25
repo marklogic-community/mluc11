@@ -23,6 +23,7 @@ import module namespace json="http://marklogic.com/json" at "lib/json.xqy";
 
 let $requestMethod := xdmp:get-request-method()
 let $query := string(xdmp:get-request-field("q", "{}")[1])
+let $rawOutut := exists(xdmp:get-request-field("raw")[1])
 let $query :=
     if(string-length(normalize-space($query)) = 0)
     then "{}"
@@ -31,7 +32,13 @@ let $query :=
 return
     if($requestMethod = ("GET", "POST"))
     then
-        let $docs := jsonquery:execute($query)
-        let $jsonDocs := for $doc in $docs return json:xmlToJSON($doc)
-        return concat("{""count"":", count($jsonDocs) , ", ""results"":[", string-join($jsonDocs, ","), "]}")
+        if($rawOutut)
+        then <response>{
+                let $docs := jsonquery:execute($query)
+                return (<count>{ count($docs) }</count>, <results>{ $docs }</results>)
+            }</response>
+        else
+            let $docs := jsonquery:execute($query)
+            let $jsonDocs := for $doc in $docs return json:xmlToJSON($doc)
+            return concat("{""count"":", count($jsonDocs) , ", ""results"":[", string-join($jsonDocs, ","), "]}")
     else ()

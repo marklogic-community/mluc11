@@ -126,6 +126,14 @@ Ext.define('mluc.widgets.Schedule', {
                             cell.addCls("breakoutsession");
                         }
                     }
+
+                    var featured = panel.body.query("div.featured");
+                    for(var i = 0; i < featured.length; i += 1) {
+                        var cell = Ext.get(featured[i]).parent("td");
+                        if(!cell.hasCls("featured")) {
+                            cell.addCls("featured");
+                        }
+                    }
                 }
             }
         });
@@ -288,6 +296,10 @@ Ext.define('mluc.widgets.Schedule', {
             var height = undefined;
             var addTimeslot = false;
             var speakers = "";
+
+            if(sessions[i].get("featured")) {
+                className += " featured";
+            }
 
             if(sessions[i].get("plenary")) {
                 colspan = 5;
