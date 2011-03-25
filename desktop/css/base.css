@@ -16,6 +16,39 @@
     limitations under the License.
 */
 
+.x-panel-header-top,
+.x-panel-header-vertical,
+.x-window,
+.x-toolbar {
+    background-color: #ccc;
+    border-color: #999;
+    background-image: none;
+}
+.x-window-header-top {
+    background-color: #ccc;
+}
+.x-panel-header-text,
+.x-window-header-text {
+    color: black;
+    font-height: 13pt;
+}
+.x-panel-header-horizontal {
+    height: 27px;
+}
+.x-window-body {
+    border-color: #999;
+}
+
+.visiblebutton {
+    border-color: #999;
+    background-color: #efefef;
+}
+.x-btn-toolbar-small-over {
+    background-color: #d1d1d1;
+    background-image: none;
+}
+
+
 .x-border-layout-ct {
     background-color: white;
 }
@@ -57,11 +90,6 @@ div.header div.x-panel-body {
 
 #footer {
     width: 100%;
-}
-
-.visiblebutton {
-    border-color: #81a4d0;
-    background-color: #dbeeff;
 }
 
 /*
