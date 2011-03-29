@@ -28,7 +28,6 @@ Ext.onReady(function() {
             viewing = Ext.JSON.decode(viewing);
             if(viewing.session) {
                 var session = Ext.getStore("SessionStore").getById(viewing.session);
-                console.log(session);
                 if(session) {
                     mluc.views.Schedule.detailsWindow.viewSession(session);
                 }
