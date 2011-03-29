@@ -188,6 +188,7 @@ var sessionViewer = Ext.extend(Ext.Panel, {
                     panel.attend(reason.dom.value);
                 }
                 else if(element.hasCls("session-login") || element.parent(".session-login")) {
+                    mluc.createCookie("MLUC-VIEWING", Ext.util.JSON.encode({session: panel.session.get("id")}), 1);
                     mluc.login();
                 }
                 else if(element.hasCls("showall-button") || element.parent(".showall-button")) {

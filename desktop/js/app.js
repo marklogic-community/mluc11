@@ -21,6 +21,21 @@ Ext.onReady(function() {
         window.location = "http://www.bringdownie6.com/";
     }
 
+    Ext.getStore("SessionStore").on("load", function() {
+        var viewing = mluc.readCookie("MLUC-VIEWING");
+        if(viewing) {
+            mluc.eraseCookie("MLUC-VIEWING");
+            viewing = Ext.JSON.decode(viewing);
+            if(viewing.session) {
+                var session = Ext.getStore("SessionStore").getById(viewing.session);
+                console.log(session);
+                if(session) {
+                    mluc.views.Schedule.detailsWindow.viewSession(session);
+                }
+            }
+        }
+    });
+
     mluc.views.Schedule = Ext.create('mluc.widgets.Schedule', {});
     mluc.views.Twitter = Ext.create('mluc.widgets.Twitter', {});
 

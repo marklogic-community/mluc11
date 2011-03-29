@@ -488,6 +488,21 @@ mluc.friendlyDateSince = function(time) {
     return since;
 }
 
+Ext.getStore("SessionStore").on("load", function() {
+    var viewing = mluc.readCookie("MLUC-VIEWING");
+    if(viewing) {
+        mluc.eraseCookie("MLUC-VIEWING");
+        viewing = Ext.util.JSON.decode(viewing);
+        if(viewing.session) {
+            var session = Ext.getStore("SessionStore").getById(viewing.session);
+            console.log(session);
+            if(session) {
+                mluc.scheduleView.viewSession(session);
+            }
+        }
+    }
+});
+
 Ext.setup({
     tabletStartupScreen: 'tablet_startup.png',
     phoneStartupScreen: 'phone_startup.png',

@@ -37,7 +37,7 @@
             xtype: "sessionviewer",
             scroll: "vertical"
         });
-        mluc.favoritesView.add(sessionDetailsPanel);
+        mluc.scheduleView.add(sessionDetailsPanel);
 
         mluc.scheduleView.setActiveItem(sessionDetailsPanel, {
             type: "slide",
@@ -158,5 +158,29 @@
                 ]
             }
         ],
+        viewSession: function(session) {
+            toolBar.add({
+                xtype: "button",
+                ui: "back",
+                text: toolBar.title,
+                handler: goBack
+            });
+            toolBar.doLayout();
+
+            sessionDetailsPanel = new Ext.create({
+                xtype: "sessionviewer",
+                scroll: "vertical"
+            });
+            mluc.scheduleView.add(sessionDetailsPanel);
+
+            mluc.scheduleView.setActiveItem(sessionDetailsPanel, {
+                type: "slide",
+                direction: "left"
+            });
+
+            toolBar.setTitle("Info");
+
+            sessionDetailsPanel.viewSession(session);
+        }
     });
 })();

@@ -103,7 +103,8 @@ Ext.define('mluc.widgets.Schedule', {
                 dock: 'top',
                 items: [
                     this.dateSelector,
-                    "-",
+                    " ",
+                    " ",
                     this.myScheduleButton,
                     "->",
                     this.searchInput,

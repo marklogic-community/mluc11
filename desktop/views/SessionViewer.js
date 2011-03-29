@@ -181,6 +181,7 @@ Ext.define("mluc.views.DetailsWindow", {
                     panel.attend(reason.dom.value);
                 }
                 else if(element.hasCls("session-login") || element.parent("div.session-login")) {
+                    mluc.createCookie("MLUC-VIEWING", Ext.JSON.encode({session: panel.session.get("id")}), 1);
                     mluc.login();
                 }
                 else if(element.hasCls("detailslink")) {
