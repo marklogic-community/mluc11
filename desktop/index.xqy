@@ -35,6 +35,7 @@ return
         <script src="/js/common.js" type="text/javascript"><!-- --></script>
         <script src="/views/SessionViewer.js" type="text/javascript"><!-- --></script>
         <script src="/views/Schedule.js" type="text/javascript"><!-- --></script>
+        <script src="/views/Speakers.js" type="text/javascript"><!-- --></script>
         <script src="/views/Twitter.js" type="text/javascript"><!-- --></script>
         <script src="/js/app.js" type="text/javascript"><!-- --></script>
     </head> 

@@ -46,7 +46,17 @@ Ext.regModel("Speaker", {
         {name: "email", type: "string"},
         {name: "position", type: "string"},
         {name: "affiliation", type: "string"},
-        {name: "bio", type: "string"}
+        {name: "bio", type: "string"},
+
+        {name: "lastName", convert: function(value, record) {
+            var name = record.get("name").trim();
+            var bits = name.split(" ");
+            var last = bits[bits.length - 1];
+            if(last === "PhD") {
+                last = bits[bits.length - 2];
+            }
+            return last;
+        }}
     ]
 });
 
@@ -138,7 +148,7 @@ Ext.regStore("SpeakerStore", {
     },
     sorters: [
         {
-            property : "name",
+            property : "lastName",
             direction: "ASC"
         }
     ],
@@ -196,6 +206,26 @@ Ext.regStore("SessionSearchStore", {
         },
         {
             property : "track",
+            direction: "ASC"
+        }
+    ]
+});
+
+Ext.regStore("SpeakerSearchStore", {
+    model: "Speaker",
+    proxy: {
+        type: "ajax",
+        url: "/data/jsonquery.xqy",
+        extraParams:{q: '{key:"name"}'},
+        reader: {
+            type: "json",
+            root: "results",
+            totalProperty: "count",
+        }
+    },
+    sorters: [
+        {
+            property : "lastName",
             direction: "ASC"
         }
     ]

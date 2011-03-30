@@ -36,6 +36,7 @@ Ext.onReady(function() {
     });
 
     mluc.views.Schedule = Ext.create('mluc.widgets.Schedule', {});
+    mluc.views.Speakers = Ext.create('mluc.widgets.Speakers', {});
     mluc.views.Twitter = Ext.create('mluc.widgets.Twitter', {});
 
     mluc.loginLogoutButton = new Ext.button.Button({
@@ -84,7 +85,12 @@ Ext.onReady(function() {
                     padding: 5
                 },
                 items: [
-                    mluc.views.Schedule,
+                    {
+                        xtype: "tabpanel",
+                        cls: "tab-panel",
+                        region: 'center',
+                        items: [mluc.views.Schedule, mluc.views.Speakers]
+                    },
                     mluc.views.Twitter
                 ]
             },

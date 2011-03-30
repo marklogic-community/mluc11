@@ -19,11 +19,33 @@
 .x-panel-header-top,
 .x-panel-header-vertical,
 .x-window,
-.x-toolbar {
+.x-tab-bar-body,
+.x-tab-bar-strip {
     background-color: #ccc;
     border-color: #999;
     background-image: none;
 }
+.x-toolbar {
+    background-color: #ccc;
+    background-image: none;
+    border: none;
+}
+.x-toolbar .x-box-inner {
+    border-color: #ccc;
+}
+.x-tab {
+    border-color: #999;
+    background-color: #efefef;
+    background-image: none;
+}
+
+.x-tab button {
+    color: #666;
+}
+.x-tab-active button {
+    color: black;
+}
+
 .x-window-header-top {
     background-color: #ccc;
 }
@@ -90,6 +112,10 @@ div.header div.x-panel-body {
 .x-panel,
 .x-panel-body {
     border-color: #ABA7A6;
+}
+div.tab-panel .x-panel,
+div.tab-panel .x-panel-body {
+    border-top: none;
 }
 
 #footer {
@@ -299,4 +325,47 @@ div.session-presenter div.speaker-details div.speaker-title,
 div.session-presenter div.speaker-details div.speaker-email,
 div.session-presenter div.speaker-details p {
     margin-top: 5px;
+}
+
+
+/* Speakers tab */
+div.speaker-container {
+    border-bottom: 1px solid #d1d1d1;
+}
+
+div.speaker-container div.speaker-header {
+    padding: 8px 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+div.speaker-container div.speaker-header:hover {
+    background-color: #eef1d7;
+}
+
+div.speaker-container div.speaker-details {
+    padding: 5px 5px 8px 5px;
+}
+
+div.speaker-container div.speaker-details p {
+    padding-top: 5px;
+    max-width: 600px;
+    line-height: 1.4em;
+}
+div.speaker-container div.speaker-details h3 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #556D00;
+    padding: 3px 5px 5px 0px;
+}
+div.speaker-container div.speaker-details div.session {
+    padding: 2px;
+}
+div.speaker-container div.speaker-details div.session:hover {
+    background-color: #eef1d7;
+    cursor: pointer;
+}
+div.speaker-container div.speaker-details span.track {
+    text-transform: uppercase;
+    color: #999;
+    font-size: 10px !important;
 }

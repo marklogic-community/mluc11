@@ -86,7 +86,7 @@ Ext.define('mluc.widgets.Schedule', {
 
         Ext.apply(this, {
             xtype: "container",
-            region: 'center',
+            title: "Schedule",
             autoScroll: true,
             defaults: {bodyStyle:"padding:5px"},
             layout: {
