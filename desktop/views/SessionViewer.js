@@ -35,7 +35,7 @@ Ext.define("mluc.views.DetailsWindow", {
             sorters: [
                 {
                     property : "dateAdded",
-                    direction: "DSC"
+                    direction: "DESC"
                 }
             ]
         });
@@ -137,7 +137,7 @@ Ext.define("mluc.views.DetailsWindow", {
                                     addLogin += "</tr></tbody></table>";
                                 }
 
-                                return '<div class="attend-login">' + addLogin + '</div><h3>Attendees</h3>';
+                                return '<div class="attend-login">' + addLogin + '</div>';
                             }
                         }
                     )
@@ -147,13 +147,25 @@ Ext.define("mluc.views.DetailsWindow", {
                     cls: "attendance-list",
                     tpl: new Ext.XTemplate(
                         '<tpl for=".">',
-                            '<table class="person"><tbody><tr>',
-                                '<td><a href="http://www.facebook.com/profile.php?id={[ this.getIdFromUsername(values.get("username")) ]}" target="_blank"><img src="http://graph.facebook.com/{[ this.getIdFromUsername(values.get("username")) ]}/picture"/></a></td>',
-                                '<td>',
-                                    '<a href="http://www.facebook.com/profile.php?id={[ this.getIdFromUsername(values.get("username")) ]}" target="_blank">{[ values.get("realname") ]}</a>',
-                                    '<p class="reason">{[ values.get("reason") ]}</p>',
-                                '</td>',
-                            '</tr></tbody></table>',
+                            '<tpl if="xindex == 1"><h3>Attendance</h3></tpl>',
+                            '<tpl if="xindex &lt; 51">',
+                                '<table class="person"><tbody><tr>',
+                                    '<td><a href="http://www.facebook.com/profile.php?id={[ this.getIdFromUsername(values.get("username")) ]}" target="_blank"><img src="http://graph.facebook.com/{[ this.getIdFromUsername(values.get("username")) ]}/picture"/></a></td>',
+                                    '<td>',
+                                        '<a href="http://www.facebook.com/profile.php?id={[ this.getIdFromUsername(values.get("username")) ]}" target="_blank">{[ values.get("realname") ]}</a>',
+                                        '<p class="reason">{[ values.get("reason") ]}</p>',
+                                    '</td>',
+                                '</tr></tbody></table>',
+                            '</tpl>',
+                            '<tpl if="xindex == 10 && xcount &gt; 10">',
+                                '<div class="showall"><span class="showall-button x-btn x-btn-default x-btn-default-small x-btn-small x-btn-default-small-noicon x-abs-layout-item x-btn-default-small-over"><em>',
+                                    '<tpl if="xcount &gt; 50"><button>See the latest 50 attendees</button></tpl>',
+                                    '<tpl if="xcount &lt; 51"><button>See all {[xcount]} attendees</button></tpl>',
+                                '</em></span></div><div class="fulllist">',
+                            '</tpl>',
+                            '<tpl if="xindex == xcount && xcount &gt; 10">',
+                                '</div>',
+                            '</tpl>',
                         '</tpl>',
                         {
                             getIdFromUsername: function(username) {
@@ -189,6 +201,12 @@ Ext.define("mluc.views.DetailsWindow", {
                 }
                 else if(element.hasCls("numattendees") || element.parent("div.numattendees")) {
                     panel.jumpToAttendance();
+                }
+                else if(element.hasCls("showall-button") || element.parent(".showall-button")) {
+                    var showallContainer = Ext.get(element.parent("div.showall"));
+                    showallContainer.setVisible(Element.DISPLAY);
+                    showallContainer.hide(true);
+                    showallContainer.next("div.fulllist").dom.style.display = "block";
                 }
             });
         }

@@ -305,6 +305,7 @@ div.attend-login input {
 
 div.attendance-list {
     padding: 0px 10px;
+    font-size: 11pt;
 }
 
 div.attendance-list table.person {
@@ -449,12 +450,10 @@ span.sponsor-tagline {
     font-size: 9pt !important;
 }
 div.sponsor-details div.sponsor-image {
+    padding: 5px;
     text-align: center;
 }
 
-div.sponsor-details th.about {
-    vertical-align: top;
-}
 div.sponsor-details td.about {
-    font-weight: normal !important;
+    padding: 5px;
 }

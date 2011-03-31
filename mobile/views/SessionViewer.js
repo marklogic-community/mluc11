@@ -33,7 +33,7 @@ var sessionViewer = Ext.extend(Ext.Panel, {
             },
             sorters: [
                 {
-                    property : "dateAdded",
+                    property: "dateAdded",
                     direction: "DESC"
                 }
             ]
@@ -110,7 +110,7 @@ var sessionViewer = Ext.extend(Ext.Panel, {
                     '<tpl if="this.isLoggedIn() == false">',
                         '<table><tbody><tr>',
                         '<td class="icon"><img src="/images/unknown.gif"/></td>',
-                        '<td><span class="header">Look like an interesting session?</span><div class="inputs"><span class="session-login x-button x-button-normal"><em><span class="x-button-label">Login to add to favorites</span></span></div></td>',
+                        '<td><span class="header">Look like an interesting session?</span><div class="inputs"><span class="session-login x-button x-button-normal"><em><span class="x-button-label">Login to add to favorites</span></em></span></div></td>',
                         '</tr></tbody></table>',
                     '</tpl>',
                     {
@@ -142,20 +142,24 @@ var sessionViewer = Ext.extend(Ext.Panel, {
                 tpl: new Ext.XTemplate(
                     '<div class="grouped-container"><h2 class="group-name">Attendance</h2>',
                     '<div class="attendance-list section"><tpl for=".">',
-                        '<table class="person"><tbody><tr>',
-                            '<td><a href="http://www.facebook.com/profile.php?id={[ this.getFBIdFromUsername(values.username) ]}" target="_blank">',
-                                '<img src="http://graph.facebook.com/{[ this.getFBIdFromUsername(values.username) ]}/picture"/>',
-                            '</a></td>',
-                            '<td>',
-                                '<a href="http://www.facebook.com/profile.php?id={[ this.getFBIdFromUsername(values.username) ]}" target="_blank">{realname}</a>',
-                                '<p class="reason">{reason}</p>',
-                            '</td>',
-                        '</tr></tbody></table>',
-                        '<tpl if="xindex == 1 && xcount &gt; 1">',
-                            '<div class="showall"><span class="showall-button x-button x-button-normal"><em><span class="x-button-label">See all {[xcount]} attendees</em></span></div>',
+                        '<tpl if="xindex &lt; 51">',
+                            '<table class="person"><tbody><tr>',
+                                '<td><a href="http://www.facebook.com/profile.php?id={[ this.getFBIdFromUsername(values.username) ]}" target="_blank">',
+                                    '<img src="http://graph.facebook.com/{[ this.getFBIdFromUsername(values.username) ]}/picture"/>',
+                                '</a></td>',
+                                '<td>',
+                                    '<a href="http://www.facebook.com/profile.php?id={[ this.getFBIdFromUsername(values.username) ]}" target="_blank">{realname}</a>',
+                                    '<p class="reason">{reason}</p>',
+                                '</td>',
+                            '</tr></tbody></table>',
+                        '</tpl>',
+                        '<tpl if="xindex == 10 && xcount &gt; 10">',
+                            '<div class="showall"><span class="showall-button x-button x-button-normal"><em>',
+                                '<tpl if="xcount &gt; 50"><span class="x-button-label">See the latest 50 attendees</span></tpl>',
+                                '<tpl if="xcount &lt; 51"><span class="x-button-label">See all {[xcount]} attendees</span></tpl>',
                             '<div class="fulllist">',
                         '</tpl>',
-                        '<tpl if="xindex == xcount && xcount &gt; 1">',
+                        '<tpl if="xindex == xcount && xcount &gt; 10">',
                             '</div>',
                         '</tpl>',
                     '</tpl></div></div>',
@@ -202,15 +206,14 @@ var sessionViewer = Ext.extend(Ext.Panel, {
     },
 
     viewSession: function(session) {
+        console.log("viewSession");
         var me = this;
         if(session !== undefined) {
-            this.setLoading(true);
             this.session = session
             this.store.proxy.extraParams = {q: Ext.util.JSON.encode({key: "sessionId", value: this.session.getId()})};
             this.store.load(function(records) {
                 me.getComponent(0).update(me.session.data);
                 me.getComponent(1).update(me.session.data);
-                me.setLoading(false);
             });
         }
         else {

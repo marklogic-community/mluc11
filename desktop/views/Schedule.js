@@ -305,7 +305,7 @@ Ext.define('mluc.widgets.Schedule', {
 
             if(sessions[i].get("plenary")) {
                 colspan = 5;
-                className += " plenary";
+                className += " breakoutsession plenary";
                 height = Math.pow(numberOf15MinBlocks, .25) * 20;
 
                 addTimeslot = true;

@@ -60,10 +60,10 @@
                 '<div class="sponsor-image"><img src="{imageURL}"/></div>',
                 '<table><tbody>',
                     '<tr><th>Company</th><td>{company}</td></tr>',
-                    '<tr><th class="about">About</th><td class="about">{info}</td></tr>',
                     '<tr><th>Website</th><td><a href="{websiteFull}" target="_new">{websitePretty}</a></td></tr>',
                     '<tpl if="email"><tr><th>Email</th><td><a href="mailto:{email}">{email}</a></td></tr></tpl>',
                     '<tpl if="phone"><tr><th>Phone</th><td><a href="tel:{phone}">{phone}</a></td></tr></tpl>',
+                    '<tr><td colspan="2" class="about">{info}</td></tr>',
                 '</tbody></table>',
             '</div>',
         '</div>'

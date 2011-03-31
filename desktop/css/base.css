@@ -36,7 +36,7 @@
 .x-tab {
     border-color: #999;
     background-color: #efefef;
-    background-image: none;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, from(#F7F7F7), color-stop(0.48, #F1F1F1), color-stop(0.52, #DADADA), to(#DFDFDF));
 }
 
 .x-tab button {
@@ -64,10 +64,10 @@
 .visiblebutton {
     border-color: #999;
     background-color: #efefef;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, from(#F7F7F7), color-stop(0.48, #F1F1F1), color-stop(0.52, #DADADA), to(#DFDFDF));
 }
 .x-btn-toolbar-small-over {
     background-color: #d1d1d1;
-    background-image: none;
 }
 
 
@@ -245,7 +245,7 @@ div.attendance {
     margin-top: 15px;
 }
 
-div.attendance h3 {
+div.attendance-list h3 {
     margin-top: 15px;
     font-size: 16px;
     border-bottom: 1px solid #d1d1d1;
@@ -325,6 +325,10 @@ div.session-presenter div.speaker-details div.speaker-title,
 div.session-presenter div.speaker-details div.speaker-email,
 div.session-presenter div.speaker-details p {
     margin-top: 5px;
+}
+
+div.fulllist {
+    display: none;
 }
 
 
