@@ -509,6 +509,32 @@ Ext.setup({
     glossOnIcon: false,
 
     onReady: function() {
+        Ext.History.init();
+
+        Ext.History.on("change", function(fragment) {
+            var type = fragment.substring(0, fragment.indexOf(":"));
+            var id = fragment.substring(fragment.indexOf(":") + 1);
+            var activeItem = mluc.tabPanel.getActiveItem();
+            if(type === "session" && activeItem === mluc.scheduleView) {
+                activeItem.viewSession(id);
+            }
+            else if(type === "speaker" && activeItem === mluc.speakersView) {
+                activeItem.viewSpeaker(id);
+            }
+            else if(type === "speakersession" && activeItem === mluc.speakersView) {
+                activeItem.viewSession(id);
+            }
+            else if(type === "favorite" && activeItem === mluc.favoritesView) {
+                activeItem.viewSession(id);
+            }
+            else if(type === "sponsor" && activeItem === mluc.sponsorView) {
+                activeItem.viewSponsor(id);
+            }
+            else if(typeof activeItem.goBack == "function") {
+                activeItem.goBack();
+            }
+        });
+
         mluc.scheduleView = new mluc.views.Schedule();
         mluc.speakersView = new mluc.views.Speakers();
         mluc.twiterView = new mluc.views.Twitter();

@@ -55,7 +55,7 @@ Ext.onReady(function() {
         style: {
             position: "absolute",
             top: "10px",
-            right: "10px",
+            right: "10px"
         }
     });
 

@@ -29,7 +29,7 @@ Ext.define("mluc.views.DetailsWindow", {
                 reader: {
                     type: "json",
                     root: "results",
-                    totalProperty: "count",
+                    totalProperty: "count"
                 }
             },
             sorters: [

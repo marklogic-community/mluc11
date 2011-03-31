@@ -206,7 +206,6 @@ var sessionViewer = Ext.extend(Ext.Panel, {
     },
 
     viewSession: function(session) {
-        console.log("viewSession");
         var me = this;
         if(session !== undefined) {
             this.session = session

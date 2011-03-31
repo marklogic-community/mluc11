@@ -24,52 +24,6 @@
         title: "Schedule"
     });
 
-    var viewDetails = function(scheduleList, index, elementItem, eventObject) {
-        toolBar.add({
-            xtype: "button",
-            ui: "back",
-            text: toolBar.title,
-            handler: goBack
-        });
-        toolBar.doLayout();
-
-        sessionDetailsPanel = new Ext.create({
-            xtype: "sessionviewer",
-            scroll: "vertical"
-        });
-        mluc.scheduleView.add(sessionDetailsPanel);
-
-        mluc.scheduleView.setActiveItem(sessionDetailsPanel, {
-            type: "slide",
-            direction: "left"
-        });
-
-        var session = scheduleList.store.getAt(index);
-        toolBar.setTitle("Info");
-
-        sessionDetailsPanel.viewSession(session);
-    };
-    
-    var goBack = function() {
-        mluc.scheduleView.setActiveItem(0, {
-            type: "slide",
-            direction: "right"
-        });
-        var button = toolBar.getComponent(0);
-        toolBar.setTitle(button.text);
-        toolBar.remove(0);
-
-
-        window.setTimeout(function() {
-            var scheduleList = mluc.scheduleView.getComponent(0).getComponent(1);
-            scheduleList.deselect(scheduleList.getSelectedRecords());
-            if(sessionDetailsPanel !== undefined) {
-                mluc.scheduleView.remove(sessionDetailsPanel);
-                sessionDetailsPanel = undefined;
-            }
-        }, 500);
-    };
-
     var searchTimmer = undefined;
     var searchSchedule =  function(searchInput, eventObject) {
         if(searchTimmer !== undefined) {
@@ -141,7 +95,10 @@
                         singleSelect: false,
                         store: "SessionStore",
                         listeners: {
-                            itemtap: viewDetails,
+                            itemtap: function(scheduleList, index) {
+                                var session = scheduleList.store.getAt(index);
+                                mluc.scheduleView.viewSession(session);
+                            },
                             render: function(sessionList) {
                                 window.setTimeout(function() {
                                     var featured = sessionList.el.query("span.featured");
@@ -159,11 +116,16 @@
             }
         ],
         viewSession: function(session) {
+            if(typeof session == "string") {
+                session = Ext.getStore("SessionStore").getById(session);
+            }
+
+            Ext.History.add("session:" + session.getId());
             toolBar.add({
                 xtype: "button",
                 ui: "back",
                 text: toolBar.title,
-                handler: goBack
+                handler: this.goBack
             });
             toolBar.doLayout();
 
@@ -181,6 +143,31 @@
             toolBar.setTitle("Info");
 
             sessionDetailsPanel.viewSession(session);
+        },
+    
+        goBack: function() {
+            var button = toolBar.getComponent(0);
+            if(!button) {
+                return;
+            }
+
+            Ext.History.add("");
+            mluc.scheduleView.setActiveItem(0, {
+                type: "slide",
+                direction: "right"
+            });
+
+            toolBar.setTitle(button.text);
+            toolBar.remove(0);
+
+            window.setTimeout(function() {
+                var scheduleList = mluc.scheduleView.getComponent(0).getComponent(1);
+                scheduleList.deselect(scheduleList.getSelectedRecords());
+                if(sessionDetailsPanel !== undefined) {
+                    mluc.scheduleView.remove(sessionDetailsPanel);
+                    sessionDetailsPanel = undefined;
+                }
+            }, 500);
         }
     });
 })();

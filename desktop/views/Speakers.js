@@ -223,7 +223,7 @@ Ext.define('mluc.widgets.Speakers', {
                         '<div class="speaker-header">' + speaker.get("name") + '</div>' + 
                         '<div class="speaker-details" style="display: none">' + extendedInfo + '</div>' +
                     '</div>',
-                cls: className,
+                cls: className
             });
         }
     }

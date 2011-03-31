@@ -23,36 +23,6 @@
         title: "Sponsors"
     });
 
-    var viewDetails = function(sponsorList, index, elementItem, eventObject) {
-        toolBar.add({
-            xtype: "button",
-            ui: "back",
-            text: toolBar.title,
-            handler: goBack
-        });
-        toolBar.doLayout();
-
-        mluc.sponsorView.setActiveItem(1, {
-            type: "slide",
-            direction: "left"
-        });
-
-        var sponsorData = sponsorList.store.getAt(index);
-        toolBar.setTitle("Info");
-
-        mluc.sponsorView.getComponent(1).update(sponsorData.data);
-    };
-    
-    var goBack = function() {
-        mluc.sponsorView.setActiveItem(0, {
-            type: "slide",
-            direction: "right"
-        });
-        var button = toolBar.getComponent(0);
-        toolBar.setTitle(button.text);
-        toolBar.remove(0);
-    };
-
     var sponsorDetailTemplate = new Ext.XTemplate(
         '<div class="sponsor-details grouped-container">',
             '<h2 class="group-name">{level} Sponsor</h2>',
@@ -87,7 +57,10 @@
                 singleSelect: true,
                 store: "SponsorsStore",
                 listeners: {
-                    itemtap: viewDetails
+                    itemtap: function(sponsorList, index, elementItem, eventObject) {
+                        var sponsor = sponsorList.store.getAt(index);
+                        mluc.sponsorView.viewSponsor(sponsor);
+                    }
                 }
             },
             {
@@ -95,6 +68,45 @@
                 tpl: sponsorDetailTemplate,
                 scroll: "vertical",
             }
-        ]
+        ],
+
+        viewSponsor: function(sponsor) {
+            if(typeof sponsor == "string") {
+                sponsor = Ext.getStore("SponsorsStore").getById(parseInt(sponsor));
+            }
+
+            Ext.History.add("sponsor:" + sponsor.getId());
+            toolBar.add({
+                xtype: "button",
+                ui: "back",
+                text: toolBar.title,
+                handler: this.goBack
+            });
+            toolBar.doLayout();
+
+            mluc.sponsorView.setActiveItem(1, {
+                type: "slide",
+                direction: "left"
+            });
+
+            toolBar.setTitle("Info");
+
+            mluc.sponsorView.getComponent(1).update(sponsor.data);
+        },
+    
+        goBack: function() {
+            var button = toolBar.getComponent(0);
+            if(!button) {
+                return;
+            }
+
+            Ext.History.add("");
+            mluc.sponsorView.setActiveItem(0, {
+                type: "slide",
+                direction: "right"
+            });
+            toolBar.setTitle(button.text);
+            toolBar.remove(0);
+        }
     });
 })();

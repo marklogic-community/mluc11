@@ -19,101 +19,11 @@
 (function() {
 
     var sessionDetailsPanel = undefined;
-    var prevTitleStack = [];
 
     var toolBar = new Ext.Toolbar({
         dock: "top",
         title: "Speakers"
     });
-
-    var viewSpeaker = function(speakerList, index, elementItem, eventObject) {
-        toolBar.add({
-            xtype: "button",
-            ui: "back",
-            text: toolBar.title,
-            handler: goBack
-        });
-        toolBar.doLayout();
-
-        var speakerData = speakerList.store.getAt(index);
-        var speakersSessionStore = Ext.getStore("SpeakersSessionStore");
-        speakersSessionStore.each(function(record) {
-            speakersSessionStore.remove(record);
-        });
-        var sessionStore = Ext.getStore("SessionStore");
-        sessionStore.each(function(record) {
-            var speakerIds = record.get("speakerIds");
-            for(var i = 0; i < speakerIds.length; i += 1) {
-                if(speakerIds[i] == speakerData.data.id) {
-                    speakersSessionStore.add(record.data);
-                }
-            }
-        });
-
-        mluc.speakersView.setActiveItem(1, {
-            type: "slide",
-            direction: "left"
-        });
-
-        prevTitleStack.push(toolBar.title);
-
-        toolBar.setTitle("Details");
-
-        mluc.speakersView.getComponent(1).getComponent(0).update(speakerData.data);
-    };
-
-    var viewSessionDetails = function(sessionList, index, elementItem, eventObject) {
-        sessionDetailsPanel = new Ext.create({
-            xtype: "sessionviewer",
-            scroll: "vertical"
-        });
-        mluc.speakersView.add(sessionDetailsPanel);
-
-        mluc.speakersView.setActiveItem(sessionDetailsPanel, {
-            type: "slide",
-            direction: "left"
-        });
-
-        prevTitleStack.push(toolBar.title);
-
-        var sessionData = sessionList.store.getAt(index);
-
-        var button = toolBar.getComponent(0);
-        button.setText(toolBar.title);
-        toolBar.setTitle("Info");
-
-        sessionDetailsPanel.viewSession(sessionData);
-    };
-    
-    var goBack = function() {
-        mluc.speakersView.setActiveItem(prevTitleStack.length - 1, {
-            type: "slide",
-            direction: "right"
-        });
-        
-        var lastTitle = prevTitleStack.pop();
-
-        var button = toolBar.getComponent(0);
-        toolBar.setTitle(lastTitle);
-
-        var list;
-        if(prevTitleStack.length == 0) {
-            toolBar.remove(0);
-            list = mluc.speakersView.getComponent(0).getComponent(1);
-        }
-        else {
-            button.setText(prevTitleStack[prevTitleStack.length - 1]);
-            list = mluc.speakersView.getComponent(1).getComponent(1);
-        }
-
-        window.setTimeout(function() {
-            list.deselect(list.getSelectedRecords());
-            if(sessionDetailsPanel !== undefined) {
-                mluc.speakersView.remove(sessionDetailsPanel);
-                sessionDetailsPanel = undefined;
-            }
-        }, 500);
-    };
 
     var speakerInfoTemplate = new Ext.XTemplate(
         '<div class="speaker-details grouped-container">',
@@ -180,6 +90,7 @@
         dockedItems: [toolBar],
         items: [
             {
+                id: "speaker-list-panel",
                 xtype: "panel",
                 scroll: "vertical",
                 items:[
@@ -203,12 +114,16 @@
                         singleSelect: true,
                         store: "SpeakerStore",
                         listeners: {
-                            itemtap: viewSpeaker
+                            itemtap: function(speakerList, index) {
+                                var speaker = speakerList.store.getAt(index);
+                                mluc.speakersView.viewSpeaker(speaker);
+                            },
                         },
                     }
                 ]
             },
             {
+                id: "speaker-details-panel",
                 xtype: "panel",
                 scroll: "vertical",
                 items: [
@@ -227,15 +142,126 @@
                         singleSelect: true,
                         store: "SpeakersSessionStore",
                         listeners: {
-                            itemtap: viewSessionDetails
+                            itemtap:  function(sessionList, index, elementItem, eventObject) {
+                                var session = sessionList.store.getAt(index);
+                                mluc.speakersView.viewSession(session);
+                            }
                         }
                     },
                 ]
-            },
-            {
+            }
+        ],
+
+        viewSpeaker: function(speaker) {
+            if(typeof speaker == "string") {
+                speaker = Ext.getStore("SpeakerStore").getById(speaker);
+            }
+            this.viewingSpeaker = speaker;
+
+            Ext.History.add("speaker:" + speaker.getId());
+
+            var button = toolBar.getComponent(0);
+            if(button) {
+                button.setText(toolBar.title);
+            }
+            else {
+                toolBar.add({
+                    xtype: "button",
+                    ui: "back",
+                    text: toolBar.title,
+                    handler: this.goBack
+                });
+                toolBar.doLayout();
+            }
+
+            var speakersSessionStore = Ext.getStore("SpeakersSessionStore");
+            speakersSessionStore.each(function(record) {
+                speakersSessionStore.remove(record);
+            });
+            var sessionStore = Ext.getStore("SessionStore");
+            sessionStore.each(function(record) {
+                var speakerIds = record.get("speakerIds");
+                for(var i = 0; i < speakerIds.length; i += 1) {
+                    if(speakerIds[i] == speaker.data.id) {
+                        speakersSessionStore.add(record.data);
+                    }
+                }
+            });
+
+            mluc.speakersView.setActiveItem(1, {
+                type: "slide",
+                direction: "left"
+            });
+
+            toolBar.setTitle("Details");
+
+            mluc.speakersView.getComponent(1).getComponent(0).update(speaker.data);
+        },
+
+        viewSession: function(session) {
+            if(typeof session == "string") {
+                session = Ext.getStore("SessionStore").getById(session);
+            }
+
+            Ext.History.add("speakersession:" + session.getId());
+            sessionDetailsPanel = new Ext.create({
+                id: "session-details-panel",
                 xtype: "sessionviewer",
                 scroll: "vertical"
+            });
+            mluc.speakersView.add(sessionDetailsPanel);
+
+            mluc.speakersView.setActiveItem(sessionDetailsPanel, {
+                type: "slide",
+                direction: "left"
+            });
+
+            var button = toolBar.getComponent(0);
+            button.setText("Details");
+            toolBar.setTitle("Info");
+
+            sessionDetailsPanel.viewSession(session);
+        },
+    
+        goBack: function() {
+            var activePanel = mluc.speakersView.getActiveItem();
+            if(activePanel.id === "speaker-list-panel") {
+                // Nowhere to go back to so just return
+                return;
             }
-        ]
+
+            var list;
+            if(activePanel.id === "speaker-details-panel") {
+                Ext.History.add("");
+                toolBar.setTitle("Speakers");
+                toolBar.remove(0);
+                list = mluc.speakersView.getComponent(0).getComponent(1);
+
+                mluc.speakersView.setActiveItem(0, {
+                    type: "slide",
+                    direction: "right"
+                });
+            }
+            else {
+                Ext.History.add("speaker:" + mluc.speakersView.viewingSpeaker.getId());
+                toolBar.setTitle("Details");
+                var button = toolBar.getComponent(0);
+                button.setText("Speakers");
+                list = mluc.speakersView.getComponent(1).getComponent(1);
+
+                mluc.speakersView.setActiveItem(1, {
+                    type: "slide",
+                    direction: "right"
+                });
+            }
+
+            window.setTimeout(function() {
+                list.deselect(list.getSelectedRecords());
+                if(sessionDetailsPanel !== undefined) {
+                    mluc.speakersView.remove(sessionDetailsPanel);
+                    sessionDetailsPanel = undefined;
+                }
+            }, 500);
+        }
     });
 })();
