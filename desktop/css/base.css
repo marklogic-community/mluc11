@@ -20,7 +20,12 @@
 .x-panel-header-vertical,
 .x-window,
 .x-tab-bar-body,
-.x-tab-bar-strip {
+.x-tab-bar-strip,
+.x-nlg .x-panel-header-top,
+.x-nlg .x-panel-header-vertical,
+.x-nlg .x-window,
+.x-nlg .x-tab-bar-body,
+.x-nlg .x-tab-bar-strip {
     background-color: #ccc;
     border-color: #999;
     background-image: none;
@@ -33,6 +38,7 @@
 .x-toolbar .x-box-inner {
     border-color: #ccc;
 }
+.x-nlg .x-tab,
 .x-tab {
     border-color: #999;
     background-color: #efefef;
