@@ -457,3 +457,13 @@ div.sponsor-details div.sponsor-image {
 div.sponsor-details td.about {
     padding: 5px;
 }
+
+/*
+Survey
+*/
+.x-field {
+    display: block;
+}
+.x-form-label {
+    width: 100% !important;
+}

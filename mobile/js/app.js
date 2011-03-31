@@ -23,8 +23,10 @@ mluc.RawJsonWriter = Ext.extend(Ext.data.Writer, {
     writeRecords: function(request, data) {
         for(var i = 0; i < data.length; i += 1) {
             var record = data[i];
-            for(var j = 0; j < this.ignoreKeys.length; j += 1) {
-                delete record[this.ignoreKeys[j]];
+            if(this.ignoreKeys) {
+                for(var j = 0; j < this.ignoreKeys.length; j += 1) {
+                    delete record[this.ignoreKeys[j]];
+                }
             }
         }
 
@@ -140,6 +142,40 @@ Ext.regModel("Sponsor", {
         {name: "email", type: "string"},
         {name: "phone", type: "string"}
     ]
+});
+
+Ext.regModel("Survey", {
+    fields: [
+        {name: "id", type: "number"},
+        {name: "forSession", type: "string"},
+        {name: "userId", type: "string"},
+        {name: "speakerQuality", type: "number"},
+        {name: "sessionQuality", type: "number"},
+        {name: "sessionComments", type: "string"},
+        {name: "dateAdded", type: "date", dateFormat: "c"}
+    ],
+    proxy: {
+        type: "rest",
+        url: "/data/jsonstore.xqy",
+        appendId: false,
+        buildUrl: function(request) {
+            var records = request.operation.records || [];
+            var record = records[0];
+            var username = mluc.readCookie("MLUC-USERNAME");
+
+            if(record) {
+                request.params = {uri: "/survey/" + username + "/" + record.get("forSession") + ".json"};
+            }
+
+            return Ext.data.RestProxy.superclass.buildUrl.apply(this, arguments);
+        },
+        writer: {
+            type: "rawjson"
+        },
+        reader: {
+            type: "emptyjson"
+        }
+    },
 });
 
 
@@ -559,5 +595,22 @@ Ext.setup({
                 }
             }
         });
+
+        mluc.surveyPanel = new Ext.create({
+            xtype: "sessionsurvey"
+        });
+
+        mluc.mainPanel = new Ext.Panel({
+            fullscreen: true,
+            layout: 'card',
+            items:[mluc.tabPanel, mluc.surveyPanel]
+        });
     }
 });
+
+mluc.closeSurvey = function() {
+    mluc.mainPanel.setActiveItem(0, {
+        type: "slide",
+        direction: "down"
+    });
+}

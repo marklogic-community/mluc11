@@ -21,7 +21,28 @@
     
     var toolBar = new Ext.Toolbar({
         dock: "top",
-        title: "Schedule"
+        title: "Schedule",
+        items: [
+            {
+                id: "backbutton",
+                xtype: "button",
+                ui: "back",
+                text: "Schedule",
+                handler: function() {
+                    mluc.scheduleView.goBack();
+                }
+            },
+            {xtype: 'spacer'},
+            {
+                id: 'opensurvey',
+                xtype: 'button',
+                text: 'Survey',
+                hidden: true,
+                handler: function() {
+                    mluc.surveyPanel.viewSurvey(mluc.scheduleView.viewingSession);
+                }
+            }
+        ]
     });
 
     var searchTimmer = undefined;
@@ -116,18 +137,14 @@
             }
         ],
         viewSession: function(session) {
+            this.viewingSession = session;
             if(typeof session == "string") {
                 session = Ext.getStore("SessionStore").getById(session);
             }
 
             Ext.History.add("session:" + session.getId());
-            toolBar.add({
-                xtype: "button",
-                ui: "back",
-                text: toolBar.title,
-                handler: this.goBack
-            });
-            toolBar.doLayout();
+            toolBar.getComponent("backbutton").show();
+            toolBar.getComponent("opensurvey").show();
 
             sessionDetailsPanel = new Ext.create({
                 xtype: "sessionviewer",
@@ -146,8 +163,9 @@
         },
     
         goBack: function() {
-            var button = toolBar.getComponent(0);
-            if(!button) {
+            toolBar.getComponent("opensurvey").hide();
+            var button = toolBar.getComponent("backbutton");
+            if(button.isHidden()) {
                 return;
             }
 
@@ -158,7 +176,7 @@
             });
 
             toolBar.setTitle(button.text);
-            toolBar.remove(0);
+            button.hide();
 
             window.setTimeout(function() {
                 var scheduleList = mluc.scheduleView.getComponent(0).getComponent(1);
