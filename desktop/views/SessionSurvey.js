@@ -61,6 +61,7 @@ Ext.define("mluc.views.SessionSurvey", {
                 xtype: "textareafield",
                 id: "sessionComments",
                 labelWidth: 150,
+                height: 350,
                 fieldLabel: "Comments"
             }
         ];
