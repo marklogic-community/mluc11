@@ -204,9 +204,14 @@ div.session span.affiliation {
     font-style: italic;
 }
 
-div.sessiondetail div.numattendees {
+div.sessiondetail div.topright {
     float: right;
     text-align: center;
+    width: 75px;
+    height: 80px;
+}
+div.sessiondetail div.numattendees {
+    margin-top: 7px;
     padding: 3px;
     width: 75px;
     height: 47px;
@@ -282,14 +287,13 @@ div.attend-login img {
 div.attend-login div.inputs {
     margin-top: 5px;
 }
-div.attend-login input {
-    width: 300px;
-    padding: 3px;
-    margin-right: 5px;
-    border: 1px solid #d1d1d1;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+div.attend-login .x-form-item,
+div.attend-login .x-form-item .x-clear,
+div.attend-login .x-form-item-body {
+    display: inline;
+}
+div.attend-login .x-btn {
+    margin-left: 5px;
 }
 
 div.attendance-list table.person {
@@ -378,4 +382,11 @@ div.speaker-container div.speaker-details span.track {
     text-transform: uppercase;
     color: #999;
     font-size: 10px !important;
+}
+
+#sessionsurvey .x-toolbar {
+    background: none;
+}
+#sessionsurvey .x-toolbar .x-box-inner {
+    border: none;
 }

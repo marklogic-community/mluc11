@@ -161,7 +161,6 @@ Ext.define('mluc.widgets.Schedule', {
                     var session = Ext.getStore("SessionStore").getById(sessionId);
                     panel.detailsWindow.viewSession(session);
                 }
-
             });
         }
     },

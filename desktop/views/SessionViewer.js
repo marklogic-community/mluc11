@@ -40,6 +40,177 @@ Ext.define("mluc.views.DetailsWindow", {
             ]
         });
 
+        var sessionItems = [{
+            xtype: "container",
+            tpl: new Ext.XTemplate(
+                '<div class="sessiondetail">',
+                    '{id:this.renderTopRightLinks}',
+                    '<h2 class="title">{title}</h2>',
+                    '<span class="time">{[ Ext.Date.format(values.startTime, "g:ia") + " &ndash; " + Ext.Date.format(values.endTime, "g:ia") ]}</span>',
+                    '<span class="location">&nbsp;in {location}</span>',
+                    '<p class="abstract">{abstract}</h2>',
+                    '<div class="speakers">{speakerIds:this.renderSpeakers}</div>',
+                '</div>',
+                '<div class="attendance">',
+                    '{id:this.renderAttendies}',
+                '</div>',
+                {
+                    renderTopRightLinks: function() {
+                        var containerId = Ext.id();
+                        Ext.defer(function() {
+                            var button = new Ext.button.Button({
+                                renderTo: containerId,
+                                text: "Survey",
+                                width: 75,
+                                scope: me,
+                                handler: function() {
+                                    me.getComponent(1).viewSurvey(me.session, me.getLayout());
+                                }
+                            });
+                        }, 50);
+
+                        var content = '<div class="topright"><div id="{0}"></div>';
+                        if(me.store.getCount()) {
+                            content += '<div class="numattendees"><span class="num">' + me.store.getCount() + '</span><br>Attending</div></div>';
+                        }
+                        content += "</div>";
+                        return Ext.String.format(content, containerId);
+                    },
+                    renderSpeakers: function(speakerIds) {
+                        var speakers = "";
+                        var speakerStore = Ext.getStore("SpeakerStore");
+
+                        for(var i = 0; i < speakerIds.length; i += 1) {
+                            var speaker = speakerStore.getById(speakerIds[i] + "").data;
+                            var className = "session-presenter";
+                            if(i < speakerIds.length - 1) {
+                                className += " bordered";
+                            }
+                            var extendedInfo = '<div style="display: none" class="speaker-details">';
+                            if(speaker.position) {
+                                extendedInfo += Ext.String.format('<div class="speaker-title">Title: {0}</div>', speaker.position);
+                            }
+                            if(speaker.email) {
+                                extendedInfo += Ext.String.format('<div class="speaker-email">Contact: <a href="mailto:{0}">{0}</a></div>', speaker.email);
+                            }
+                            if(speaker.bio) {
+                                extendedInfo += '<p>' + speaker.bio + '</p>';
+                            }
+                            extendedInfo += '</div>';
+                            speakers += Ext.String.format('<div class="{0}"><span class="presenter-name">{1}</span> &ndash; <span class="presenter-affiliation">{2}</span> <a class="detailslink">speaker details</a>{3}</div>', className, speaker.name, speaker.affiliation, extendedInfo);
+                        }
+
+                        return speakers;
+                    },
+                    renderAttendies: function() {
+                        var username = mluc.readCookie("MLUC-USERNAME");
+                        var attending = false;
+
+                        if(me.store.find("username", username) >= 0) {
+                            attending = true;
+                        }
+
+                        var addLogin;
+                        var containerId = Ext.id();
+                        if(mluc.readCookie("MLUC-SESSION")) {
+                            if(attending) {
+                                addLogin = "<table><tbody><tr>";
+                                addLogin += "<td class='icon'><img src='http://graph.facebook.com/" + username.substring(username.indexOf("_") + 1) + "/picture'/></td>";
+                                addLogin += Ext.String.format('<td><span class="header">This session is in your favorites.</span><div id="{0}" class="inputs"></div></td>', containerId);
+                                addLogin += "</tr></tbody></table>";
+
+                                Ext.defer(function() {
+                                    var button = new Ext.button.Button({
+                                        renderTo: containerId,
+                                        text: "Remove from favorites",
+                                        scope: me,
+                                        handler: me.unattend
+                                    });
+                                }, 50)
+                            }
+                            else {
+                                addLogin = "<table><tbody><tr>";
+                                addLogin += "<td class='icon'><img src='http://graph.facebook.com/" + username.substring(username.indexOf("_") + 1) + "/picture'/></td>";
+                                addLogin += Ext.String.format('<td><span class="header">Look like an interesting session?</span><div id="{0}" class="inputs"></div></td>', containerId);
+                                addLogin += "</tr></tbody></table>";
+
+                                Ext.defer(function() {
+                                    var input = new Ext.form.Text({
+                                        width: 300,
+                                        hideLabel: true,
+                                        renderTo: containerId,
+                                        emptyText: "Tell everyone why (optional)"
+                                    });
+
+                                    var button = new Ext.button.Button({
+                                        renderTo: containerId,
+                                        text: "Add to favorites",
+                                        scope: me,
+                                        handler: function() {
+                                            this.attend(input.getValue());
+                                        }
+                                    });
+                                }, 50)
+                            }
+                        }
+                        else {
+                            addLogin = '<div class="session-login">Click to login via Facebook so you can mark yourself as attending this session.</div>';
+                            addLogin = "<table><tbody><tr>";
+                            addLogin += "<td class='icon'><img src='/images/unknown.gif'/></td>";
+                            addLogin += Ext.String.format('<td><span class="header">Look like an interesting session?</span><div id="{0}" class="inputs"></div></td>', containerId);
+                            addLogin += "</tr></tbody></table>";
+
+                            Ext.defer(function() {
+                                var button = new Ext.button.Button({
+                                    renderTo: containerId,
+                                    text: "Login to add to favorites",
+                                    cls: "session-login",
+                                    handler: function() {
+                                        mluc.createCookie("MLUC-VIEWING", Ext.JSON.encode({session: panel.session.get("id")}), 1);
+                                        mluc.login();
+                                    }
+                                });
+                            }, 50)
+                        }
+
+                        return '<div class="attend-login">' + addLogin + '</div>';
+                    }
+                }
+            )
+        },
+        {
+            xtype: "container",
+            cls: "attendance-list",
+            tpl: new Ext.XTemplate(
+                '<tpl for=".">',
+                    '<tpl if="xindex == 1"><h3>Attendance</h3></tpl>',
+                    '<tpl if="xindex &lt; 51">',
+                        '<table class="person"><tbody><tr>',
+                            '<td><a href="http://www.facebook.com/profile.php?id={[ this.getIdFromUsername(values.get("username")) ]}" target="_blank"><img src="http://graph.facebook.com/{[ this.getIdFromUsername(values.get("username")) ]}/picture"/></a></td>',
+                            '<td>',
+                                '<a href="http://www.facebook.com/profile.php?id={[ this.getIdFromUsername(values.get("username")) ]}" target="_blank">{[ values.get("realname") ]}</a>',
+                                '<p class="reason">{[ values.get("reason") ]}</p>',
+                            '</td>',
+                        '</tr></tbody></table>',
+                    '</tpl>',
+                    '<tpl if="xindex == 10 && xcount &gt; 10">',
+                        '<div class="showall"><span class="showall-button x-btn x-btn-default x-btn-default-small x-btn-small x-btn-default-small-noicon x-abs-layout-item x-btn-default-small-over"><em>',
+                            '<tpl if="xcount &gt; 50"><button>See the latest 50 attendees</button></tpl>',
+                            '<tpl if="xcount &lt; 51"><button>See all {[xcount]} attendees</button></tpl>',
+                        '</em></span></div><div class="fulllist">',
+                    '</tpl>',
+                    '<tpl if="xindex == xcount && xcount &gt; 10">',
+                        '</div>',
+                    '</tpl>',
+                '</tpl>',
+                {
+                    getIdFromUsername: function(username) {
+                        return username.substring(username.indexOf("_") + 1);
+                    }
+                }
+            )
+        }];
+
         Ext.apply(this, {
             title: 'Session Details',
             closable: true,
@@ -50,129 +221,15 @@ Ext.define("mluc.views.DetailsWindow", {
             plain: true,
             autoScroll: true,
             bodyPadding: 10,
+            layout: "card",
             session: undefined,
             items: [
                 {
                     xtype: "container",
-                    tpl: new Ext.XTemplate(
-                        '<div class="sessiondetail">',
-                            '{id:this.renderNumAttendees}',
-                            '<h2 class="title">{title}</h2>',
-                            '<span class="time">{[ Ext.Date.format(values.startTime, "g:ia") + " &ndash; " + Ext.Date.format(values.endTime, "g:ia") ]}</span>',
-                            '<span class="location">&nbsp;in {location}</span>',
-                            '<p class="abstract">{abstract}</h2>',
-                            '<div class="speakers">{speakerIds:this.renderSpeakers}</div>',
-                        '</div>',
-                        {
-                            renderNumAttendees: function() {
-                                if(me.store.getCount()) {
-                                    return '<div class="numattendees"><span class="num">' + me.store.getCount() + '</span><br>Attending</div>';
-                                }
-                                return "";
-                            },
-                            renderSpeakers: function(speakerIds) {
-                                var speakers = "";
-                                var speakerStore = Ext.getStore("SpeakerStore");
-
-                                for(var i = 0; i < speakerIds.length; i += 1) {
-                                    var speaker = speakerStore.getById(speakerIds[i] + "").data;
-                                    var className = "session-presenter";
-                                    if(i < speakerIds.length - 1) {
-                                        className += " bordered";
-                                    }
-                                    var extendedInfo = '<div style="display: none" class="speaker-details">';
-                                    if(speaker.position) {
-                                        extendedInfo += '<div class="speaker-title">Title: ' + speaker.position + '</div>';
-                                    }
-                                    if(speaker.email) {
-                                        extendedInfo += '<div class="speaker-email">Contact: <a href="mailto:' + speaker.email + '">' + speaker.email + '</a></div>';
-                                    }
-                                    if(speaker.bio) {
-                                        extendedInfo += '<p>' + speaker.bio + '</p>';
-                                    }
-                                    extendedInfo += '</div>';
-                                    speakers += '<div class="' + className + '"><span class="presenter-name">' + speaker.name + '</span> &ndash; <span class="presenter-affiliation">' + speaker.affiliation + '</span> <a class="detailslink">speaker details</a>' + extendedInfo + '</div>';
-                                }
-
-                                return speakers;
-                            }
-                        }
-                    )
+                    items: sessionItems
                 },
                 {
-                    xtype: "container",
-                    tpl: new Ext.XTemplate(
-                        '<div class="attendance">',
-                            '{id:this.renderAttendies}',
-                        '</div>',
-                        {
-                            renderAttendies: function() {
-                                var username = mluc.readCookie("MLUC-USERNAME");
-                                var attending = false;
-
-                                if(me.store.find("username", username) >= 0) {
-                                    attending = true;
-                                }
-
-                                var addLogin;
-                                if(mluc.readCookie("MLUC-SESSION")) {
-                                    if(attending) {
-                                        addLogin = "<table><tbody><tr>";
-                                        addLogin += "<td class='icon'><img src='http://graph.facebook.com/" + username.substring(username.indexOf("_") + 1) + "/picture'/></td>";
-                                        addLogin += "<td><span class='header'>This session is in your favorites.</span><div class='inputs'><div class='session-dont-attend x-btn x-btn-default x-btn-default-small x-btn-small x-btn-default-small-noicon x-abs-layout-item x-btn-default-small-over'><em><button>Remove from favorites</button></em></div></div></div></td>";
-                                        addLogin += "</tr></tbody></table>";
-                                    }
-                                    else {
-                                        addLogin = "<table><tbody><tr>";
-                                        addLogin += "<td class='icon'><img src='http://graph.facebook.com/" + username.substring(username.indexOf("_") + 1) + "/picture'/></td>";
-                                        addLogin += "<td><span class='header'>Look like an interesting session?</span> Optionally tell everyone why:<div class='inputs'><input type='text' class='favorite-reason'/><div class='session-attend x-btn x-btn-default x-btn-default-small x-btn-small x-btn-default-small-noicon x-abs-layout-item x-btn-default-small-over'><em><button>Add to favorites</button></em></div></div></td>";
-                                        addLogin += "</tr></tbody></table>";
-                                    }
-                                }
-                                else {
-                                    addLogin = '<div class="session-login">Click to login via Facebook so you can mark yourself as attending this session.</div>';
-                                    addLogin = "<table><tbody><tr>";
-                                    addLogin += "<td class='icon'><img src='/images/unknown.gif'/></td>";
-                                    addLogin += "<td><span class='header'>Look like an interesting session?</span><div class='inputs'><div class='session-login x-btn x-btn-default x-btn-default-small x-btn-small x-btn-default-small-noicon x-abs-layout-item x-btn-default-small-over'><em><button>Login to add to favorites</button></em></div></div></td>";
-                                    addLogin += "</tr></tbody></table>";
-                                }
-
-                                return '<div class="attend-login">' + addLogin + '</div>';
-                            }
-                        }
-                    )
-                },
-                {
-                    xtype: "container",
-                    cls: "attendance-list",
-                    tpl: new Ext.XTemplate(
-                        '<tpl for=".">',
-                            '<tpl if="xindex == 1"><h3>Attendance</h3></tpl>',
-                            '<tpl if="xindex &lt; 51">',
-                                '<table class="person"><tbody><tr>',
-                                    '<td><a href="http://www.facebook.com/profile.php?id={[ this.getIdFromUsername(values.get("username")) ]}" target="_blank"><img src="http://graph.facebook.com/{[ this.getIdFromUsername(values.get("username")) ]}/picture"/></a></td>',
-                                    '<td>',
-                                        '<a href="http://www.facebook.com/profile.php?id={[ this.getIdFromUsername(values.get("username")) ]}" target="_blank">{[ values.get("realname") ]}</a>',
-                                        '<p class="reason">{[ values.get("reason") ]}</p>',
-                                    '</td>',
-                                '</tr></tbody></table>',
-                            '</tpl>',
-                            '<tpl if="xindex == 10 && xcount &gt; 10">',
-                                '<div class="showall"><span class="showall-button x-btn x-btn-default x-btn-default-small x-btn-small x-btn-default-small-noicon x-abs-layout-item x-btn-default-small-over"><em>',
-                                    '<tpl if="xcount &gt; 50"><button>See the latest 50 attendees</button></tpl>',
-                                    '<tpl if="xcount &lt; 51"><button>See all {[xcount]} attendees</button></tpl>',
-                                '</em></span></div><div class="fulllist">',
-                            '</tpl>',
-                            '<tpl if="xindex == xcount && xcount &gt; 10">',
-                                '</div>',
-                            '</tpl>',
-                        '</tpl>',
-                        {
-                            getIdFromUsername: function(username) {
-                                return username.substring(username.indexOf("_") + 1);
-                            }
-                        }
-                    )
+                    xtype: "sessionsurvey"
                 }
             ]
         });
@@ -184,25 +241,14 @@ Ext.define("mluc.views.DetailsWindow", {
         render: function(panel) {
             panel.body.on('click', function(e) {
                 var element = Ext.get(e.target);
-                if(element.hasCls("session-dont-attend") || element.parent("div.session-dont-attend")) {
-                    panel.unattend();
-                }
-                else if(element.hasCls("session-attend") || element.parent("div.session-attend")) {
-                    var inputs = element.parent("div.inputs");
-                    var reason = inputs.child("input.favorite-reason");
-                    panel.attend(reason.dom.value);
-                }
-                else if(element.hasCls("session-login") || element.parent("div.session-login")) {
-                    mluc.createCookie("MLUC-VIEWING", Ext.JSON.encode({session: panel.session.get("id")}), 1);
-                    mluc.login();
-                }
-                else if(element.hasCls("detailslink")) {
+                if(element.hasCls("detailslink")) {
                     panel.showHideSpeakerDetails(element);
                 }
                 else if(element.hasCls("numattendees") || element.parent("div.numattendees")) {
                     panel.jumpToAttendance();
                 }
                 else if(element.hasCls("showall-button") || element.parent(".showall-button")) {
+                    // XXX - change to ext button
                     var showallContainer = Ext.get(element.parent("div.showall"));
                     showallContainer.setVisible(Element.DISPLAY);
                     showallContainer.hide(true);
@@ -277,6 +323,7 @@ Ext.define("mluc.views.DetailsWindow", {
         if(session !== undefined) {
             this.session = session;
         }
+
         var title = this.session.get("title");
         if(title.length > 75) {
             this.setTitle(title.substring(0, 75) + "...");
@@ -285,14 +332,14 @@ Ext.define("mluc.views.DetailsWindow", {
             this.setTitle(title);
         }
         this.show();
+        this.getLayout().setActiveItem(0);
 
         this.setLoading(true);
         this.store.proxy.extraParams = {q: Ext.JSON.encode({key: "sessionId", value: this.session.getId()})};
         this.store.load(function(records) {
             me.setLoading(false);
-            me.getComponent(0).update(me.session.data);
-            me.getComponent(1).update(me.session.data);
-            me.getComponent(2).update(me.store.getRange());
+            me.getComponent(0).getComponent(0).update(me.session.data);
+            me.getComponent(0).getComponent(1).update(me.store.getRange());
         });
     },
 

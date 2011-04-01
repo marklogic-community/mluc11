@@ -34,6 +34,7 @@ return
         <script type="text/javascript" src="/ext4.0/bootstrap.js"><!-- --></script> 
         <script src="/js/common.js" type="text/javascript"><!-- --></script>
         <script src="/views/SessionViewer.js" type="text/javascript"><!-- --></script>
+        <script src="/views/SessionSurvey.js" type="text/javascript"><!-- --></script>
         <script src="/views/Schedule.js" type="text/javascript"><!-- --></script>
         <script src="/views/Speakers.js" type="text/javascript"><!-- --></script>
         <script src="/views/Twitter.js" type="text/javascript"><!-- --></script>
