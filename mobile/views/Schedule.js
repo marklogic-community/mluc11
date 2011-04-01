@@ -28,6 +28,7 @@
                 xtype: "button",
                 ui: "back",
                 text: "Schedule",
+                hidden: true,
                 handler: function() {
                     mluc.scheduleView.goBack();
                 }
