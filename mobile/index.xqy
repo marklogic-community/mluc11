@@ -26,7 +26,7 @@ return
 "<!DOCTYPE html>",
 <html> 
     <head> 
-        <title>Mark Logic User Conference 2011</title>
+        <title>MLUC 2011</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
         <link href="/sencha-touch/resources/css/sencha-touch.css" rel="stylesheet" type="text/css" />
         <link href="/css/app.css" rel="stylesheet" type="text/css" />

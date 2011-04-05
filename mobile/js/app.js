@@ -541,7 +541,7 @@ Ext.getStore("SessionStore").on("load", function() {
 Ext.setup({
     tabletStartupScreen: 'tablet_startup.png',
     phoneStartupScreen: 'phone_startup.png',
-    icon: 'icon.png',
+    icon: '/images/mluc11-icon.png',
     glossOnIcon: false,
 
     onReady: function() {

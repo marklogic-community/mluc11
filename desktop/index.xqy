@@ -26,7 +26,7 @@ return
 "<!DOCTYPE html>",
 <html> 
     <head> 
-        <title>MLUC 2011</title>
+        <title>MarkLogic User Conference 2011</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
         <link rel="stylesheet" type="text/css" href="/ext4.0/resources/css/ext-all.css"/> 
         <link rel="stylesheet" type="text/css" href="/css/mleventstyles.css"/> 
