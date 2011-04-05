@@ -17,14 +17,16 @@
 */
 
 (function() {
-    var sessionDetailsPanel;
+    var sessionDetailsPanel = undefined;
+    var backButtonId = Ext.id();
+    var openSurveyId = Ext.id()
     
     var toolBar = new Ext.Toolbar({
         dock: "top",
         title: "Schedule",
         items: [
             {
-                id: "backbutton",
+                id: backButtonId,
                 xtype: "button",
                 ui: "back",
                 text: "Schedule",
@@ -35,15 +37,22 @@
             },
             {xtype: 'spacer'},
             {
-                id: 'opensurvey',
+                id: openSurveyId,
                 xtype: 'button',
                 text: 'Survey',
                 hidden: true,
                 handler: function() {
-                    mluc.surveyPanel.viewSurvey(mluc.scheduleView.viewingSession);
+                    surveyPanel.viewSurvey(mluc.scheduleView.viewingSession, mluc.scheduleView);
                 }
             }
         ]
+    });
+
+    var surveyPanel = Ext.create({
+        xtype: "sessionsurvey",
+        scroll: "vertical",
+        backButtonId: backButtonId,
+        openButtonId: openSurveyId
     });
 
     var searchTimmer = undefined;
@@ -133,19 +142,20 @@
                                 }, 1000);
                             }
                         }
-                    }
+                    },
                 ]
-            }
+            },
+            surveyPanel
         ],
         viewSession: function(session) {
-            this.viewingSession = session;
             if(typeof session == "string") {
                 session = Ext.getStore("SessionStore").getById(session);
             }
+            this.viewingSession = session;
 
             Ext.History.add("session:" + session.getId());
-            toolBar.getComponent("backbutton").show();
-            toolBar.getComponent("opensurvey").show();
+            toolBar.getComponent(backButtonId).show();
+            toolBar.getComponent(openSurveyId).show();
 
             sessionDetailsPanel = new Ext.create({
                 xtype: "sessionviewer",
@@ -164,8 +174,8 @@
         },
     
         goBack: function() {
-            toolBar.getComponent("opensurvey").hide();
-            var button = toolBar.getComponent("backbutton");
+            toolBar.getComponent(openSurveyId).hide();
+            var button = toolBar.getComponent(backButtonId);
             if(button.isHidden()) {
                 return;
             }

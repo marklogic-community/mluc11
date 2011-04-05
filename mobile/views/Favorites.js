@@ -18,6 +18,9 @@
 
 (function() {
     var sessionDetailsPanel = undefined;
+    var backButtonId = Ext.id();
+    var loginButtonId = Ext.id();
+    var openSurveyId = Ext.id()
 
     var loginLogoutUser = function() {
         if(mluc.readCookie("MLUC-SESSION")) {
@@ -35,18 +38,44 @@
         dock: "top",
         title: "Favorites",
         items: [
+            {
+                id: backButtonId,
+                xtype: "button",
+                ui: "back",
+                hidden: true,
+                text: "Favorites",
+                handler: function() {
+                    mluc.favoritesView.goBack();
+                }
+            },
             {xtype: 'spacer'},
             {
-                id: 'loginbutton',
+                id: loginButtonId,
                 xtype: 'button',
                 handler: loginLogoutUser
+            },
+            {
+                id: openSurveyId,
+                xtype: 'button',
+                text: 'Survey',
+                hidden: true,
+                handler: function() {
+                    surveyPanel.viewSurvey(mluc.favoritesView.viewingSession, mluc.favoritesView);
+                }
             }
         ]
     });
 
+    var surveyPanel = Ext.create({
+        xtype: "sessionsurvey",
+        scroll: "vertical",
+        backButtonId: backButtonId,
+        openButtonId: openSurveyId
+    });
+
     var updatePage = function() {
         var mySessionStore = Ext.getStore("MySessionsStore");
-        var button = toolBar.getComponent("loginbutton");
+        var button = toolBar.getComponent(loginButtonId);
         var username = mluc.readCookie("MLUC-USERNAME");
         if(mluc.readCookie("MLUC-SESSION") && username) {
             button.setText("Logout");
@@ -84,6 +113,7 @@
                     }
                 }
             },
+            surveyPanel
         ],
         listeners: {
             beforeactivate: updatePage
@@ -95,14 +125,9 @@
             }
 
             Ext.History.add("favorite:" + mySession.getId());
-            toolBar.insert(0, {
-                id: "backbutton",
-                xtype: "button",
-                ui: "back",
-                text: toolBar.title,
-                handler: this.goBack
-            });
-            toolBar.doLayout();
+            toolBar.getComponent(backButtonId).show();
+            toolBar.getComponent(loginButtonId).hide();
+            toolBar.getComponent(openSurveyId).show();
 
             sessionDetailsPanel = new Ext.create({
                 xtype: "sessionviewer",
@@ -118,12 +143,15 @@
             toolBar.setTitle("Info");
 
             var session = Ext.getStore("SessionStore").getById(mySession.get("sessionId"));
+            this.viewingSession = session;
             sessionDetailsPanel.viewSession(session);
         },
 
         goBack: function() {
-            var button = toolBar.getComponent(0);
-            if(!button) {
+            toolBar.getComponent(openSurveyId).hide();
+            toolBar.getComponent(loginButtonId).show();
+            var button = toolBar.getComponent(backButtonId);
+            if(button.isHidden()) {
                 return;
             }
 
@@ -132,10 +160,11 @@
                 type: "slide",
                 direction: "right"
             });
-            toolBar.setTitle(button.text);
-            toolBar.remove(0);
 
-            mluc.speakersView.remove(sessionDetailsPanel);
+            toolBar.setTitle(button.text);
+            button.hide();
+
+            mluc.favoritesView.remove(sessionDetailsPanel);
             sessionDetailsPanel = undefined;
         }
     });

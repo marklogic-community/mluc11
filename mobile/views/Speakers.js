@@ -19,10 +19,33 @@
 (function() {
 
     var sessionDetailsPanel = undefined;
+    var backButtonId = Ext.id();
+    var openSurveyId = Ext.id()
 
     var toolBar = new Ext.Toolbar({
         dock: "top",
-        title: "Speakers"
+        title: "Speakers",
+        items: [
+            {
+                id: backButtonId,
+                xtype: "button",
+                ui: "back",
+                hidden: true,
+                handler: function() {
+                    mluc.speakersView.goBack();
+                }
+            },
+            {xtype: 'spacer'},
+            {
+                id: openSurveyId,
+                xtype: 'button',
+                text: 'Survey',
+                hidden: true,
+                handler: function() {
+                    surveyPanel.viewSurvey(mluc.speakersView.viewingSession, mluc.speakersView);
+                }
+            }
+        ]
     });
 
     var speakerInfoTemplate = new Ext.XTemplate(
@@ -41,6 +64,14 @@
             '<h2 class="group-name">Sessions</h2>',
         '</div>'
     );
+
+
+    var surveyPanel = Ext.create({
+        xtype: "sessionsurvey",
+        scroll: "vertical",
+        backButtonId: backButtonId,
+        openButtonId: openSurveyId
+    });
 
     var searchTimmer = undefined;
     var searchSpeakers =  function(searchInput, eventObject) {
@@ -149,7 +180,8 @@
                         }
                     },
                 ]
-            }
+            },
+            surveyPanel
         ],
 
         viewSpeaker: function(speaker) {
@@ -159,20 +191,8 @@
             this.viewingSpeaker = speaker;
 
             Ext.History.add("speaker:" + speaker.getId());
-
-            var button = toolBar.getComponent(0);
-            if(button) {
-                button.setText(toolBar.title);
-            }
-            else {
-                toolBar.add({
-                    xtype: "button",
-                    ui: "back",
-                    text: toolBar.title,
-                    handler: this.goBack
-                });
-                toolBar.doLayout();
-            }
+            toolBar.getComponent(backButtonId).show();
+            toolBar.getComponent(backButtonId).setText(toolBar.title);
 
             var speakersSessionStore = Ext.getStore("SpeakersSessionStore");
             speakersSessionStore.each(function(record) {
@@ -202,10 +222,12 @@
             if(typeof session == "string") {
                 session = Ext.getStore("SessionStore").getById(session);
             }
+            this.viewingSession = session;
+
+            toolBar.getComponent(openSurveyId).show();
 
             Ext.History.add("speakersession:" + session.getId());
             sessionDetailsPanel = new Ext.create({
-                id: "session-details-panel",
                 xtype: "sessionviewer",
                 scroll: "vertical"
             });
@@ -216,7 +238,7 @@
                 direction: "left"
             });
 
-            var button = toolBar.getComponent(0);
+            var button = toolBar.getComponent(backButtonId);
             button.setText("Details");
             toolBar.setTitle("Info");
 
@@ -234,7 +256,7 @@
             if(activePanel.id === "speaker-details-panel") {
                 Ext.History.add("");
                 toolBar.setTitle("Speakers");
-                toolBar.remove(0);
+                toolBar.getComponent(backButtonId).hide();
                 list = mluc.speakersView.getComponent(0).getComponent(1);
 
                 mluc.speakersView.setActiveItem(0, {
@@ -245,8 +267,8 @@
             else {
                 Ext.History.add("speaker:" + mluc.speakersView.viewingSpeaker.getId());
                 toolBar.setTitle("Details");
-                var button = toolBar.getComponent(0);
-                button.setText("Speakers");
+                toolBar.getComponent(openSurveyId).hide();
+                toolBar.getComponent(backButtonId).setText("Speakers");
                 list = mluc.speakersView.getComponent(1).getComponent(1);
 
                 mluc.speakersView.setActiveItem(1, {
