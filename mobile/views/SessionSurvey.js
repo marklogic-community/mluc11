@@ -50,12 +50,14 @@ var sessionSurvey = Ext.extend(Ext.form.FormPanel, {
             {
                 xtype: "selectfield",
                 id: this.ids.speakerQuality,
+                name: "speakerQuality",
                 label: "Effectiveness of speaker",
                 options: options
             },
             {
                 xtype: "selectfield",
                 id: this.ids.sessionQuality,
+                name: "sessionQuality",
                 label: "Quality of content",
                 options: options
             },
