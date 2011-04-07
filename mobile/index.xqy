@@ -32,7 +32,7 @@ return
         <link href="/css/app.css" rel="stylesheet" type="text/css" />
     </head> 
     <body>Loading...</body> 
-    <script src="/sencha-touch/sencha-touch-debug.js" type="text/javascript"><!-- --></script>
+    <script src="/sencha-touch/sencha-touch.js" type="text/javascript"><!-- --></script>
     <script src="/js/app.js" type="text/javascript"><!-- --></script>
     <script src="/views/SessionViewer.js" type="text/javascript"><!-- --></script>
     <script src="/views/SessionSurvey.js" type="text/javascript"><!-- --></script>

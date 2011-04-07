@@ -6,20 +6,6 @@ body {
 
 }
 
-#outer-wrapper {
-	width: 978px;
-	margin: 0 auto;
-	overflow: hidden;
-
-}
-
-#wrapper {
-	width: 978px;
-	margin: 0 auto;
-	overflow: hidden;
-
-}
-
 h1 {
 	font-size: 14px;
 	font-weight:bold;
@@ -31,72 +17,20 @@ h1 {
 	padding-left: 13px;
 	width: 670px;
 }
-h1 a{
-	color: #000;
-	text-decoration: none;
-}
-h1 a:hover {
-	text-decoration: underline;
-}
 h2 {
 	font-size: 22px;
 	color: #000;
 	padding: 0 0 8px 0;
-}
-h2 a{
-	color: #000;
-	text-decoration: none;
-}
-h2 a:hover {
-	text-decoration: underline;
 }
 h3 {
 	font-size: 20px;
 	color: #000;
 	padding: 0 0 8px 0;
 }
-h3 a{
-	color: #000;
-	text-decoration: none;
-}
-h3 a:hover {
-	text-decoration: underline;
-}
 h4 {
 	font-size: 18px;
 	color: #000;
 	padding: 0 0 8px 0;
-}
-h4 a{
-	color: #000;
-	text-decoration: none;
-}
-h4 a:hover {
-	text-decoration: underline;
-}
-h5 {
-	font-size: 16px;
-	color: #000;
-	padding: 0 0 8px 0;
-}
-h5 a{
-	color: #000;
-	text-decoration: none;
-}
-h5 a:hover {
-	text-decoration: underline;
-}
-h6 {
-	font-size: 14px;
-	color: #000;
-	padding: 0 0 8px 0;
-}
-h6 a{
-	color: #000;
-	text-decoration: none;
-}
-h6 a:hover {
-	text-decoration: underline;
 }
 p {
 	font-size: 12px;
@@ -104,74 +38,12 @@ p {
 	line-height: 14px;
 	padding: 0 0 8px 0;
 }
-p a {
-	color: #000;
-	text-decoration: underline;
+a {
+    font-weight:bold;
+    text-decoration:none;
 }
-p a:hover {
-	text-decoration: none;
-}
-p img {
-	padding: 0;
-	max-width: 100%;
-}
-
-img.centered {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-img.alignright {
-	padding: 0px;
-	margin: 5px 0px 0px 15px;
-	display: inline;
-}
-
-img.alignleft {
-	padding: 0px;
-	margin: 5px 15px 0px 0;
-	display: inline;
-}
-	
-img.aligncenter {
-	display: block;
-	padding: 0px;
-	margin:0 0 10px 0;
-	}
-.alignright {
-	float: right;
-}
-.alignleft {
-	float: left;
-} 
-ol {
-	list-style-type: decimal;
-	padding: 0 0 0 10px;
-}
-ul {
-	list-style-type: disc;
-	padding: 0 0 0 24px;
-}
-.left {
-	float: left;
-}
-.right {
-	float: right;
-}
-.padding-none {
-	padding: 0!important;
-}
-.margin-none {
-	margin: 0!important;
-}
-a{
-color:#556d00;
-font-weight:bold;
-text-decoration:none;
-}
-a:hover{
-text-decoration:underline;
+a:hover {
+    text-decoration:underline;
 }
 /* Main CSS End */
 
@@ -186,7 +58,7 @@ text-decoration:underline;
 	width: 237px;
 	height: 87px;
 	float:left;
-		padding:10px 0 0 0;
+    padding:10px 0 0 0;
 }
 #logo a{
 	width: 237px;
@@ -196,389 +68,21 @@ text-decoration:underline;
 	background:url(http://www.marklogicevents.com/img/logo.png) no-repeat left top;
 
 }
-.header-right-nav{
-	float:right;
-	padding:7px 0 0 0;
-}
-.header-right-nav ul{
-	list-style-type:none;
-	padding:0 0 0 0;
-}
-.header-right-nav ul li{
-	float:left;
-	padding:0 3px 0 0;
-}
-.contact{
-	padding:3px 11px 0 0 !important;
-}
 
 /* Header CSS End */
 
-
-#menuNew {
-	width:978px;
-	height: 33px;
-	border-top:5px solid #fff;
-	border-bottom:5px solid #fff;
-	background: url(http://www.marklogicevents.com/img/newMenu.jpg) repeat-x left top;
-}
-
-#menuNew ul {
-	width:978px;
-	list-style-type: none;
-	padding: 0;
-	float:left;
-	z-index:30;
-	position:relative;
-}
-#menuNew ul li {
-	float: left;
-	position: relative;
-	padding: 0 0px;
-}
-.padding-none{
-	padding-right:0 !important;
-}
-#menuNew ul li a {
-	color: #fff;
-	font-size:13px;
-	font-weight: bold;
-	display: block;
-	text-decoration: none;
-	padding: 10px 0 10px 0px;
-	_padding: 10px 0 7px 0px;
-
-}
-#menuNew ul li a:hover, #menuNew ul li a.now {
-	background-image:url(http://www.marklogicevents.com/img/nav-mark.png);
-	background-position:center top;
-	background-repeat: no-repeat;
-	color:#9C0;
-}
-#menuNew ul li.first{
-padding-left:0;}
-#menuNew ul li a.active {
-color:#fff;
-}
-#menuNew ul ul {
-	background:url(http://www.marklogicevents.com/img/drop_bg.png) top center no-repeat #697f04;
-	position: absolute;
-	display: none;
-	top:33px;
-	z-index: 1500;
-	left: -38px;
-	width:128px;
-	padding: 0 0 0 0;
-	text-align: center;
-	list-style-type: none;
-	border:1px solid #fff;
-
-}
-
-#menuNew ul ul li {
-	padding: 0 0 0 0px;
-	float: none;
-	border:none;
-
-}
-#menuNew ul ul li.none {
-	padding: 0 !important;
-}
-#menuNew ul li ul a {
-
-	font-size: 13px;
-	display: block;
-	font-weight:bold;
-	text-decoration:none;
-	text-align:center;
-	color:#fff;
-	line-height:normal;
-/*	padding-bottom:0 !important;*/
-	padding:10px 4px 8px 4px;
-}
-#menuNew ul li ul li a:hover {
-	color:#9C0;
-	background:url(http://www.marklogicevents.com/img/dropmark_bg.png) top center no-repeat #697f04;
-}
-#menuNew li ul ul {
-	left: 110px;
-	top: 0;
-	margin: 0;
-	padding: 0;
-}
-#menuNew li:hover ul ul, #menuNew li:hover ul ul ul, #menuNew li:hover ul ul ul ul {
-	display:none;
-}
-#menuNew li:hover ul, #menuNew li li:hover ul, #menuNew li li li:hover ul, #menuNew li li li li:hover ul {
-	display:block;
-	text-decoration:none;
-}
-.home2{
-	left: 40px;
-}
-.why2{
-	left: 115px;
-}
-.agenda2{
-	left: 191px;
-}
-.speaker2{
-	left: 270px;
-}
-.sponsor2{
-	left: 350px;
-}
-.travel2{
-	left: 420px;
-}
-.registration2{
-	left: 480px;
-	border-right:0 !important;
-}
-.registration2 a{
-padding-left:14px !important;
-	
-}
-/* Menu CSS End */
-
-
-/* Content CSS Start */
-#content {
-	float:left;
-	background: #ebe8ea url(http://www.marklogicevents.com/img/content-bg.png) no-repeat left bottom;
-	padding:0 0 23px 0;
-	
-}
-
-/* Footer CSS Start */
-#footer {
-	width:978px;
-	padding:0 0 100px 0;
-	float:left;
-	border-top: 1px solid #ABA7A6; 
-}
 #footer ul{
 	list-style-type:none;
 	padding:0 0 0 0;
 	float:right;
 }
 #footer ul li{
-	background:url(http://www.marklogicevents.com/img/li-bg.gif) no-repeat left 17px;
 	float:left;
 	padding:15px 5px 0 10px;
 	font-size:11px;
-	color:#9A9F40;
-}
-#footer ul li.none{
-	background:none !important;
 }
 #footer ul li a{
 	font-size:11px;
 	font-weight:normal;
-	color:#9A9F40;
 	padding:0 0;
 }
-
-/* NAVIGATION */
-
-#mainnav {   /*container*/
-        clear: both;
-        background: #000;
-        display: block;
-        font-size: 12px;
-        font-weight: bold;
-        color: #fff;
-        padding: 0 8px;
-}
-
-#mainnav ul {display:block; list-style:none; list-style-image:url(none); margin:0; padding:0;}
-#mainnav ul li {list-style-image:url(none); float:left; display:block; position:relative; margin:0; padding:0; border:1px solid #000; border-bottom:1px solid #000; border-left:1px solid #000}
-#mainnav ul li a {display:block; margin:0; padding:6px 9px; color:#fff}
-#mainnav ul li:hover a {background:#1E1E1E}
-#mainnav ul li.on a {background:#343434;}
-
-#mainnav ul ul {display:none; position:absolute; top:28px; left:0; width:160px; height:auto; border:none; margin:0; padding:1px 0 0; background:#333}
-#mainnav ul ul li {border:none; float:none; margin:0; padding:0; line-height:14px; height:1%}
-#mainnav ul ul li a {zoom:1}
-#mainnav ul li.on ul li a {background:#1E1E1E; border:none}
-#mainnav ul li ul li:hover a {background:#343434}
-
-#mainnav ul ul ul {top:0; left:160px; font-size:11px; margin:0; padding:0}
-#mainnav ul li ul li ul li:hover a {background:#b00}
-
-#mainnav ul li:hover ul, #mainnav ul li:hover ul li:hover ul  {display:block}
-#mainnav ul li:hover ul ul, #mainnav ul li:hover ul li:hover ul ul {display:none}
-
-/* for IE6 */
-#mainnav ul li.hover a {background:#1E1E1E}
-#mainnav ul li ul li.hover a {background:#343434}
-#mainnav ul li ul li ul li.hover a {background:#b00}
-#mainnav ul li.hover ul, #mainnav ul li.hover ul li.hover ul  {display:block}
-#mainnav ul li.hover ul ul, #mainnav ul li.hover ul li.hover ul ul {display:none}
-
-*/
-
-.clear {clear: both; margin:0; padding: 0; line-height: 0; font-size: 0;}
-
-/* Order Invoice styles */
-.invoiceBorder {
-	border-collapse: collapse;
-	border: 1px solid #000000;
-	width: 400px;
-}
-
-.invoiceHeader {
-	font-family:Arial;
-	font-weight: 600;
-	font-size: 12px;
-	background-color: #FFFFFF;
-	border-color: #FFFFFF;
-	line-height: 20px;
-}
-
-.invoiceTotal {
-	font-family:Arial;
-	font-weight: 600;
-	font-size: 10;
-	background-color: #FFFFFF;
-	border-color: #FFFFFF;
-	line-height: 12px;
-	align: left;
-}
-
-.invoiceItem {
-	font-family:Arial;
-	font-weight: 400;
-	font-size: 10;
-	background-color: #FFFFFF;
-	border-color: #FFFFFF;
-	line-height: 12px;
-}
-
-.invoiceAmount {
-	font-family:Arial;
-	font-weight: 400;
-	font-size: 10;
-	background-color: #FFFFFF;
-	border-color: #FFFFFF;
-	line-height: 12px;
-	align: left;
-}
-
-.black_border {
-	border-collapse: collapse;
-	border: 1px solid #000000;
-}
-
-.regPricing {
-	background-color: #E1E1E1;
-	padding-right: 10px;
-	padding-left: 10px;
-	padding-top: 2px;
-	padding-bottom: 2px;
-}
-
-.regPricing2 {
-	padding-right: 10px;
-	padding-left: 10px;
-	padding-top: 2px;
-	padding-bottom: 2px;
-}
-
-.regSpacer {
-	background-color: #FFFFFF;
-	height: 1px;
-	padding-right: 0px;
-	padding-left: 0px;
-	padding-top: 0px;
-	padding-bottom: 0px;
-}
-
-.agendaHeader {
-	background: url(http://www.marklogicevents.com/img/tables/bg_total.jpg) repeat-x top #435D09;
-	/* background-color: #9A9F40; */
-	padding-right: 10px;
-	padding-left: 10px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	color: #FFFFFF;
-}
-
-.agendaItem {
-	background: url(http://www.marklogicevents.com/img/tables/bg_td2.jpg) repeat-x top;
-	/* background-color: #E1E1E1; */
-	padding-right: 10px;
-	padding-left: 10px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	color: #000000;
-	border-bottom: 1px solid #DDDDDD; 
-	border-right: 1px solid #DDDDDD;
-	border-left: 1px solid #DDDDDD;
-}
-
-.agendaItemWhite {
-	background-color: #FFFFFF;
-	padding-right: 10px;
-	padding-left: 10px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	color: #000000;
-	border-bottom: 1px solid #DDDDDD; 
-	border-right: 1px solid #DDDDDD;
-	border-left: 1px solid #DDDDDD;
-}
-
-.agendaSpacer {
-	background-color: #FFFFFF;
-	height: 1px;
-	padding-right: 0px;
-	padding-left: 0px;
-	padding-top: 0px;
-	padding-bottom: 0px;
-}
-
-.agendaSpacerHorizontial {
-	background-color: #FFFFFF;
-	width: 0px;
-	padding-right: 0px;
-	padding-left: 0px;
-	padding-top: 0px;
-	padding-bottom: 0px;
-}
-
-.copyFont {
-	color: 333333;
-	font-size: 10px;
-}
-
-.registerNowFont {
-	color: 9A9F40;
-	font-size: 16px;
-}
-
-.h3Green {
-	font-size: 14px;
-	letter-spacing: 0.5pt;
-	color: #556d00;
-	font-weight: 600;
-}
-
-.divIndent {
-	padding-left:25px;
-	}
-	
-.smallLink {
-	color: 9A9F40;
-	font-size: 10px;
-}	
-
-.unboldLink {
-	color: 9A9F40;
-	font-size: 12px;
-	font-weight: 200;
-}	
-
-.divCenter {
-	align:center;
-	}

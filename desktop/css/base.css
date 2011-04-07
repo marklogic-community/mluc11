@@ -67,9 +67,16 @@
     border-color: #999;
 }
 
-.visiblebutton {
-    border-color: #999;
+.x-nbr table.visiblebutton {
+    border: 1px solid #999;
     background-color: #efefef;
+}
+.x-nbr table.visiblebutton.x-btn-toolbar-small-over {
+    border: none;
+    background-color: transparent;
+}
+
+.visiblebutton {
     background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, from(#F7F7F7), color-stop(0.48, #F1F1F1), color-stop(0.52, #DADADA), to(#DFDFDF));
 }
 .x-btn-toolbar-small-over {
