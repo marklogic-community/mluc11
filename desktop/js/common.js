@@ -149,7 +149,7 @@ Ext.regModel("Survey", {
         writer: {
             type: "rawjson"
         }
-    },
+    }
 });
 
 Ext.regModel("Sponsor", {
