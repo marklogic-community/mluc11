@@ -90,7 +90,7 @@ Ext.define('mluc.widgets.Twitter', {
                     rpp: 100
                 },
                 reader: {
-                    root: "results",
+                    root: "results"
                 },
             },
             listeners: {

@@ -76,7 +76,7 @@ Ext.define("mluc.views.SessionSurvey", {
             {
                 text: 'Submit',
                 scope: this,
-                handler: this.submit,
+                handler: this.submit
             }
         ];
 
