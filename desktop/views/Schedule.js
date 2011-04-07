@@ -79,11 +79,6 @@ Ext.define('mluc.widgets.Schedule', {
             }
         });
 
-        Ext.getStore("SessionStore").addListener("load", this.renderSchedule, this);
-        var speakerStore = Ext.getStore("SpeakerStore");
-        speakerStore.addListener("load", this.loadSchedule);
-        speakerStore.load();
-
         Ext.apply(this, {
             xtype: "container",
             title: "Schedule",
@@ -119,6 +114,16 @@ Ext.define('mluc.widgets.Schedule', {
                 ]
             }],
             listeners: {
+                render: function() {
+                    var me = this;
+                    window.setTimeout(function() {
+                        Ext.getStore("SessionStore").addListener("load", me.renderSchedule, me);
+                        var speakerStore = Ext.getStore("SpeakerStore");
+                        speakerStore.addListener("load", me.loadSchedule);
+                        me.setLoading(true);
+                        speakerStore.load();
+                    }, 1);
+                },
                 afterlayout: function(panel) {
                     var sessions = panel.body.query("div.breakoutsession");
                     for(var i = 0; i < sessions.length; i += 1) {
@@ -234,6 +239,7 @@ Ext.define('mluc.widgets.Schedule', {
     },
 
     renderSchedule: function(sessionStore, records, successful, viaSearch) {
+        this.setLoading(false);
         if(viaSearch === true) {
             this.dateSelector.setActiveItem(0, true);
             if(this.myScheduleButton.pressed) {
