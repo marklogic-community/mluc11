@@ -46,8 +46,8 @@ Ext.define("mluc.views.DetailsWindow", {
                 '<div class="sessiondetail">',
                     '{id:this.renderTopRightLinks}',
                     '<h2 class="title">{title}</h2>',
-                    '<span class="time">{[ Ext.Date.format(values.startTime, "g:ia") + " &ndash; " + Ext.Date.format(values.endTime, "g:ia") ]}</span>',
-                    '<span class="location">&nbsp;in {location}</span>',
+                    '<div class="meta"><span class="time">{[ Ext.Date.format(values.startTime, "g:ia") + " &ndash; " + Ext.Date.format(values.endTime, "g:ia") ]}</span>',
+                    '<span class="location">&nbsp;in {location}</span></div>',
                     '<p class="abstract">{abstract}</h2>',
                     '<div class="speakers">{speakerIds:this.renderSpeakers}</div>',
                 '</div>',
@@ -71,7 +71,7 @@ Ext.define("mluc.views.DetailsWindow", {
 
                         var content = '<div class="topright"><div id="{0}"></div>';
                         if(me.store.getCount()) {
-                            content += '<div class="numattendees"><span class="num">' + me.store.getCount() + '</span><br>Attending</div></div>';
+                            content += '<div class="numattendees"><span class="num">' + me.store.getCount() + '</span><br>Attending</div>';
                         }
                         content += "</div>";
                         return Ext.String.format(content, containerId);
@@ -166,7 +166,7 @@ Ext.define("mluc.views.DetailsWindow", {
                                     text: "Login to add to favorites",
                                     cls: "session-login",
                                     handler: function() {
-                                        mluc.createCookie("MLUC-VIEWING", Ext.JSON.encode({session: panel.session.get("id")}), 1);
+                                        mluc.createCookie("MLUC-VIEWING", Ext.JSON.encode({session: mluc.views.Schedule.detailsWindow.session.get("id")}), 1);
                                         mluc.login();
                                     }
                                 });

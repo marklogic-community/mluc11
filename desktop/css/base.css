@@ -95,7 +95,7 @@ td.featured {
 }
 
 td.breakoutsession:hover {
-    background-color: #eef1d7;
+    background-color: #e8edf8;
     cursor: pointer;
 }
 
@@ -165,11 +165,14 @@ table.tweet td.text {
     padding: 5px;
 }
 table.tweet a {
-    color: #436026;
     text-decoration: none;
     font-weight: normal;
 }
 
+a,
+#footer li {
+    color: #477da1 !important;
+}
 
 
 /*
@@ -209,6 +212,7 @@ div.sessiondetail div.topright {
     text-align: center;
     width: 75px;
     height: 80px;
+    margin-left: 7px;
 }
 div.sessiondetail div.numattendees {
     margin-top: 7px;
@@ -238,7 +242,7 @@ div.sessiondetail p {
 
 td div.header {
     background: inherit;
-    background-color: rgb(95,116,37);
+    background-color: #545861;
     color: white;
     font-weight: bold;
 }
@@ -251,6 +255,19 @@ div.notattending {
 /*
 Session details
 */
+
+div.sessiondetail h2 {
+    padding-bottom: 5px;
+}
+
+div.sessiondetail div.meta {
+    margin-bottom: 10px;
+}
+
+div.sessiondetail span.time,
+div.sessiondetail span.location {
+    font-weight: bold;
+}
 
 div.attendance {
     margin-top: 15px;
