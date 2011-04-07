@@ -202,7 +202,7 @@ Ext.regStore("SessionStore", {
         reader: {
             type: "json",
             root: "results",
-            totalProperty: "count",
+            totalProperty: "count"
         }
     },
     sorters: [
@@ -229,7 +229,7 @@ Ext.regStore("SessionSearchStore", {
         reader: {
             type: "json",
             root: "results",
-            totalProperty: "count",
+            totalProperty: "count"
         }
     },
     sorters: [
@@ -253,7 +253,7 @@ Ext.regStore("SpeakerSearchStore", {
         reader: {
             type: "json",
             root: "results",
-            totalProperty: "count",
+            totalProperty: "count"
         }
     },
     sorters: [
