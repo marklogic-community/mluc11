@@ -91,7 +91,7 @@ Ext.define('mluc.widgets.Twitter', {
                 },
                 reader: {
                     root: "results"
-                },
+                }
             },
             listeners: {
                 load: this.renderTweets

@@ -102,7 +102,7 @@ Ext.onReady(function() {
                         '<li class="none"><a href="http://www.marklogicevents.com/?event=content.privacy">Privacy Policy</a></li>' +
                         '<li><a href="http://www.marklogicevents.com/?event=content.terms">Terms of Use </a></li>' +
                         '<li>&copy; 2011 MarkLogic. All rights reserved.</li>' +
-                    '</ul><br class="clear" /></div>',
+                    '</ul><br class="clear" /></div>'
             }
         ]
     });
