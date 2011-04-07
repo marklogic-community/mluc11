@@ -67,7 +67,7 @@
             url: "http://search.twitter.com/search.json",
             callbackKey: "callback",
             params: {                    
-                q: "#marklogic",
+                q: "marklogic OR mluc11",
                 rpp: 100
             },
 

@@ -86,7 +86,7 @@ Ext.define('mluc.widgets.Twitter', {
                 type: 'scripttag',
                 url : 'http://search.twitter.com/search.json',
                 extraParams: {
-                    q: "#marklogic",
+                    q: "marklogic OR mluc11",
                     rpp: 100
                 },
                 reader: {
