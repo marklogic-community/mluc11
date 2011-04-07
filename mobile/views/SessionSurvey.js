@@ -31,35 +31,33 @@ var sessionSurvey = Ext.extend(Ext.form.FormPanel, {
         this.ids.id = Ext.id();
 
         config.id = this.ids.id;
-        var options = [
-            {text: 'Select one',  value: '0'},
-            {text: 'Poor',  value: '1'},
-            {text: 'Fair', value: '2'},
-            {text: 'Average',  value: '3'},
-            {text: 'Good',  value: '4'},
-            {text: 'Great',  value: '5'}
+        var buttons = [
+            {text: 'Poor',  data: {value: 1}},
+            {text: 'Fair', data: {value: 2}},
+            {text: 'Average',  data: {value: 3}},
+            {text: 'Good',  data: {value: 4}},
+            {text: 'Great',  data: {value: 5}}
         ]
         config.items = [
             {
                 xtype: "panel",
+                cls: "survey-session-title",
                 id: this.ids.title,
                 tpl: new Ext.XTemplate(
                     '<h2>{title}</h2>'
                 )
             },
             {
-                xtype: "selectfield",
+                xtype: "segmentedbutton",
                 id: this.ids.speakerQuality,
-                name: "speakerQuality",
-                label: "Effectiveness of speaker",
-                options: options
+                html: '<div class="seglabel">Effectiveness of speaker</div>',
+                items: buttons
             },
             {
-                xtype: "selectfield",
+                xtype: "segmentedbutton",
                 id: this.ids.sessionQuality,
-                name: "sessionQuality",
-                label: "Quality of content",
-                options: options
+                html: '<div class="seglabel">Quality of content</div>',
+                items: buttons
             },
             {
                 xtype: "textareafield",
@@ -82,8 +80,8 @@ var sessionSurvey = Ext.extend(Ext.form.FormPanel, {
         this.layoutManager = layoutManager;
         this.parentToolbar = this.layoutManager.dockedItems.items[0];
         this.getComponent(this.ids.title).update(session.data);
-        this.getComponent(this.ids.speakerQuality).setValue(0);
-        this.getComponent(this.ids.sessionQuality).setValue(0);
+        this.getComponent(this.ids.speakerQuality).setPressed(this.getComponent(this.ids.speakerQuality).getPressed(), false, true);
+        this.getComponent(this.ids.sessionQuality).setPressed(this.getComponent(this.ids.sessionQuality).getPressed(), false, true);
         this.getComponent(this.ids.comments).setValue("");
         this.lastActiveItem = layoutManager.getActiveItem();
 
@@ -121,8 +119,8 @@ var sessionSurvey = Ext.extend(Ext.form.FormPanel, {
         var id = Math.ceil(Math.random() * 100000000000000000);
         var username = mluc.readCookie("MLUC-USERNAME");
         if(username) {
-            var speakerQ = this.getComponent(this.ids.speakerQuality).getValue();
-            var sessionQ = this.getComponent(this.ids.sessionQuality).getValue();
+            var speakerQ = this.getComponent(this.ids.speakerQuality).getPressed().data.value;
+            var sessionQ = this.getComponent(this.ids.sessionQuality).getPressed().data.value;
             var comments = this.getComponent(this.ids.comments).getValue();
             var survey = Ext.ModelMgr.create({id: id, forSession: this.session.getId(), userId: username, speakerQuality: speakerQ, sessionQuality: sessionQ, sessionComments: comments, dateAdded: new Date()}, 'Survey');
             me.setLoading(true);

@@ -115,6 +115,7 @@
     mluc.views.Speakers = Ext.extend(Ext.Panel, {
         title: "Speakers",
         iconCls: "speakers",
+        cls: "speakers-panel",
         scroll: "vertical",
         layout: "card",
         scroll: false,
@@ -229,7 +230,8 @@
             Ext.History.add("speakersession:" + session.getId());
             sessionDetailsPanel = new Ext.create({
                 xtype: "sessionviewer",
-                scroll: "vertical"
+                scroll: "vertical",
+                parentClass: "speakers-panel"
             });
             mluc.speakersView.add(sessionDetailsPanel);
 

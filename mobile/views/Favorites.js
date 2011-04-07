@@ -91,6 +91,7 @@
 
     mluc.views.Favorites = Ext.extend(Ext.Panel, {
         title: "Favorites",
+        cls: "favorites-panel",
         iconCls: "favorites",
         layout: "card",
         dockedItems: [toolBar],
@@ -101,7 +102,7 @@
                 grouped: true,
                 html: "Loading...",
                 emptyText: "Either you haven't marked yourself as attending any sessions or you need to login first.",
-                itemTpl: "<span class='session-track'>{track}</span><br><span class='session-title'>{title}</span><br><span class='session-room'>{location}</span>",
+                itemTpl: '<tpl if="track"><span class="session-track">{track}</span><br></tpl><span class="session-title">{title}</span><br><span class="session-room">{location}</span>',
                 cls: "session-list",
                 multiSelect: false,
                 singleSelect: true,
@@ -131,7 +132,8 @@
 
             sessionDetailsPanel = new Ext.create({
                 xtype: "sessionviewer",
-                scroll: "vertical"
+                scroll: "vertical",
+                parentClass: "favorites-panel"
             });
             mluc.favoritesView.add(sessionDetailsPanel);
 

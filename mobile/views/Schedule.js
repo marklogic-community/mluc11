@@ -97,6 +97,7 @@
     mluc.views.Schedule = Ext.extend(Ext.Panel, {
         title: "Schedule",
         iconCls: "schedule",
+        cls: "schedule-panel",
         layout: "card",
         scroll: false,
         dockedItems: [toolBar],
@@ -120,7 +121,7 @@
                         grouped: true,
                         html: "Loading...",
                         emptyText: "No Sessions",
-                        itemTpl: '<tpl if="featured"><span class="featured"></span></tpl><span class="session-track">{track}</span><br><span class="session-title">{title}</span><br><span class="session-room">{location}</span>',
+                        itemTpl: '<tpl if="featured"><span class="featured"></span></tpl><tpl if="track"><span class="session-track">{track}</span><br></tpl><span class="session-title">{title}</span><br><span class="session-room">{location}</span>',
                         cls: "session-list",
                         multiSelect: false,
                         singleSelect: false,
@@ -159,7 +160,8 @@
 
             sessionDetailsPanel = new Ext.create({
                 xtype: "sessionviewer",
-                scroll: "vertical"
+                scroll: "vertical",
+                parentClass: "schedule-panel"
             });
             mluc.scheduleView.add(sessionDetailsPanel);
 

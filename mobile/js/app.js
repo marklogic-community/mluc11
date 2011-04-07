@@ -279,20 +279,15 @@ Ext.regStore("MySessionsStore", {
     },
     sorters: [
         {
-            sorterFn: function(mySession1, mySession2) {
-                var sessionStore = Ext.getStore("SessionStore");
-                var session1 = sessionStore.getById(mySession1.get("sessionId"));
-                var session2 = sessionStore.getById(mySession2.get("sessionId"));
-
-                return session1 > session2 ? 1 : (session1 < session2 ? -1 : 0);
-            }
+            property: "startTime",
+            direction: "ASC"
         }
     ],
     getGroupString: function(record) {
         var sessionStore = Ext.getStore("SessionStore");
         var session = sessionStore.getById(record.get("sessionId"));
 
-        return session.get("startTime").format("g:ia") + " &ndash; " + session.get("endTime").format("g:ia");
+        return session.get("startTime").format("l, g:ia") + " &ndash; " + session.get("endTime").format("g:ia");
     }
 });
 

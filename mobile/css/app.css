@@ -120,7 +120,8 @@ h3.x-list-header {
     -webkit-mask-image:url(/images/icon-favorites.png)
 }
 
-.x-list-item {
+.x-list .x-list-item {
+    padding-right: 17px;
     background-image:url('/images/chevron.png');
     background-repeat:no-repeat;
     background-position:right center;
@@ -128,9 +129,8 @@ h3.x-list-header {
 
 
 
-.session-list div.x-list-item-body,
-.speaker-list div.x-list-item-body {
-    line-height: 12pt;
+.sponsor-list div.x-list-item-body {
+    padding-top:3px;
 }
 
 /* Makes the tab bar a bit smaller and the icons keep their original proportions */
@@ -420,6 +420,7 @@ div.tweet img {
     -webkit-border-radius: 5px;
 }
 div.tweet span.username {
+    font-size: 14px;
     font-weight: bold;
 }
 div.tweet span.date {
@@ -455,15 +456,40 @@ div.sponsor-details div.sponsor-image {
 }
 
 div.sponsor-details td.about {
-    padding: 5px;
+    font-weight: normal !important;
+    line-height: 1.4em;
+    padding: 8px 10px 5px 10px;
 }
 
 /*
 Survey
 */
+
+div.survey-session-title .x-panel-body {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+div.survey-session-title .x-panel-body h2 {
+    font-weight: bold !important;
+}
 .x-field {
     display: block;
 }
 .x-form-label {
     width: 100% !important;
+}
+
+.x-segmentedbutton {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.x-segmentedbutton .x-button-label {
+    font-size: 14px !important;
+}
+.x-segmentedbutton .x-layout-box-inner {
+    height: 40px !important;
+}
+
+div.seglabel {
+    margin-bottom: 5px;
 }

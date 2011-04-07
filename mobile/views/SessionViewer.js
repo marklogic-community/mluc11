@@ -233,8 +233,8 @@ var sessionViewer = Ext.extend(Ext.Panel, {
             mySession.save({
                 success: function() {
                     me.setLoading(false);
-                    Ext.DomQuery.selectNode("table.attending").style.display = "block";
-                    Ext.DomQuery.selectNode("table.notattending").style.display = "none";
+                    Ext.DomQuery.selectNode("div." + me.parentClass + " table.attending").style.display = "block";
+                    Ext.DomQuery.selectNode("div." + me.parentClass + " table.notattending").style.display = "none";
                 }
             });
         }
@@ -259,8 +259,8 @@ var sessionViewer = Ext.extend(Ext.Panel, {
             var callback = function(operation) {
                 if(operation.wasSuccessful()) {
                     me.setLoading(false);
-                    Ext.DomQuery.selectNode("table.attending").style.display = "none";
-                    Ext.DomQuery.selectNode("table.notattending").style.display = "block";
+                    Ext.DomQuery.selectNode("div." + me.parentClass + " table.attending").style.display = "none";
+                    Ext.DomQuery.selectNode("div." + me.parentClass + " table.notattending").style.display = "block";
                 }
             };
         
