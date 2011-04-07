@@ -61,7 +61,7 @@ Ext.onReady(function() {
 
     Ext.create('Ext.Viewport', {
         layout: {
-            type: 'border',
+            type: 'border'
         },
         defaults: {
         },

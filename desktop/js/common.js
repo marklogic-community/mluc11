@@ -273,7 +273,7 @@ Ext.regStore("MySessionsStore", {
         reader: {
             type: "json",
             root: "results",
-            totalProperty: "count",
+            totalProperty: "count"
         }
     },
     sorters: [
