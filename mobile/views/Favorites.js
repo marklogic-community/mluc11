@@ -124,11 +124,14 @@
             if(typeof mySession == "string") {
                 mySession = Ext.getStore("MySessionsStore").getById(mySession);
             }
+            var session = Ext.getStore("SessionStore").getById(mySession.get("sessionId"));
 
             Ext.History.add("favorite:" + mySession.getId());
             toolBar.getComponent(backButtonId).show();
             toolBar.getComponent(loginButtonId).hide();
-            toolBar.getComponent(openSurveyId).show();
+            if(session.get("giveSurvey")) {
+                toolBar.getComponent(openSurveyId).show();
+            }
 
             sessionDetailsPanel = new Ext.create({
                 xtype: "sessionviewer",
@@ -144,7 +147,6 @@
 
             toolBar.setTitle("Info");
 
-            var session = Ext.getStore("SessionStore").getById(mySession.get("sessionId"));
             this.viewingSession = session;
             sessionDetailsPanel.viewSession(session);
         },

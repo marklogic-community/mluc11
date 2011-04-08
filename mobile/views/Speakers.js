@@ -225,7 +225,9 @@
             }
             this.viewingSession = session;
 
-            toolBar.getComponent(openSurveyId).show();
+            if(session.get("giveSurvey")) {
+                toolBar.getComponent(openSurveyId).show();
+            }
 
             Ext.History.add("speakersession:" + session.getId());
             sessionDetailsPanel = new Ext.create({

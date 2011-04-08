@@ -156,7 +156,9 @@
 
             Ext.History.add("session:" + session.getId());
             toolBar.getComponent(backButtonId).show();
-            toolBar.getComponent(openSurveyId).show();
+            if(session.get("giveSurvey")) {
+                toolBar.getComponent(openSurveyId).show();
+            }
 
             sessionDetailsPanel = new Ext.create({
                 xtype: "sessionviewer",

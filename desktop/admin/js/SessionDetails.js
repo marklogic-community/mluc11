@@ -47,6 +47,8 @@ Ext.define('mluc.AdminSessionDetails', {
 
                     var data = this.record.data;
                     data.featured = form.findField("featured").getValue();
+                    data.plenary = form.findField("plenary").getValue();
+                    data.giveSurvey = form.findField("giveSurvey").getValue();
                     data.startTime = this.combineDateAndTime(form.findField("sessionDate").getValue(), form.findField("startTime").getValue());
                     data.endTime = this.combineDateAndTime(form.findField("sessionDate").getValue(), form.findField("endTime").getValue());
 
@@ -92,6 +94,11 @@ Ext.define('mluc.AdminSessionDetails', {
             {
                 fieldLabel: 'Plenary',
                 name: "plenary",
+                xtype: "checkbox",
+            },
+            {
+                fieldLabel: 'Survey',
+                name: "giveSurvey",
                 xtype: "checkbox",
             },
             {

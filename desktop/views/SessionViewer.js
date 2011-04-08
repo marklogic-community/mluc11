@@ -44,7 +44,7 @@ Ext.define("mluc.views.DetailsWindow", {
             xtype: "container",
             tpl: new Ext.XTemplate(
                 '<div class="sessiondetail">',
-                    '{id:this.renderTopRightLinks}',
+                    '{giveSurvey:this.renderTopRightLinks}',
                     '<h2 class="title">{title}</h2>',
                     '<div class="meta"><span class="time">{[ Ext.Date.format(values.startTime, "g:ia") + " &ndash; " + Ext.Date.format(values.endTime, "g:ia") ]}</span>',
                     '<span class="location">&nbsp;in {location}</span></div>',
@@ -55,21 +55,29 @@ Ext.define("mluc.views.DetailsWindow", {
                     '{id:this.renderAttendies}',
                 '</div>',
                 {
-                    renderTopRightLinks: function() {
+                    renderTopRightLinks: function(giveSurvey) {
                         var containerId = Ext.id();
-                        Ext.defer(function() {
-                            var button = new Ext.button.Button({
-                                renderTo: containerId,
-                                text: "Survey",
-                                width: 75,
-                                scope: me,
-                                handler: function() {
-                                    me.getComponent(1).viewSurvey(me.session, me.getLayout());
-                                }
-                            });
-                        }, 50);
+                        if(giveSurvey) {
+                            Ext.defer(function() {
+                                var button = new Ext.button.Button({
+                                    renderTo: containerId,
+                                    text: "Survey",
+                                    width: 75,
+                                    scope: me,
+                                    handler: function() {
+                                        me.getComponent(1).viewSurvey(me.session, me.getLayout());
+                                    }
+                                });
+                            }, 50);
+                        }
 
-                        var content = '<div class="topright"><div id="{0}"></div>';
+                        var content;
+                        if(giveSurvey) {
+                            content = '<div class="topright"><div id="{0}"></div>';
+                        }
+                        else {
+                            content = '<div class="topright">';
+                        }
                         if(me.store.getCount()) {
                             content += '<div class="numattendees"><span class="num">' + me.store.getCount() + '</span><br>Attending</div>';
                         }
