@@ -542,13 +542,11 @@ Ext.setup({
 
     onReady: function() {
         Ext.History.init();
-        /*
-        window.setTimeout(function() {
-            window.scrollTo(0, window.innerHeight);
-        }, 1000);
-        */
 
         Ext.History.on("change", function(fragment) {
+            if(Ext.is.Android) {
+                window.scrollTo(0, window.innerHeight);
+            }
 
             var type = fragment.substring(0, fragment.indexOf(":"));
             var id = fragment.substring(fragment.indexOf(":") + 1);

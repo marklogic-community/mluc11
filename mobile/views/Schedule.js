@@ -185,6 +185,9 @@
             }
 
             Ext.History.add("");
+            if(Ext.is.Android) {
+                window.scrollTo(0, window.innerHeight);
+            } 
             mluc.scheduleView.setActiveItem(0, {
                 type: "slide",
                 direction: "right"

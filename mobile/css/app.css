@@ -480,6 +480,7 @@ div.survey-session-title .x-panel-body h2 {
 }
 
 .x-segmentedbutton {
+    margin-left: -5px;
     margin-top: 10px;
     margin-bottom: 10px;
 }

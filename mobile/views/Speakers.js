@@ -259,6 +259,9 @@
             var list;
             if(activePanel.id === "speaker-details-panel") {
                 Ext.History.add("");
+                if(Ext.is.Android) {
+                    window.scrollTo(0, window.innerHeight);
+                } 
                 toolBar.setTitle("Speakers");
                 toolBar.getComponent(backButtonId).hide();
                 list = mluc.speakersView.getComponent(0).getComponent(1);

@@ -160,6 +160,9 @@
             }
 
             Ext.History.add("");
+            if(Ext.is.Android) {
+                window.scrollTo(0, window.innerHeight);
+            } 
             mluc.favoritesView.setActiveItem(0, {
                 type: "slide",
                 direction: "right"
