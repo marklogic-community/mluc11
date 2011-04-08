@@ -80,7 +80,8 @@ Ext.define("mluc.views.DetailsWindow", {
                         var speakers = "";
                         var speakerStore = Ext.getStore("SpeakerStore");
 
-                        for(var i = 0; i < speakerIds.length; i += 1) {
+                        var i;
+                        for(i = 0; i < speakerIds.length; i += 1) {
                             var speaker = speakerStore.getById(speakerIds[i] + "").data;
                             var className = "session-presenter";
                             if(i < speakerIds.length - 1) {
@@ -126,7 +127,7 @@ Ext.define("mluc.views.DetailsWindow", {
                                         scope: me,
                                         handler: me.unattend
                                     });
-                                }, 50)
+                                }, 50);
                             }
                             else {
                                 addLogin = "<table><tbody><tr>";
@@ -150,7 +151,7 @@ Ext.define("mluc.views.DetailsWindow", {
                                             this.attend(input.getValue());
                                         }
                                     });
-                                }, 50)
+                                }, 50);
                             }
                         }
                         else {
@@ -170,7 +171,7 @@ Ext.define("mluc.views.DetailsWindow", {
                                         mluc.login();
                                     }
                                 });
-                            }, 50)
+                            }, 50);
                         }
 
                         return '<div class="attend-login">' + addLogin + '</div>';
@@ -313,7 +314,7 @@ Ext.define("mluc.views.DetailsWindow", {
                 };
                 record.getProxy().destroy(operation, callback, record);
 
-            	mluc.views.Schedule.renderSchedule(Ext.getStore("SessionStore"));
+                mluc.views.Schedule.renderSchedule(Ext.getStore("SessionStore"));
             }, 0);
         }
     },

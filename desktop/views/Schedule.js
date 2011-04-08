@@ -126,16 +126,18 @@ Ext.define('mluc.widgets.Schedule', {
                 },
                 afterlayout: function(panel) {
                     var sessions = panel.body.query("div.breakoutsession");
-                    for(var i = 0; i < sessions.length; i += 1) {
-                        var cell = Ext.get(sessions[i]).parent("td");
+                    var cell;
+                    var i;
+                    for(i = 0; i < sessions.length; i += 1) {
+                        cell = Ext.get(sessions[i]).parent("td");
                         if(!cell.hasCls("breakoutsession")) {
                             cell.addCls("breakoutsession");
                         }
                     }
 
                     var featured = panel.body.query("div.featured");
-                    for(var i = 0; i < featured.length; i += 1) {
-                        var cell = Ext.get(featured[i]).parent("td");
+                    for(i = 0; i < featured.length; i += 1) {
+                        cell = Ext.get(featured[i]).parent("td");
                         if(!cell.hasCls("featured")) {
                             cell.addCls("featured");
                         }
@@ -150,7 +152,7 @@ Ext.define('mluc.widgets.Schedule', {
         render: function(panel) {
             panel.body.on('click', function(e) {
                 var element = Ext.get(e.target);
-                var container = undefined;
+                var container;
                 if(element.hasCls("breakoutsession") && element.hasCls("session")) {
                     container = element;
                 }
@@ -208,7 +210,8 @@ Ext.define('mluc.widgets.Schedule', {
             this.setLoading(true);
             var words = userQuery.split(" ");
             var keywords = [];
-            for(var i = 0; i < words.length; i += 1) {
+            var i;
+            for(i = 0; i < words.length; i += 1) {
                 keywords.push({
                     "or": [
                         {"contains": {"key": "title", "string": words[i], "weight": 3, "caseSensitive": false}},
@@ -218,12 +221,12 @@ Ext.define('mluc.widgets.Schedule', {
                     ]
                 });
             }
-
             query = {
                 "fulltext": {
                     "and": keywords
                 }
-            }
+            };
+
             store.proxy.extraParams = {q: Ext.JSON.encode(query)};
             store.load({
                 scope: this,
@@ -251,23 +254,23 @@ Ext.define('mluc.widgets.Schedule', {
         indexToDateRange[0] = {
             start: new Date("April 26, 2011 00:00:00"),
             end: new Date("April 29, 2011 23:59:59")
-        }
+        };
         indexToDateRange[1] = {
             start: new Date("April 26, 2011 00:00:00"),
             end: new Date("April 26, 2011 23:59:59")
-        }
+        };
         indexToDateRange[2] = {
             start: new Date("April 27, 2011 00:00:00"),
             end: new Date("April 27, 2011 23:59:59")
-        }
+        };
         indexToDateRange[3] = {
             start: new Date("April 28, 2011 00:00:00"),
             end: new Date("April 28, 2011 23:59:59")
-        }
+        };
         indexToDateRange[4] = {
             start: new Date("April 29, 2011 00:00:00"),
             end: new Date("April 29, 2011 23:59:59")
-        }
+        };
 
         var dateIndex = this.dateSelector.getActiveItem().getId();
         var dateRange = indexToDateRange[dateIndex];
@@ -280,7 +283,8 @@ Ext.define('mluc.widgets.Schedule', {
         var searchResultStore = Ext.getStore("SessionSearchStore");
         var lastHeaderString = "";
         var numColumnOutput = 0;
-        for(var i = 0; i < sessions.length; i += 1) {
+        var i;
+        for(i = 0; i < sessions.length; i += 1) {
             if(!(sessions[i].get("startTime") >= dateRange.start && sessions[i].get("endTime") <= dateRange.end)) {
                 continue;
             }
@@ -327,7 +331,8 @@ Ext.define('mluc.widgets.Schedule', {
 
                 var speakerIds = sessions[i].get("speakerIds");
                 var speakerStore = Ext.getStore("SpeakerStore");
-                for(var j = 0; j < speakerIds.length; j += 1) {
+                var j;
+                for(j = 0; j < speakerIds.length; j += 1) {
                     var speaker = speakerStore.getById(speakerIds[j] + "");
                     var nextSpeaker = speakerStore.getById(speakerIds[j + 1] + "");
                     var nextSpeakerAffiliation = "";
@@ -347,7 +352,7 @@ Ext.define('mluc.widgets.Schedule', {
                         }
 
                         if(j !== speakerIds.length - 1) {
-                            speakers += ", "
+                            speakers += ", ";
                         }
                     }
                 }

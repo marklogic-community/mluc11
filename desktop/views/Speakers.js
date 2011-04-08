@@ -56,20 +56,7 @@ Ext.define('mluc.widgets.Speakers', {
                     },
                     " "
                 ]
-            }],
-            listeners: {
-                afterlayout: function(panel) {
-                    /*
-                    var featured = panel.body.query("div.featured");
-                    for(var i = 0; i < featured.length; i += 1) {
-                        var cell = Ext.get(featured[i]).parent("td");
-                        if(!cell.hasCls("featured")) {
-                            cell.addCls("featured");
-                        }
-                    }
-                    */
-                }
-            }
+            }]
         });
         this.callParent(arguments);
 
@@ -139,7 +126,8 @@ Ext.define('mluc.widgets.Speakers', {
             this.setLoading(true);
             var words = userQuery.split(" ");
             var keywords = [];
-            for(var i = 0; i < words.length; i += 1) {
+            var i;
+            for(i = 0; i < words.length; i += 1) {
                 keywords.push({
                     "or": [
                         {"contains": {"key": "name", "string": words[i], "weight": 3, "caseSensitive": false}},
@@ -154,7 +142,7 @@ Ext.define('mluc.widgets.Speakers', {
                 "fulltext": {
                     "and": keywords
                 }
-            }
+            };
             store.proxy.extraParams = {q: Ext.JSON.encode(query)};
             store.load({
                 scope: this,
@@ -184,7 +172,8 @@ Ext.define('mluc.widgets.Speakers', {
 
         var sessionStore = Ext.getStore("SessionStore");
 
-        for(var i = 0; i < speakers.length; i += 1) {
+        var i;
+        for(i = 0; i < speakers.length; i += 1) {
             var speaker = speakers[i];
             if(speaker.get("featured")) {
                 className += " featured";
@@ -205,14 +194,16 @@ Ext.define('mluc.widgets.Speakers', {
             var sessions = [];
             sessionStore.each(function(record) {
                 var speakerIds = record.get("speakerIds");
-                for(var j = 0; j < speakerIds.length; j += 1) {
+                var j;
+                for(j = 0; j < speakerIds.length; j += 1) {
                     if(speakerIds[j] == speaker.getId()) {
                         sessions.push(record);
                     }
                 }
             });
 
-            for(var j = 0; j < sessions.length; j += 1) {
+            var j;
+            for(j = 0; j < sessions.length; j += 1) {
                 extendedInfo += "<div class='session' id='sesh-" + sessions[j].get("id") + "'><span class='track'>" + sessions[j].get("track") + "</span><br><span class='title'>" + sessions[j].get("title") + "</span></div>";
             }
             extendedInfo += "</div>";

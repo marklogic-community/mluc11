@@ -22,16 +22,18 @@ Ext.define("mluc.RawJsonWriter", {
     extend: "Ext.data.Writer",
     alias: "writer.rawjson",
     writeRecords: function(request, data) {
-        for(var i = 0; i < data.length; i += 1) {
+        var i;
+        for(i = 0; i < data.length; i += 1) {
             var record = data[i];
             if(this.ignoreKeys) {
-                for(var j = 0; j < this.ignoreKeys.length; j += 1) {
+                var j;
+                for(j = 0; j < this.ignoreKeys.length; j += 1) {
                     delete record[this.ignoreKeys[j]];
                 }
             }
         }
 
-        if(data.length == 1) {
+        if(data.length === 1) {
             request.jsonData = data[0];
         }
         else {
@@ -97,7 +99,7 @@ Ext.regModel("Attendee", {
         {name: "track", convert: function(value, record) { var sesh = Ext.getStore("SessionStore").getById(record.get("sessionId")); return sesh ? sesh.get("track") : undefined; }},
         {name: "type", convert: function(value, record) { var sesh = Ext.getStore("SessionStore").getById(record.get("sessionId")); return sesh ? sesh.get("type") : undefined; }},
         {name: "sponsor", convert: function(value, record) { var sesh = Ext.getStore("SessionStore").getById(record.get("sessionId")); return sesh ? sesh.get("sponsor") : undefined; }},
-        {name: "abstract", convert: function(value, record) { var sesh = Ext.getStore("SessionStore").getById(record.get("sessionId")); return sesh ? sesh.get("abstract") : undefined; }},
+        {name: "abstract", convert: function(value, record) { var sesh = Ext.getStore("SessionStore").getById(record.get("sessionId")); return sesh ? sesh.get("abstract") : undefined; }}
     ],
     proxy: {
         type: "rest",
@@ -345,13 +347,14 @@ Ext.regStore("SponsorsStore", {
 
 
 mluc.createCookie = function(name, value, days) {
+    var expires;
     if(days) {
         var date = new Date();
         date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        var expires = "; expires=" + date.toGMTString();
+        expires = "; expires=" + date.toGMTString();
     }
     else {
-        var expires = "";
+        expires = "";
     }
     document.cookie = name + "=" + value + expires + "; path=/; domain=" + document.domain + ";";
 };
@@ -359,12 +362,13 @@ mluc.createCookie = function(name, value, days) {
 mluc.readCookie = function(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
-    for(var i = 0; i < ca.length; i += 1) {
+    var i;
+    for(i = 0; i < ca.length; i += 1) {
         var c = ca[i];
-        while(c.charAt(0)==' ') {
+        while(c.charAt(0) === ' ') {
             c = c.substring(1, c.length);
         }
-        if(c.indexOf(nameEQ) == 0) {
+        if(c.indexOf(nameEQ) === 0) {
             return c.substring(nameEQ.length, c.length);
         }
     }
@@ -383,7 +387,7 @@ mluc.logout = function() {
     mluc.eraseCookie("MLUC-SESSION");
     mluc.eraseCookie("MLUC-USERNAME");
     mluc.eraseCookie("MLUC-NAME");
-}
+};
 
 mluc.isLoggedIn = function() {
     var username = mluc.readCookie("MLUC-USERNAME");
@@ -395,41 +399,52 @@ mluc.friendlyDateSince = function(time) {
     var currentTime = new Date();
     var sinceMin = Math.round((currentTime - time) / 60000);
     var since = '';
-    if(sinceMin == 0) {
+    if(sinceMin === 0) {
         var sinceSec = Math.round((currentTime - time) / 1000);
-        if(sinceSec < 10)
+        if(sinceSec < 10) {
             since = 'less than 10 seconds ago';
-        else if(sinceSec < 20)
+        }
+        else if(sinceSec < 20) {
             since = 'less than 20 seconds ago';
-        else
+        }
+        else {
             since = 'half a minute ago';
+        }
     }
-    else if(sinceMin == 1) {
+    else if(sinceMin === 1) {
         var sinceSec = Math.round((currentTime - time) / 1000);
-        if(sinceSec == 30)
+        if(sinceSec === 30) {
             since = 'half a minute ago';
-        else if(sinceSec < 60)
+        }
+        else if(sinceSec < 60) {
             since = 'less than a minute ago';
-        else
+        }
+        else {
             since = '1 minute ago';
+        }
     }   
-    else if(sinceMin < 45)
+    else if(sinceMin < 45) {
         since = sinceMin + ' minutes ago';
-    else if(sinceMin > 44 && sinceMin < 60)
-        since = 'about 1 hour ago';
-    else if(sinceMin < 1440) {
-        sinceHr = Math.round(sinceMin / 60);
-        if(sinceHr == 1)
-            since = 'about 1 hour ago';
-        else
-            since = 'about ' + sinceHr + ' hours ago';
     }
-    else if(sinceMin > 1439 && sinceMin < 2880)
+    else if(sinceMin > 44 && sinceMin < 60) {
+        since = 'about 1 hour ago';
+    }
+    else if(sinceMin < 1440) {
+        var sinceHr = Math.round(sinceMin / 60);
+        if(sinceHr === 1) {
+            since = 'about 1 hour ago';
+        }
+        else {
+            since = 'about ' + sinceHr + ' hours ago';
+        }
+    }
+    else if(sinceMin > 1439 && sinceMin < 2880) {
         since = '1 day ago';
+    }
     else {
         var sinceDay = Math.round(sinceMin / 1440);
         since = sinceDay + ' days ago';
     } 
 
     return since;
-}
+};

@@ -21,7 +21,6 @@ Ext.define("mluc.views.SessionSurvey", {
     extend: "Ext.form.FormPanel",
     alias: "widget.sessionsurvey",
     initComponent: function() {
-        var me = this;
         var options = [
             ["0", 'Select one'],
             ["1", 'Poor'],
@@ -84,7 +83,7 @@ Ext.define("mluc.views.SessionSurvey", {
     },
 
     viewSurvey: function(session, layoutManager) {
-        this.session = session
+        this.session = session;
         this.layoutManager = layoutManager;
         this.getComponent("surveyTitle").update(session.data);
         this.getComponent("speakerQuality").setValue("0");
