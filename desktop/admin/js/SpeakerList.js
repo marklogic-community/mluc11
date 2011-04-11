@@ -25,7 +25,8 @@ Ext.define('mluc.AdminSpeakerList', {
             layout: 'fit',
             title: 'Speakers',
             autoScroll: "true",
-            items: this.createView()
+            items: this.createView(),
+            dockedItems: this.createToolbar()
         });
         this.addEvents(
             'speakerselect'
@@ -51,6 +52,19 @@ Ext.define('mluc.AdminSpeakerList', {
         });
         return this.view;
     },
+    
+    createToolbar: function(){
+        this.addAction = Ext.create('Ext.Action', {
+            scope: this,
+            handler: this.onAddSpeakerClick,
+            text: 'Add speaker'
+        });
+
+        this.toolbar = Ext.create('widget.toolbar', {
+            items: [this.addAction]
+        });
+        return this.toolbar;
+    },
 
     onSelectionChange: function(){
         var selected = this.getSelectedItem();
@@ -62,4 +76,21 @@ Ext.define('mluc.AdminSpeakerList', {
     getSelectedItem: function(){
         return this.view.getSelectionModel().getSelection()[0] || false;    
     },
+
+    onAddSpeakerClick: function(){
+        var me = this;
+        var id = Math.ceil(Math.random() * 100000000000000000);
+
+        var data = {id: id, name:"New Speaker AAAA"}
+        me.setLoading(true);
+        Ext.Ajax.request({
+            url: "/data/jsonstore.xqy",
+            method: "PUT",
+            success: function() {
+                me.setLoading(false);
+            },
+            params: {uri: "/speaker/" + id + ".json"},
+            jsonData: data
+        });
+    }
 });

@@ -77,6 +77,7 @@
                         "or": [
                             {"contains": {"key": "title", "string": words[i], "weight": 3, "caseSensitive": false, "wildcarded": wildcarded}},
                             {"contains": {"key": "abstract", "string": words[i], "weight": 2, "caseSensitive": false, "wildcarded": wildcarded}},
+                            {"contains": {"key": "speakers_string", "string": words[i], "weight": 2, "caseSensitive": false, "wildcarded": wildcarded}},
                             {"contains": {"key": "track", "string": words[i], "weight": 1, "caseSensitive": false, "wildcarded": wildcarded}},
                             {"contains": {"key": "location", "string": words[i], "weight": 1, "caseSensitive": false, "wildcarded": wildcarded}}
                         ]

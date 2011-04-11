@@ -47,7 +47,7 @@ Ext.define("mluc.views.DetailsWindow", {
                     '{giveSurvey:this.renderTopRightLinks}',
                     '<h2 class="title">{title}</h2>',
                     '<div class="meta"><span class="time">{[ Ext.Date.format(values.startTime, "g:ia") + " &ndash; " + Ext.Date.format(values.endTime, "g:ia") ]}</span>',
-                    '<span class="location">&nbsp;in {location}</span></div>',
+                    '<tpl if="location"><span class="location">&nbs;in {location}</span></tpl></div>',
                     '<p class="abstract">{abstract}</h2>',
                     '<div class="speakers">{speakerIds:this.renderSpeakers}</div>',
                 '</div>',

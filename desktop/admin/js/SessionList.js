@@ -58,7 +58,7 @@ Ext.define('mluc.AdminSessionList', {
             scope: this,
             handler: this.onAddSessionClick,
             text: 'Add session'
-        });  
+        });
 
         this.toolbar = Ext.create('widget.toolbar', {
             items: [this.addAction]
@@ -78,6 +78,19 @@ Ext.define('mluc.AdminSessionList', {
     },
 
     onAddSessionClick: function(){
-        alert("XXX - create new session");
+        var me = this;
+        var id = Math.ceil(Math.random() * 100000000000000000);
+
+        var data = {id: id, title:"AAAA New Session"}
+        me.setLoading(true);
+        Ext.Ajax.request({
+            url: "/data/jsonstore.xqy",
+            method: "PUT",
+            success: function() {
+                me.setLoading(false);
+            },
+            params: {uri: "/session/" + id + ".json"},
+            jsonData: data
+        });
     }
 });

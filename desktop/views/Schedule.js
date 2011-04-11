@@ -216,6 +216,7 @@ Ext.define('mluc.widgets.Schedule', {
                     "or": [
                         {"contains": {"key": "title", "string": words[i], "weight": 3, "caseSensitive": false}},
                         {"contains": {"key": "abstract", "string": words[i], "weight": 2, "caseSensitive": false}},
+                        {"contains": {"key": "speakers_string", "string": words[i], "weight": 2, "caseSensitive": false}},
                         {"contains": {"key": "track", "string": words[i], "weight": 1, "caseSensitive": false}},
                         {"contains": {"key": "location", "string": words[i], "weight": 1, "caseSensitive": false}}
                     ]

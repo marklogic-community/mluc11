@@ -81,7 +81,7 @@ Ext.define('mluc.AdminSessionDetails', {
         for(var i = 0; i < speakers.length; i += 1) {
             ids.push(speakers[i].get('id'));
         }
-        this.record.set("speakers", ids);
+        this.record.set("speakerIds", ids);
     },
 
     createView: function() {

@@ -33,11 +33,7 @@ return
         <link rel="stylesheet" type="text/css" href="/css/base.css"/> 
         <script type="text/javascript" src="/ext4.0/bootstrap.js"><!-- --></script> 
         <script src="/js/common.js" type="text/javascript"><!-- --></script>
-        <script src="/views/SessionViewer.js" type="text/javascript"><!-- --></script>
-        <script src="/views/SessionSurvey.js" type="text/javascript"><!-- --></script>
-        <script src="/views/Schedule.js" type="text/javascript"><!-- --></script>
-        <script src="/views/Speakers.js" type="text/javascript"><!-- --></script>
-        <script src="/views/Twitter.js" type="text/javascript"><!-- --></script>
+        <script src="/views/AllViews.js" type="text/javascript"><!-- --></script>
         <script src="/js/app.js" type="text/javascript"><!-- --></script>
         <script type="text/javascript">
             var _gaq = _gaq || [];

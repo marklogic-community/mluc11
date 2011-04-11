@@ -43,6 +43,7 @@
     border-color: #999;
     background-color: #efefef;
     background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, from(#F7F7F7), color-stop(0.48, #F1F1F1), color-stop(0.52, #DADADA), to(#DFDFDF));
+    background-image: -moz-linear-gradient(top, #F7F7F7, #F1F1F1 48%, #DADADA 52%, #DFDFDF);
 }
 
 .x-tab button {
@@ -78,6 +79,7 @@
 
 .visiblebutton {
     background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, from(#F7F7F7), color-stop(0.48, #F1F1F1), color-stop(0.52, #DADADA), to(#DFDFDF));
+    background-image: -moz-linear-gradient(top, #F7F7F7, #F1F1F1 48%, #DADADA 52%, #DFDFDF);
 }
 .x-btn-toolbar-small-over {
     background-color: #d1d1d1;
