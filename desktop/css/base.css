@@ -369,23 +369,28 @@ div.fulllist {
 
 
 /* Speakers tab */
+div.sponsor-container,
 div.speaker-container {
     border-bottom: 1px solid #d1d1d1;
 }
 
+div.sponsor-container div.sponsor-header,
 div.speaker-container div.speaker-header {
     padding: 8px 5px;
     cursor: pointer;
     font-weight: bold;
 }
+div.sponsor-container div.sponsor-header:hover,
 div.speaker-container div.speaker-header:hover {
     background-color: #eef1d7;
 }
 
+div.sponsor-container div.sponsor-details,
 div.speaker-container div.speaker-details {
     padding: 5px 5px 8px 5px;
 }
 
+div.sponsor-container div.sponsor-details p,
 div.speaker-container div.speaker-details p {
     padding-top: 5px;
     max-width: 600px;

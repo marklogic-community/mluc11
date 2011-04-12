@@ -34,13 +34,7 @@ return
     <body>Loading...</body> 
     <script src="/sencha-touch/sencha-touch.js" type="text/javascript"><!-- --></script>
     <script src="/js/app.js" type="text/javascript"><!-- --></script>
-    <script src="/views/SessionViewer.js" type="text/javascript"><!-- --></script>
-    <script src="/views/SessionSurvey.js" type="text/javascript"><!-- --></script>
-    <script src="/views/Schedule.js" type="text/javascript"><!-- --></script>
-    <script src="/views/Speakers.js" type="text/javascript"><!-- --></script>
-    <script src="/views/Twitter.js" type="text/javascript"><!-- --></script>
-    <script src="/views/Sponsors.js" type="text/javascript"><!-- --></script>
-    <script src="/views/Favorites.js" type="text/javascript"><!-- --></script>
+    <script src="/views/AllViews.js" type="text/javascript"><!-- --></script>
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-6638631-10']);

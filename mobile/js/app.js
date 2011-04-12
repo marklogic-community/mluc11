@@ -438,6 +438,41 @@ Ext.regStore("SponsorsStore", {
             imageURL: "http://www.marklogicevents.com/img/sponsors/FlatironsSolutionsLeft.jpg",
             websiteFull: "http://flatironssolutions.com",
             websitePretty: "flatironssolutions.com",
+        },
+        {
+            id: "16",
+            company: "MLJSON",
+            level: "Additional Sponsors",
+            info: "<div>The MLJSON project is a set of libraries and REST endpoints to enable the MarkLogic Server to become an advanced JSON store.<br><br>" +
+            "<h4>MarkLogic</h4>" +
+            "• High-performance, scalable database for unstructured information<br>" + 
+            '• "NoSQL" datastore (no tables, rows, columns) - just documents and unique IDs (URIs).<br>' + 
+            "• Uses XML datamodel for documents, query-able via XQuery, XSLT, XPath<br>" + 
+            "• Uses search-engine techniques to efficiently expose real-time fulltext search<br>" + 
+            "• ACID-compliant CRUD (Create, Read, Update, Delete)<br><br>" + 
+            "<h4>JSON</h4>" +
+            "• JavaScript Object Notation<br>" + 
+            "• A lightweight data-encoding and interchange format<br>" + 
+            "• Native to JavaScript, now widely utilized across languages<br>" + 
+            "• Commonly used for passing data to web browsers<br>" + 
+            "• Design goal<br>" + 
+            "• Enable developers to store and search/query JSON inside MarkLogic (without knowledge of XQuery, XSLT, or XPath)<br><br>" + 
+            
+            "<h4>Design considerations:</h4>" +
+            "1) Approach things from a JSON angle<br>" + 
+            "2) Create the XML to match the JSON, not vice-versa<br>" + 
+            "3) Make good use of MarkLogic indexes<br>" + 
+            "4) Craft the XML so it's fast to query<br>" + 
+            "5) XML representation of JSON is an implementation detail - users only need think in terms of JSON<br><br>" + 
+            "<h4>Overview</h4>" +
+            "MLJSON exposes REST endpoints that allow a developer to easily store and retrieve JSON documents from the database (CRUD). It also exposes a very powerful query interface that uses a native JSON syntax:<br><br>" +
+            "Query using native JSON syntax - Don't expose the XML internals to users - Support full range of MarkLogic indexes<br><br>" +
+            "This query interface allows the user to find documents via \"path\" expressions as well as full text search expressions. For those familiar with MarkLogic, it exposes all of the functionality found in the CTS search functions.<br><br>" +
+            "<h4>Presentation</h4>" +
+            "Here are some <a href='http://www.xmlprague.cz/2011/presentations/jason-hunter-mljson.pdf'>slides</a> from a presentation on MLJSON given at XML Prague 2011.</div>",
+            imageURL: "http://developer.marklogic.com/media/marklogic-community-badge.png",
+            websiteFull: "http://developer.marklogic.com",
+            websitePretty: "developer.marklogic.com",
         }
     ]
 });

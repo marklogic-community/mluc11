@@ -34,6 +34,7 @@ return
         <script type="text/javascript" src="/ext4.0/bootstrap.js"><!-- --></script> 
         <script src="/js/common.js" type="text/javascript"><!-- --></script>
         <script src="/views/AllViews.js" type="text/javascript"><!-- --></script>
+        <script src="/views/Sponsors.js" type="text/javascript"><!-- --></script>
         <script src="/js/app.js" type="text/javascript"><!-- --></script>
         <script type="text/javascript">
             var _gaq = _gaq || [];

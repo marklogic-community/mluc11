@@ -373,7 +373,7 @@ Ext.define('mluc.widgets.Schedule', {
                 content = '<div class="x-unselectable">' + content + '</div>';
             }
 
-            if(this.myScheduleButton.pressed === true && sessions[i].get("plenary") === false) {
+            if(this.myScheduleButton.pressed === true) {
                 if(mySessionStore.find("sessionId", sessions[i].getId()) == -1) {
                     className += " notattending";
                 }

@@ -52,6 +52,11 @@ h3.x-list-header {
     color: white;
 }
 
+.x-list .x-list-item.x-item-pressed {
+    background-color: #C6D43C;
+    border-top-color: #D1D1D1;
+}
+
 .x-tabbar-dark {
     background-color: black;
     background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(black), color-stop(0.02, #333), to(black));
