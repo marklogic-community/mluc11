@@ -71,7 +71,7 @@ Ext.onReady(function() {
                 region: 'north',
                 height: 100,
                 cls: "header",
-                html: '<div id="header"><div id="logo"><a href="?event=content.home">Mark Logic</a></div></div>',
+                html: '<div id="header"><div id="logo"><a href="http://developer.marklogic.com">MarkLogic</a></div></div>',
                 border: false,
                 layout:'absolute',
                 items: [mluc.loginLogoutButton]
