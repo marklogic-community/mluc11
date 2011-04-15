@@ -75,6 +75,25 @@ Ext.regModel("Session", {
         {name: "startTime", type: "date", dateFormat: "c"},
         {name: "endTime", type: "date", dateFormat: "c"},
         {name: "sessionDate", convert: function(value, record) { return record.get("startTime");}},
+        {name: "roomNumber", convert: function(value, record) {
+            var room = record.get("location");
+            if(room === "Grand Ballroom") {
+                return 1;
+            }
+            if(room === "Sea Cliff") {
+                return 2;
+            }
+            if(room === "Pacific Heights") {
+                return 3;
+            }
+            if(room === "Twin Peaks South") {
+                return 4;
+            }
+            if(room === "Presidio") {
+                return 5;
+            }
+            return 0;
+        }},
         {name: "location", type: "string"},
         {name: "track", type: "string"},
         {name: "type", type: "string"},
@@ -214,7 +233,7 @@ Ext.regStore("SessionStore", {
             direction: "ASC"
         },
         {
-            property : "track",
+            property : "roomNumber",
             direction: "ASC"
         }
     ],
@@ -241,7 +260,7 @@ Ext.regStore("SessionSearchStore", {
             direction: "ASC"
         },
         {
-            property : "track",
+            property : "roomNumber",
             direction: "ASC"
         }
     ]
@@ -317,7 +336,7 @@ Ext.regStore("SponsorsStore", {
             info: "Avalon Consulting, LLC is a team of expert-level consultants providing thought leadership and technical integrations for enterprise-scale internet, intranet, and extranet sites. Avalon enhances leading technical platforms such as MarkLogic to create first-rate enterprise web experiences.<br>Since partnering with MarkLogic Corporation in 2009, Avalon has delivered solutions to more than a dozen MarkLogic customers. Drawing on critical expertise in search and content management, Avalon has established itself as the recognized leader for creating compelling business solutions on the MarkLogic platform.<br> Avalon is headquartered in Plano, TX with a regional office in Washington, DC.",
             imageURL: "http://www.marklogicevents.com/img/sponsors/avalon.png",
             websiteFull: "http://www.avalonconsult.com/",
-            websitePretty: "avalonconsult.com",
+            websitePretty: "avalonconsult.com"
         },
         {
             id: "2",
@@ -326,7 +345,7 @@ Ext.regStore("SponsorsStore", {
             info: "A leader in the practical application of content and publishing technologies, Innodata Isogen provides consulting, technology, editorial and production services to information- intensive enterprises worldwide, helping them operate more competitively and profitably. Widely recognized for our experience and expertise in transformative content technologies, process re-engineering and XML publishing, we’ve partnered successfully with MarkLogic since 2004 to help clients reduce the cost of creating, managing and delivering content.",
             imageURL: "http://www.marklogicevents.com/img/sponsors/innodata.png",
             websiteFull: "http://www.innodata-isogen.com/",
-            websitePretty: "innodata-isogen.com",
+            websitePretty: "innodata-isogen.com"
         },
         {
             id: "3",
@@ -335,7 +354,7 @@ Ext.regStore("SponsorsStore", {
             info: "Cognizant (Nasdaq: CTSH) is a leading provider of information technology, consulting, and business process outsourcing services. With more than 50 delivery centers worldwide and over 100,000 employees, Cognizant combines a passion for client satisfaction, technology innovation, deep industry and business process expertise, and a global, collaborative workforce that embodies the future of work. Cognizant is a member of the NASDAQ-100, the S&P 500, the Forbes Global 2000, and the Fortune 1000. Follow us on Twitter: Cognizant.",
             imageURL: "http://www.marklogicevents.com/img/sponsors/CG_logoReflect.jpg",
             websiteFull: "http://www.cognizant.com/",
-            websitePretty: "cognizant.com",
+            websitePretty: "cognizant.com"
         },
         {
             id: "4",
@@ -344,7 +363,7 @@ Ext.regStore("SponsorsStore", {
             info: "Infosys Technologies Ltd. (NASDAQ: INFY) defines, designs and delivers technology-enabled business solutions for Global 2000 companies. Infosys also provides a complete range of services by leveraging our domain and business expertise and strategic alliances with leading technology providers. Our offerings span business and technology consulting, application services, systems integration, product engineering, custom software development, maintenance, re-engineering, independent testing and validation services, IT infrastructure services and business process outsourcing.",
             imageURL: "http://www.marklogicevents.com/img/sponsors/infosys.jpg",
             websiteFull: "http://www.infosys.com/",
-            websitePretty: "infosys.com",
+            websitePretty: "infosys.com"
         },
         {
             id: "5",
@@ -353,7 +372,7 @@ Ext.regStore("SponsorsStore", {
             info: "Virtusa provides a broad range of IT services through an optimized global delivery model. We specialize in developing online products for information and media companies. Virtusa is a strategic implementation and integration partner for MarkLogic and has built a solution accelerator for content spot-lighting on top of MarkLogic. Other practice areas include ECM, moblity, BPM, DW/BI, and custom application/product development. Marquee clients include Thomson Reuters, National Geographic, JPMC, Aetna, Citibank and many others.",
             imageURL: "http://www.marklogicevents.com/img/sponsors/virtusa.jpg",
             websiteFull: "http://www.virtusa.com/",
-            websitePretty: "virtusa.com",
+            websitePretty: "virtusa.com"
         },
         {
             id: "6",
@@ -362,7 +381,7 @@ Ext.regStore("SponsorsStore", {
             info: "Janya provides semantic analysis tools and solutions that extract critical information from unstructured data to create actionable intelligence. Organizations use Janya’s content enrichment capabilities to accelerate sharing and discovery of hidden knowledge within their existing information stores. Customizable solutions include automated metadata, fact and relationship extraction, and social media mining.",
             imageURL: "http://www.marklogicevents.com/img/sponsors/janyaLeft.jpg",
             websiteFull: "http://www.janya.com/",
-            websitePretty: "janya.com",
+            websitePretty: "janya.com"
         },
         {
             id: "7",
@@ -371,7 +390,7 @@ Ext.regStore("SponsorsStore", {
             info: "Antenna House is very pleased to be showing Formatter V5.2 with support for specifying page layouts for PDF and print using either CSS or XSL-FO. Now users can select the stylesheet strategy that best suits their web, content management and business needs. Visit Antenna House to see why Formatter is used worldwide for demanding formatting requirements. ",
             imageURL: "http://www.marklogicevents.com/img/sponsors/antennaHouse.jpg",
             websiteFull: "http://www.antennahouse.com/",
-            websitePretty: "antennahouse.com",
+            websitePretty: "antennahouse.com"
         },
         {
             id: "8",
@@ -380,7 +399,7 @@ Ext.regStore("SponsorsStore", {
             info: "Since 1992 iFactory has delivered innovative, inspiring, and intelligent interactive solutions to more than 150 organizations in a variety of verticals such as publishing, higher education and health care. iFactory's epublishing platform, PubFactory, is a highly regarded solution for publishers including Oxford University Press, DeGruyter, SAGE, and Cengage. ",
             imageURL: "http://www.marklogicevents.com/img/sponsors/iFactoryLogo.jpg",
             websiteFull: "http://www.ifactory.com/",
-            websitePretty: "ifactory.com",
+            websitePretty: "ifactory.com"
         },
         {
             id: "9",
@@ -389,7 +408,7 @@ Ext.regStore("SponsorsStore", {
             info: "TEMIS is the leading provider of Semantic Content Enrichment solutions. TEMIS helps publishers to add value to their content by extracting entities and intelligence from text, to create metadata programmatically and to allow semantic navigation. Documents are linked based on their actual content, and automatic classification enables publishers to repurpose their content and create new custom products.",
             imageURL: "http://www.marklogicevents.com/img/sponsors/temisLeft.jpg",
             websiteFull: "http://www.temis.com/",
-            websitePretty: "temis.com",
+            websitePretty: "temis.com"
         },
         {
             id: "10",
@@ -398,7 +417,7 @@ Ext.regStore("SponsorsStore", {
             info: "Data Conversion Laboratory, Inc. specializes in converting and organizing content for web publishing, database population, and the creation of electronic documents. DCL converts from any source format to XML including NLM, DOCBOOK, DITA, TEI and S1000D as well as XHTML E-book formats. DCL has processed more than one billion pages for publishers, industry, government, libraries, and documentation developers.",
             imageURL: "http://www.marklogicevents.com/img/sponsors/dclLogoLeft.jpg",
             websiteFull: "http://www.dclab.com/",
-            websitePretty: "dclab.com",
+            websitePretty: "dclab.com"
         },
         {
             id: "11",
@@ -407,7 +426,7 @@ Ext.regStore("SponsorsStore", {
             info: "HTC Global Services (HTC) is a leading global Information Technology solutions and services provider specialized in content management, delivery and publishing solutions for Digital Media. HTC’s Mobile Publishing Framework integrates seamlessly with publishing systems for delivery of digital content on wide variety of platforms including Tablets, iPad, and Smart Phones.",
             imageURL: "http://www.marklogicevents.com/img/sponsors/htcLeft.jpg",
             websiteFull: "http://www.htcinc.com/",
-            websitePretty: "htcinc.com",
+            websitePretty: "htcinc.com"
         },
         {
             id: "12",
@@ -416,7 +435,7 @@ Ext.regStore("SponsorsStore", {
             info: "Applied Relevance produces software and services to help enterprise users find the information they need. AR•Semantics for MarkLogic Server provides high-performance auto-classification of enterprise documents, a taxonomy management console and metadata enhancement. Create dynamic rules to categorize documents in an intuitive, attractive user interface.",
             imageURL: "http://www.marklogicevents.com/img/sponsors/applied.jpg",
             websiteFull: "http://appliedrelevance.com/",
-            websitePretty: "appliedrelevance.com",
+            websitePretty: "appliedrelevance.com"
         },
         {
             id: "13",
@@ -425,7 +444,7 @@ Ext.regStore("SponsorsStore", {
             info: "eXtyles & Typefi combined is an editorial and composition solution that enables users to generate XML from Word and dynamically flow it into InDesign Server to create richly formatted documents for print and eBook without users having InDesign on the desktop. The solution significantly reduces editorial and composition time.",
             imageURL: "http://www.marklogicevents.com/img/sponsors/typefiLeft.jpg",
             websiteFull: "http://www.typefi.com/",
-            websitePretty: "typefi.com",
+            websitePretty: "typefi.com"
         },
         {
             id: "14",
@@ -434,7 +453,7 @@ Ext.regStore("SponsorsStore", {
             info: "RSuite is an XML-optimized content management system powered by MarkLogic Server and used by the world’s leading publishers. RSuite accelerates publishers’ revenue and profit growth through better content management, including a robust workflow engine and suite of editorial/production capabilities. Already a MarkLogic customer? Contact us to leverage your investment today!",
             imageURL: "http://www.marklogicevents.com/img/sponsors/rsuite.gif",
             websiteFull: "http://www.reallysi.com/",
-            websitePretty: "reallysi.com",
+            websitePretty: "reallysi.com"
         },
         {
             id: "15",
@@ -443,7 +462,7 @@ Ext.regStore("SponsorsStore", {
             info: "Flatirons Solutions is a Colorado based system integrator and long-time MarkLogic partner specializing in XML publishing, dynamic content delivery, and digital asset management. Their implementations focus on content reuse and rich media delivery, and their team specializes in meeting the unique needs of commercial publishers and media / entertainment companies.",
             imageURL: "http://www.marklogicevents.com/img/sponsors/FlatironsSolutionsLeft.jpg",
             websiteFull: "http://flatironssolutions.com",
-            websitePretty: "flatironssolutions.com",
+            websitePretty: "flatironssolutions.com"
         },
         {
             id: "16",
@@ -478,7 +497,7 @@ Ext.regStore("SponsorsStore", {
             "Here are some <a href='http://www.xmlprague.cz/2011/presentations/jason-hunter-mljson.pdf'>slides</a> from a presentation on MLJSON given at XML Prague 2011.</div>",
             imageURL: "http://developer.marklogic.com/media/marklogic-community-badge.png",
             websiteFull: "http://developer.marklogic.com",
-            websitePretty: "developer.marklogic.com",
+            websitePretty: "developer.marklogic.com"
         }
     ]
 });
