@@ -7,8 +7,8 @@ mluc11 is a desktop/mobile web application that provides access to the MarkLogic
 
 mluc11 is built using
 
- * [MLJSON] (on top of  [MarkLogic Server])
- * ExtJS 4.0 (alpha) and SenchaTouch 1.0
+ * [MLJSON], on top of  [MarkLogic Server]
+ * ExtJS 4.0 alpha and SenchaTouch 1.0
 
 mluc11 runs on
 
