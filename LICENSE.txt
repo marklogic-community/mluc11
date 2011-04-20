@@ -1,0 +1,18 @@
+mluc11 - Sample MLJSON application 
+Copyright (c) 2011, MarkLogic Corpotation
+All rights reserved.
+community-requests@marklogic.com
+
+Open Source License
+------------------------------------------------------------------------------------------
+This application is licensed under the terms of the Open Source GPL 3.0 license. 
+
+http://www.gnu.org/licenses/gpl.html
+
+Individual source code files for this application are licensed and distributed per the terms
+in the files (or containing directories) themselves.
+
+This application is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT OF THIRD-PARTY INTELLECTUAL PROPERTY RIGHTS.
+See the GNU General Public License for more details.
