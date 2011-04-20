@@ -15,5 +15,5 @@ mluc11 runs on
  * Modern browsers (Chrome, Safari, Firefox, IE7 or later)
  * Mobile WebKit browsers (iPhone, iPad, Android)
 
-[MLJSON]: https://github.com/isubiker/mljson  "MLJSON"
-[MarkLogic Server]: http://developer.marklogic.com/ "MarkLogic"
+[MLJSON]: https://github.com/isubiker/mljson/  
+[MarkLogic Server]: http://developer.marklogic.com/ 
