@@ -1,9 +1,14 @@
-mluc11 is a sample mobile web application for the [MLJSON] library for building applications on [MarkLogic Server]
+mluc11 is a desktop/mobile web application that provides access to the MarkLogic User Conference 2011
+
+ * schedule/agenda
+ * list of speakers, sponsors
+ * a twitter feed
+ * ability to manage your personalized agenda (assumes a facebook account)
 
 mluc11 is built using
 
- * MLJSON (on top of MarkLogic)
- * ExtJS 4.0 (alpha) and SechaTouch 1.0
+ * [MLJSON] (on top of  [MarkLogic Server])
+ * ExtJS 4.0 (alpha) and SenchaTouch 1.0
 
 mluc11 runs on
 
