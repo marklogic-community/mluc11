@@ -58,7 +58,7 @@ Ext.regModel("Speaker", {
         {name: "bio", type: "string"},
 
         {name: "lastName", convert: function(value, record) {
-            var name = record.get("name").trim();
+            var name = record.get("name");
             var bits = name.split(" ");
             var last = bits[bits.length - 1];
             if(last === "PhD") {
