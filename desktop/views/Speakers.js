@@ -63,24 +63,10 @@ Ext.define('mluc.widgets.Speakers', {
         // Make sure we've got our data loaded
         var sessionStore = Ext.getStore("SessionStore");
         var speakerStore = Ext.getStore("SpeakerStore");
-        if(sessionStore.getCount() === 0) {
-            sessionStore.addListener("load", function() {
-                if(speakerStore.getCount() === 0) {
-                    speakerStore.addListener("load", function() {
-                        me.renderSpeakers(speakerStore);
-                    });
-                }
-                else {
-                    me.renderSpeakers(speakerStore);
-                }
-            });
-        }
-        else if(speakerStore.getCount() === 0) {
-            speakerStore.addListener("load", function() {
-                me.renderSpeakers(speakerStore);
-            });
-        }
-        else {
+        sessionStore.addListener("load", me.renderSpeakers());
+        speakerStore.addListener("load", me.renderSpeakers());
+
+        if(sessionStore.getCount() && speakerStore.getCount()) {
             me.renderSpeakers(speakerStore);
         }
     },
@@ -158,6 +144,11 @@ Ext.define('mluc.widgets.Speakers', {
     },
 
     renderSpeakers: function(speakerStore, records, successful, viaSearch) {
+        var sessionStore = Ext.getStore("SessionStore");
+        if(sessionStore.isLoading() || speakerStore.isLoading()) {
+            return;
+        }
+
         var speakers;
         if(viaSearch) {
             speakers = Ext.getStore("SpeakerSearchStore").getRange();
