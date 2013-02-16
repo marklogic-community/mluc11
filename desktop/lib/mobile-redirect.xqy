@@ -1,9 +1,9 @@
 xquery version "1.0-ml";
 
 (:~
- : Mark Logic Redirect To/From Mobile
+ : MarkLogic Redirect To/From Mobile
  :
- : Copyright 2011 Ryan Grimm
+ : Copyright 2011 MarkLogic Corporation
  :
  : Licensed under the Apache License, Version 2.0 (the "License");
  : you may not use this file except in compliance with the License.
