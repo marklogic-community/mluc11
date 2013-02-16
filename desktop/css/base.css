@@ -259,6 +259,8 @@ td div.header {
 div.notsearchresult,
 div.notattending {
     opacity: 0.3;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
 }
 
 /*
@@ -420,4 +422,20 @@ div.speaker-container div.speaker-details span.track {
 }
 #sessionsurvey .x-toolbar .x-box-inner {
     border: none;
+}
+
+
+
+table.labs {
+    width: 100%;
+}
+table.labs tr {
+    border-bottom: 1px solid #999;
+    /* background-color: #efefef; */
+}
+table.labs td {
+    padding: 5px;
+}
+table.labs strong {
+    font-weight: bold;
 }
