@@ -17,6 +17,29 @@
 */
 
 Ext.onReady(function() {
+    var loginWindow = Ext.create("Ext.window.Window", {
+        title: "Login",
+        modal: true,
+        width: 250,
+        closable: false,
+        bodyPadding: 10,
+        items: [{
+            xtype: 'textfield',
+            inputType: "password",
+            fieldLabel: "Password",
+            width: 200,
+            listeners: {
+                change: function(input, value) {
+                    if(value === "boosencha") {
+                        loginWindow.hide();
+                    }
+                }
+            }
+        }]
+    });
+    loginWindow.show();
+
+    
     Ext.getStore("SpeakerStore").load(function() {
     Ext.getStore("SessionStore").load(function() {
         var sessionDetails = Ext.create("mluc.AdminSessionDetails", {region: "center"});
