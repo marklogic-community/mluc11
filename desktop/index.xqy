@@ -40,7 +40,7 @@ return
         <script type="text/javascript">
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-6638631-10']);
-            _gaq.push(['_setDomainName', '.mluc11.marklogic.com']);
+            _gaq.push(['_setDomainName', '.mlw13.marklogic.com']);
             _gaq.push(['_trackPageview']);
             (function() {{
                 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
