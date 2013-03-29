@@ -409,8 +409,8 @@ Ext.regStore("SponsorsStore", {
             level: "Silver",
             info: "NetOwl® is the industry’s leading Text and Entity Analytics product suite for Big Data Analysis. NetOwl offers state-of-the-art entity extraction, link and event extraction, as well as geotagging, multicultural name matching, and identity resolution. NetOwl analyzes data in multiple languages and has demonstrated unparalleled accuracy and scalability in mission-critical environments.",
             imageURL: "http://www.marklogic.com/images/2013/04/mlw-sponsor-smartlogic.gif",
-            websiteFull: "http://www.netowl.com/",
-            websitePretty: "netowl.com"
+            websiteFull: "http://www.sra.com/",
+            websitePretty: "sra.com"
         },
         {
             id: "16",
