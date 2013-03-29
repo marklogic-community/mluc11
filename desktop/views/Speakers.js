@@ -63,8 +63,8 @@ Ext.define('mluc.widgets.Speakers', {
         // Make sure we've got our data loaded
         var sessionStore = Ext.getStore("SessionStore");
         var speakerStore = Ext.getStore("SpeakerStore");
-        sessionStore.addListener("load", me.renderSpeakers());
-        speakerStore.addListener("load", me.renderSpeakers());
+        sessionStore.on("load", function() { me.renderSpeakers() } );
+        speakerStore.on("load", function() { me.renderSpeakers() } );
 
         if(sessionStore.getCount() && speakerStore.getCount()) {
             me.renderSpeakers(speakerStore);
