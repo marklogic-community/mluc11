@@ -74,15 +74,19 @@ for c in ['Partners', 'Solutions Track', 'Tech and Lightning']:
             session['giveSurvey'] = True
             session['selectable'] = True
             session['plenary'] = False
-            session['id'] = sessionID
+            session['featured'] = False
+            session['id'] = "" + str(sessionID)
             date = row['DATE OF SESSION']
             time = row['TIME OF SESSION']
             if date and time:
-                day = '08'
+                day = '10'
                 hour = '01'
                 minute = '00'
-                session['startTime'] = '2012-04-' + day + 'T' + hour + ":" + minute + ':00'
-                session['endTime'] = '2012-04-' + day + 'T' + hour + ":" + minute + ':00'
+                session['startTime'] = '2013-04-' + day + 'T' + hour + ":" + minute + ':00'
+                session['endTime'] = '2013-04-' + day + 'T' + hour + ":" + minute + ':00'
+            else:
+                print "Skipping"
+                continue
 
             session['speakerNames'] = [ row['SPEAKER FIRST'] + ' ' + row['SPEAKER LAST'] ]
 
@@ -95,11 +99,11 @@ for c in ['Partners', 'Solutions Track', 'Tech and Lightning']:
             speaker['affiliation'] = row['COMPANY NAME']
             speaker['bio'] = row['BIOGRAPHY']
             speaker['email'] = row['EMAIL ADDRESS']
-            speaker['title'] = row['JOB TITLE']
-            speaker['id'] = speakerID
+            speaker['position'] = row['JOB TITLE']
+            speaker['id'] = "" + str(speakerID)
             speaker_file.write(json.dumps(speaker))
 
-            session['speakerIds'] = [ speakerID ]
+            session['speakerIds'] = [ "" + str(speakerID) ]
 
             if row['CO-PRESENTER FIRST'] :
                 speakerID = speakerID + 1
@@ -110,11 +114,11 @@ for c in ['Partners', 'Solutions Track', 'Tech and Lightning']:
                 speaker['affiliation'] = row['CO-PRESENTER COMPANY']
                 speaker['bio'] = row['CO-PRESENTER BIOGRAPHY']
                 speaker['email'] = ''
-                speaker['title'] = row['CO-PRESENTER JOB TITLE']
-                speaker['id'] = speakerID
+                speaker['position'] = row['CO-PRESENTER JOB TITLE']
+                speaker['id'] = "" + str(speakerID)
                 speaker_file.write(json.dumps(speaker))
                 session['speakerNames'].append(row['CO-PRESENTER FIRST'] + ' ' + row['CO-PRESENTER LAST'])
-                session['speakerIds'].append(speakerID)
+                session['speakerIds'].append("" + str(speakerID))
 
             if row['CO-PRESENTER #2 FIRST'] :
                 speakerID = speakerID + 1
@@ -125,8 +129,8 @@ for c in ['Partners', 'Solutions Track', 'Tech and Lightning']:
                 speaker['affiliation'] = row['CO-PRESENTER #2 COMPANY']
                 speaker['bio'] = row['CO-PRESENTER #2 BIOGRAPHY']
                 speaker['email'] = ''
-                speaker['title'] = row['CO-PRESENTER #2 JOB TITLE']
-                speaker['id'] = speakerID
+                speaker['position'] = row['CO-PRESENTER #2 JOB TITLE']
+                speaker['id'] = "" + str(speakerID)
                 speaker_file.write(json.dumps(speaker))
                 session['speakerNames'].append(row['CO-PRESENTER #2 FIRST'] + ' ' + row['CO-PRESENTER #2 LAST'])
                 session['speakerIds'].append(speakerID)
