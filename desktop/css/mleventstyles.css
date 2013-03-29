@@ -50,8 +50,8 @@ a:hover {
 
 /* Header CSS Start */
 #header {
-	background:url(http://www.marklogicevents.com/img/header-bg.gif) no-repeat left top;
-	height:102px;
+	background:url(/images/mlw13-banner.jpg) no-repeat left top;
+	height:178;
 	padding:0 7px 0 16px;
 }
 #logo {

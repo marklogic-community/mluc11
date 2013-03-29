@@ -211,14 +211,14 @@ declare function oauth2:loginAsMarkLogicUser(
             (xs:QName("username"), $username, xs:QName("sessionID"), $sessionID)
         )
     return (
-        cookies:add-cookie("MLUC-SESSION", $sessionID, current-dateTime() + xs:dayTimeDuration("P60D"), "mluc11.marklogic.com", "/", false()),
-        cookies:add-cookie("MLUC-USERNAME", $username, current-dateTime() + xs:dayTimeDuration("P60D"), "mluc11.marklogic.com", "/", false()),
-        cookies:add-cookie("MLUC-NAME", string($userDoc/provider-data/name), current-dateTime() + xs:dayTimeDuration("P60D"), "mluc11.marklogic.com", "/", false())
+        cookies:add-cookie("MLUC-SESSION", $sessionID, current-dateTime() + xs:dayTimeDuration("P60D"), "mlw13.marklogic.com", "/", false()),
+        cookies:add-cookie("MLUC-USERNAME", $username, current-dateTime() + xs:dayTimeDuration("P60D"), "mlw13.marklogic.com", "/", false()),
+        cookies:add-cookie("MLUC-NAME", string($userDoc/provider-data/name), current-dateTime() + xs:dayTimeDuration("P60D"), "mlw13.marklogic.com", "/", false())
     )
 };
 
 declare function oauth2:logout(
 ) as empty-sequence()
 {
-    cookies:delete-cookie("MLUC-SESSION", "mluc11.marklogic.com", "/")
+    cookies:delete-cookie("MLUC-SESSION", "mlw13.marklogic.com", "/")
 };

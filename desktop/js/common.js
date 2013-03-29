@@ -331,170 +331,117 @@ Ext.regStore("SponsorsStore", {
     data: [
         {
             id: "1",
-            company: "Avalon Consulting, LLC",
+            company: "Intel",
             level: "Platinum",
-            info: "Avalon Consulting, LLC is a team of expert-level consultants providing thought leadership and technical integrations for enterprise-scale internet, intranet, and extranet sites. Avalon enhances leading technical platforms such as MarkLogic to create first-rate enterprise web experiences.<br>Since partnering with MarkLogic Corporation in 2009, Avalon has delivered solutions to more than a dozen MarkLogic customers. Drawing on critical expertise in search and content management, Avalon has established itself as the recognized leader for creating compelling business solutions on the MarkLogic platform.<br> Avalon is headquartered in Plano, TX with a regional office in Washington, DC.",
-            imageURL: "http://www.marklogicevents.com/img/sponsors/avalon.png",
+            info: "Intel believes that every organization and individual in the world should be able to unlock the transformative potential of all data to enrich our lives through discovery and innovation, new business models, and consumer experiences. Intel is enabling its customers to obtain value from data by delivering robust open platforms that support innovation in analytics, from intelligent devices at the edge to servers, storage, and networks in the cloud.",
+            imageURL: "http://www.marklogic.com/images/2013/04/mlw-sponsor-intel.gif",
+            websiteFull: "http://hadoop.intel.com/",
+            websitePretty: "hadoop.intel.com"
+        },
+        {
+            id: "2",
+            company: "SGI",
+            level: "Platinum",
+            info: "SGI is the trusted leader in technical computing. The company develops, markets and sells a broad line of mid-range and high-end scale-out and scale-up servers, complete data storage solutions and differentiating software. SGI solutions are used by scientific, technical and business communities to find answers to the most challenging and data-intensive problems which require large amounts of computing power and fast, efficient data movement both within the computing system and to and from large-scale data storage installations. Additionally, SGI provides an end-to-end Big Data architecture from data ingest to archive, including the SGI® DataRaptor™ for MarkLogic Database.",
+            imageURL: "http://www.marklogic.com/images/2012/11/summit-sponsor-sgi.gif",
+            websiteFull: "http://www.sgi.com/",
+            websitePretty: "www.sgi.com"
+        },
+        {
+            id: "3",
+            company: "Tableau",
+            level: "Platinum",
+            info: "Tableau Software helps people see and understand data. Used by more than 10,000 organizations worldwide, Tableau’s award-winning software delivers fast analytics and rapid-fire business intelligence. Create visualizations and dashboards in minutes, then share in seconds. The result? You get answers from data quickly, with no programming required.",
+            imageURL: "http://www.marklogic.com/images/2013/01/mlw-sponsor-tableau.gif",
+            websiteFull: "http://www.tableausoftware.com/",
+            websitePretty: "tableausoftware.com"
+        },
+        {
+            id: "4",
+            company: "Avalon Consulting, LLC",
+            level: "Gold",
+            info: "Avalon Consulting, LLC implements enterprise Web, Search, Big Data, and Learning solutions. We are the trusted partner to over one hundred clients, primarily Global 2000 companies, public agencies, and institutions of higher learning. Avalon partners with award-winning vendors and is known for providing a superior customer experience through a combination of business acumen, intellectual curiosity, and a collaborative work style. Avalon’s deep technical expertise mitigates project risk and reduces total cost of ownership for our clients.",
+            imageURL: "http://www.marklogic.com/images/2012/11/summit-sponsor-avalon.gif",
             websiteFull: "http://www.avalonconsult.com/",
             websitePretty: "avalonconsult.com"
         },
         {
-            id: "2",
-            company: "Innodata Isogen",
-            level: "Gold",
-            info: "A leader in the practical application of content and publishing technologies, Innodata Isogen provides consulting, technology, editorial and production services to information- intensive enterprises worldwide, helping them operate more competitively and profitably. Widely recognized for our experience and expertise in transformative content technologies, process re-engineering and XML publishing, we’ve partnered successfully with MarkLogic since 2004 to help clients reduce the cost of creating, managing and delivering content.",
-            imageURL: "http://www.marklogicevents.com/img/sponsors/innodata.png",
-            websiteFull: "http://www.innodata-isogen.com/",
-            websitePretty: "innodata-isogen.com"
-        },
-        {
-            id: "3",
-            company: "Cognizant",
-            level: "Gold",
-            info: "Cognizant (Nasdaq: CTSH) is a leading provider of information technology, consulting, and business process outsourcing services. With more than 50 delivery centers worldwide and over 100,000 employees, Cognizant combines a passion for client satisfaction, technology innovation, deep industry and business process expertise, and a global, collaborative workforce that embodies the future of work. Cognizant is a member of the NASDAQ-100, the S&P 500, the Forbes Global 2000, and the Fortune 1000. Follow us on Twitter: Cognizant.",
-            imageURL: "http://www.marklogicevents.com/img/sponsors/CG_logoReflect.jpg",
-            websiteFull: "http://www.cognizant.com/",
-            websitePretty: "cognizant.com"
-        },
-        {
-            id: "4",
-            company: "Infosys Technologies",
-            level: "Gold",
-            info: "Infosys Technologies Ltd. (NASDAQ: INFY) defines, designs and delivers technology-enabled business solutions for Global 2000 companies. Infosys also provides a complete range of services by leveraging our domain and business expertise and strategic alliances with leading technology providers. Our offerings span business and technology consulting, application services, systems integration, product engineering, custom software development, maintenance, re-engineering, independent testing and validation services, IT infrastructure services and business process outsourcing.",
-            imageURL: "http://www.marklogicevents.com/img/sponsors/infosys.jpg",
-            websiteFull: "http://www.infosys.com/",
-            websitePretty: "infosys.com"
-        },
-        {
             id: "5",
-            company: "Virtusa",
+            company: "Flatirons Solutions",
             level: "Gold",
-            info: "Virtusa provides a broad range of IT services through an optimized global delivery model. We specialize in developing online products for information and media companies. Virtusa is a strategic implementation and integration partner for MarkLogic and has built a solution accelerator for content spot-lighting on top of MarkLogic. Other practice areas include ECM, moblity, BPM, DW/BI, and custom application/product development. Marquee clients include Thomson Reuters, National Geographic, JPMC, Aetna, Citibank and many others.",
-            imageURL: "http://www.marklogicevents.com/img/sponsors/virtusa.jpg",
-            websiteFull: "http://www.virtusa.com/",
-            websitePretty: "virtusa.com"
+            info: "Flatirons Solutions is a system integrator, reseller, and longtime MarkLogic partner specializing in content technology, DAM, and XML publishing solutions for both commercial and government clients. They are a leading provider for the publishing and media industries, focused on dynamic publishing, rich media management, and publishing and production process automation. Established in 2001, Flatirons Solutions is a privately-held company headquartered in Boulder, Colorado, with offices in Washington D.C. and London, England.",
+            imageURL: "http://www.marklogic.com/images/2013/03/mlw-sponsor-flatirons.gif",
+            websiteFull: "http://www.flatironssolutions.com/",
+            websitePretty: "flatironssolutions.com"
         },
         {
             id: "6",
-            company: "Janya",
-            level: "Silver",
-            info: "Janya provides semantic analysis tools and solutions that extract critical information from unstructured data to create actionable intelligence. Organizations use Janya’s content enrichment capabilities to accelerate sharing and discovery of hidden knowledge within their existing information stores. Customizable solutions include automated metadata, fact and relationship extraction, and social media mining.",
-            imageURL: "http://www.marklogicevents.com/img/sponsors/janyaLeft.jpg",
-            websiteFull: "http://www.janya.com/",
-            websitePretty: "janya.com"
+            company: "RSuite CMS",
+            level: "Gold",
+            info: "RSuite CMS is a content management system used by the world’s leading publishers to create, store, manage, transform, and deliver content. Powered by MarkLogic, RSuite CMS provides powerful workflow and search capabilities tofind, re-use, and create new derivative products. Drive production efficiencies by integrating RSuite CMS into your dynamic publishing environment.",
+            imageURL: "http://www.marklogic.com/images/2012/10/summitseries-sponsor-rsi.gif",
+            websiteFull: "http://www.rsicms.com/rsuite-cms",
+            websitePretty: "rsicms.com"
         },
         {
             id: "7",
-            company: "Antenna House",
-            level: "Silver",
-            info: "Antenna House is very pleased to be showing Formatter V5.2 with support for specifying page layouts for PDF and print using either CSS or XSL-FO. Now users can select the stylesheet strategy that best suits their web, content management and business needs. Visit Antenna House to see why Formatter is used worldwide for demanding formatting requirements. ",
-            imageURL: "http://www.marklogicevents.com/img/sponsors/antennaHouse.jpg",
-            websiteFull: "http://www.antennahouse.com/",
-            websitePretty: "antennahouse.com"
-        },
-        {
-            id: "8",
-            company: "iFactory",
-            level: "Silver",
-            info: "Since 1992 iFactory has delivered innovative, inspiring, and intelligent interactive solutions to more than 150 organizations in a variety of verticals such as publishing, higher education and health care. iFactory's epublishing platform, PubFactory, is a highly regarded solution for publishers including Oxford University Press, DeGruyter, SAGE, and Cengage. ",
-            imageURL: "http://www.marklogicevents.com/img/sponsors/iFactoryLogo.jpg",
-            websiteFull: "http://www.ifactory.com/",
-            websitePretty: "ifactory.com"
-        },
-        {
-            id: "9",
             company: "TEMIS",
-            level: "Silver",
-            info: "TEMIS is the leading provider of Semantic Content Enrichment solutions. TEMIS helps publishers to add value to their content by extracting entities and intelligence from text, to create metadata programmatically and to allow semantic navigation. Documents are linked based on their actual content, and automatic classification enables publishers to repurpose their content and create new custom products.",
-            imageURL: "http://www.marklogicevents.com/img/sponsors/temisLeft.jpg",
+            level: "Gold",
+            info: "TEMIS helps organizations structure and leverage their unstructured information assets. Its flagship platform, Luxid®, identifies and extracts targeted information to semantically enrich content with domain-specific metadata. Luxid® enables professional publishers to efficiently package and deliver relevant information to their audience, and helps enterprises to intelligently analyze, discover and share increasing volumes of information.",
+            imageURL: "http://www.marklogic.com/images/2012/10/summit-sponsor-temis.gif",
             websiteFull: "http://www.temis.com/",
             websitePretty: "temis.com"
         },
         {
-            id: "10",
-            company: "Data Conversion Laboratory",
+            id: "8",
+            company: "Yuxi Pacific",
+            level: "Gold",
+            info: "Yuxi Pacific helps companies generate new revenue from existing intellectual property, leveraging cutting edge technology to optimize content workflows, enrich content with metadata, and quickly create new product offerings. As early-adopters and trusted partners of MarkLogic, our firm has been conducting implementations since 2005 and has deep experience with XQuery, content management systems and semantic enrichment technology.",
+            imageURL: "http://www.marklogic.com/images/2013/01/mlw-sponsor-yuxi.gif",
+            websiteFull: "http://www.yuxipacific.com/",
+            websitePretty: "yuxipacific.com"
+        },
+        {
+            id: "9",
+            company: "Esgisoft",
             level: "Silver",
-            info: "Data Conversion Laboratory, Inc. specializes in converting and organizing content for web publishing, database population, and the creation of electronic documents. DCL converts from any source format to XML including NLM, DOCBOOK, DITA, TEI and S1000D as well as XHTML E-book formats. DCL has processed more than one billion pages for publishers, industry, government, libraries, and documentation developers.",
-            imageURL: "http://www.marklogicevents.com/img/sponsors/dclLogoLeft.jpg",
-            websiteFull: "http://www.dclab.com/",
-            websitePretty: "dclab.com"
+            info: "Esgisoft is an IT consulting firm specialized in Enterprise Search / Information Retrieval / eDiscovery Solutions for customers across geographies. We deliver mobile search & high end ‘Enterprise Search Solutions’ to suit customer needs and meet their challenges. We have enabled clients to understand uniqueness of their innovative search aspirations and identify associated business risks.",
+            imageURL: "http://www.marklogic.com/images/2013/02/mlw-sponsor-esgisoft.gif",
+            websiteFull: "http://www.esgisoft.com/",
+            websitePretty: "esgisoft.com"
+        },
+        {
+            id: "10",
+            company: "Innodata",
+            level: "Silver",
+            info: "Innodata is a leading provider of business process, technology, and consulting services. Our role in the digital revolution is that of an enabler. We help our clients by building and enhancing information products, creating smarter workflows, and empowering their e-book content.",
+            imageURL: "http://www.marklogic.com/images/2013/01/mlw-sponsor-innodata.gif",
+            websiteFull: "http://www.innodata.com/",
+            websitePretty: "innodata.com"
         },
         {
             id: "11",
-            company: "HTC Global Services",
+            company: "Smartlogic",
             level: "Silver",
-            info: "HTC Global Services (HTC) is a leading global Information Technology solutions and services provider specialized in content management, delivery and publishing solutions for Digital Media. HTC’s Mobile Publishing Framework integrates seamlessly with publishing systems for delivery of digital content on wide variety of platforms including Tablets, iPad, and Smart Phones.",
-            imageURL: "http://www.marklogicevents.com/img/sponsors/htcLeft.jpg",
-            websiteFull: "http://www.htcinc.com/",
-            websitePretty: "htcinc.com"
+            info: "At Smartlogic we focus our energy on creating value from unstructured content. We bring context to Big Data. We capture the semantics and language of your business and apply this to automatically analyze unstructured information in order to surface its value to your enterprise – something we call Content Intelligence.",
+            imageURL: "http://www.marklogic.com/images/2013/04/mlw-sponsor-smartlogic.gif",
+            websiteFull: "http://www.smartlogic.com/",
+            websitePretty: "smartlogic.com"
         },
         {
             id: "12",
-            company: "Applied Relevance",
+            company: "NetOwl",
             level: "Silver",
-            info: "Applied Relevance produces software and services to help enterprise users find the information they need. AR•Semantics for MarkLogic Server provides high-performance auto-classification of enterprise documents, a taxonomy management console and metadata enhancement. Create dynamic rules to categorize documents in an intuitive, attractive user interface.",
-            imageURL: "http://www.marklogicevents.com/img/sponsors/applied.jpg",
-            websiteFull: "http://appliedrelevance.com/",
-            websitePretty: "appliedrelevance.com"
-        },
-        {
-            id: "13",
-            company: "Typefi",
-            level: "Silver",
-            info: "eXtyles & Typefi combined is an editorial and composition solution that enables users to generate XML from Word and dynamically flow it into InDesign Server to create richly formatted documents for print and eBook without users having InDesign on the desktop. The solution significantly reduces editorial and composition time.",
-            imageURL: "http://www.marklogicevents.com/img/sponsors/typefiLeft.jpg",
-            websiteFull: "http://www.typefi.com/",
-            websitePretty: "typefi.com"
-        },
-        {
-            id: "14",
-            company: "Really Strategies",
-            level: "Bronze",
-            info: "RSuite is an XML-optimized content management system powered by MarkLogic Server and used by the world’s leading publishers. RSuite accelerates publishers’ revenue and profit growth through better content management, including a robust workflow engine and suite of editorial/production capabilities. Already a MarkLogic customer? Contact us to leverage your investment today!",
-            imageURL: "http://www.marklogicevents.com/img/sponsors/rsuite.gif",
-            websiteFull: "http://www.reallysi.com/",
-            websitePretty: "reallysi.com"
-        },
-        {
-            id: "15",
-            company: "Flatirons Solutions",
-            level: "Additional Sponsors",
-            info: "Flatirons Solutions is a Colorado based system integrator and long-time MarkLogic partner specializing in XML publishing, dynamic content delivery, and digital asset management. Their implementations focus on content reuse and rich media delivery, and their team specializes in meeting the unique needs of commercial publishers and media / entertainment companies.",
-            imageURL: "http://www.marklogicevents.com/img/sponsors/FlatironsSolutionsLeft.jpg",
-            websiteFull: "http://flatironssolutions.com",
-            websitePretty: "flatironssolutions.com"
+            info: "NetOwl® is the industry’s leading Text and Entity Analytics product suite for Big Data Analysis. NetOwl offers state-of-the-art entity extraction, link and event extraction, as well as geotagging, multicultural name matching, and identity resolution. NetOwl analyzes data in multiple languages and has demonstrated unparalleled accuracy and scalability in mission-critical environments.",
+            imageURL: "http://www.marklogic.com/images/2013/04/mlw-sponsor-smartlogic.gif",
+            websiteFull: "http://www.netowl.com/",
+            websitePretty: "netowl.com"
         },
         {
             id: "16",
-            company: "MLJSON",
+            company: "MarkLogic Developer Community",
             level: "Additional Sponsors",
-            info: "<div style='width: 500px;'>The MLJSON project is a set of libraries and REST endpoints to enable the MarkLogic Server to become an advanced JSON store.<br><br>" +
-            "<h4>MarkLogic</h4>" +
-            "• High-performance, scalable database for unstructured information<br>" + 
-            '• "NoSQL" datastore (no tables, rows, columns) - just documents and unique IDs (URIs).<br>' + 
-            "• Uses XML datamodel for documents, query-able via XQuery, XSLT, XPath<br>" + 
-            "• Uses search-engine techniques to efficiently expose real-time fulltext search<br>" + 
-            "• ACID-compliant CRUD (Create, Read, Update, Delete)<br><br>" + 
-            "<h4>JSON</h4>" +
-            "• JavaScript Object Notation<br>" + 
-            "• A lightweight data-encoding and interchange format<br>" + 
-            "• Native to JavaScript, now widely utilized across languages<br>" + 
-            "• Commonly used for passing data to web browsers<br>" + 
-            "• Design goal<br>" + 
-            "• Enable developers to store and search/query JSON inside MarkLogic (without knowledge of XQuery, XSLT, or XPath)<br><br>" + 
-            
-            "<h4>Design considerations:</h4>" +
-            "1) Approach things from a JSON angle<br>" + 
-            "2) Create the XML to match the JSON, not vice-versa<br>" + 
-            "3) Make good use of MarkLogic indexes<br>" + 
-            "4) Craft the XML so it's fast to query<br>" + 
-            "5) XML representation of JSON is an implementation detail - users only need think in terms of JSON<br><br>" + 
-            "<h4>Overview</h4>" +
-            "MLJSON exposes REST endpoints that allow a developer to easily store and retrieve JSON documents from the database (CRUD). It also exposes a very powerful query interface that uses a native JSON syntax:<br><br>" +
-            "Query using native JSON syntax - Don't expose the XML internals to users - Support full range of MarkLogic indexes<br><br>" +
-            "This query interface allows the user to find documents via \"path\" expressions as well as full text search expressions. For those familiar with MarkLogic, it exposes all of the functionality found in the CTS search functions.<br><br>" +
-            "<h4>Presentation</h4>" +
-            "Here are some <a href='http://www.xmlprague.cz/2011/presentations/jason-hunter-mljson.pdf'>slides</a> from a presentation on MLJSON given at XML Prague 2011.</div>",
+            info: "Home of <b>THE</b> Enterprise NoSQL Database. If you need the performance and flexibility of NoSQL, along with trusted Enterprise-grade features like ACID transactions, security, high-availability, and disaster recovery, MarkLogic is THE choice.",
             imageURL: "http://developer.marklogic.com/media/marklogic-community-badge.png",
             websiteFull: "http://developer.marklogic.com",
             websitePretty: "developer.marklogic.com"

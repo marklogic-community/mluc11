@@ -21,12 +21,12 @@ xquery version "1.0-ml";
 import module namespace redirect="http://marklogic.com/commons/mobile-redirect" at "/lib/mobile-redirect.xqy";
 
 let $set := xdmp:set-response-content-type("text/html")
-where not(redirect:testAndPerformRedirect(8004, 8005, "mluc11.marklogic.com", "m.mluc11.marklogic.com", "sticky"))
+where not(redirect:testAndPerformRedirect(8104, 8105, "mlw13.marklogic.com", "m.mlw13.marklogic.com", "sticky"))
 return
 "<!DOCTYPE html>",
 <html> 
     <head> 
-        <title>MLUC 2011</title>
+        <title>MLW 2013</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
         <link rel="stylesheet" type="text/css" href="/ext4.0/resources/css/ext-all.css"/> 
         <link rel="stylesheet" type="text/css" href="/admin/css/base.css"/> 

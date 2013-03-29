@@ -35,7 +35,6 @@ return
         <script src="/js/common.js" type="text/javascript"><!-- --></script>
         <script src="/views/AllViews.js" type="text/javascript"><!-- --></script>
         <script src="/views/Sponsors.js" type="text/javascript"><!-- --></script>
-        <script src="/views/Labs.js" type="text/javascript"><!-- --></script>
         <script src="/js/app.js" type="text/javascript"><!-- --></script>
         <script type="text/javascript">
             var _gaq = _gaq || [];
