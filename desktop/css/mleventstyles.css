@@ -50,23 +50,8 @@ a:hover {
 
 /* Header CSS Start */
 #header {
-	background:url(/images/mlw13-banner.jpg) no-repeat left top;
 	height:178;
-	padding:0 7px 0 16px;
-}
-#logo {
-	width: 237px;
-	height: 87px;
-	float:left;
-    padding:10px 0 0 0;
-}
-#logo a{
-	width: 237px;
-	height: 87px;
-	display: block;
-	text-indent: -9000px;
-	background:url(http://www.marklogicevents.com/img/logo.png) no-repeat left top;
-
+	padding: 0 0 0 10px;
 }
 
 /* Header CSS End */
