@@ -77,20 +77,23 @@ Ext.regModel("Session", {
         {name: "sessionDate", convert: function(value, record) { return record.get("startTime");}},
         {name: "roomNumber", convert: function(value, record) {
             var room = record.get("location");
-            if(room === "Grand Ballroom") {
+            if(room === "Mont-Royal 1") {
                 return 1;
             }
-            if(room === "Sea Cliff") {
+            if(room === "Mont-Royal 2") {
                 return 2;
             }
-            if(room === "Pacific Heights") {
+            if(room === "Chelsea 1") {
                 return 3;
             }
-            if(room === "Twin Peaks South") {
+            if(room === "Chelsea 4") {
                 return 4;
             }
-            if(room === "Presidio") {
+            if(room === "Chelsea 5") {
                 return 5;
+            }
+            if(room === "Chelsea 8") {
+                return 6;
             }
             return 0;
         }},
@@ -433,7 +436,7 @@ Ext.regStore("SponsorsStore", {
             company: "NetOwl",
             level: "Silver",
             info: "NetOwl® is the industry’s leading Text and Entity Analytics product suite for Big Data Analysis. NetOwl offers state-of-the-art entity extraction, link and event extraction, as well as geotagging, multicultural name matching, and identity resolution. NetOwl analyzes data in multiple languages and has demonstrated unparalleled accuracy and scalability in mission-critical environments.",
-            imageURL: "http://www.marklogic.com/images/2013/04/mlw-sponsor-smartlogic.gif",
+            imageURL: "http://www.marklogic.com/images/2013/03/mlw-sponsor-sra.gif",
             websiteFull: "http://www.sra.com/",
             websitePretty: "sra.com"
         },

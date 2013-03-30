@@ -70,8 +70,7 @@ Ext.onReady(function() {
             {
                 region: 'north',
                 height: 100,
-                cls: "header",
-                html: '<div id="header"><div id="logo"><a href="http://developer.marklogic.com">MarkLogic</a></div></div>',
+                html: '<div id="header"><a href="http://www.marklogic.com/events/marklogic-world-2013/"><img alt="mlw13" width="360" height="105" src="/images/mlw13-event-page-banner.jpg"/></a></div>',
                 border: false,
                 layout:'absolute',
                 items: [mluc.loginLogoutButton]
@@ -100,9 +99,9 @@ Ext.onReady(function() {
                 border: false,
                 height: 40,
                 html: '<div id="footer"><ul>' +
-                        '<li class="none"><a href="http://www.marklogicevents.com/?event=content.privacy">Privacy Policy</a></li>' +
-                        '<li><a href="http://www.marklogicevents.com/?event=content.terms">Terms of Use </a></li>' +
-                        '<li>&copy; 2011 MarkLogic. All rights reserved.</li>' +
+                        '<li class="none"><a href="http://www.marklogic.com/privacy-policy/">Privacy Policy</a></li>' +
+                        '<li><a href="http://www.marklogic.com/terms-of-use/">Terms of Use </a></li>' +
+                        '<li>&copy; 2013 MarkLogic. All rights reserved.</li>' +
                     '</ul><br class="clear" /></div>'
             }
         ]
