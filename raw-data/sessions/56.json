@@ -1,5 +1,6 @@
 {
-    "abstract": "We love MarkLogic and all the things you can do with it, but sometimes we just want to get a bit of data one-off into a tool we also love \u2013 Excel.  This talk will describe some easy ways to get data from MarkLogic into Excel for those times you want to make a quick calculation, a complicated graph or to email your co-workers some data.  We will discuss several methods. Some of them may surprise you as to how easy they are.",
+    "title": "Showing Off Your Data",
+    "abstract": "Getting data from MarkLogic into Excel<br/>We love MarkLogic and all the things you can do with it, but sometimes we just want to get a bit of data one-off into a tool we also love \u2013 Excel.  This talk will describe some easy ways to get data from MarkLogic into Excel for those times you want to make a quick calculation, a complicated graph or to email your co-workers some data.  We will discuss several methods. Some of them may surprise you as to how easy they are.<br/><br/>Advanced JSON Transformations<br/><br/>Using HighCharts and MarkLogic<br/>This talk introduces the HighCharts charting library, that comes with MarkLogic. Learn how you can leverage this visualization library to build your own REST powered data visualizations as well as visualize AppBuilder data.  We'll review the generous licensing details and the features and APIs the library offers, and we'll wrap up by demoing some interesting ways to render your data.",
     "endTime": "2013-04-09T15:20:00",
     "featured": false,
     "giveSurvey": true,
@@ -8,13 +9,14 @@
     "plenary": false,
     "selectable": true,
     "speakerIds": [
-        "64"
+        "64",
+        "65"
     ],
     "speakerNames": [
-        "David Lee"
+        "David Lee",
+        "Scott Brooks"
     ],
     "startTime": "2013-04-09T14:30:00",
-    "title": "Getting data from MarkLogic into Excel",
     "track": "technical",
     "type": "session"
 }

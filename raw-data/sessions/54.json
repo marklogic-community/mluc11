@@ -1,5 +1,5 @@
 {
-    "abstract": "Micah Dubinko describes the end-to-end process of building an application that leverages the semantic capabilities that we're building into MarkLogic. The talk includes a behind-the-scenes look at MarkLogic's internal test suite, which is itself a full-fledged semantic application.",
+    "abstract": "Building Semantic Applications<br/>Micah Dubinko describes the end-to-end process of building an application that leverages the semantic capabilities that we're building into MarkLogic. The talk includes a behind-the-scenes look at MarkLogic's internal test suite, which is itself a full-fledged semantic application.<br/><br/>Introduction to SPARQL in MarkLogic<br/>John Snelson describes how to query over RDF and documents together, using SPARQL and XQuery, in this sneak-peek into MarkLogic's future semantics capabilities.<br/><br/>Inside the RDF Triple Index<br/>MarkLogic is all about performance, and performance is all about indexes. In this talk John Snelson describes indexes that he is working on to make semantic queries fast and scalable.",
     "endTime": "2013-04-09T16:40:00",
     "featured": false,
     "giveSurvey": true,
@@ -8,13 +8,15 @@
     "plenary": false,
     "selectable": true,
     "speakerIds": [
-        "63"
+        "63",
+        "62"
     ],
     "speakerNames": [
-        "Micah Dubinko"
+        "Micah Dubinko",
+        "John Snelson"
     ],
     "startTime": "2013-04-09T15:50:00",
-    "title": "Building Semantic Applications ",
+    "title": "Semantics Double-Click",
     "track": "technical",
     "type": "session"
 }

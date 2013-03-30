@@ -1,5 +1,6 @@
 {
-    "abstract": "Fei Xue describes the MarkLogic tools that help you understand how queries are broken down and processed by the index, so you can tune both queries and index settings for best performance. This talk briefly reviews search queries basics in MarkLogic, how you can use the tools to understand them, and how to adjust index settings accordingly. Wildcard expansion and reverse queries get a special mention.",
+    "title": "Practical Advice from MarkLogic Developers",
+    "abstract": "Understanding and Optimizing Search Queries in MarkLogic<br/>Fei Xue describes the MarkLogic tools that help you understand how queries are broken down and processed by the index, so you can tune both queries and index settings for best performance. This talk briefly reviews search queries basics in MarkLogic, how you can use the tools to understand them, and how to adjust index settings accordingly. Wildcard expansion and reverse queries get a special mention.<br/><br/>Your Path to Structural Big Data Search<br/>Gajanan Chinchwadkar describes the awesome power of structural indexing and search in MarkLogic Server, now and in the future. In this talk he will explain how path and field indexes let you target your search to a specific part of a document's structure. If you are a new user exploring MarkLogic Server as a powerful Big Data Search engine, you should not miss this talk. If you are an experienced MarkLogic developer or administrator, this talk will expose some features you may not have used yet, and update you on current engineering work and future capabilities.<br/><br/>Customizing Tokenization<br/>Do you want to index certain characters in some contexts as part of a word? Do you want an ISBN number or \u00a712 to be a single search term? If only you could customize the tokenization rules MarkLogic uses... In this talk Mary will give you a sneak-peek at something she's working on for an upcoming release to let you do just that.",
     "endTime": "2013-04-11T10:20:00",
     "featured": false,
     "giveSurvey": true,
@@ -8,13 +9,17 @@
     "plenary": false,
     "selectable": true,
     "speakerIds": [
-        "49"
+        "49",
+        "50",
+        "51"
     ],
     "speakerNames": [
-        "Fei Xue"
+        "Fei Xue",
+        "Gajanan Chinchwadkar",
+        "Mary Holstege"
     ],
     "startTime": "2013-04-11T09:30:00",
-    "title": "Understanding and Optimizing Search Queries in MarkLogic",
+    "title": "Inside MarkLogic Search",
     "track": "technical",
     "type": "session"
 }

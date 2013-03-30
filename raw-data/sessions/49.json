@@ -1,5 +1,6 @@
 {
-    "abstract": "Leveraging the power of MarkLogic\u2019s search API, one is able to build a fully functional, rapid prototype of a data visualization application. Learn how to utilize Marklogic search to drive data visualization widgets and map geospatial coordinates via template-based search results. \n\nIt\u2019s simple to get started. All you need is some background in W3 standards (HTML, CSS, JavaScript) and MarkLogic (Express or Developer). The data for this particular application was obtained for free from NYC Open Data (Socarta).\n\n",
+    "title": "Search With MarkLogic",
+    "abstract": "An Introduction to Search Visualization Using NYC Open Data<br/>Leveraging the power of MarkLogic\u2019s search API, one is able to build a fully functional, rapid prototype of a data visualization application. Learn how to utilize Marklogic search to drive data visualization widgets and map geospatial coordinates via template-based search results. \n\nIt\u2019s simple to get started. All you need is some background in W3 standards (HTML, CSS, JavaScript) and MarkLogic (Express or Developer). The data for this particular application was obtained for free from NYC Open Data (Socarta).<br/><br/>Correct and Consumable Answers to Complex Questions<br/>Big Data earns its name not just for volume, but for variety of format and structure, for differing rates of change, presence of noise, and complex relationships among the data. All of this adds up to some challenging queries \u2013 either because the user wishes to carry out a sophisticated search strategy or because the user has a simple question that maps to a complicated problem \u201cunder the hood\u201d. This talk will take some real world data situations and discuss how to empower the user to express the question at hand, how to map that question to the appropriate search string (which may involve complex Booleans, other constraints, field mappings, and more), and how to carry out that search in a manner that is accurate, is performance-tuned, and retains the full advantages of MarkLogic search services.<br/><br/>Search Intelligence and MarkLogic Search API<br/>An increasing requirement of many search services is to provide fast, accurate search results without a complicated GUI or search syntax. A user-friendly search engine needs to be able to infer as much as possible from a simple query in order to give the user as specific and complete result set as possible. This session will demonstrate strategies developed at Jones McClure Publishing for transforming user queries into more intelligent queries that leverage content-specific markup for speed and accuracy, without additional input from the user. The presentation will give an overview of some basic templates and present several examples of real world implementations that enhance users\u2019 search experiences without adding complexity.",
     "endTime": "2013-04-10T13:50:00",
     "featured": false,
     "giveSurvey": true,
@@ -8,13 +9,16 @@
     "plenary": false,
     "selectable": true,
     "speakerIds": [
-        "59"
+        "59",
+        "60",
+        "61"
     ],
     "speakerNames": [
-        "Andrew Wanczowski"
+        "Andrew Wanczowski",
+        "Beverly Jamison",
+        "Will Thompson"
     ],
     "startTime": "2013-04-10T13:00:00",
-    "title": "An Introduction to Search Visualization Using NYC Open Data",
     "track": "technical",
     "type": "session"
 }

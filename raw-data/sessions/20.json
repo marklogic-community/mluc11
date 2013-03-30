@@ -8,10 +8,12 @@
     "plenary": false,
     "selectable": true,
     "speakerIds": [
-        "28"
+        "28",
+        "30"
     ],
     "speakerNames": [
-        "Aaron Brauser"
+        "Aaron Brauser",
+        "Aaron Stranahan"
     ],
     "startTime": "2013-04-10T14:00:00",
     "title": "Rx for Better Patient Care -- and Cost Containment",

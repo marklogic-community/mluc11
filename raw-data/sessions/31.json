@@ -8,11 +8,13 @@
     "plenary": false,
     "selectable": true,
     "speakerIds": [
+        "35",
         "41",
         "42",
         "43"
     ],
     "speakerNames": [
+        "Sanjay Anand",
         "Gerry Grenier",
         "Mehul Trivedi",
         "Sergio Restreppo"
