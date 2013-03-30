@@ -1,1 +1,9 @@
-{"bio": "Amir Halfon is Chief Technologist for Financial Services at Marklogic, where he oversees the development of technology strategy to address Big Data challenges across the industry. Before joining Marklogic Amir was the CTO for Global Financial Services at Oracle, as well as Sun Microsystems. He possesses a wealth of technical and industry experience, and is a frequent speaker at conferences and contributed to several publications. ", "name": "Amir Halfon", "id": "1", "affiliation": "MarkLogic Corporation", "position": "CTO, Financial Services", "type": "speaker", "email": "amir.halfon@marklogic.com"}
+{
+    "affiliation": "RSuite CMS",
+    "bio": "Lisa serves as the CTO/EVP for RSI Content Solutions, with primary responsibility for the RSuite CMS product vision and engineering. Lisa is a recognized industry professional and an expert in the design of XML-based content management systems. For many years, she managed RSI Content Solutions' consulting practice, providing guidance to publishers on technology choices, workflow engineering, and content design.",
+    "email": "Chill@rsicms.com",
+    "id": "1",
+    "name": "Christopher Hill",
+    "position": "Vice President, Product Management",
+    "type": "speaker"
+}

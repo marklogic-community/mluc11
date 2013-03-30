@@ -1,1 +1,9 @@
-{"bio": "Andrew Wanczowski is an Information Systems professional specializing in Content Management, Digital Asset Management and Information Retrieval. \n\nHe currently holds the title of Systems Architect for Cond\u00e9 Nast: Editorial Assets and Rights. During his time at Cond\u00e9 Nast, he architected and implemented the company\u2019s new Digital Asset Management system, built on MarkLogic. Andrew has a Master\u2019s of Science in Information Systems and is an active member and co-organizer of NYMUG.", "name": "Andrew Wanczowski", "id": "54", "affiliation": "Cond\u00e9 Nast", "position": "Systems Architect", "type": "speaker", "email": "Andrew_Wanczowski@condenast.com"}
+{
+    "affiliation": "",
+    "bio": "Clark is the Technical Director, Public Sector for MarkLogic, managing all Public Sector pre-sales engineering. Clark has an over twelve years experience in software engineering and system architecture with an emphasis on delivering large scale systems to Government customers. He is an active MarkLogic Community member, contributing to several open source projects. In addition to working at MarkLogic, Clark teaches computer science and Big Data at Loyola's master's program. He has a B.S. in Computer Science from U.M.U.C. and a Masters in Computer Science from American University.",
+    "email": "clark.richey@marklogic.com",
+    "id": "54",
+    "name": "Clark Richey",
+    "position": "Techincal Director",
+    "type": "speaker"
+}

@@ -1,1 +1,20 @@
-{"endTime": "2013-04-10T01:00:00", "speakerIds": ["72"], "title": "Inside MarkLogic: an introduction to MarkLogic Architecture", "track": "technical", "abstract": "What makes MarkLogic an exceptional database? If you've ever wondered what's going on inside MarkLogic Server as it evaluates queries, this talk is for you. It explains, in human terms, the core concepts and features of the universal index, \u201cstructured\u201d search, the range index, and how MarkLogic differs from traditional search and database products. You'll leave the talk with a deeper understanding of how MarkLogic Server \"thinks\".", "speakerNames": ["David Gorbet"], "plenary": false, "featured": false, "location": "", "startTime": "2013-04-10T01:00:00", "selectable": true, "giveSurvey": true, "type": "session", "id": "62"}
+{
+    "abstract": "Day to day administration of a single MarkLogic instance is a snap.  But as clusters scale up and instances multiply, operations teams need easy ways to orchestrate tasks such as building clusters and deploying applications. Come to this session to learn more about automating MarkLogic management tasks using MarkLogic's Rest APIs, and get a sneak-peek at some features under development to make MarkLogic administration even easier.\n",
+    "endTime": "2013-04-10T16:00:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "62",
+    "location": "Chelsea 8",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "69"
+    ],
+    "speakerNames": [
+        "Colleen Whitney"
+    ],
+    "startTime": "2013-04-10T15:10:00",
+    "title": "Using MarkLogic's Rest APIs for DevOps ",
+    "track": "technical",
+    "type": "session"
+}

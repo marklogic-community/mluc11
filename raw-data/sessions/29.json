@@ -1,1 +1,22 @@
-{"endTime": "2013-04-10T01:00:00", "speakerIds": ["33"], "title": "Find What You're Looking for with MarkLogic Big Data Search ", "track": "business", "abstract": "Finding the right data and content in the ever growing world of information is a key challenge and having the right information quickly is a critical advantage. Whats needed is a new approach to search - Big Data Search. In this session MarkLogics Chief Technologist of Media Solutions Matt Turner, will review the real-world examples of MarkLogic is changing the game in search by: Addressing every element of your data with flexible schema and universal indexing Pinpointing information using integrated search functions Getting users the latest information with alerts Scaling out to 10s of billions of records Join us for a lively session with demonstrations and discussion and find what youre looking for! ", "speakerNames": ["Matt Turner"], "plenary": false, "featured": false, "location": "", "startTime": "2013-04-10T01:00:00", "selectable": true, "giveSurvey": true, "type": "session", "id": "29"}
+{
+    "abstract": "Warrior Gateway is an exciting and innovative approach to consolidating, analyzing and disseminating large amounts of disparate information, in a scalable and feasible fashion and within a limited  budget. A non-profit that serves veterans and their families, it is an aggregation of federal, state, and community information \u2014 augmented by the community and veterans themselves to make it more relevant. The enriched content can be easily repurposed (or multi-purposed) and/or queried on other  sites and even combined with additional content and applications in mashups, therefore making Warrior Gateway content even more valuable and accessible to the military community it serves. ",
+    "endTime": "2013-04-11T10:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "29",
+    "location": "Mont-Royal 1",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "38",
+        "39"
+    ],
+    "speakerNames": [
+        "Devin Holmes",
+        "David Erickson"
+    ],
+    "startTime": "2013-04-11T09:30:00",
+    "title": "Big Data Consolidation, Analytics, and Localized Delivery",
+    "track": "business",
+    "type": "session"
+}

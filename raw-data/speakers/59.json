@@ -1,1 +1,9 @@
-{"bio": "Adam is a Senior Sales Engineer at MarkLogic, in UK Public Sector team, focusing on central Government, Defence and Intelligence prospects. He is a keen blogger on technology issues with over 1200 visitors per month to his Big Data blog.  In his spare time he is a Flight Sergeant with 1401 (Alfreton & Ripley) Squadron Air Training Corps (ATC), the youth organisation of the Royal Air Force. ", "name": "Adam  Fowler", "id": "59", "affiliation": "", "position": "Sales Engineer", "type": "speaker", "email": "adam.fowler@marklogic.com"}
+{
+    "affiliation": "Cond\u00e9 Nast",
+    "bio": "Andrew Wanczowski is an Information Systems professional specializing in Content Management, Digital Asset Management and Information Retrieval. \n\nHe currently holds the title of Systems Architect for Cond\u00e9 Nast: Editorial Assets and Rights. During his time at Cond\u00e9 Nast, he architected and implemented the company\u2019s new Digital Asset Management system, built on MarkLogic. Andrew has a Master\u2019s of Science in Information Systems and is an active member and co-organizer of NYMUG.",
+    "email": "Andrew_Wanczowski@condenast.com",
+    "id": "59",
+    "name": "Andrew Wanczowski",
+    "position": "Systems Architect",
+    "type": "speaker"
+}

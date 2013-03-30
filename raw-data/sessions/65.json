@@ -1,1 +1,20 @@
-{"endTime": "2013-04-10T01:00:00", "speakerIds": ["75"], "title": "Search: Know the Score!", "track": "technical", "abstract": "Relevance scores are  key to getting the most out of your searches. Mary will help you understand how MarkLogic computes scores, and let you know what options and controls are available and how they are applied. You'll also get a sneak-peek at some upcoming scoring features.", "speakerNames": ["Mary Holstege"], "plenary": false, "featured": false, "location": "", "startTime": "2013-04-10T01:00:00", "selectable": true, "giveSurvey": true, "type": "session", "id": "65"}
+{
+    "abstract": "MarkLogic's shared-nothing architecture has long been utilized within private clouds. Come to this session to learn about current and future features that bring new levels of flexibility to deployment of MarkLogic applications. Features include expanding and collapsing clusters, re-distributing storage, and using reserved and on-demand services to speed development and scale production on Amazon Web Sevices.",
+    "endTime": "2013-04-09T14:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "65",
+    "location": "Chelsea 4",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "71"
+    ],
+    "speakerNames": [
+        "Denis Sheahan"
+    ],
+    "startTime": "2013-04-09T13:30:00",
+    "title": "Amazon Web Services Really Lets You Scale Up And Down",
+    "track": "technical",
+    "type": "session"
+}

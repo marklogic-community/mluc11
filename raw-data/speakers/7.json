@@ -1,1 +1,9 @@
-{"bio": "", "name": "Sergio Restreppo", "id": "7", "affiliation": "Yuxi Pacific", "position": "Vice President of Architecture", "type": "speaker", "email": ""}
+{
+    "affiliation": "Flatirons Solutions",
+    "bio": "",
+    "email": "christian.kaefer@flatironssolutions.com",
+    "id": "7",
+    "name": "Christian Kaefer",
+    "position": "Director of Publishing",
+    "type": "speaker"
+}

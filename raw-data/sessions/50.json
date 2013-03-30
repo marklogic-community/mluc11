@@ -1,1 +1,20 @@
-{"endTime": "2013-04-10T01:00:00", "speakerIds": ["59"], "title": "A Node.JS connector for MarkLogic", "track": "technical", "abstract": "This connector provides a convenient JavaScript wrapper for common operations on MarkLogic REST API. It abstracts authentication and common search settings to make it intuitive for a non MarkLogician to get started rapidly with MarkLogic", "speakerNames": ["Adam  Fowler"], "plenary": false, "featured": false, "location": "", "startTime": "2013-04-10T01:00:00", "selectable": true, "giveSurvey": true, "type": "session", "id": "50"}
+{
+    "abstract": "Big Data earns its name not just for volume, but for variety of format and structure, for differing rates of change, presence of noise, and complex relationships among the data. All of this adds up to some challenging queries \u2013 either because the user wishes to carry out a sophisticated search strategy or because the user has a simple question that maps to a complicated problem \u201cunder the hood\u201d. This talk will take some real world data situations and discuss how to empower the user to express the question at hand, how to map that question to the appropriate search string (which may involve complex Booleans, other constraints, field mappings, and more), and how to carry out that search in a manner that is accurate, is performance-tuned, and retains the full advantages of MarkLogic search services. ",
+    "endTime": "2013-04-10T13:50:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "50",
+    "location": "Mont-Royal 2",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "60"
+    ],
+    "speakerNames": [
+        "Beverly Jamison"
+    ],
+    "startTime": "2013-04-10T13:00:00",
+    "title": "Correct and Consumable Answers to Complex Questions",
+    "track": "technical",
+    "type": "session"
+}

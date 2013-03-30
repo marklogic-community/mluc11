@@ -1,1 +1,20 @@
-{"endTime": "2013-04-10T01:00:00", "speakerIds": ["45"], "title": "Using HighCharts and MarkLogic", "track": "technical", "abstract": "TBD", "speakerNames": ["Scott  Brooks"], "plenary": false, "featured": false, "location": "Lightning Talk Room - Mont-Royal 2", "startTime": "2013-04-10T01:00:00", "selectable": true, "giveSurvey": true, "type": "session", "id": "37"}
+{
+    "abstract": "Fei Xue describes the MarkLogic tools that help you understand how queries are broken down and processed by the index, so you can tune both queries and index settings for best performance. This talk briefly reviews search queries basics in MarkLogic, how you can use the tools to understand them, and how to adjust index settings accordingly. Wildcard expansion and reverse queries get a special mention.",
+    "endTime": "2013-04-11T10:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "37",
+    "location": "Mont-Royal 2",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "49"
+    ],
+    "speakerNames": [
+        "Fei Xue"
+    ],
+    "startTime": "2013-04-11T09:30:00",
+    "title": "Understanding and Optimizing Search Queries in MarkLogic",
+    "track": "technical",
+    "type": "session"
+}

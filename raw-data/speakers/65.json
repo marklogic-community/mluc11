@@ -1,1 +1,9 @@
-{"bio": "Will Thompson has worked for Jones McClure Publishing since 2005, where he began work on their XML conversion initiative. He has developed tools for authoring, automation, and XML pipelining, and he is currently responsible for search engine development within the companys new online service, OConnors Online ", "name": "Will Thompson", "id": "65", "affiliation": "Jones McClure Publishing", "position": "Chief Software Engineer", "type": "speaker", "email": "wthompson@jonesmcclure.com"}
+{
+    "affiliation": "MarkLogic",
+    "bio": "TBD",
+    "email": "scott.brooks@marklogic.com",
+    "id": "65",
+    "name": "Scott Brooks",
+    "position": "Senior Engineer",
+    "type": "speaker"
+}

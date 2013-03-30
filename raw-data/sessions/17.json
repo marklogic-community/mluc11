@@ -1,1 +1,22 @@
-{"endTime": "2013-04-10T01:00:00", "speakerIds": ["15", "16"], "title": "Inside a Data Breach", "track": "business", "abstract": "Security is not usually a consideration for a company until a breach occurs. But with the audacity and frequency of high-profile hacks, security should be on everyone's radar. In this talk, renowned security specialist Steven Branigan will walk you through two data breaches: the online banking credentials for a retail chain, and credit card payment for the entertainment industry. He will discuss how they were infiltrated, how they detected it, how these incidents were handled and how companies can better protect themselves from these types of attacks --including safe-guarding who has access to the data -- at the data layer.", "speakerNames": ["Steven Branigan", "Steve Branigan"], "plenary": false, "featured": false, "location": "Chelsea 4", "startTime": "2013-04-10T01:00:00", "selectable": true, "giveSurvey": true, "type": "session", "id": "17"}
+{
+    "abstract": "Mitchell1, a division of Snap-on Tools, is a 95-year old company that provides automotive repair, diagnostic and estimating information to the automotive repair industry. Evolving from a print history to \u201ccomputerized manuals\u201d on CD then DVD and then to an online product, Mitchell1 (like others in this space) continues to be confronted with exponential growth of content due to the increased complexity of the modern vehicle. Making relevant information easily \u201cfind-able\u201d by our customers is the key to success, and Mitchell1\u2019s newest online product delivers that vision through the use of MarkLogic. This talk will discuss Mitchell1\u2019s evolution from a \u201cstructured data\u201d approach to moving to a document-centric approach in MarkLogic architecture. ",
+    "endTime": "2013-04-10T11:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "17",
+    "location": "Chelsea 4",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "22",
+        "23"
+    ],
+    "speakerNames": [
+        "Ben Johnson",
+        "Jeff Grier"
+    ],
+    "startTime": "2013-04-10T10:30:00",
+    "title": "The Journey: From Print to Online",
+    "track": "business",
+    "type": "session"
+}

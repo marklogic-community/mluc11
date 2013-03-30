@@ -1,1 +1,9 @@
-{"bio": "", "name": "Sara Mazer", "id": "79", "affiliation": "MarkLogic", "position": "Sales Engineer", "type": "speaker", "email": "sara.mazer@marklogic.com"}
+{
+    "affiliation": "MarkLogic",
+    "bio": "",
+    "email": "wayne.feick@marklogic.com",
+    "id": "79",
+    "name": "Wayne Feick",
+    "position": "Principal Engineer",
+    "type": "speaker"
+}

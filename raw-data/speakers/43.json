@@ -1,1 +1,9 @@
-{"bio": "Chris is a senior engineer at the Church of Jesus Christ of Latter-day Saints.  He has been working with MarkLogic for the last 5 years doing consulting with development and administration teams.  He has written custom administration tools, performance analysis applications, static code analysis tools, and tool integrations for use with the MarkLogic platform.", "name": "Chris Cieslinski", "id": "43", "affiliation": "Church of Jesus Christ of the Latter-day Saints", "position": "Senior Engineer", "type": "speaker", "email": "CieslinskiCE@ldschurch.org"}
+{
+    "affiliation": "Yuxi Pacific",
+    "bio": "",
+    "email": "",
+    "id": "43",
+    "name": "Sergio Restreppo",
+    "position": "Vice President of Architecture",
+    "type": "speaker"
+}

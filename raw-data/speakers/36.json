@@ -1,1 +1,9 @@
-{"bio": "Natascha Helbig is the Director of Reader Store, Sony\u2019s online store for eBooks. Natascha is in charge for the store\u2019s operations for North America, including all aspects of content processing, merchandising and content acquisition. She has been working in the ereading space since Sony\u2019s launch of its store and Sony Reader in 2006. She is from Hamburg, Germany. ", "name": "Natascha Helbig", "id": "36", "affiliation": "Sony Electronics", "position": "Director, Reader Store", "type": "speaker", "email": "Natascha.Helbig@am.sony.com"}
+{
+    "affiliation": "EBCONT enterprise technologies GmbH",
+    "bio": "Alexander Deles is Executive Vice President at EBCONT enterprise technologies. The company focuses on consulting and software development in the fields of big data, mission critical and mobile applications.\nPrior to joining EBCONT, he worked for companies like Superfund and Nokia Siemens Networks. \nDuring his career he has been covering technical as well as management roles. Thus he has extensive experience across different industries and sectors, he now applies to make customers and services even more successful.",
+    "email": "alexander.deles@ebcont-et.com",
+    "id": "36",
+    "name": "Alexander Deles",
+    "position": "Executive Vice President, Head of Software Eng.",
+    "type": "speaker"
+}

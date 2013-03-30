@@ -1,0 +1,20 @@
+{
+    "abstract": "XML is the foundation that enables multichannel publishing for publishers and media companies, but authors, editors, and reviewers have struggled to work with it effectively. At last, the tools and technology have caught up! Today organizations can choose whether they want XML-first, XML-early, or XML-late workflows, and even whether they want the XML hidden from their users altogether. In this presentation, Lisa Bos, CTO and co-founder at RSI Content Solutions, will demonstrate RSuite CMS, the industry\u2019s first enterprise content management system powered by MarkLogic. She will detail the benefits of XML-first, XML-early, and XML-hidden workflows in various publishing scenarios from leading publishing organizations using RSuite CMS.",
+    "endTime": "2013-04-10T11:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "1",
+    "location": "Chelsea 8",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "1"
+    ],
+    "speakerNames": [
+        "Christopher Hill"
+    ],
+    "startTime": "2013-04-10T10:30:00",
+    "title": "XML-First, XML-Early, XML-Hidden",
+    "track": "customer",
+    "type": "session"
+}

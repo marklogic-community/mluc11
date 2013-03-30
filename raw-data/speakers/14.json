@@ -1,1 +1,9 @@
-{"bio": "Ben Ackerman manages the new product planning and development for Sony\u2019s Reader Store and reading apps and looks to bring big data solutions to the everyday problems of content discovery, enhancement and operations.", "name": "Ben Ackerman", "id": "14", "affiliation": "Sony Entertainment", "position": "Senior Manager of Service Planning for Digital Reading", "type": "speaker", "email": ""}
+{
+    "affiliation": "McGraw-Hill Financial",
+    "bio": "Sagar Bhujbal has over 17 years of experience providing technical leadership and management to drive organizational change by adopting high impact development practices and cloud strategies to meet critical software engineering challenges. He has demonstrated success in architecting, designing & development of large scale mission critical software solutions using SOA and REST architecture style to develop API\u2019s/services using XML, JSON and loosely coupled applications also using complex search solutions built on top of MarkLogic and Temis. He is also a proponent of agile development methodologies (SCRUM) and has successfully transformed teams to adopt & execute including test-driven development, automated testing and continuous integration.",
+    "email": "",
+    "id": "14",
+    "name": "Sagar Bhujbal",
+    "position": "Solutions Architect",
+    "type": "speaker"
+}

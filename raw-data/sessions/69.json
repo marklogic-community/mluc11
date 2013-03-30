@@ -1,1 +1,20 @@
-{"endTime": "2013-04-10T01:00:00", "speakerIds": ["81"], "title": "mesonet.info: A Large-Scale Weather Database for Citizen Science", "track": "technical", "abstract": "This presentation discusses an architecture designed to receive weather reports and provide them on the Web, in real-time, using MarkLogic. The raw data comes from The Citizen Weather Observation Program which generates about 55K weather reports an hour from around the world but is not available on the Web. The architecture uses XProc (XML Pipelines) to both import and serve the data while MarkLogic scales the geospatial database. The trials, failures, recoveries, and eventual solution for a system that can scale while also providing real-time access to for slicing and dicing by spatial and time dimensions will be presented. Several demonstrations of visualization and computation of scientific results will be shown. ", "speakerNames": ["Alex Milowski"], "plenary": false, "featured": false, "location": "", "startTime": "2013-04-10T01:00:00", "selectable": true, "giveSurvey": true, "type": "session", "id": "69"}
+{
+    "abstract": "Getting data into MarkLogic doesn\u2019t have to give you heartburn! We have tools that make it easy and fast - and you can even Hadoop your load for extreme performance. Jane Chen will show you how to load data very easily through a GUI tool (Information Studio) or very fast using the command-line mlcp (MarkLogic Content Pump). Jane will also give you a sneak-peek at what she's working on for a future version of mlcp.",
+    "endTime": "2013-04-10T16:00:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "69",
+    "location": "Chelsea 8",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "74"
+    ],
+    "speakerNames": [
+        "Jane Chen"
+    ],
+    "startTime": "2013-04-10T15:10:00",
+    "title": "Ingestion that doesn\u2019t Give you Indigestion",
+    "track": "technical",
+    "type": "session"
+}

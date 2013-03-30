@@ -1,1 +1,9 @@
-{"bio": "John Snelson is a Lead Engineer at MarkLogic. He participates in the W3C XQuery and XSLT working groups, and maintains XQilla, an open source implementation of XQuery. He enjoys all things to do with computer languages and databases. ", "name": "John Snelson", "id": "69", "affiliation": "MarkLogic", "position": "Lead Engineer", "type": "speaker", "email": "john.snelson@marklogic.com"}
+{
+    "affiliation": "MarkLogic",
+    "bio": "",
+    "email": "colleen.whitney@marklogic.com",
+    "id": "69",
+    "name": "Colleen Whitney",
+    "position": "Principal Engineer",
+    "type": "speaker"
+}

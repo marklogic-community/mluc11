@@ -1,1 +1,9 @@
-{"bio": "Thomas Weiser is a Senior Project Manager & Solution Developer at Thieme Publisher Group. He possesses a wide range of skills, amongst others: software development, solution architecture, project management, security, content deployment, search-, text mining-, analytics- and semantic technologies. During his professional career he was Head of Solution Development in an E-business division, IT Manager of an Internet agency and IT Security Specialist in the finance and government sector. Most recently, Thomas has managed projects involving the use of MarkLogic Server as main technology for web- and mobile applications in the medicine sector, especially as search engine and content repository.", "name": "Thomas Weiser", "id": "35", "affiliation": "George Thieme Verlag KG", "position": "Thomas.Weiser@thieme.de", "type": "speaker", "email": ""}
+{
+    "affiliation": "Zynx Health, Inc.",
+    "bio": "With an ivy league education in Cultural Anthropology, Sanjay has leveraged his training in analytic and critical research skills and methods for the study and exposition of complex systems and histories. He enjoys delving into a variety of analytic frameworks and tasks ranging from business processes, mathematical modeling and science to the meaning-making systems of \u2018primitive\u2019 cultural complexes. For the past year he has been enjoying the deliciously complex world of clinical decision support content and healthcare knowledge management at Zynx. He has been leading the effort to explore and implement new and innovative technologies and approaches to the development, curation and deployment of medical knowledge. ",
+    "email": "sanand@zynx.com",
+    "id": "35",
+    "name": "Sanjay Anand",
+    "position": "Product Engineer",
+    "type": "speaker"
+}

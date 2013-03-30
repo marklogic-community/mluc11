@@ -1,1 +1,22 @@
-{"endTime": "2013-04-10T01:00:00", "speakerIds": ["84", "85"], "title": "MarkLogic Architecture 201: Analyzing and Tuning for Performance", "track": "technical", "abstract": "We'll review existing tools and APIs for understanding system performance with MarkLogic, and give you a preview of some new ones under development.  We'll show you how to use MarkLogic's tools to monitor resource utilization such as storage system IO, memory consumption and CPU utilization; how to read performance graphs; how to construct and execute tests; and how to discuss resource requirements with storage, system and network administrators. The talk also includes some general approaches to troubleshooting performance issues, and of course some Q&A.", "speakerNames": ["Denis Sheahan", "Denis Shehan"], "plenary": false, "featured": false, "location": "", "startTime": "2013-04-10T01:00:00", "selectable": true, "giveSurvey": true, "type": "session", "id": "71"}
+{
+    "abstract": "Aligning a storage strategy with the value and access patterns of your data allows you to optimize tradeoffs among cost, performance, and availability. Learn how to implement a data governance policy and how to deploy MarkLogic using a fluid mix of SSD, local disk, shared disk, and cloud storage, including the Hadoop Distributed File System and Amazon S3. This talk includes a sneak-peek into some exciting developments that MarkLogic is working on for future releases.",
+    "endTime": "2013-04-10T11:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "71",
+    "location": "Chelsea 5",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "75",
+        "74"
+    ],
+    "speakerNames": [
+        "Justin Makeig",
+        "Jane Chen"
+    ],
+    "startTime": "2013-04-10T10:30:00",
+    "title": "Optimizing Cost, Performance, and Availability with Tiered Storage",
+    "track": "technical",
+    "type": "session"
+}

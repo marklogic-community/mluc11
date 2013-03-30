@@ -1,0 +1,22 @@
+{
+    "abstract": "Dell, HP, IBM, EMC, SGI - the list goes on and on!  Hardware is often a dirty word for us \u201csoftware guys\u201d, but it\u2019s something we all need to spend some time thinking about, so we can make sure to get the most out of our tools.  This informative discussion will give you the tips and tricks you need to make informed hardware decisions and recommendations for your projects.  Learn what questions to ask, what features are critical, and what to stay away from when looking for the foundation for your MarkLogic (or any other Big Data) investment.",
+    "endTime": "2013-04-09T15:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "8",
+    "location": "Chelsea 5",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "8",
+        "9"
+    ],
+    "speakerNames": [
+        "Sanhita Sarkar",
+        "Stephanie Best"
+    ],
+    "startTime": "2013-04-09T14:30:00",
+    "title": "The Hardware Dilemma\u2026 ",
+    "track": "customer",
+    "type": "session"
+}

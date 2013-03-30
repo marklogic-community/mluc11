@@ -1,1 +1,9 @@
-{"bio": "TBD", "name": "Geert Josten", "id": "49", "affiliation": "Dayon", "position": "Senior Developer", "type": "speaker", "email": "geert.josten@dayon.nl"}
+{
+    "affiliation": "MarkLogic",
+    "bio": "Fei Xue is a Software Engineer at MarkLogic and has worked on projects optimizing and enhancing search capability on MarkLogic server. Her previous projects include ones on image  retrieval and segmentation. Fei Xue holds a Master degree in Computer Science from Yale University and Bachelor degree in Electrical Engineering from Tsinghua University, Beijing",
+    "email": "fei.xue@marklogic.com",
+    "id": "49",
+    "name": "Fei Xue",
+    "position": "Software Engineer",
+    "type": "speaker"
+}

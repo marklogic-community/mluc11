@@ -1,1 +1,9 @@
-{"bio": "Devin is the Chief Executive Officer of Warrior Gateway and is dedicated to connecting returning veterans with existing resources in their local community as they transition to civilian life. Devin\u2019s development of the Warrior Gateway portal and the G.I. Network search API recently earned him a 2011 Federal 100 award which recognizes individuals who have made significant contributions to the federal IT community and a 2012 ComputerWorld Honors Laureate recipient. When not helping veterans, Devin is an avid Ironman triathlete and 6 time Escape from Alcatraz triathlon finisher who holds MBA\u2019s from London and Columbia Business Schools and a BS in Engineering from Rensselaer Polytechnic Institute. ", "name": "Devin Holmes", "id": "20", "affiliation": "Warrior Gateway", "position": "CEO", "type": "speaker", "email": "devin@warriorgateway.org"}
+{
+    "affiliation": "Ernst & Young",
+    "bio": "Harshad is a  Senior manager in Ernst & Young\u2019s Financial Services Advisory practice where he specializes in compliance solutions enablement . He has more than 14 years of experience delivering  strategic planning and project/program management services in the Capital Markets industry. His primary area of focus is capital markets and regulatory compliance.  Prior to joining Ernst & Young, Harshad led and managed a compliance technology team at a large high frequency trading firm where he was responsible for implementing several key compliance solutions needed to enable a fully compliant trading environment across all business lines and asset classes.  Recently Harshad has been primarily involved in Dodd-Frank related initiatives and currently leads the Volcker and OTC Derivatives reform (Title VII) campaigns within the practice.",
+    "email": "",
+    "id": "20",
+    "name": "Harshad Pitkar",
+    "position": "Senior Manager",
+    "type": "speaker"
+}

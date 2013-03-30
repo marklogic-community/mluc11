@@ -1,1 +1,9 @@
-{"bio": "John Snelson is a Lead Engineer at MarkLogic. He participates in the W3C XQuery and XSLT working groups, and maintains XQilla, an open source implementation of XQuery. He enjoys all things to do with computer languages and databases. ", "name": "John Snelson", "id": "57", "affiliation": "MarkLogic", "position": "Lead Engineer", "type": "speaker", "email": "john.snelson@marklogic.com"}
+{
+    "affiliation": "MarkLogic",
+    "bio": "Damon Feldman is a Technical Architect supporting MarkLogics Federal Health Care projects. ",
+    "email": "damon.feldman@marklogic.com",
+    "id": "57",
+    "name": "Damon Feldman",
+    "position": "Technical Architect",
+    "type": "speaker"
+}

@@ -1,1 +1,9 @@
-{"bio": "TBD", "name": "Aaron Rosenbaum", "id": "66", "affiliation": "MarkLogic", "position": "Director, Product Management", "type": "speaker", "email": "aaron.rosenbaum@marklogic.com"}
+{
+    "affiliation": "",
+    "bio": "Jason Hunter is Chief Architect at MarkLogic, and the co-inventor of MarkMail.org. Jason is the author of \"Java Servlet Programming\" (O'Reilly Media) and the creator of the JDOM open source project for Java-optimized XML manipulation. He's also an Apache Software Foundation Member and former Vice-President, and as Apache's representative to the Java Community Process Executive Committee he established a landmark agreement for open source Java. He's an original contributor to Apache Tomcat, a member of the expert groups responsible for Servlet, JSP, JAXP, and XQJ API development, and a recognized Java Champion.",
+    "email": "jason.hunter@marklogic.com",
+    "id": "66",
+    "name": "Jason Hunter",
+    "position": "Chief Architect",
+    "type": "speaker"
+}

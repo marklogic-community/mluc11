@@ -1,1 +1,9 @@
-{"bio": "", "name": "Erik Hennum", "id": "71", "affiliation": "MarkLogic", "position": "Senior Engineer", "type": "speaker", "email": "erik.hennum@marklogic.com"}
+{
+    "affiliation": "MarkLogic",
+    "bio": "TBD",
+    "email": "denis.sheahan@marklogic.com",
+    "id": "71",
+    "name": "Denis Sheahan",
+    "position": "Lead Performance Engineer",
+    "type": "speaker"
+}

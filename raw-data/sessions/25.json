@@ -1,1 +1,20 @@
-{"endTime": "2013-04-10T01:00:00", "speakerIds": ["27"], "title": "Gearing Up for the Content Factory to Quickly Create, Innovate and Monetize", "track": "business", "abstract": "Two companies, Wiley and ALM, provide two views of how content consolidation helps them keep up with the ever-changing publishing landscape. For ALM, 40-50 print publication digital-focused workflows and processes have become more important than ever to help streamline the consolidation, aggregation and standardization of editorial content across numerous content types. As a result of the efficient consolidation, the content is much more easily delivered to internal and external content applications and third party content recipients and licensees. For Wiley, 2013 marks an important milestone: the transition of the American Geophysical Union's portfolio of content and functionality to Wiley's Online Library. The timeframe: 4 months. This presentation looks at the challenges, how they were overcome, and MarkLogic's role in making \"Mission Impossible\" possible. Find out how both these companies are teed up to innovate and create new revenue streams.", "speakerNames": ["Freddie Quek"], "plenary": false, "featured": false, "location": "", "startTime": "2013-04-10T01:00:00", "selectable": true, "giveSurvey": true, "type": "session", "id": "25"}
+{
+    "abstract": "\nMarkLogic Server is working to save the Federal Government money spent on fraudulent healthcare claims at the Centers for Medicare and Medicaid Services (CMS) through an innovative approach that is impossible or simply too costly using other technologies. This presentation will focus on work in progress for CMS and MarkLogic\u2019s schema-agnostic architecture which allows for rapid incorporation of multi-structured data for claims oversight. It will also focus on the rich hierarchical provider and beneficiary profiles that include data from claims, Dunn & Bradstreet, Facebook, Indictment documents, home and car ownership and other non-traditional sources to better identify bad actors and improve fraud detection.",
+    "endTime": "2013-04-10T16:00:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "25",
+    "location": "Chelsea 4",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "33"
+    ],
+    "speakerNames": [
+        "Michael Doane"
+    ],
+    "startTime": "2013-04-10T15:10:00",
+    "title": "Innovative Fraud Detection at CMS",
+    "track": "business",
+    "type": "session"
+}

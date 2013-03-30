@@ -1,1 +1,9 @@
-{"bio": "", "name": "Mehul Trivedi", "id": "6", "affiliation": "IEEE", "position": "", "type": "speaker", "email": ""}
+{
+    "affiliation": "Intel",
+    "bio": "",
+    "email": "todd.cramer@intel.com",
+    "id": "6",
+    "name": "Todd Cramer",
+    "position": "Director, Product Marketing ",
+    "type": "speaker"
+}

@@ -1,1 +1,9 @@
-{"bio": "Lead Engineer, MarkLogic Haitao Wu is a member of the MarkLogic server team. He has over 10 years of experience developing large-scale high-availability software systems. His career includes various engineering positions at Oracle Corporation and Nortel Networks. He holds a masters degree in Computer Science from Yale University. ", "name": "Haitao Wu", "id": "48", "affiliation": "MarkLogic", "position": "Lead Engineer", "type": "speaker", "email": "haitao.wu@marklogic.com"}
+{
+    "affiliation": "MarkLogic",
+    "bio": "Mike is a Senior Engineer for the Application Services group at MarkLogic. He designs and implements user interfaces at the company. ",
+    "email": "mike.wooldridge@marklogic.com",
+    "id": "48",
+    "name": "Mike Wooldridge",
+    "position": "Senior Engineer",
+    "type": "speaker"
+}

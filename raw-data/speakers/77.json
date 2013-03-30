@@ -1,1 +1,9 @@
-{"bio": "", "name": "John Snelson", "id": "77", "affiliation": "MarkLogic", "position": "Lead Engineer", "type": "speaker", "email": ""}
+{
+    "affiliation": "MarkLogic",
+    "bio": "",
+    "email": "stephen.buxton@marklogic.com",
+    "id": "77",
+    "name": "Stephen Buxton",
+    "position": "Director, Product Management",
+    "type": "speaker"
+}

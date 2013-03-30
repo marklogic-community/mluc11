@@ -1,1 +1,20 @@
-{"endTime": "2013-04-10T01:00:00", "speakerIds": ["92"], "title": "The Best Database for Hadoop", "track": "technical", "abstract": "Hadoop has rapidly emerged as a cost-effective alternative to proprietary SAN and distributed computing infrastructures for large or complex data. MarkLogic provides the only mature, enterprise-grade database that can be deployed directly into an existing Hadoop environment. Learn how MarkLogic can leverage your existing Hadoop investment with real-time analysis, transactional updates, granular security, and full-text search.", "speakerNames": ["Justin Makeig"], "plenary": false, "featured": false, "location": "", "startTime": "2013-04-10T01:00:00", "selectable": true, "giveSurvey": true, "type": "session", "id": "76"}
+{
+    "abstract": "MarkLogic has a rich set of capabilities for High Availability and Disaster Recovery. In addition, modern storage and virtualization management systems have their own built-in capabilities. Come to this session for an overview of options and design patterns to build a highly available and resilient data layer within today's virtualized, hybrid and enterprise infrastructures. Come away with the vocabulary and understanding to work with your storage and system administrators to plan and implement HA and DR within your organization.",
+    "endTime": "2013-04-11T09:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "76",
+    "location": "Chelsea 5",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "79"
+    ],
+    "speakerNames": [
+        "Wayne Feick"
+    ],
+    "startTime": "2013-04-11T08:30:00",
+    "title": "MarkLogic Architecture 202: Highly Available & Mission-critical Systems",
+    "track": "technical",
+    "type": "session"
+}

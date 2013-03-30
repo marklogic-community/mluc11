@@ -1,1 +1,20 @@
-{"endTime": "2013-04-10T01:00:00", "speakerIds": ["20", "21"], "title": "Big Data Consolidation, Analytics, and Localized Delivery", "track": "business", "abstract": "Warrior Gateway is an exciting and innovative approach to consolidating, analyzing and disseminating large amounts of disparate information, in a scalable and feasible fashion and within a limited  budget. A non-profit that serves veterans and their families, it is an aggregation of federal, state, and community information \u2014 augmented by the community and veterans themselves to make it more relevant. The enriched content can be easily repurposed (or multi-purposed) and/or queried on other  sites and even combined with additional content and applications in mashups, therefore making Warrior Gateway content even more valuable and accessible to the military community it serves. ", "speakerNames": ["Devin Holmes", "David  Erickson"], "plenary": false, "featured": false, "location": "", "startTime": "2013-04-10T01:00:00", "selectable": true, "giveSurvey": true, "type": "session", "id": "21"}
+{
+    "abstract": "John Tredennick, CEO of Catalyst Repository Systems, will present best practices in managing Big Data in e-discovery, focusing on new technologies that speed review, reduce cost and give corporations more control of their data. Specifically, he will address how Catalyst uses and partners with MarkLogic to deliver innovative approaches to e-discovery including predictive analytics, multi-matter/single instance (reuse of data for multiple cases), multi-language review and machine translation. Tredennick is an innovator and pioneer in cloud-based e-discovery and a frequent speaker on e-cloud technology. ",
+    "endTime": "2013-04-10T14:50:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "21",
+    "location": "Chelsea 8",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "29"
+    ],
+    "speakerNames": [
+        "John Tredennick"
+    ],
+    "startTime": "2013-04-10T14:00:00",
+    "title": "Leveraging MarkLogic's Unified Database to Manage Big Data in e-Discovery ",
+    "track": "business",
+    "type": "session"
+}

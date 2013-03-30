@@ -1,1 +1,9 @@
-{"bio": "", "name": "Wayne Feick", "id": "73", "affiliation": "MarkLogic", "position": "Principal Engineer", "type": "speaker", "email": "wayne.feick@marklogic.com"}
+{
+    "affiliation": "MarkLogic",
+    "bio": "Frank Salonga is a Lead Engineer with MarkLogic Support ",
+    "email": "franklin.salonga@marklogic.com",
+    "id": "73",
+    "name": "Franklin Salonga",
+    "position": "Lead Engineer",
+    "type": "speaker"
+}

@@ -1,1 +1,9 @@
-{"bio": "Matt Turner is the Chief Technologist for the Media and Publishing industries at Mark Logic where he develops strategy and solutions for the Media, Publishing and Information Provider markets and works with customers such as LexisNexis, McGraw-Hill, Warner Bros., Conde Nast and Dow Jones and more to create leading edge information and digital content applications with MarkLogic Server. Previously, Matt worked with Sony Music creating community, identity and content delivery applications for artist sites and reviewing investment opportunities for Sony Music\u2019s venture arm. Prior to that, Matt was at PC World where he developed some of the industry\u2019s first XML based publishing systems. ", "name": "Matt Turner", "id": "12", "affiliation": "MarkLogic", "position": "Chief Technologist, Media Solutions", "type": "speaker", "email": "matt.turner@marklogic.com"}
+{
+    "affiliation": "Church of Jesus Christ Latter-day Saints",
+    "bio": "Michael Bowers has been working in high tech for over 25 years as an architect, developer, database administrator, and consultant. He is currently a principal engineer at the LDS Church. He has a Bachelors of Music Composition at Brigham Young University and an ABD PhD in Music Theory from Florida State University. He is the author of Pro CSS and HTML Design Patterns published by Apress in April 2007.",
+    "email": "BowersMT@ldschurch.org",
+    "id": "12",
+    "name": "Mike Bowers",
+    "position": "Principal Engineer",
+    "type": "speaker"
+}

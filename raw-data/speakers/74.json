@@ -1,1 +1,9 @@
-{"bio": "", "name": "Steve Guttman", "id": "74", "affiliation": "MarkLogic", "position": "Vice President, Product Management", "type": "speaker", "email": "steve.guttman@marklogic.com"}
+{
+    "affiliation": "MarkLogic",
+    "bio": "",
+    "email": "jane.chen@marklogic.com",
+    "id": "74",
+    "name": "Jane Chen",
+    "position": "Lead Engineer",
+    "type": "speaker"
+}

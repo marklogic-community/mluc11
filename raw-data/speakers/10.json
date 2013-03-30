@@ -1,1 +1,9 @@
-{"bio": "Aaron is the Director of Product Management for M*Modal\u2019s Catalyst product family. M*Modal\u2019s Catalyst solution is a robust NLP platform that is used to understand large volumes of clinical documentation to drive better care across Healthcare. Aaron is responsible for defining and bringing new products to market and works out of the M*Modal Pittsburgh office. ", "name": "Aaron Brauser", "id": "10", "affiliation": "M*Modal", "position": "Director, Product Management", "type": "speaker", "email": "aaron.brauser@mmodal.com"}
+{
+    "affiliation": "Springer",
+    "bio": "Stephen has spent the majority of his career creating online products for the scientific, technical and medical publishing sector and since 2011 has been a key member of the team responsible for rebuilding Springer's flagship platform SpringerLink. He's interested in the interface between business problems and technology, is an enthusiast for agile development and has been working with XML-centric projects since the day his first boss dumped a pile of SGML CDs on his desk and told him to go sort it out.  ",
+    "email": "Stephen.cornelius@springer.com",
+    "id": "10",
+    "name": "Stephen Cornelius",
+    "position": "Senior Business Analyst",
+    "type": "speaker"
+}

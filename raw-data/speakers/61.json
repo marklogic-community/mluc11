@@ -1,1 +1,9 @@
-{"bio": "Norman Walsh is a Lead Engineer at MarkLogic Corporation where he works in the Application Services team. Norm is also an active participant in a number of standards efforts worldwide: he is chair of the XML Processing Model Working Group at the W3C where he is also co-chair of the XML Core Working Group. At OASIS, he is chair of the DocBook Technical Committee. With almost two decades of industry experience, Norm is well known for his work on DocBook and a wide range of open source projects. He is the author of _DocBook: The Definitive Guide_. ", "name": "Norman Walsh", "id": "61", "affiliation": "MarkLogic Corporation", "position": "Lead Engineer", "type": "speaker", "email": "norman.walsh@marklogic.com"}
+{
+    "affiliation": "Jones McClure Publishing",
+    "bio": "Will Thompson has worked for Jones McClure Publishing since 2005, where he began work on their XML conversion initiative. He has developed tools for authoring, automation, and XML pipelining, and he is currently responsible for search engine development within the companys new online service, OConnors Online ",
+    "email": "wthompson@jonesmcclure.com",
+    "id": "61",
+    "name": "Will Thompson",
+    "position": "Chief Software Engineer",
+    "type": "speaker"
+}

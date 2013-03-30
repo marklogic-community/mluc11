@@ -1,1 +1,9 @@
-{"bio": "John Tredennick: Author/editor of five books and countless articles on legal technology and electronic discovery issues, he has spoken to numerous legal audiences on five continents. After 20 years as a trial lawyer and litigation partner for an AmLaw 200 firm, John founded Catalyst Repository Systems, which provides secure, hosted document repositories for electronic discovery. Catalyst uses MarkLogic technology to host, search and manage Big Data for some of the worlds largest litigation and investigation cases. ", "name": "John Tredennick", "id": "31", "affiliation": "Catalyst Repository Systems", "position": "Marketing Director", "type": "speaker", "email": "jtredennick@catalystsecure.com "}
+{
+    "affiliation": "Warner Bros.",
+    "bio": "Eddie Lee is responsible for systems \nimplementations for various initiatives across Warner Bros. Technical \nOperations that serve to support and improve digital media servicing at \nthe Studio. Such initiatives include aggregating and centralizing \ndisparate sources of data, enabling data transformation pipelines, \ncreation of reusable data access services, and implementing and \nimproving search of assets, titles, and products. Eddie led the \nimplementation of the Studio\u2019s Metadata Service Bureau (MSB) data \naggregation and management system and was heavily involved in the \nimplementation of the Studio\u2019s MARS digital asset management system.",
+    "email": "",
+    "id": "31",
+    "name": "Eddie Lee",
+    "position": "Director, Digital Media Initiatives",
+    "type": "speaker"
+}

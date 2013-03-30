@@ -1,1 +1,9 @@
-{"bio": "", "name": "David Gorbet", "id": "72", "affiliation": "MarkLogic", "position": "VP, Product Strategy", "type": "speaker", "email": "david.gorbet@marklogic.com"}
+{
+    "affiliation": "MarkLogic",
+    "bio": "",
+    "email": "erik.hennum@marklogic.com",
+    "id": "72",
+    "name": "Erik Hennum",
+    "position": "Senior Engineer",
+    "type": "speaker"
+}

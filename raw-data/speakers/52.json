@@ -1,1 +1,9 @@
-{"bio": "David Erickson is a consultant in the Civilian group at MarkLogic Professional Services and has a passion for human computer interface design, unstructured data, and rapid application development. ", "name": "David Erickson", "id": "52", "affiliation": "MarkLogic", "position": "Principal Consultant", "type": "speaker", "email": "david.erickson@marklogic.com"}
+{
+    "affiliation": "MarkLogic",
+    "bio": "TBD",
+    "email": "aaron.rosenbaum@marklogic.com",
+    "id": "52",
+    "name": "Aaron Rosenbaum",
+    "position": "Director, Product Management",
+    "type": "speaker"
+}

@@ -1,1 +1,9 @@
-{"bio": "Aaron Stranahan is a 15 year Healthcare IT leader focused on building powerful tools for clinicians and improving patient health. Currently at the Informatics Corporation of America (ICA), Aaron serves as AVP, Product development where he is engaged in the implementation of large scale Health Information Exchange and intelligent realtime analytics of patient data.  Through his career, Aaron has extensive experience leading HIT efforts including system integration, software development and technical operations.", "name": "Aaron Stranahan", "id": "11", "affiliation": "ICA", "position": "AVP, Product Development", "type": "speaker", "email": "aaron.stranahan@icainformatics.com"}
+{
+    "affiliation": "De Gruyter",
+    "bio": "For more than two-hundred and sixty years the name De Gruyter has been synonymous with high-quality, landmark publications in the humanities and natural sciences, firmly establishing itself as a key international publisher. As Director Information and Publishing Technology for De Gruyter, Christian is responsible for the enterprise information architecture and all publishing related technologies and processes. Christian holds a degree in Computational Linguistics and has worked as project manager, software developer, system administrator, event manager, and researcher before joining De Gruyter in 2005. Since 2009 he also teaches courses on E-Publishing and Project Management for the Academy of the German Book Trade. ",
+    "email": "christian.kohl@degruyter.com",
+    "id": "11",
+    "name": "Christian Kohl",
+    "position": "Director Information & Publishing Technology",
+    "type": "speaker"
+}

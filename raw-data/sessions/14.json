@@ -1,1 +1,20 @@
-{"endTime": "2013-04-10T01:00:00", "speakerIds": ["10"], "title": "Rx for Better Patient Care -- and Cost Containment", "track": "business", "abstract": "Better outcomes and cost-containment are two urgent public health concerns \u2014 and unified information is the Rx. M*Modal and ICA are two vendors pioneering change in the healthcare industry as they unify everything from doctors' scribbles to providers' claims, practioners' transcriptions to facilities patient charts onto one platform. Find out the challenges of interoperability, the benefits of adding intelligence to approve patient care, the distinctions between search and querying. Learn about the technologies, the challenges and lessons learned. Finally, take a peek at how analytics on a unified repository will further drive value to the industry.", "speakerNames": ["Aaron Brauser"], "plenary": false, "featured": false, "location": "Chelsea 5", "startTime": "2013-04-10T01:00:00", "selectable": true, "giveSurvey": true, "type": "session", "id": "14"}
+{
+    "abstract": "Finding the right data and content in the ever growing world of information is a key challenge and having the right information quickly is a critical advantage. Whats needed is a new approach to search - Big Data Search. In this session MarkLogics Chief Technologist of Media Solutions Matt Turner, will review the real-world examples of MarkLogic is changing the game in search by: Addressing every element of your data with flexible schema and universal indexing Pinpointing information using integrated search functions Getting users the latest information with alerts Scaling out to 10s of billions of records Join us for a lively session with demonstrations and discussion and find what youre looking for! ",
+    "endTime": "2013-04-09T16:40:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "14",
+    "location": "Chelsea 1",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "17"
+    ],
+    "speakerNames": [
+        "Matt Turner"
+    ],
+    "startTime": "2013-04-09T15:50:00",
+    "title": "Find What You're Looking for with MarkLogic Big Data Search ",
+    "track": "business",
+    "type": "session"
+}

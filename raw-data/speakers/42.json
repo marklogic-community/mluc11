@@ -1,1 +1,9 @@
-{"bio": "Mike is a Senior Engineer for the Application Services group at MarkLogic. He designs and implements user interfaces at the company. ", "name": "Mike Wooldridge", "id": "42", "affiliation": "MarkLogic", "position": "Senior Engineer", "type": "speaker", "email": "mike.wooldridge@marklogic.com"}
+{
+    "affiliation": "IEEE",
+    "bio": "A seasoned technical director, and systems architect with over seventeen years of experience. He is responsible for developing and managing a process that identifies and analyze potential new product opportunities and enhancements to existing IEEEXplore Digital Library. He is also  accountable for developing strategic plans that include detailed technical planning and implementation to digital library and major enhancements to existing IEEE product lines. His technical expertise includes Search, Web 2.0, SOA, information architecture and  data management.",
+    "email": "",
+    "id": "42",
+    "name": "Mehul Trivedi",
+    "position": "Director Software & Systems Development",
+    "type": "speaker"
+}

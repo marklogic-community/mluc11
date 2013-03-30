@@ -1,1 +1,9 @@
-{"bio": "David Lee has over 30 years experience in the software industry responsible for many major projects in small and large companies including Sun Microsystems, IBM, Centura Software (formerly Gupta.), Premenos, Epiphany (formerly RightPoint), WebGain, Nexstra, Epocrates, MarkLogic. As Lead Engineer at MarkLogic, Inc., Mr Lee is responsible for maintaining and enhancing the core XML Database server. Key career contributions include Real-time AIX OS extensions for optimizing transmission of real-time streaming video (IBM), secure encrypted EDI over internet email (Premenos), optimizations of large Enterprise CRM systems (Epiphany), author of xmlsh (http://www.xmlsh.org), and recently authoring the JSON implementation for MarkLogic.", "name": "David Lee", "id": "63", "affiliation": "David Lee", "position": "Lead Engineer", "type": "speaker", "email": "dlee@marklogic.com"}
+{
+    "affiliation": "MarkLogic",
+    "bio": "Micah Dubinko is a Lead Semantics Engineer at MarkLogic. Previously he was the semantic data wrangler for Yahoo! Search and co-founder of the SearchMonkey project. He lives with his wife and daughters in Sunnyvale, CA.",
+    "email": "micah.dubinko@marklogic.com",
+    "id": "63",
+    "name": "Micah Dubinko",
+    "position": "Lead Semantics Engineer",
+    "type": "speaker"
+}

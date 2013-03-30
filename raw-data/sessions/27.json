@@ -1,1 +1,20 @@
-{"endTime": "2013-04-10T01:00:00", "speakerIds": ["29", "30"], "title": "Power through Reading Analytics -- The Future of Publishing with MarkLogic ", "track": "business", "abstract": "MBS Direct Digital is a cloud-based white-label publishing platform built using MarkLogic technologies. Our partners -- trade and educational publishers -- demand a scalable yet flexible solution, and one that provides multiple levels of data security. In addition, they need reading analytics or big data capabilities that can inform them about user engagement and help them understand how their products are being utilized in the market. In this presentation we will discuss how Direct Digital has used MarkLogic to build a unique publishing product and how we are addressing both present and future needs of the publishing industry. We will discuss our approaches to reading analytics, content flexibility and publishing, and content security.", "speakerNames": ["Rob Reynolds", "Dennis Flanagan"], "plenary": false, "featured": false, "location": "", "startTime": "2013-04-10T01:00:00", "selectable": true, "giveSurvey": true, "type": "session", "id": "27"}
+{
+    "abstract": "Two companies, IEEE and Zynx Health explain how they wrestled \u2014 and tamed \u2014 complex data. IEEE publishes nearly a third of the world\u2019s highly valuable technical literature in electrical engineering and computer science via the IEEE Xplore digital library. IEEE Xplore is a repository of over 3-million full text documents that are built on a legacy multi-tiered platform. IEEEs vision is to reduce their platform complexity using MarkLogic. IEEE technical staff will describe the content ingestion process (and content model development) from 3 legacy data streams, the development framework used, and the future evolutionary roadmap as they move to a more simple, yet more powerful platform designed to meet the information needs of a new generation of users. Zynx Health, a subsidiary of Hearst Corp, provides evidence-based, clinical decision support solutions for healthcare organizations to measurably improve patient outcomes, enhance safety and lower costs. Content is complex: highly-structured clinical decision support protocols designed to distill reams of scientific knowledge into pithy, actionable instructions while retaining full evidentiary traceability and perfect quality. Find out how a small team of dedicated technologists and analysts replaced its suite of homegrown systems with a smart data repository. Find out how they did it, why they chose NoSQL and why XML as the data model provided the precision they needed.",
+    "endTime": "2013-04-11T09:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "27",
+    "location": "Chelsea 1",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "35"
+    ],
+    "speakerNames": [
+        "Sanjay Anand"
+    ],
+    "startTime": "2013-04-11T08:30:00",
+    "title": "Complex Data is a Totally Different Beast",
+    "track": "business",
+    "type": "session"
+}

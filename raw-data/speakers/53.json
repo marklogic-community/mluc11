@@ -1,1 +1,9 @@
-{"bio": "Beverly Jamison is the Senior Director, IT Architecture and Publishing Solutions, at American Psychological Association. She is responsible for Architecture as a practice within APA IT services, and for the STM Publishing vertical within APA. Beverly has set up MarkLogic as the central repository for the XML content at APA, as well as the source of search services for commercial products and other customer-facing services. She has previously worked in product management, R&D, and Computer Science research and teaching. Beverly holds a BSc in Mathematics from MIT and a PhD in Computer Science from Old Dominion University. ", "name": "Beverly Jamison", "id": "53", "affiliation": "American Psychological Association", "position": "Sr. Director, IT Architecture", "type": "speaker", "email": "bjamison@apa.org"}
+{
+    "affiliation": "MarkLogic",
+    "bio": "Lead Engineer, MarkLogic Haitao Wu is a member of the MarkLogic server team. He has over 10 years of experience developing large-scale high-availability software systems. His career includes various engineering positions at Oracle Corporation and Nortel Networks. He holds a masters degree in Computer Science from Yale University. ",
+    "email": "haitao.wu@marklogic.com",
+    "id": "53",
+    "name": "Haitao Wu",
+    "position": "Lead Engineer",
+    "type": "speaker"
+}

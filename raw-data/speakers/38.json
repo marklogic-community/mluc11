@@ -1,1 +1,9 @@
-{"bio": "Technology partner to our business team with extensive DBA experience and more recent experience with Search and Content Enrichment. Currently transitioning to Solutions Architect role. Performed in-depth evaluation of Search Solutions during which time I became familiar with MarkLogic. Working with MarkLogic and Agile Development Methodology for about 3 years. Recently celebrated by 25 Year Anniversary with The McGraw-Hill Companies.", "name": "Mark Burlock", "id": "38", "affiliation": "McGraw-Hill Financial", "position": "Solutions Architect", "type": "speaker", "email": "Mark_Burlock@mcgraw-hill.com"}
+{
+    "affiliation": "Warrior Gateway",
+    "bio": "Devin is the Chief Executive Officer of Warrior Gateway and is dedicated to connecting returning veterans with existing resources in their local community as they transition to civilian life. Devin\u2019s development of the Warrior Gateway portal and the G.I. Network search API recently earned him a 2011 Federal 100 award which recognizes individuals who have made significant contributions to the federal IT community and a 2012 ComputerWorld Honors Laureate recipient. When not helping veterans, Devin is an avid Ironman triathlete and 6 time Escape from Alcatraz triathlon finisher who holds MBA\u2019s from London and Columbia Business Schools and a BS in Engineering from Rensselaer Polytechnic Institute. ",
+    "email": "devin@warriorgateway.org",
+    "id": "38",
+    "name": "Devin Holmes",
+    "position": "CEO",
+    "type": "speaker"
+}

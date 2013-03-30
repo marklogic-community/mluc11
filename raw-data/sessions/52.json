@@ -1,1 +1,20 @@
-{"endTime": "2013-04-10T01:00:00", "speakerIds": ["61"], "title": "Configuration Management Today and Tomorrow ", "track": "technical", "abstract": "Ensuring consistent configuration of databases and app servers between production, test, and development environments is fundamental to the operation of mission-critical systems. This session will detail best practices for managing MarkLogic configurations to support applications deployed in cloud and on-premise clusters. It will also demonstrate how to use MarkLogic\u2019s built-in tools to reliably export, compare, update, and rollback configurations between environments. ", "speakerNames": ["Norman Walsh"], "plenary": false, "featured": false, "location": "", "startTime": "2013-04-10T01:00:00", "selectable": true, "giveSurvey": true, "type": "session", "id": "52"}
+{
+    "abstract": "MarkLogic is all about performance, and performance is all about indexes. In this talk John Snelson describes indexes that he is working on to make semantic queries fast and scalable.",
+    "endTime": "2013-04-09T16:40:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "52",
+    "location": "Mont-Royal 2",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "62"
+    ],
+    "speakerNames": [
+        "John Snelson"
+    ],
+    "startTime": "2013-04-09T15:50:00",
+    "title": "Inside the RDF Triple Index",
+    "track": "technical",
+    "type": "session"
+}

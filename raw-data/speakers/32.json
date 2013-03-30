@@ -1,1 +1,9 @@
-{"bio": "", "name": "John Tredennick", "id": "32", "affiliation": "", "position": "", "type": "speaker", "email": ""}
+{
+    "affiliation": "Conde Nast",
+    "bio": "Brian Cross received his Master in Library and Information Science from Pratt Institute, where he worked as an Assistant Archivist on their institutional collection.  Later, as a digital archivist, he worked at \nARTstor on their multi-national, multi-institution Mellon International Dunhuang Archive (MIDA).  At Conde Nast he helped implement the company\u2019s first Digital Asset Management system, as well as facilitated \nthe solution architecture for a number of XML conversion initiatives including the recently launched Vogue Archive.",
+    "email": "Brian_Cross@condenast.com",
+    "id": "32",
+    "name": "Brian Cross",
+    "position": "Director, DIgital Assets",
+    "type": "speaker"
+}

@@ -1,1 +1,9 @@
-{"bio": "Brian Cross received his Master in Library and Information Science from Pratt Institute, where he worked as an Assistant Archivist on their institutional collection.  Later, as a digital archivist, he worked at \nARTstor on their multi-national, multi-institution Mellon International Dunhuang Archive (MIDA).  At Conde Nast he helped implement the company\u2019s first Digital Asset Management system, as well as facilitated \nthe solution architecture for a number of XML conversion initiatives including the recently launched Vogue Archive.", "name": "Brian Cross", "id": "17", "affiliation": "Conde Nast", "position": "Director, DIgital Assets", "type": "speaker", "email": "Brian_Cross@condenast.com"}
+{
+    "affiliation": "MarkLogic",
+    "bio": "Matt Turner is the Chief Technologist for the Media and Publishing industries at Mark Logic where he develops strategy and solutions for the Media, Publishing and Information Provider markets and works with customers such as LexisNexis, McGraw-Hill, Warner Bros., Conde Nast and Dow Jones and more to create leading edge information and digital content applications with MarkLogic Server. Previously, Matt worked with Sony Music creating community, identity and content delivery applications for artist sites and reviewing investment opportunities for Sony Music\u2019s venture arm. Prior to that, Matt was at PC World where he developed some of the industry\u2019s first XML based publishing systems. ",
+    "email": "matt.turner@marklogic.com",
+    "id": "17",
+    "name": "Matt Turner",
+    "position": "Chief Technologist, Media Solutions",
+    "type": "speaker"
+}

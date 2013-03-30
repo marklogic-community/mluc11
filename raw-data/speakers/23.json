@@ -1,1 +1,9 @@
-{"bio": "", "name": "Jeff Grier", "id": "23", "affiliation": "Mitchell1", "position": "Senior Director, Product Development", "type": "speaker", "email": ""}
+{
+    "affiliation": "Mitchell1",
+    "bio": "Jeff Grier is the Senior Director of Product Development for Mitchell 1, the leading provider of shop management and repair information systems to the automotive aftermarket.   Jeff is responsible for development of all Mitchell1 software products, and joint-venture projects with other Snap-on Divisions.  Prior to joining Snap-on he had 20+ years of software development and technical leadership experience in diverse industries including Insurance, Telecommunications, and Automotive.   Jeff was educated at the Department of Defense Computer Science School in Quantico, VA.  He holds numerous technical certifications including two Instructor ratings in Database and Knowledge Based Systems development, and has been issued 8 US Patents during his tenure with Snap-on.",
+    "email": "",
+    "id": "23",
+    "name": "Jeff Grier",
+    "position": "Senior Director, Product Development",
+    "type": "speaker"
+}

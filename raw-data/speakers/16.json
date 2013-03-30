@@ -1,1 +1,9 @@
-{"bio": "", "name": "Steve Branigan", "id": "16", "affiliation": "", "position": "sb@cyanline.com", "type": "speaker", "email": ""}
+{
+    "affiliation": "Bank of America Merrill Lynch",
+    "bio": "",
+    "email": "kathleen.j.donner@baml.com",
+    "id": "16",
+    "name": "Kathy Donner",
+    "position": "Director",
+    "type": "speaker"
+}

@@ -1,1 +1,9 @@
-{"bio": "", "name": "Sagar Bhujbal", "id": "39", "affiliation": "McGraw-Hill Financial", "position": "Solutions Architect", "type": "speaker", "email": ""}
+{
+    "affiliation": "MarkLogic",
+    "bio": "David Erickson is a consultant in the Civilian group at MarkLogic Professional Services and has a passion for human computer interface design, unstructured data, and rapid application development. ",
+    "email": "",
+    "id": "39",
+    "name": "David Erickson",
+    "position": "Principal Consultant",
+    "type": "speaker"
+}

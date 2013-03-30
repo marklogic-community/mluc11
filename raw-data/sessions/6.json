@@ -1,0 +1,20 @@
+{
+    "abstract": "When a system delivers better performance, it usually means you\u2019re able to do more work in the same time (increased throughput) or that it takes less time to get the same result (reduced latency). Sometimes, the performance of a system can be improved to such a degree that it makes possible new use cases that would be previously unimaginable. We call this \u201cRadical Performance\u201d. And we will share a recent case study in which McGraw Hill used the Intel Distribution for Apache Hadoop with MarkLogic to process documents in an hour that would have previously taken 5 days. Join us to hear how you too can benefit from the radical performance of an open platform that gets the most out of the industry-leading hardware.",
+    "endTime": "2013-04-09T16:40:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "6",
+    "location": "Chelsea 4",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "6"
+    ],
+    "speakerNames": [
+        "Todd Cramer"
+    ],
+    "startTime": "2013-04-09T15:50:00",
+    "title": "Radical Performance: Enabling New use Cases in Big Data Analytics",
+    "track": "customer",
+    "type": "session"
+}

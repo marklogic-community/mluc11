@@ -1,1 +1,20 @@
-{"endTime": "2013-04-10T01:00:00", "speakerIds": ["48"], "title": "Rebalancing Clusters", "track": "technical", "abstract": "Get a sneak-peek at some capabilities that you'll see in a future MarkLogic release for distributing, balancing, and rebalancing data across a MarkLogic cluster.  ", "speakerNames": ["Haitao Wu"], "plenary": false, "featured": false, "location": "Lightning Talk Room - Mont-Royal 2", "startTime": "2013-04-10T01:00:00", "selectable": true, "giveSurvey": true, "type": "session", "id": "40"}
+{
+    "abstract": "During this lightning talk we will demonstrate new capabilities to run MarkLogic clusters using VMWare vSphere. We will review basic configuration options for MarkLogic and vSphere when for both Test/Dev and Production uses of VMWare/MarkLogic.\n",
+    "endTime": "2013-04-10T14:50:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "40",
+    "location": "Mont-Royal 2",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "52"
+    ],
+    "speakerNames": [
+        "Aaron Rosenbaum"
+    ],
+    "startTime": "2013-04-10T14:00:00",
+    "title": "Running MarkLogic on VMware",
+    "track": "technical",
+    "type": "session"
+}

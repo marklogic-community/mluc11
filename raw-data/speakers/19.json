@@ -1,1 +1,9 @@
-{"bio": "", "name": "Kathy Donner", "id": "19", "affiliation": "Bank of America Merrill Lynch", "position": "Director", "type": "speaker", "email": "kathleen.j.donner@baml.com"}
+{
+    "affiliation": "MarkLogic Corporation",
+    "bio": "Amir Halfon is Chief Technologist for Financial Services at Marklogic, where he oversees the development of technology strategy to address Big Data challenges across the industry. Before joining Marklogic Amir was the CTO for Global Financial Services at Oracle, as well as Sun Microsystems. He possesses a wealth of technical and industry experience, and is a frequent speaker at conferences and contributed to several publications. ",
+    "email": "amir.halfon@marklogic.com",
+    "id": "19",
+    "name": "Amir Halfon",
+    "position": "CTO, Financial Services",
+    "type": "speaker"
+}

@@ -1,1 +1,24 @@
-{"endTime": "2013-04-10T01:00:00", "speakerIds": ["36", "37"], "title": "Designing with the Customer in Mind", "track": "business", "abstract": "An overview of Sony's launch of its digital reading business in North America, its challenges and ongoing changes to the store's eBook operations flow and what steps Sony took to address them by implementing a MarkLogic solution. Learn how this implementation opens up new possibilities for content discovery and the eBook reading experience for the customer.", "speakerNames": ["Natascha Helbig", "Ben Ackerman"], "plenary": false, "featured": false, "location": "", "startTime": "2013-04-10T01:00:00", "selectable": true, "giveSurvey": true, "type": "session", "id": "31"}
+{
+    "abstract": "Two companies, IEEE and Zynx Health explain how they wrestled \u2014 and tamed \u2014 complex data. IEEE publishes nearly a third of the world\u2019s highly valuable technical literature in electrical engineering and computer science via the IEEE Xplore digital library. IEEE Xplore is a repository of over 3-million full text documents that are built on a legacy multi-tiered platform. IEEEs vision is to reduce their platform complexity using MarkLogic. IEEE technical staff will describe the content ingestion process (and content model development) from 3 legacy data streams, the development framework used, and the future evolutionary roadmap as they move to a more simple, yet more powerful platform designed to meet the information needs of a new generation of users. Zynx Health, a subsidiary of Hearst Corp, provides evidence-based, clinical decision support solutions for healthcare organizations to measurably improve patient outcomes, enhance safety and lower costs. Content is complex: highly-structured clinical decision support protocols designed to distill reams of scientific knowledge into pithy, actionable instructions while retaining full evidentiary traceability and perfect quality. Find out how a small team of dedicated technologists and analysts replaced its suite of homegrown systems with a smart data repository. Find out how they did it, why they chose NoSQL and why XML as the data model provided the precision they needed.",
+    "endTime": "2013-04-11T09:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "31",
+    "location": "Chelsea 1",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "41",
+        "42",
+        "43"
+    ],
+    "speakerNames": [
+        "Gerry Grenier",
+        "Mehul Trivedi",
+        "Sergio Restreppo"
+    ],
+    "startTime": "2013-04-11T08:30:00",
+    "title": "Complex Data is a Totally Different Beast",
+    "track": "business",
+    "type": "session"
+}
