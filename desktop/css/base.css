@@ -192,11 +192,11 @@ table.x-table-layout {
 }
 
 table.x-table-layout div.timeslot {
-    min-width: 110px;
+    min-width: 80px;
 }
 
 table.x-table-layout td {
-    width: 16.6%;
+    width: 14.28%;
     vertical-align: top;
 }
 

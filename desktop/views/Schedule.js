@@ -82,7 +82,7 @@ Ext.define('mluc.widgets.Schedule', {
             defaults: {bodyStyle:"padding:5px"},
             layout: {
                 type: 'table',
-                columns: 6,
+                columns: 7,
                 tableAttrs: {
                     style: {
                         width: '100%'
@@ -318,7 +318,7 @@ Ext.define('mluc.widgets.Schedule', {
                     addTimeslot = true;
                 }
                 numColumnOutput += 1;
-                if(numColumnOutput === 5) {
+                if(numColumnOutput === 6) {
                     numColumnOutput = 0;
                 }
 
