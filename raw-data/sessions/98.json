@@ -1,0 +1,18 @@
+{
+    "abstract": "",
+    "endTime": "2013-04-10T13:00:00",
+    "featured": false,
+    "giveSurvey": false,
+    "id": "98",
+    "location": "Chelsea Commons | Nolita Ballroom",
+    "plenary": true,
+    "selectable": true,
+    "speakerIds": [
+    ],
+    "speakerNames": [
+    ],
+    "startTime": "2013-04-10T11:20:00",
+    "title": "Partner Showcase | Lunch | Birds-of-a-Feather sessions",
+    "track": "",
+    "type": "session"
+}

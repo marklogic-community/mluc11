@@ -374,12 +374,12 @@ Ext.define('mluc.widgets.Schedule', {
             }
 
             if(this.myScheduleButton.pressed === true) {
-                if(mySessionStore.find("sessionId", sessions[i].getId()) == -1) {
+                if(mySessionStore.findExact("sessionId", sessions[i].getId()) == -1) {
                     className += " notattending";
                 }
             }
 
-            if(viaSearch === true && searchResultStore.find("id", sessions[i].getId()) === -1) {
+            if(viaSearch === true && searchResultStore.findExact("id", sessions[i].getId()) === -1) {
                 className += " notsearchresult";
             }
 
@@ -626,7 +626,7 @@ Ext.define("mluc.views.DetailsWindow", {
                         var username = mluc.readCookie("MLUC-USERNAME");
                         var attending = false;
 
-                        if(me.store.find("username", username) >= 0) {
+                        if(me.store.findExact("username", username) >= 0) {
                             attending = true;
                         }
 
@@ -810,7 +810,7 @@ Ext.define("mluc.views.DetailsWindow", {
     unattend: function() {
         var me = this;
         var username = mluc.readCookie("MLUC-USERNAME");
-        var index = this.store.find("username", username);
+        var index = this.store.findExact("username", username);
 
         if(username && index >= 0) {
             this.setLoading(true);
@@ -818,7 +818,7 @@ Ext.define("mluc.views.DetailsWindow", {
                 var record = me.store.getAt(index);
 
                 var mySessionStore = Ext.getStore("MySessionsStore");
-                var mySession = mySessionStore.find("sessionId", me.session.getId());
+                var mySession = mySessionStore.findExact("sessionId", me.session.getId());
                 mySessionStore.removeAt(mySession);
 
                 me.store.remove(record);

@@ -2,8 +2,8 @@
     "abstract": "",
     "endTime": "2013-04-09T10:15:00",
     "featured": false,
-    "giveSurvey": true,
-    "id": "77",
+    "giveSurvey": false,
+    "id": "90",
     "location": "Chelsea Commons",
     "plenary": true,
     "selectable": true,
@@ -12,7 +12,7 @@
     "speakerNames": [
     ],
     "startTime": "2013-04-09T09:45:00",
-    "title": "Partner Showcase & AM Break", 
-    "track": "keynote",
+    "title": "Partner Showcase | AM Break", 
+    "track": "",
     "type": "session"
 }

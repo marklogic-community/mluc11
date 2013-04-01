@@ -22,3 +22,7 @@ Created 8[4567] as registration
 Created 88 as training
 
 Moved 82 into 79 removed 82
+remove sessino 81 with Shap
+edit Lindblad name
+
+ROlled 83 into 78

@@ -374,12 +374,12 @@ Ext.define('mluc.widgets.Schedule', {
             }
 
             if(this.myScheduleButton.pressed === true) {
-                if(mySessionStore.find("sessionId", sessions[i].getId()) == -1) {
+                if(mySessionStore.findExact("sessionId", sessions[i].getId()) == -1) {
                     className += " notattending";
                 }
             }
 
-            if(viaSearch === true && searchResultStore.find("id", sessions[i].getId()) === -1) {
+            if(viaSearch === true && searchResultStore.findExact("id", sessions[i].getId()) === -1) {
                 className += " notsearchresult";
             }
 

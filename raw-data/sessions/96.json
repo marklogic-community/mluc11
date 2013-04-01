@@ -1,18 +1,18 @@
 {
     "abstract": "",
-    "endTime": "2013-04-08T18:00:00",
+    "endTime": "2013-04-11T08:30:00",
     "featured": false,
     "giveSurvey": false,
-    "id": "89",
-    "location": "Chelsea Commons",
+    "id": "96",
+    "location": "Chelsea Commons | Nolita Ballroom",
     "plenary": true,
     "selectable": true,
     "speakerIds": [
     ],
     "speakerNames": [
     ],
-    "startTime": "2013-04-08T16:00:00",
-    "title": "Monday Mingle - Partner Showcase and Welcome Reception",
+    "startTime": "2013-04-11T07:00:00",
+    "title": "Partner Showcase | Breakfast", 
     "track": "",
     "type": "session"
 }

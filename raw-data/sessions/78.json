@@ -1,5 +1,5 @@
 {
-    "abstract": "How do you stay one step ahead of the competition? How do you ensure you've future-proofed your infrastructure and systems? How do you prepare for tomorrow's challenges today? Those are questions our product team asks each and every day, working tirelessly to ensure that not only our technology stays one step ahead, but that our customers and partners can stay one step ahead, too. Find out what the team is working on to deliver tomorrow's game changing technology -- today.",
+    "abstract": "MarkLogic, One Step Beyond<br/>How do you stay one step ahead of the competition? How do you ensure you've future-proofed your infrastructure and systems? How do you prepare for tomorrow's challenges today? Those are questions our product team asks each and every day, working tirelessly to ensure that not only our technology stays one step ahead, but that our customers and partners can stay one step ahead, too. Find out what the team is working on to deliver tomorrow's game changing technology -- today.<br/><br/>Turning Big Data into a Compelling Visual Story<br/><br/>Organizations now have the ability to store and process massive amounts of data like never before. And there are huge expectations for turning data into a fundamental driver for business transformation and competitive advantage.\nBut turning big data into useful information for the business decision maker is still a challenge. Storing and accessing the data is just one piece of the puzzle; analyzing it, understanding it, and sharing the resulting insights effectively are a huge set of challenges. Interactive visual analytics, or data visualization, is one way to help make sense of big data. It can help virtually anyone see patterns and trends that other data analysis methods would overlook. Visual analysis is an iterative process of asking questions, creating pictures, discovering new hypothesis, and foraging for data.\n\n",
     "endTime": "2013-04-10T09:20:00",
     "featured": false,
     "giveSurvey": true,
@@ -8,13 +8,15 @@
     "plenary": true,
     "selectable": true,
     "speakerIds": [
-        "70"
+        "70",
+        "85"
     ],
     "speakerNames": [
-        "David Gorbet"
+        "David Gorbet",
+        "Paul Lilford"
     ],
     "startTime": "2013-04-10T08:30:00",
-    "title": "MarkLogic | One Step Beyond",
+    "title": "DAY TWO KEYNOTE: MarkLogic, One Step Beyond",
     "track": "keynote",
     "type": "session"
 }

@@ -1,9 +1,9 @@
 {
     "abstract": "",
-    "endTime": "2013-04-08T18:00:00",
+    "endTime": "2013-04-09T15:50:00",
     "featured": false,
     "giveSurvey": false,
-    "id": "89",
+    "id": "93",
     "location": "Chelsea Commons",
     "plenary": true,
     "selectable": true,
@@ -11,8 +11,8 @@
     ],
     "speakerNames": [
     ],
-    "startTime": "2013-04-08T16:00:00",
-    "title": "Monday Mingle - Partner Showcase and Welcome Reception",
+    "startTime": "2013-04-09T15:20:00",
+    "title": "Partner Showcase | PM Break",
     "track": "",
     "type": "session"
 }

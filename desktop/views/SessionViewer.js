@@ -115,7 +115,7 @@ Ext.define("mluc.views.DetailsWindow", {
                         var username = mluc.readCookie("MLUC-USERNAME");
                         var attending = false;
 
-                        if(me.store.find("username", username) >= 0) {
+                        if(me.store.findExact("username", username) >= 0) {
                             attending = true;
                         }
 
@@ -299,7 +299,7 @@ Ext.define("mluc.views.DetailsWindow", {
     unattend: function() {
         var me = this;
         var username = mluc.readCookie("MLUC-USERNAME");
-        var index = this.store.find("username", username);
+        var index = this.store.findExact("username", username);
 
         if(username && index >= 0) {
             this.setLoading(true);
@@ -307,7 +307,7 @@ Ext.define("mluc.views.DetailsWindow", {
                 var record = me.store.getAt(index);
 
                 var mySessionStore = Ext.getStore("MySessionsStore");
-                var mySession = mySessionStore.find("sessionId", me.session.getId());
+                var mySession = mySessionStore.findExact("sessionId", me.session.getId());
                 mySessionStore.removeAt(mySession);
 
                 me.store.remove(record);
