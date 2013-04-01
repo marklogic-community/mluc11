@@ -15,3 +15,5 @@ session 49/50/51 lightning to 49
 session 40/41/42 lightning to 40
 session 43/44/45 lightning to 43
 session 46/47/48 lightning to 48
+
+Create sessions.new, speakers.new with new csv2json that brings in plenaries
