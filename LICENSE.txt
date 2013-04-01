@@ -1,5 +1,5 @@
 mluc11 - Sample MLJSON application 
-Copyright (c) 2011, MarkLogic Corpotation
+Copyright (c) 2011,2013 MarkLogic Corpotation
 All rights reserved.
 community-requests@marklogic.com
 
