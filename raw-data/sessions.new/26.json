@@ -1,0 +1,20 @@
+{
+    "abstract": "Security is not usually a consideration for a company until a breach occurs. But with the audacity and frequency of high-profile hacks, security should be on everyone's radar. In this talk, renowned security specialist Steven Branigan will walk you through two data breaches: the online banking credentials for a retail chain, and credit card payment for the entertainment industry. He will discuss how they were infiltrated, how they detected it, how these incidents were handled and how companies can better protect themselves from these types of attacks --including safe-guarding who has access to the data -- at the data layer.",
+    "endTime": "2013-04-10T16:00:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "26",
+    "location": "Chelsea 1",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "34"
+    ],
+    "speakerNames": [
+        "Steven Branigan"
+    ],
+    "startTime": "2013-04-10T15:10:00",
+    "title": "Inside a Data Breach",
+    "track": "business",
+    "type": "session"
+}

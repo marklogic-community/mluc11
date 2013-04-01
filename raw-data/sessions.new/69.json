@@ -1,0 +1,20 @@
+{
+    "abstract": "Getting data into MarkLogic doesn\u2019t have to give you heartburn! We have tools that make it easy and fast - and you can even Hadoop your load for extreme performance. Jane Chen will show you how to load data very easily through a GUI tool (Information Studio) or very fast using the command-line mlcp (MarkLogic Content Pump). Jane will also give you a sneak-peek at what she's working on for a future version of mlcp.",
+    "endTime": "2013-04-10T16:00:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "69",
+    "location": "Chelsea 8",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "74"
+    ],
+    "speakerNames": [
+        "Jane Chen"
+    ],
+    "startTime": "2013-04-10T15:10:00",
+    "title": "Ingestion that doesn\u2019t Give you Indigestion",
+    "track": "technical",
+    "type": "session"
+}

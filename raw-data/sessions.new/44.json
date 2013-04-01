@@ -1,0 +1,20 @@
+{
+    "abstract": "There are lots of ways to deploy your applications in MarkLogic. Numerous tools are at your disposal, like the Configuration Manager, Pomegranade, and Roxy. But how about a pure XQuery solution, that takes you all the way? Ill discuss the existing tools briefly, and show a new personally made prototype that allows deployments simply by uploading a zip.",
+    "endTime": "2013-04-10T16:00:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "44",
+    "location": "Mont-Royal 2",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "55"
+    ],
+    "speakerNames": [
+        "Geert Josten"
+    ],
+    "startTime": "2013-04-10T15:10:00",
+    "title": "Automate Your Deployments",
+    "track": "technical",
+    "type": "session"
+}

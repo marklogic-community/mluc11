@@ -1,0 +1,20 @@
+{
+    "abstract": "XQuery is a wonderfully productive language, especially when coupled with MarkLogic. Yet as with any language, it has its own dark corners and surprises. In this fast-paced lightning talk, we'll run through a litany of common XQuery gotchas, programming mistakes, and performance pitfalls. Many will apply to XQuery programming in general and some will be MarkLogic-specific. For each one, you'll learn the gist of the problem, the reason it fools people, and the way to avoid it. Come to commiserate. Come to preemptively save yourself time and frustration. Come to pick up tips and techniques for helping you to write faster, cleaner, and more robust code.",
+    "endTime": "2013-04-10T11:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "58",
+    "location": "Mont-Royal 2",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "66"
+    ],
+    "speakerNames": [
+        "Jason Hunter"
+    ],
+    "startTime": "2013-04-10T10:30:00",
+    "title": "XQuery Gotchas",
+    "track": "technical",
+    "type": "session"
+}

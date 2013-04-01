@@ -1,0 +1,20 @@
+{
+    "abstract": "The best storage for MarkLogic looks quite different than what is used to run relational databases. For storage system providers, architects and administrators with decades of experience, MarkLogic can seem strange and unfamiliar. During this session you will: Learn how to plan storage for MarkLogic. Learn how to explain requirements with storage providers, internal or external, using their unique language. Learn about common provisioning issues encountered when utilizing shared storage. ",
+    "endTime": "2013-04-10T14:50:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "41",
+    "location": "Mont-Royal 2",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "52"
+    ],
+    "speakerNames": [
+        "Aaron Rosenbaum"
+    ],
+    "startTime": "2013-04-10T14:00:00",
+    "title": "Storage for MarkLogic 101",
+    "track": "technical",
+    "type": "session"
+}

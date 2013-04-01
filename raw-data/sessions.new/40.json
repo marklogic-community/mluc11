@@ -1,0 +1,20 @@
+{
+    "abstract": "During this lightning talk we will demonstrate new capabilities to run MarkLogic clusters using VMWare vSphere. We will review basic configuration options for MarkLogic and vSphere when for both Test/Dev and Production uses of VMWare/MarkLogic.\n",
+    "endTime": "2013-04-10T14:50:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "40",
+    "location": "Mont-Royal 2",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "52"
+    ],
+    "speakerNames": [
+        "Aaron Rosenbaum"
+    ],
+    "startTime": "2013-04-10T14:00:00",
+    "title": "Running MarkLogic on VMware",
+    "track": "technical",
+    "type": "session"
+}

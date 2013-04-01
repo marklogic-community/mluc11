@@ -1,0 +1,20 @@
+{
+    "abstract": "MarkLogic provides a rich and mature stack of APIs for building real-time search and analytics applications. Learn how the APIs fit together and how to choose the appropriate integration point for your environment and development team. We\u2019ll dig into sample code to illustrate best practices for common use cases and show you how to customize the APIs to more highly leverage the MarkLogic and XQuery expertise within your team.",
+    "endTime": "2013-04-09T16:40:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "67",
+    "location": "Mont-Royal 1",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "72"
+    ],
+    "speakerNames": [
+        "Erik Hennum"
+    ],
+    "startTime": "2013-04-09T15:50:00",
+    "title": "Building Applications with MarkLogic using REST, Java, and JSON",
+    "track": "technical",
+    "type": "session"
+}

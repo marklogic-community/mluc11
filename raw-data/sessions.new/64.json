@@ -1,0 +1,20 @@
+{
+    "abstract": "What makes MarkLogic an exceptional database? If you've ever wondered what's going on inside MarkLogic Server as it evaluates queries, this talk is for you. It explains, in human terms, the core concepts and features of the universal index, \u201cstructured\u201d search, the range index, and how MarkLogic differs from traditional search and database products. You'll leave the talk with a deeper understanding of how MarkLogic Server \"thinks\".",
+    "endTime": "2013-04-09T14:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "64",
+    "location": "Chelsea 5",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "70"
+    ],
+    "speakerNames": [
+        "David Gorbet"
+    ],
+    "startTime": "2013-04-09T13:30:00",
+    "title": "Inside MarkLogic: an Introduction to MarkLogic Architecture",
+    "track": "technical",
+    "type": "session"
+}

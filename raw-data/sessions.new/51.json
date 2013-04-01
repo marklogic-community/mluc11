@@ -1,0 +1,20 @@
+{
+    "abstract": "An increasing requirement of many search services is to provide fast, accurate search results without a complicated GUI or search syntax. A user-friendly search engine needs to be able to infer as much as possible from a simple query in order to give the user as specific and complete result set as possible. This session will demonstrate strategies developed at Jones McClure Publishing for transforming user queries into more intelligent queries that leverage content-specific markup for speed and accuracy, without additional input from the user. The presentation will give an overview of some basic templates and present several examples of real world implementations that enhance users\u2019 search experiences without adding complexity. ",
+    "endTime": "2013-04-10T13:50:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "51",
+    "location": "Mont-Royal 2",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "61"
+    ],
+    "speakerNames": [
+        "Will Thompson"
+    ],
+    "startTime": "2013-04-10T13:00:00",
+    "title": "Search Intelligence and MarkLogic Search API",
+    "track": "technical",
+    "type": "session"
+}

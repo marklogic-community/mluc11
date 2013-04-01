@@ -1,0 +1,22 @@
+{
+    "abstract": "Establishing the right architecture up front increases performance and makes the system easier to manage. In this session we introduce the major architectural components (both software and infrastructure) of a MarkLogic cluster, and review architectural best practices. We also review best practices for operations so your project gets off on the right foot.",
+    "endTime": "2013-04-09T15:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "60",
+    "location": "Chelsea 1",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "52",
+        "67"
+    ],
+    "speakerNames": [
+        "Aaron Rosenbaum",
+        "Frank Salonga"
+    ],
+    "startTime": "2013-04-09T14:30:00",
+    "title": "MarkLogic System Architecture 101: Sizing, Elasticity, Tiering and Balancing",
+    "track": "technical",
+    "type": "session"
+}

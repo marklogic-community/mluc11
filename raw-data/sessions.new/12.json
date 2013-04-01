@@ -1,0 +1,24 @@
+{
+    "abstract": "McGraw-Hill Construction, part of McGraw-Hill Financial connects owners, architects, contractors, building product manufacturers, and other players in the commercial construction market to help their businesses grow. Improving our customer experience required a solution beyond traditional search engines or relational databases offerings.\nOur customers require search support for cross-document relationships between structured, semi-structured and non-structured data with intelligent navigators, integrated access control and efficient performance with increased volumes of data.\nFind out how we use MarkLogic's enterprise NoSQL database to effectively handle the complexity of our data  to address key challenges and risks. We will share our experience on various topics including registered queries, point in time query, document fragments, performance and joins.\n\n",
+    "endTime": "2013-04-09T15:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "12",
+    "location": "Chelsea 8",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "13",
+        "14",
+        "15"
+    ],
+    "speakerNames": [
+        "Mark Burlock",
+        "Sagar Bhujbal",
+        "Abhishek Srivastav"
+    ],
+    "startTime": "2013-04-09T14:30:00",
+    "title": "When Simple Search Is Not Enough",
+    "track": "business",
+    "type": "session"
+}

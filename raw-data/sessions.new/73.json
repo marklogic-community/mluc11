@@ -1,0 +1,22 @@
+{
+    "abstract": "Have you ever wished that your favorite BI tool could handle unstructured data? Would you like to leverage the power of MarkLogic with your existing reports and tools? If so, this session is for you! Learn how to use MarkLogic with any major SQL-based BI or analytical tool. Then hear how you can write your own MapReduce functions and link them in to MarkLogic for fast, efficient in-database analytics.",
+    "endTime": "2013-04-10T14:50:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "73",
+    "location": "Chelsea 1",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "76",
+        "62"
+    ],
+    "speakerNames": [
+        "Sara Mazer",
+        "John Snelson"
+    ],
+    "startTime": "2013-04-10T14:00:00",
+    "title": "Using BI Tools and Doing in-database Analytics with MarkLogic",
+    "track": "technical",
+    "type": "session"
+}

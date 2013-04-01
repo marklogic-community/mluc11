@@ -1,0 +1,20 @@
+{
+    "abstract": "Better outcomes and cost-containment are two urgent public health concerns \u2014 and unified information is the Rx. M*Modal and ICA are two vendors pioneering change in the healthcare industry as they unify everything from doctors' scribbles to providers' claims, practioners' transcriptions to facilities patient charts onto one platform. Find out the challenges of interoperability, the benefits of adding intelligence to approve patient care, the distinctions between search and querying. Learn about the technologies, the challenges and lessons learned. Finally, take a peek at how analytics on a unified repository will further drive value to the industry.",
+    "endTime": "2013-04-10T14:50:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "20",
+    "location": "Chelsea 5",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "28"
+    ],
+    "speakerNames": [
+        "Aaron Brauser"
+    ],
+    "startTime": "2013-04-10T14:00:00",
+    "title": "Rx for Better Patient Care -- and Cost Containment",
+    "track": "business",
+    "type": "session"
+}

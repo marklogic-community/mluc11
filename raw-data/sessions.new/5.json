@@ -1,0 +1,20 @@
+{
+    "abstract": "Learn how MarkLogic made it possible to take a collection of 8,000 disparate videos and create a powerful search based, community website. We will share tips like how to extract text from videos, synchronizing video and text, searching across and within videos, automatically relating videos to one another and building a community around video content.\n\n",
+    "endTime": "2013-04-11T10:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "5",
+    "location": "Chelsea 1",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "5"
+    ],
+    "speakerNames": [
+        "Joseph Hilger"
+    ],
+    "startTime": "2013-04-11T09:30:00",
+    "title": "Maximize Video Assets with MarkLogic",
+    "track": "customer",
+    "type": "session"
+}

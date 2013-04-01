@@ -1,0 +1,20 @@
+{
+    "abstract": "We love MarkLogic and all the things you can do with it, but sometimes we just want to get a bit of data one-off into a tool we also love \u2013 Excel.  This talk will describe some easy ways to get data from MarkLogic into Excel for those times you want to make a quick calculation, a complicated graph or to email your co-workers some data.  We will discuss several methods. Some of them may surprise you as to how easy they are.",
+    "endTime": "2013-04-09T15:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "56",
+    "location": "Mont-Royal 2",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "64"
+    ],
+    "speakerNames": [
+        "David Lee"
+    ],
+    "startTime": "2013-04-09T14:30:00",
+    "title": "Getting data from MarkLogic into Excel",
+    "track": "technical",
+    "type": "session"
+}

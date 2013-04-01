@@ -1,0 +1,20 @@
+{
+    "abstract": "Frank has answered hundreds thousands of customer calls, many of them asking how to make stuff go faster, in his role as Lead Engineer with MarkLogic WorldWide Support. So he\u2019s uniquely placed to give this talk! While MarkLogic is designed to be scalable and performant out-of-the-box, as with any database there are ways to shoot yourself in the foot. Come hear Frank describe the Top 10 performance-related issues he hears, and how to avoid them.",
+    "endTime": "2013-04-11T09:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "68",
+    "location": "Chelsea 8",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "73"
+    ],
+    "speakerNames": [
+        "Franklin Salonga"
+    ],
+    "startTime": "2013-04-11T08:30:00",
+    "title": "Tales from the Support Desk: Top 10 Things to Avoid when Building a High-performance Application",
+    "track": "technical",
+    "type": "session"
+}

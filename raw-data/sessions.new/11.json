@@ -1,0 +1,20 @@
+{
+    "abstract": "We are in the middle of a database revolution. NoSQL is disrupting the database world in three ways: 1. Providing new database architectures that handle the large and ever growing velocity and volume of data dispersed across geographically distant data centers, 2. Creating new modeling paradigms (Document and Graph) that compete with object, relational, and dimensional 3. Adding schema-less databases to enable extreme agility of software development and rapid changes to huge data sets. In this presentation find out which database works best and why.",
+    "endTime": "2013-04-09T15:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "11",
+    "location": "Mont-Royal 1",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "12"
+    ],
+    "speakerNames": [
+        "Mike Bowers"
+    ],
+    "startTime": "2013-04-09T14:30:00",
+    "title": "Database Revolution: Old SQL, New SQL, NoSQL \u2026 Huh?",
+    "track": "business",
+    "type": "session"
+}

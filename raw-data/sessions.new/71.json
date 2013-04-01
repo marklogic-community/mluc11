@@ -1,0 +1,22 @@
+{
+    "abstract": "Aligning a storage strategy with the value and access patterns of your data allows you to optimize tradeoffs among cost, performance, and availability. Learn how to implement a data governance policy and how to deploy MarkLogic using a fluid mix of SSD, local disk, shared disk, and cloud storage, including the Hadoop Distributed File System and Amazon S3. This talk includes a sneak-peek into some exciting developments that MarkLogic is working on for future releases.",
+    "endTime": "2013-04-10T11:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "71",
+    "location": "Chelsea 5",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "75",
+        "74"
+    ],
+    "speakerNames": [
+        "Justin Makeig",
+        "Jane Chen"
+    ],
+    "startTime": "2013-04-10T10:30:00",
+    "title": "Optimizing Cost, Performance, and Availability with Tiered Storage",
+    "track": "technical",
+    "type": "session"
+}

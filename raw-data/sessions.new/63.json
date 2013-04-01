@@ -1,0 +1,20 @@
+{
+    "abstract": "Most of us have extensive experience modeling data for Relational Database Systems (RDBMS). Much of that experience is helpful when defining data models for MarkLogic using XML, but some is inappropriate, including the very notion of a normal form. This session describes some differences between relational modeling and XML modeling, including specifics of how to model XML that will work well in MarkLogic. It is ideal for people with a relational background who want a framework to know what to use from the relational approach, and how to think about the differences. ",
+    "endTime": "2013-04-11T10:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "63",
+    "location": "Chelsea 8",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "57"
+    ],
+    "speakerNames": [
+        "Damon Feldman"
+    ],
+    "startTime": "2013-04-11T09:30:00",
+    "title": "Moving from Relational Modeling to XML and MarkLogic Data Models",
+    "track": "technical",
+    "type": "session"
+}

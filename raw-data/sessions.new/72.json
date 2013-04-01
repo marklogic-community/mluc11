@@ -1,0 +1,20 @@
+{
+    "abstract": "Relevance scores are  key to getting the most out of your searches. Mary will help you understand how MarkLogic computes scores, and let you know what options and controls are available and how they are applied. You'll also get a sneak-peek at some upcoming scoring features.",
+    "endTime": "2013-04-10T11:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "72",
+    "location": "Mont-Royal 1",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "51"
+    ],
+    "speakerNames": [
+        "Mary Holstege"
+    ],
+    "startTime": "2013-04-10T10:30:00",
+    "title": "Search: Know the Score!",
+    "track": "technical",
+    "type": "session"
+}

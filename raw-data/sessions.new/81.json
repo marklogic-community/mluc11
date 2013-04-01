@@ -1,0 +1,20 @@
+{
+    "abstract": "",
+    "endTime": "2013-04-09T09:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "81",
+    "location": "Chelsea 2/3",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "83"
+    ],
+    "speakerNames": [
+        "John Shap"
+    ],
+    "startTime": "2013-04-09T08:30:00",
+    "title": "Keynote MC",
+    "track": "keynote",
+    "type": "session"
+}

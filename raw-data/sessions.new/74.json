@@ -1,0 +1,24 @@
+{
+    "abstract": "SPARQL, RDF, and other Semantic Technologies are finally breaking into mainstream information access applications. The BBC's Dynamic Semantic Publishing architecture, which was hugely impressive behind the BBC Sports web site during the Olympics, is one of many great success stories in this area. In this session we'll show how you can combine document, value, and semantic search to manage greater complexity, with greater efficiency, with a simpler architecture. We'll review MarkLogic's ground-breaking work with Dr. Jim Hendler and describe the roadmap of Semantic Technologies at MarkLogic over the next few releases.",
+    "endTime": "2013-04-09T15:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "74",
+    "location": "Chelsea 4",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "77",
+        "62",
+        "63"
+    ],
+    "speakerNames": [
+        "Stephen Buxton",
+        "John Snelson",
+        "Micah Dubinko"
+    ],
+    "startTime": "2013-04-09T14:30:00",
+    "title": "Semantic Technologies in MarkLogic",
+    "track": "technical",
+    "type": "session"
+}

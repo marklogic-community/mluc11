@@ -1,0 +1,20 @@
+{
+    "abstract": "Learn about the benefits of creating a new Big Data application, which has the ability to increase sales effectiveness, reduce support staff and maintenance, and track usage to better target resource investments. Find out how this executive systematically met and addressed obstacles as she worked to transform and streamline the information gathering process.",
+    "endTime": "2013-04-09T16:40:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "13",
+    "location": "Chelsea 8",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "16"
+    ],
+    "speakerNames": [
+        "Kathy Donner"
+    ],
+    "startTime": "2013-04-09T15:50:00",
+    "title": "Winning Strategies to Make the Internal Sale",
+    "track": "business",
+    "type": "session"
+}

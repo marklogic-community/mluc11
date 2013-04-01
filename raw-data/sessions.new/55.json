@@ -1,0 +1,20 @@
+{
+    "abstract": "In MarkLogic 6, there is a powerful feature for transforming XML to and from JSON. In this talk I discuss various strategies for JSON transformation including some of the more advanced techniques that allow you to closely manage the generated JSON and XML. Examples include:\n\n\u2022 Using XML schema to control JSON types \n\u2022 Features of the Custom strategy for precise transformation \n\u2022 Understanding the MarkLogic XML representation of JSON documents \n\u2022 Advanced techniques for achieving non-standard JSON such as needed for Google Visualization.",
+    "endTime": "2013-04-09T15:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "55",
+    "location": "Mont-Royal 2",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "64"
+    ],
+    "speakerNames": [
+        "David Lee"
+    ],
+    "startTime": "2013-04-09T14:30:00",
+    "title": "Advanced JSON Transformations",
+    "track": "technical",
+    "type": "session"
+}

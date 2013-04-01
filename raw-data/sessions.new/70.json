@@ -1,0 +1,20 @@
+{
+    "abstract": "Hadoop has rapidly emerged as a cost-effective alternative to proprietary SAN and distributed computing infrastructures for large or complex data. MarkLogic provides the only mature, enterprise-grade database that can be deployed directly into an existing Hadoop environment. Learn how MarkLogic can leverage your existing Hadoop investment with real-time analysis, transactional updates, granular security, and full-text search.",
+    "endTime": "2013-04-09T16:40:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "70",
+    "location": "Chelsea 5",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "75"
+    ],
+    "speakerNames": [
+        "Justin Makeig"
+    ],
+    "startTime": "2013-04-09T15:50:00",
+    "title": "The Best Database for Hadoop",
+    "track": "technical",
+    "type": "session"
+}

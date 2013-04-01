@@ -1,0 +1,24 @@
+{
+    "abstract": "Hear from leaders from the cutting edge of entertainment and media on how digital adoption is revolutionizing the way users are interacting with media and how digital assets are managed and delivered. This panel will explore the key factors and approaches of delivering media to audiences in the new digital age.",
+    "endTime": "2013-04-10T14:50:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "23",
+    "location": "Mont-Royal 1",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "17",
+        "31",
+        "27"
+    ],
+    "speakerNames": [
+        "Matt Turner",
+        "Eddie Lee",
+        "Ben Ackerman"
+    ],
+    "startTime": "2013-04-10T14:00:00",
+    "title": "Playing to Audiences in the Digital World",
+    "track": "business",
+    "type": "session"
+}

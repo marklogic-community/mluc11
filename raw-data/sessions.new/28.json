@@ -1,0 +1,22 @@
+{
+    "abstract": "Using MarkLogic as its platform for RadBase v2, a web-based, radiologist workflow tool, Georg Thieme Publishers can keep up with the ever-increasing demand for medical content, by having an agile platform that allows medical information out of Thieme's reference works to be searched from one location. Sophisticated, integrated search allows radiologists to get instant access to high quality medical content like verified diagnosis, images, e-books, e-journals and other resources to confirm their experience-based findings. Search and exploration is supported by adding anatomy, pathology and modality as facets and the content is intelligently linked using an automated text mining tool.",
+    "endTime": "2013-04-10T16:00:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "28",
+    "location": "Chelsea 5",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "36",
+        "37"
+    ],
+    "speakerNames": [
+        "Alexander Deles",
+        "Thomas Weiser"
+    ],
+    "startTime": "2013-04-10T15:10:00",
+    "title": "EBCONT and Georg Thieme Publishers: Providing robust search to improve patient diagnostics",
+    "track": "business",
+    "type": "session"
+}

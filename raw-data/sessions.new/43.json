@@ -1,0 +1,20 @@
+{
+    "abstract": "Its really easy to do point in time recovery using MarkLogic. This talk shows you how.",
+    "endTime": "2013-04-10T16:00:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "43",
+    "location": "Mont-Royal 2",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "54"
+    ],
+    "speakerNames": [
+        "Clark Richey"
+    ],
+    "startTime": "2013-04-10T15:10:00",
+    "title": "Point In Time Recovery using MarkLogic",
+    "track": "technical",
+    "type": "session"
+}

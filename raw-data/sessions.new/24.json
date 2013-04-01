@@ -1,0 +1,20 @@
+{
+    "abstract": "A look into Conde Nast's ground-breaking solutions that streamline the access and distribution of assets across the organization and a peek at the next steps where rights information will start to drive the next generation of asset workflows bringing automation to one of the most difficult areas of the digital supply chain.",
+    "endTime": "2013-04-10T16:00:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "24",
+    "location": "Mont-Royal 1",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "32"
+    ],
+    "speakerNames": [
+        "Brian Cross"
+    ],
+    "startTime": "2013-04-10T15:10:00",
+    "title": "But do You Have the Rights to use It?",
+    "track": "business",
+    "type": "session"
+}

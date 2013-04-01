@@ -1,0 +1,20 @@
+{
+    "abstract": "This talk introduces the HighCharts charting library, that comes with MarkLogic. Learn how you can leverage this visualization library to build your own REST powered data visualizations as well as visualize AppBuilder data.  We'll review the generous licensing details and the features and APIs the library offers, and we'll wrap up by demoing some interesting ways to render your data.",
+    "endTime": "2013-04-09T15:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "57",
+    "location": "Mont-Royal 2",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "65"
+    ],
+    "speakerNames": [
+        "Scott Brooks"
+    ],
+    "startTime": "2013-04-09T14:30:00",
+    "title": "Using HighCharts and MarkLogic",
+    "track": "technical",
+    "type": "session"
+}

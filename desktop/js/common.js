@@ -77,6 +77,9 @@ Ext.regModel("Session", {
         {name: "sessionDate", convert: function(value, record) { return record.get("startTime");}},
         {name: "roomNumber", convert: function(value, record) {
             var room = record.get("location");
+            if(room === "Chelsea 2/3") {
+                return 1;
+            }
             if(room === "Mont-Royal 1") {
                 return 1;
             }

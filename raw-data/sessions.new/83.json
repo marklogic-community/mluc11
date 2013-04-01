@@ -1,0 +1,20 @@
+{
+    "abstract": "Organizations now have the ability to store and process massive amounts of data like never before. And there are huge expectations for turning data into a fundamental driver for business transformation and competitive advantage.\nBut turning big data into useful information for the business decision maker is still a challenge. Storing and accessing the data is just one piece of the puzzle; analyzing it, understanding it, and sharing the resulting insights effectively are a huge set of challenges. Interactive visual analytics, or data visualization, is one way to help make sense of big data. It can help virtually anyone see patterns and trends that other data analysis methods would overlook. Visual analysis is an iterative process of asking questions, creating pictures, discovering new hypothesis, and foraging for data.\n\n",
+    "endTime": "2013-04-10T09:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "83",
+    "location": "Chelsea 2/3",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "85"
+    ],
+    "speakerNames": [
+        "Paul Lilford"
+    ],
+    "startTime": "2013-04-10T08:30:00",
+    "title": "Turning Big Data into a Compelling Visual Story",
+    "track": "keynote",
+    "type": "session"
+}

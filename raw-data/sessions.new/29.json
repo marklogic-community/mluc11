@@ -1,0 +1,22 @@
+{
+    "abstract": "Warrior Gateway is an exciting and innovative approach to consolidating, analyzing and disseminating large amounts of disparate information, in a scalable and feasible fashion and within a limited  budget. A non-profit that serves veterans and their families, it is an aggregation of federal, state, and community information \u2014 augmented by the community and veterans themselves to make it more relevant. The enriched content can be easily repurposed (or multi-purposed) and/or queried on other  sites and even combined with additional content and applications in mashups, therefore making Warrior Gateway content even more valuable and accessible to the military community it serves. ",
+    "endTime": "2013-04-11T10:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "29",
+    "location": "Mont-Royal 1",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "38",
+        "39"
+    ],
+    "speakerNames": [
+        "Devin Holmes",
+        "David Erickson"
+    ],
+    "startTime": "2013-04-11T09:30:00",
+    "title": "Big Data Consolidation, Analytics, and Localized Delivery",
+    "track": "business",
+    "type": "session"
+}

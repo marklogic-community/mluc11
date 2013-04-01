@@ -1,0 +1,20 @@
+{
+    "abstract": "When MarkLogic founder Christopher Lindblad set out to create the software that would become MarkLogic Server, he knew he was breaking new ground with his ideas \u2014 but at the same time building a product that met all of the needs of the enterprise. He built in reliability, security, scalability and high availability from the start which has ensure that MarkLogic Server is a NoSQL database that is significantly ahead of the competition. Christopher is still very involved with product direction, development and he may have even been the guy who coded your favorite new feature. Bring your questions for this audience participation session, and find out what Christopher has dreamed up for you recently.",
+    "endTime": "2013-04-11T11:35:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "80",
+    "location": "Chelsea 2/3",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "82"
+    ],
+    "speakerNames": [
+        "v Lindblad"
+    ],
+    "startTime": "2013-04-11T10:45:00",
+    "title": "Further Ahead & Moving Faster",
+    "track": "keynote",
+    "type": "session"
+}

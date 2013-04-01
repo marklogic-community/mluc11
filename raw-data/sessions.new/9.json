@@ -1,0 +1,20 @@
+{
+    "abstract": "Springer, a 160year old scientific publisher with turnover in excess of half a billion Euro, decided to adopt an \"E-First\" strategy, and stop outsourcing its content platform. This meant staffing an internal software development team, building a replacement platform in less than a year, and migrating our tens of thousands of institutional customers (and tens of millions of pageviews per month) onto a MarkLogic-powered web application built using the latest technologies. This talk will explore how MarkLogic: integrated with the agile, test-driven development; reduced project risk by serving as both database and search engine; provided maximum performance; and allowed us to provide the company with flexibility in product development.",
+    "endTime": "2013-04-09T14:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "9",
+    "location": "Chelsea 1",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "10"
+    ],
+    "speakerNames": [
+        "Stephen Cornelius"
+    ],
+    "startTime": "2013-04-09T13:30:00",
+    "title": "Betting the Company: How Springer Successfully Insourced Its Flagship Content Platform",
+    "track": "business",
+    "type": "session"
+}

@@ -1,0 +1,20 @@
+{
+    "abstract": "Come and learn how to create functional data structures and the algorithms that process them. An introduction to some more advanced XQuery 3.0 techniques for creating fast algebraic data structures using higher order functions in XQuery 3.0, complete with pattern matching over those structures, and recursive algorithms to process them. ",
+    "endTime": "2013-04-10T11:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "59",
+    "location": "Mont-Royal 2",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "62"
+    ],
+    "speakerNames": [
+        "John Snelson"
+    ],
+    "startTime": "2013-04-10T10:30:00",
+    "title": "Modelling Application Data in XQuery",
+    "track": "technical",
+    "type": "session"
+}

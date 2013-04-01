@@ -1,0 +1,20 @@
+{
+    "abstract": "\nMarkLogic Server is working to save the Federal Government money spent on fraudulent healthcare claims at the Centers for Medicare and Medicaid Services (CMS) through an innovative approach that is impossible or simply too costly using other technologies. This presentation will focus on work in progress for CMS and MarkLogic\u2019s schema-agnostic architecture which allows for rapid incorporation of multi-structured data for claims oversight. It will also focus on the rich hierarchical provider and beneficiary profiles that include data from claims, Dunn & Bradstreet, Facebook, Indictment documents, home and car ownership and other non-traditional sources to better identify bad actors and improve fraud detection.",
+    "endTime": "2013-04-10T16:00:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "25",
+    "location": "Chelsea 4",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "33"
+    ],
+    "speakerNames": [
+        "Michael Doane"
+    ],
+    "startTime": "2013-04-10T15:10:00",
+    "title": "Innovative Fraud Detection at CMS",
+    "track": "business",
+    "type": "session"
+}

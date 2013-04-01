@@ -1,0 +1,20 @@
+{
+    "abstract": "How do you stay one step ahead of the competition? How do you ensure you've future-proofed your infrastructure and systems? How do you prepare for tomorrow's challenges today? Those are questions our product team asks each and every day, working tirelessly to ensure that not only our technology stays one step ahead, but that our customers and partners can stay one step ahead, too. Find out what the team is working on to deliver tomorrow's game changing technology -- today.",
+    "endTime": "2013-04-10T09:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "78",
+    "location": "Chelsea 2/3",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "70"
+    ],
+    "speakerNames": [
+        "David Gorbet"
+    ],
+    "startTime": "2013-04-10T08:30:00",
+    "title": "MarkLogic | One Step Beyond",
+    "track": "keynote",
+    "type": "session"
+}

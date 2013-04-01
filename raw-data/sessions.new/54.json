@@ -1,0 +1,20 @@
+{
+    "abstract": "Micah Dubinko describes the end-to-end process of building an application that leverages the semantic capabilities that we're building into MarkLogic. The talk includes a behind-the-scenes look at MarkLogic's internal test suite, which is itself a full-fledged semantic application.",
+    "endTime": "2013-04-09T16:40:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "54",
+    "location": "Mont-Royal 2",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "63"
+    ],
+    "speakerNames": [
+        "Micah Dubinko"
+    ],
+    "startTime": "2013-04-09T15:50:00",
+    "title": "Building Semantic Applications ",
+    "track": "technical",
+    "type": "session"
+}

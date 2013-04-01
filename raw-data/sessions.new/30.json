@@ -1,0 +1,20 @@
+{
+    "abstract": "NoSQL software selection is dominated by two forces \u2013 diversity of data types and a lack of standards. This presentation will focus on finding a balance of these two forces as seen through the lens of two great thinkers. Darwin was the observer of how different environments caused adaptation and specialization. Metcalf\u2019s Law shows the value of networks based on standards grow exponentially with size. By integrating these perspectives, we will create a framework selecting the best NoSQL solution for your business problems. ",
+    "endTime": "2013-04-11T09:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "30",
+    "location": "Chelsea 4",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "40"
+    ],
+    "speakerNames": [
+        "Dan McCreary"
+    ],
+    "startTime": "2013-04-11T08:30:00",
+    "title": "NoSQL Selection with Darwin and Metcalf",
+    "track": "business",
+    "type": "session"
+}

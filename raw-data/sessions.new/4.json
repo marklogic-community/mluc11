@@ -1,0 +1,20 @@
+{
+    "abstract": "In this presentation Michael Puscar, President of Yuxi Pacific, will demonstrate how the confluence of MarkLogic's schema agnostic storage structure, along with powerful new features in the latest release, unlock inherent content management capabilities that include workflow, authoring, versioning, component level content re-use, image processing and multi-channel export. This in-depth presentation will enumerate the various content management features within MarkLogic, demonstrated over the XQuire CCMS product, a turnkey two-tiered XQuery framework built over MarkLogic. ",
+    "endTime": "2013-04-10T14:50:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "4",
+    "location": "Chelsea 4",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "4"
+    ],
+    "speakerNames": [
+        "Michael A. Puscar"
+    ],
+    "startTime": "2013-04-10T14:00:00",
+    "title": "Turnkey Content Management with MarkLogic",
+    "track": "customer",
+    "type": "session"
+}

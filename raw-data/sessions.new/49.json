@@ -1,0 +1,20 @@
+{
+    "abstract": "Leveraging the power of MarkLogic\u2019s search API, one is able to build a fully functional, rapid prototype of a data visualization application. Learn how to utilize Marklogic search to drive data visualization widgets and map geospatial coordinates via template-based search results. \n\nIt\u2019s simple to get started. All you need is some background in W3 standards (HTML, CSS, JavaScript) and MarkLogic (Express or Developer). The data for this particular application was obtained for free from NYC Open Data (Socarta).\n\n",
+    "endTime": "2013-04-10T13:50:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "49",
+    "location": "Mont-Royal 2",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "59"
+    ],
+    "speakerNames": [
+        "Andrew Wanczowski"
+    ],
+    "startTime": "2013-04-10T13:00:00",
+    "title": "An Introduction to Search Visualization Using NYC Open Data",
+    "track": "technical",
+    "type": "session"
+}

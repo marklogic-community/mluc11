@@ -1,0 +1,20 @@
+{
+    "abstract": "12 competing Dutch newspaper publishers, representing more than 50 papers, are banding together to put all their content in one searchable platform called \u201cNewz\u201d to drive innovation of new information applications. To organize all this content, they are relying on two semantic technologies \u2014 Semantic enrichment, which automatically extracts people, companies, locations and events, and Linked Open Data, which derives more meaning from content by linking to the open data network. Find out how all this content from completely different systems is being unified, how semantics is driving search, and how this new platform will drive new applications and services for B2B and B2C markets. Newz is founded by TMG, Persgroep, Wegener, ANP, Mediagroep Limburg, SDU, NDC, Erdee Mediagroep, ND, BDU, Friesch Dagblad and FD Mediagroep.",
+    "endTime": "2013-04-10T11:20:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "15",
+    "location": "Chelsea 1",
+    "plenary": false,
+    "selectable": true,
+    "speakerIds": [
+        "18"
+    ],
+    "speakerNames": [
+        "Michel de Ru"
+    ],
+    "startTime": "2013-04-10T10:30:00",
+    "title": "When Competitors Band Together ...",
+    "track": "business",
+    "type": "session"
+}
