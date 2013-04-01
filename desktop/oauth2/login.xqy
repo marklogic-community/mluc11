@@ -65,7 +65,7 @@ return
                                 window.close();
                             }
                             else {
-                                window.location = "http://m.mlw13.marklogic.com";
+                                window.location = "http://mlw13.marklogic.com";
                             }
                         ]]></script></html>
                         (: the referrer gets lost sometimes from the original site, namely when you need to login iwth your credential

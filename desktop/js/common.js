@@ -449,8 +449,8 @@ Ext.regStore("SponsorsStore", {
         {
             id: "16",
             company: "MarkLogic Developer Community",
-            level: "Additional Sponsors",
-            info: "Home of <b>THE</b> Enterprise NoSQL Database. If you need the performance and flexibility of NoSQL, along with trusted Enterprise-grade features like ACID transactions, security, high-availability, and disaster recovery, MarkLogic is THE choice.<br/><br/>This application is powered by MarkLogic and sponsored the MarkLogic Developer Community.  Its source code is available at <a href='https://github.com/marklogic/mluc11/tree/mlw13'>GitHub</a>",
+            level: "Conference App Sponsor",
+            info: "This application is powered by MarkLogic and sponsored the MarkLogic Developer Community.  Its source code is available at <a href='https://github.com/marklogic/mluc11/tree/mlw13'>GitHub</a>",
             imageURL: "http://developer.marklogic.com/media/marklogic-community-badge.png",
             websiteFull: "http://developer.marklogic.com",
             websitePretty: "developer.marklogic.com"
