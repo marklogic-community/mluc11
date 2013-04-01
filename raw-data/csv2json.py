@@ -59,12 +59,13 @@ speakerID = 0
 tracks = {
     'Partners' : 'customer',
     'Solutions Track' : 'business',
-    'Tech and Lightning' : 'technical'
+    'Tech and Lightning' : 'technical',
+    'Keynote' : 'keynote'
 }
 
 speakers = dict()
 
-for c in ['Partners', 'Solutions Track', 'Tech and Lightning']:
+for c in ['Partners', 'Solutions Track', 'Tech and Lightning', 'Keynote']:
     with open("MLW13_Master Session Listing - " + c + ".csv", 'rb') as csvfile:
         creader = csv.DictReader(csvfile)
         for row in creader:
@@ -118,11 +119,15 @@ for c in ['Partners', 'Solutions Track', 'Tech and Lightning']:
                         indent=4, separators=(',', ': ')))
                     speakers[name] = speaker
 
-for c in ['Partners', 'Solutions Track', 'Tech and Lightning']:
+for c in ['Partners', 'Solutions Track', 'Tech and Lightning', 'Keynote']:
     with open("MLW13_Master Session Listing - " + c + ".csv", 'rb') as csvfile:
         creader = csv.DictReader(csvfile)
         for row in creader:
             sessionID = sessionID + 1
+
+            #if (row['HOUR TITLE'] or (c == 'Tech and Lightning' and row['HOUR DESCRIPTION and number'])):
+                #print "Skipping " + row["HOUR TITLE"] + " " + row['HOUR DESCRIPTION and number'] + " (" + row["SESSION TITLE"] + ")"
+                #continue
 
             session = dict()
             session['type'] = 'session'
