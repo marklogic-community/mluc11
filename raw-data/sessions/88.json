@@ -1,0 +1,18 @@
+{
+    "abstract": "1-Day condensed Training Course offered at MarkLogic World 2013: Developing MarkLogic Applications with Java<br/><br/> A <a href=\"http://www.marklogic.com/images/2012/10/developing-marklogic-applications-with-java.pdf\" target=\"_blank\">NEW training course</a> from MarkLogic, this hands-on course provides Java developers with the <strong>Information</strong> needed to build <strong>Application</strong>s using the MarkLogic Java API against content in a MarkLogic database. This course is built for Java developers, but it is not designed to make a Java developer into a MarkLogic product expert. Rather, it is designed to provide you with the knowledge necessary to build <strong>Application</strong>s using the Java API. Some high level background of MarkLogic product architecture and capabilities will be provided; however, the core focus is to teach the Java API without requiring class attendees to have MarkLogic product expertise. This 2-day course (normally $1600) is being held in a compact format on Monday, April 8 at MarkLogic World from 8am – 5pm (lunch included). Seating is limited to 45 participants, so we recommend you <a href=\"http://www.marklogic.com/events/marklogic-world-2013\" target=\"_blank\">sign up today</a>!",
+    "endTime": "2013-04-08T17:00:00",
+    "featured": false,
+    "giveSurvey": true,
+    "id": "88",
+    "location": "Chelsea 1",
+    "plenary": true,
+    "selectable": true,
+    "speakerIds": [
+    ],
+    "speakerNames": [
+    ],
+    "startTime": "2013-04-08T08:00:00",
+    "title": "TRAINING COURSE: Developing MarkLogic Applications with Java (Additional fees apply)",
+    "track": "keynote",
+    "type": "session"
+}

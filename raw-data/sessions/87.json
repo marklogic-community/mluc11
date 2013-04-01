@@ -1,0 +1,18 @@
+{
+    "abstract": "",
+    "endTime": "2013-04-08T18:00:00",
+    "featured": false,
+    "giveSurvey": false,
+    "id": "87",
+    "location": "Chelsea Commons",
+    "plenary": true,
+    "selectable": false,
+    "speakerIds": [
+    ],
+    "speakerNames": [
+    ],
+    "startTime": "2013-04-08T07:00:00",
+    "title": "Registration and Conference Services",
+    "track": "",
+    "type": "session"
+}

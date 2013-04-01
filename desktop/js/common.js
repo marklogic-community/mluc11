@@ -80,6 +80,9 @@ Ext.regModel("Session", {
             if(room === "Chelsea 2/3") {
                 return 1;
             }
+            if(room === "Chelsea Commons") {
+                return 1;
+            }
             if(room === "Mont-Royal 1") {
                 return 1;
             }

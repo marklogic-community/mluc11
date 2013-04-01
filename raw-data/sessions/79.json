@@ -1,6 +1,6 @@
 {
-    "abstract": "You\u2019ve made the right choice and decided to invest in MarkLogic to generate reliable, scalable, and real-time Big Data results, but your decision doesn\u2019t end there.  The next question to consider is how to deploy this powerful technology so that your organization will achieve the quickest time to value.  In this informative session, experts from SGI and MarkLogic will come together to discuss why the SGI DataRaptor with MarkLogic appliance will help you achieve maximum value in the shortest time to enable true business insight.  Whether you are about to deploy your first MarkLogic server, running into performance constraints on your existing infrastructure, or planning to expand an already-successful MarkLogic environment, the smart choice is to leverage SGI\u2019s 20+ years of leadership in the Big Data space and dedication to integration-testing each and every system before it leaves the factory, so that you can take delivery and be up and running in a matter of hours, not weeks or months.",
-    "endTime": "2013-04-09T11:20:00",
+    "abstract": "Making the Most out of your MarkLogic Investment<br/>You\u2019ve made the right choice and decided to invest in MarkLogic to generate reliable, scalable, and real-time Big Data results, but your decision doesn\u2019t end there.  The next question to consider is how to deploy this powerful technology so that your organization will achieve the quickest time to value.  In this informative session, experts from SGI and MarkLogic will come together to discuss why the SGI DataRaptor with MarkLogic appliance will help you achieve maximum value in the shortest time to enable true business insight.  Whether you are about to deploy your first MarkLogic server, running into performance constraints on your existing infrastructure, or planning to expand an already-successful MarkLogic environment, the smart choice is to leverage SGI\u2019s 20+ years of leadership in the Big Data space and dedication to integration-testing each and every system before it leaves the factory, so that you can take delivery and be up and running in a matter of hours, not weeks or months.<br/><br/>Security Matters: Hardening an Open Platform for Analytics<br/>As enterprises in the financial services industry and agencies in the federal government adopt Apache Hadoop, the performance and cost benefits of processing data in Apache Hadoop must be balanced with the need to ensure the confidentiality and integrity of that data. The reliance on perimeter defense and peicemeal authentication is no longer sufficient. Join this session to learn why security needs to be built from the inside out, from the silicon up, to be truly effective in the high security environments in which Hadoop and MarkLogic are being increasingly deployed.",
+    "endTime": "2013-04-09T12:00:00",
     "featured": false,
     "giveSurvey": true,
     "id": "79",
@@ -8,13 +8,15 @@
     "plenary": true,
     "selectable": true,
     "speakerIds": [
-        "81"
+        "81",
+        "84"
     ],
     "speakerNames": [
-        "Bill Mannel"
+        "Bill Mannel",
+        "Girish Juneja"
     ],
-    "startTime": "2013-04-09T10:30:00",
-    "title": "Making the Most out of your MarkLogic Investment",
+    "startTime": "2013-04-09T10:15:00",
+    "title": "MID-MORNING KEYNOTE",
     "track": "keynote",
     "type": "session"
 }

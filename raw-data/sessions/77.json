@@ -1,6 +1,6 @@
 {
     "abstract": "Big Data is gaining a lot of attention around the world, but the phrase itself can be a misnomer. Too often, conversations focus on the \u201cBig,\u201d when the real impact, in fact, comes from the \u201cData.\u201d  During this opening keynote, you will learn how our customers are using the power of MarkLogic to make the most of their data - turning it into actionable information to make better decisions, create new products or provide access to their citizens and customers. Imagine what you could do better, faster, bigger. With MarkLogic to power information applications in your enterprise almost anything is possible.",
-    "endTime": "2013-04-09T09:20:00",
+    "endTime": "2013-04-09T09:45:00",
     "featured": false,
     "giveSurvey": true,
     "id": "77",
@@ -14,7 +14,7 @@
         "Gary Bloom"
     ],
     "startTime": "2013-04-09T08:30:00",
-    "title": "Imagine What You Could Do With Enterprise NoSQL",
+    "title": "OPENING KEYNOTE: Imagine What You Could Do With Enterprise NoSQL",
     "track": "keynote",
     "type": "session"
 }

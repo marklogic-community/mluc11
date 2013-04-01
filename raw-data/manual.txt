@@ -17,3 +17,8 @@ session 43/44/45 lightning to 43
 session 46/47/48 lightning to 48
 
 Create sessions.new, speakers.new with new csv2json that brings in plenaries
+
+Created 8[4567] as registration
+Created 88 as training
+
+Moved 82 into 79 removed 82

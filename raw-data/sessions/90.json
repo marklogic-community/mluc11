@@ -1,20 +1,18 @@
 {
     "abstract": "",
-    "endTime": "2013-04-09T09:20:00",
+    "endTime": "2013-04-09T10:15:00",
     "featured": false,
     "giveSurvey": true,
-    "id": "81",
-    "location": "Chelsea 2/3",
+    "id": "77",
+    "location": "Chelsea Commons",
     "plenary": true,
     "selectable": true,
     "speakerIds": [
-        "83"
     ],
     "speakerNames": [
-        "John Shap"
     ],
-    "startTime": "2013-04-09T08:30:00",
-    "title": "Keynote MC",
+    "startTime": "2013-04-09T09:45:00",
+    "title": "Partner Showcase & AM Break", 
     "track": "keynote",
     "type": "session"
 }

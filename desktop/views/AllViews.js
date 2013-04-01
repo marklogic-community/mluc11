@@ -41,14 +41,18 @@ Ext.define('mluc.widgets.Schedule', {
                     },
                     {
                         id: "1",
-                        text: 'Tuesday, April 9th'
+                        text: 'Monday, April 8th'
                     },
                     {
                         id: "2",
-                        text: 'Wednesday, April 10th'
+                        text: 'Tuesday, April 9th'
                     },
                     {
                         id: "3",
+                        text: 'Wednesday, April 10th'
+                    },
+                    {
+                        id: "4",
                         text: 'Thursday, April 11th'
                     }
                 ]
@@ -249,18 +253,22 @@ Ext.define('mluc.widgets.Schedule', {
 
         var indexToDateRange = [];
         indexToDateRange[0] = {
-            start: new Date("April 9, 2013 00:00:00"),
+            start: new Date("April 8, 2013 00:00:00"),
             end: new Date("April 11, 2013 23:59:59")
         };
         indexToDateRange[1] = {
+            start: new Date("April 8, 2013 00:00:00"),
+            end: new Date("April 8, 2013 23:59:59")
+        };
+        indexToDateRange[2] = {
             start: new Date("April 9, 2013 00:00:00"),
             end: new Date("April 9, 2013 23:59:59")
         };
-        indexToDateRange[2] = {
+        indexToDateRange[3] = {
             start: new Date("April 10, 2013 00:00:00"),
             end: new Date("April 10, 2013 23:59:59")
         };
-        indexToDateRange[3] = {
+        indexToDateRange[4] = {
             start: new Date("April 11, 2013 00:00:00"),
             end: new Date("April 11, 2013 23:59:59")
         };
