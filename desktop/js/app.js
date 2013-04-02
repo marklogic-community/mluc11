@@ -70,7 +70,7 @@ Ext.onReady(function() {
             {
                 region: 'north',
                 height: 100,
-                html: '<div id="header"><a href="http://www.marklogic.com/events/marklogic-world-2013/"><img alt="mlw13" width="360" height="105" src="/images/mlw13-event-page-banner.jpg"/></a></div>',
+                html: '<div id="header"><a href="http://www.marklogic.com/events/marklogic-world-2013/"><img alt="mlw13" width="1150" height="90" src="/images/mlw-web-app.jpg"/></a></div>',
                 border: false,
                 layout:'absolute',
                 items: [mluc.loginLogoutButton]
