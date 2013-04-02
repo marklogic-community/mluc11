@@ -675,7 +675,7 @@ var sessionViewer = Ext.extend(Ext.Panel, {
                         isAttending: function() {
                             var username = mluc.readCookie("MLUC-USERNAME");
                             var attending = false;
-                            if(me.store.findExact("username", username) >= 0) {
+                            if(me.store.find("username", username) >= 0) {
                                 attending = true;
                             }
                             return attending;
@@ -795,7 +795,7 @@ var sessionViewer = Ext.extend(Ext.Panel, {
     unattend: function() {
         var me = this;
         var username = mluc.readCookie("MLUC-USERNAME");
-        var index = this.store.findExact("username", username);
+        var index = this.store.find("username", username);
 
         if(username && index >= 0) {
             var record = this.store.getAt(index);
