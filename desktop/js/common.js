@@ -493,12 +493,12 @@ mluc.eraseCookie = function(name) {
 };
 
 mluc.login = function() {
-    try { _gaq.push(['_trackEvent', 'click', 'login'); } catch (err) {}
+    try { _gaq.push(['_trackEvent', 'click', 'login']); } catch (err) {}
     window.location = "/oauth2/login.xqy";
 };
 
 mluc.logout = function() {
-    try { _gaq.push(['_trackEvent', 'click', 'logout'); } catch (err) {}
+    try { _gaq.push(['_trackEvent', 'click', 'logout']); } catch (err) {}
     mluc.eraseCookie("MLUC-SESSION");
     mluc.eraseCookie("MLUC-USERNAME");
     mluc.eraseCookie("MLUC-NAME");
