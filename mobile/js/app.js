@@ -416,7 +416,7 @@ Ext.regStore("SponsorsStore", {
             id: "16",
             company: "MarkLogic Developer Community",
             level: "Conference App Sponsor",
-            info: "This application is powered by MarkLogic and sponsored the MarkLogic Developer Community.  Its source code is available at <a href='https://github.com/marklogic/mluc11/tree/mlw13'>GitHub</a>",
+            info: "This application is powered by MarkLogic and sponsored the MarkLogic by Developer Community.  Its source code is available at <a href='https://github.com/marklogic/mluc11/tree/mlw13'>GitHub</a>",
             imageURL: "http://developer.marklogic.com/media/marklogic-community-badge.png",
             websiteFull: "http://developer.marklogic.com",
             websitePretty: "developer.marklogic.com"
@@ -456,6 +456,7 @@ mluc.eraseCookie = function(name) {
 };
 
 mluc.login = function() {
+    try { _gaq.push(['_trackEvent', 'click', 'login'); } catch (err) {}
     window.location = "/oauth2/login.xqy";
 };
 
