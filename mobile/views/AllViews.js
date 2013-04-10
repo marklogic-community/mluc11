@@ -365,11 +365,21 @@ Ext.reg('sessionsurvey', sessionSurvey);
     var sessionDetailsPanel = undefined;
     var backButtonId = Ext.id();
     var openSurveyId = Ext.id()
+    var confSurveyId = Ext.id()
     
     var toolBar = new Ext.Toolbar({
         dock: "top",
         title: "Schedule",
         items: [
+            {
+                id: confSurveyId,
+                xtype: 'button',
+                text: 'Conference Survey',
+                hidden: false,
+                handler: function() {
+                    window.location.href = 'https://www.surveymonkey.com/s/8HR89XD';
+                }
+            },
             {
                 id: backButtonId,
                 xtype: "button",
@@ -502,6 +512,9 @@ Ext.reg('sessionsurvey', sessionSurvey);
 
             Ext.History.add("session:" + session.getId());
             toolBar.getComponent(backButtonId).show();
+            if (toolBar.getComponent(confSurveyId)) {
+                toolBar.getComponent(confSurveyId).hide();
+            }
             if(session.get("giveSurvey")) {
                 toolBar.getComponent(openSurveyId).show();
             }
@@ -529,6 +542,9 @@ Ext.reg('sessionsurvey', sessionSurvey);
             var button = toolBar.getComponent(backButtonId);
             if(button.isHidden()) {
                 return;
+            }
+            if (toolBar.getComponent(confSurveyId)) {
+                toolBar.getComponent(confSurveyId).show();
             }
 
             Ext.History.add("");
