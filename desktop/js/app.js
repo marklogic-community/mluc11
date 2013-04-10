@@ -57,8 +57,22 @@ Ext.onReady(function() {
             position: "absolute",
             top: "10px",
             right: "10px"
+        },
+        listeners: {
+            render: function(t, e) {
+                confSurvey = new Ext.button.Button({
+                    xtype: "button",
+                    text: "<b>Conference Survey</b>",
+                    width: 150,
+                    renderTo: "conf-survey-holder",
+                    handler: function() {
+                        window.location.href = 'https://www.surveymonkey.com/s/8HR89XD';
+                    }
+                });
+            }
         }
     });
+
 
     Ext.create('Ext.Viewport', {
         layout: {
@@ -69,8 +83,8 @@ Ext.onReady(function() {
         items: [
             {
                 region: 'north',
-                height: 100,
-                html: '<div id="header"><a href="http://www.marklogic.com/events/marklogic-world-2013/"><img alt="mlw13" width="1150" height="90" src="/images/mlw-web-app.jpg"/></a></div>',
+                height: 105,
+                html: '<div id="header"><a href="http://www.marklogic.com/events/marklogic-world-2013/"><img alt="mlw13" width="1150" height="90" src="/images/mlw-web-app.jpg"/></a><br/><div id="conf-survey-holder" style="display: table; margin: 0 auto; padding-top: 5px; margin-top: -19px;"></div></div>',
                 border: false,
                 layout:'absolute',
                 items: [mluc.loginLogoutButton]
