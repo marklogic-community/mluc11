@@ -110,7 +110,7 @@ var sessionViewer = Ext.extend(Ext.Panel, {
                     '<tpl if="this.isLoggedIn() == false">',
                         '<table><tbody><tr>',
                         '<td class="icon"><img src="/images/unknown.gif"/></td>',
-                        '<td><span class="header">Look like an interesting session?</span><div class="inputs"><span class="session-login x-button x-button-normal"><em><span class="x-button-label">Login to add to favorites</span></em></span></div></td>',
+                        '<td><span class="header">Look like an interesting session?</span><div class="inputs"><span class="session-login x-button x-button-normal"><em><span class="x-button-label">Login via Facebook to add to favorites</span></em></span></div></td>',
                         '</tr></tbody></table>',
                     '</tpl>',
                     {

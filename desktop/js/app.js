@@ -42,11 +42,11 @@ Ext.onReady(function() {
 
     mluc.loginLogoutButton = new Ext.button.Button({
         xtype: "button",
-        text: mluc.isLoggedIn() ? "Logout" : "Login",
+        text: mluc.isLoggedIn() ? "Logout" : "Login via Facebook",
         handler: function(button) {
             if(mluc.isLoggedIn()) {
                 mluc.logout();
-                button.setText("Login");
+                button.setText("Login via Facebook");
             }
             else {
                 mluc.login();

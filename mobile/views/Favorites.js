@@ -84,7 +84,7 @@
             mySessionStore.load(function() {});
         }
         else {
-            button.setText("Login");
+            button.setText("Login via Facebook");
             mySessionStore.remove(mySessionStore.getRange());
         }
     };

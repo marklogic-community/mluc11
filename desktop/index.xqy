@@ -32,8 +32,8 @@ return
         <link rel="stylesheet" type="text/css" href="/css/mleventstyles.css"/> 
         <link rel="stylesheet" type="text/css" href="/css/base.css"/> 
         <script type="text/javascript" src="/ext4.0/bootstrap.js"><!-- --></script> 
-        <script src="/js/common.js" type="text/javascript"><!-- --></script>
-        <script src="/views/AllViews.js" type="text/javascript"><!-- --></script>
+        <script src="/js/common.js?v=1" type="text/javascript"><!-- --></script>
+        <script src="/views/AllViews.js?v=1" type="text/javascript"><!-- --></script>
         <script src="/views/Sponsors.js" type="text/javascript"><!-- --></script>
         <script src="/js/app.js" type="text/javascript"><!-- --></script>
         <script type="text/javascript">

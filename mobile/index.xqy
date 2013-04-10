@@ -33,8 +33,8 @@ return
     </head> 
     <body>Loading...</body> 
     <script src="/sencha-touch/sencha-touch.js" type="text/javascript"><!-- --></script>
-    <script src="/js/app.js" type="text/javascript"><!-- --></script>
-    <script src="/views/AllViews.js" type="text/javascript"><!-- --></script>
+    <script src="/js/app.js?v=1" type="text/javascript"><!-- --></script>
+    <script src="/views/AllViews.js?v=4" type="text/javascript"><!-- --></script>
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-6638631-1']);

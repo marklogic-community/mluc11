@@ -118,7 +118,11 @@ var sessionSurvey = Ext.extend(Ext.form.FormPanel, {
         var me = this;
         var id = Math.ceil(Math.random() * 100000000000000000);
         var username = mluc.readCookie("MLUC-USERNAME");
-        if(username) {
+        // if(username) {
+        if (!username) {
+            username = "" + Math.floor(Math.random() * 100000000) ;
+        }
+        {
             var speakerQ = this.getComponent(this.ids.speakerQuality).getPressed().data.value;
             var sessionQ = this.getComponent(this.ids.sessionQuality).getPressed().data.value;
             var comments = this.getComponent(this.ids.comments).getValue();
@@ -237,7 +241,7 @@ Ext.reg('sessionsurvey', sessionSurvey);
             mySessionStore.load(function() {});
         }
         else {
-            button.setText("Login");
+            button.setText("Login via Facebook");
             mySessionStore.remove(mySessionStore.getRange());
         }
     };
@@ -662,7 +666,7 @@ var sessionViewer = Ext.extend(Ext.Panel, {
                     '<tpl if="this.isLoggedIn() == false">',
                         '<table><tbody><tr>',
                         '<td class="icon"><img src="/images/unknown.gif"/></td>',
-                        '<td><span class="header">Look like an interesting session?</span><div class="inputs"><span class="session-login x-button x-button-normal"><em><span class="x-button-label">Login to add to favorites</span></em></span></div></td>',
+                        '<td><span class="header">Look like an interesting session?</span><div class="inputs"><span class="session-login x-button x-button-normal"><em><span class="x-button-label">Login via Facebook to add to favorites</span></em></span></div></td>',
                         '</tr></tbody></table>',
                     '</tpl>',
                     {

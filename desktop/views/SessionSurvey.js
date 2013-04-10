@@ -96,7 +96,8 @@ Ext.define("mluc.views.SessionSurvey", {
         var me = this;
         var id = Math.ceil(Math.random() * 100000000000000000);
         var username = mluc.readCookie("MLUC-USERNAME");
-        if(username) {
+        // if(username) {
+        {
             var speakerQ = this.getComponent("speakerQuality").getValue();
             var sessionQ = this.getComponent("sessionQuality").getValue();
             var comments = this.getComponent("sessionComments").getValue();

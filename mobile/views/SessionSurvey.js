@@ -118,7 +118,13 @@ var sessionSurvey = Ext.extend(Ext.form.FormPanel, {
         var me = this;
         var id = Math.ceil(Math.random() * 100000000000000000);
         var username = mluc.readCookie("MLUC-USERNAME");
-        if(username) {
+        if (!username) {
+            username = "" + Math.floor(Math.random() * 100000000) ;
+        }
+ 
+
+        // if(username) {
+        {
             var speakerQ = this.getComponent(this.ids.speakerQuality).getPressed().data.value;
             var sessionQ = this.getComponent(this.ids.sessionQuality).getPressed().data.value;
             var comments = this.getComponent(this.ids.comments).getValue();

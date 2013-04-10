@@ -172,7 +172,7 @@ Ext.define("mluc.views.DetailsWindow", {
                             Ext.defer(function() {
                                 var button = new Ext.button.Button({
                                     renderTo: containerId,
-                                    text: "Login to add to favorites",
+                                    text: "Login via Facebook to add to favorites",
                                     cls: "session-login",
                                     handler: function() {
                                         mluc.createCookie("MLUC-VIEWING", Ext.JSON.encode({session: mluc.views.Schedule.detailsWindow.session.get("id")}), 1);

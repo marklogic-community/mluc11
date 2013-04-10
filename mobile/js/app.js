@@ -163,6 +163,9 @@ Ext.regModel("Survey", {
             var records = request.operation.records || [];
             var record = records[0];
             var username = mluc.readCookie("MLUC-USERNAME");
+            if (!username) {
+                username = "anon-" + Math.floor(Math.random() * 1000000000);
+            }
 
             if(record) {
                 request.params = {uri: "/survey/" + username + "/" + record.get("forSession") + ".json"};
